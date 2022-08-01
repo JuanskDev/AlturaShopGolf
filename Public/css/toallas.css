@@ -107,6 +107,8 @@
     margin-top: 5px;
     text-align: center;
     font-size: 12px;
+    color: red;
+    text-decoration: underline;
   }
   body.toallas li.producto-toallas-lista .nuevo{
     font-size: 9px;

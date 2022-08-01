@@ -100,6 +100,8 @@ body.bolsas li.producto-bolsas-lista .p-descuento {
   margin-top: 5px;
   text-align: center;
   font-size: 12px;
+  color: red;
+  text-decoration: underline;
 }
 body.bolsas li.producto-bolsas-lista .nuevo{
   font-size: 9px;

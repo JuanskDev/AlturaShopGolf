@@ -107,6 +107,8 @@ body.guantes li.producto-guantes-lista .p-descuento {
   margin-top: 5px;
   text-align: center;
   font-size: 12px;
+  color: red;
+  text-decoration: underline;
 }
 body.guantes li.producto-guantes-lista .nuevo{
   font-size: 9px;

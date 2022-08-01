@@ -100,6 +100,8 @@
     margin-top: 5px;
     text-align: center;
     font-size: 12px;
+    color: red;
+    text-decoration: underline;
   }
   body.paraguas li.producto-paraguas-lista .nuevo{
     font-size: 9px;
