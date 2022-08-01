@@ -105,10 +105,13 @@
     color: white;
     font-family: 'Oswald';
 }
-div.info-balls{
+div.info-balls h5{
     text-align: justify;
-    font-size: 10px;
+    font-size: 15px;
     font-family: oswald;
+    font-weight: 500;
+
+    
 }
 
   
