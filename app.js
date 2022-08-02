@@ -134,27 +134,6 @@ app.get("/productos/telemetros", (req, res) => {
 app.get("/productos/zapatos", (req, res) => {
   res.render(path.join(__dirname, "src/views/zapatos.ejs"));
 });
-//---------------------CARROS-------------------------------//
-app.get("/productos/carros", (req, res) => {
-  res.render(path.join(__dirname, "src/views/carros.ejs"));
-});
-//---------------------PELOTAS-------------------------------//
-app.get("/productos/pelotas", (req, res) => {
-  res.render(path.join(__dirname, "src/views/pelotas.ejs"));
-});
-//---------------------VESTIR-------------------------------//
-app.get("/productos/vestir", (req, res) => {
-  res.render(path.join(__dirname, "src/views/vestir.ejs"));
-});
-//---------------------ROPA DE HOMBRES-------------------------------//
-app.get("/productos/vestir/ropa-de-hombres", (req, res) => {
-  res.render(path.join(__dirname, "src/views/ropa-de-hombres.ejs"));
-});
-//---------------------ROPA DE MUJER-------------------------------//
-app.get("/productos/ropa-de-mujer", (req, res) => {
-  res.render(path.join(__dirname, "src/views/ropa-de-mujer.ejs"));
-});
-
 // MVC SYSTEM
 
 // Main Routes
@@ -172,19 +151,3 @@ app.use(require("./src/routes/users"));
 const rutasProductos = require("./src/routes/products");
 app.use(require("./src/routes/products"));
 
-//multer settings
-// const storage = multer.diskStorage({
-//     destination: function(req, file, cb){
-//         cb(null,'./public/img/upload');
-//     },
-//     filename:function(req, file, cb){
-//         cb(null, file.filedname + '-' + Date.now());
-//     }
-// })
-
-// const uploadFile = multer({ storage: storage });
-
-// app.post('/uploadfile', uploadFile.single('myFile'), (req, res) =>{
-//     console.log(req.file)
-//     //res.send('Archivo subido correctamente')
-// })
