@@ -468,26 +468,68 @@ div.carros-home span {
 div.palos-home {
   position: relative;
   display: grid;
+  bottom: 1px;
 }
 
 div.palos-home span {
   position: absolute;
   top: 48%;
   left: 2%;
-  padding: 10px 10px;
+  padding: 10px 15px;
   color: white;
   min-width: 250px;
   text-align: center;
   font-size: 100px;
   font-family: oswald;
-  text-align: center;
   font-weight:900;
+  cursor: pointer;
+  transition: 1.1s;
 }
 div.palos-home span:hover{
-  color: #3483fa;
-
-   
+  color: #94cb39;
 }
+div.palos-home span:nth-child(1){
+width: 100%;
+height: 1px;
+top: 0;
+left: -100%;
+}
+div.palos-home span:nth-child(2){
+width: 100%;
+height: 1px;
+bottom: 0;
+right: -100%;
+}
+div.palos-home span:nth-child(3){
+width: 1px;
+height: 100%;
+bottom: -100%;
+left: 0;
+}
+div.palos-home span:nth-child(4){
+width: 1px;
+height: 100%;
+top: -100%;
+right: 0;
+}
+div.palos-home:hover span:nth-child(1){
+  left: 0;
+}
+div.palos-home:hover span:nth-child(2){
+right: 0;
+}
+div.palos-home:hover span:nth-child(3){
+bottom: 0;
+}
+div.palos-home:hover span:nth-child(4){
+top: 0;
+}
+
+
+
+
+
+
 div.palos-home button{
   background-color: #3483fa;
   color: white;
