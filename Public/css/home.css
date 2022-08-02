@@ -472,16 +472,21 @@ div.palos-home {
 
 div.palos-home span {
   position: absolute;
-  top: 40%;
-  left: 15%;
+  top: 48%;
+  left: 2%;
   padding: 10px 10px;
   color: white;
   min-width: 250px;
   text-align: center;
-  font-size: 70px;
+  font-size: 100px;
   font-family: oswald;
   text-align: center;
-  FONT-WEIGHT: 600;
+  font-weight:900;
+}
+div.palos-home span:hover{
+  color: #3483fa;
+
+   
 }
 div.palos-home button{
   background-color: #3483fa;
