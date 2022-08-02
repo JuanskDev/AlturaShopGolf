@@ -1,5 +1,5 @@
 var interval = 1;
-var slider = document.getElementById('juan-slider');
+var slider = document.location.pathname == '/';
 var submenuSelected = '';
 
 function mostrarMenuMobile(){
@@ -29,7 +29,7 @@ function mostrarSlide(slideIndex) {
     interval = slideIndex;
 }
 
-if(slider != null) {
+if(slider) {
     setInterval(function(){
         if(interval >= 6) interval = 0;
         interval++;
@@ -50,3 +50,20 @@ function mostrarMenu(menu) {
         submenuSelected = '';
     }
 }
+
+//multer settings
+// const storage = multer.diskStorage({
+//     destination: function(req, file, cb){
+//         cb(null,'./public/img/upload');
+//     },
+//     filename:function(req, file, cb){
+//         cb(null, file.filedname + '-' + Date.now());
+//     }
+// })
+
+// const uploadFile = multer({ storage: storage });
+
+// app.post('/uploadfile', uploadFile.single('myFile'), (req, res) =>{
+//     console.log(req.file)
+//     //res.send('Archivo subido correctamente')
+// })

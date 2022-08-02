@@ -227,7 +227,7 @@ font-family: sans-serif;
   background: white url("/img/2022_theOpen_Winner_D_hero.webp") center center no-repeat;
 }
 #slide2 {
-  background: white url("/img/descuentos-ropa-banner.webp") center center no-repeat;
+  background: white url("/img/promo-palos.webp") center center no-repeat;
 }
 #slide3 {
   background: white url("/img/atajos-zapatos.png") center center no-repeat;
@@ -335,170 +335,6 @@ font-family: sans-serif;
 #juan-slider .menu-de-a li a.active {
   background-color: #dc3b41;
   border: 1px solid white;
-}
-
-
-div.palos-titleist {
-  margin: 10px;
-  position: relative;
-  margin-top: 30px;
-}
-
-div.palos-titleist img {
-  width: 100%;
-}
-
-div.palos-titleist H4 {
-  position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 30px;
-    font-family: oswald;
-    font-weight: 800;
-}
-
-div.palos-titleist H5 {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 400px;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  font-size: 25px;
-  font-family: oswald;
-  font-weight: 800;
-}
-
-div.bushnells {
-  margin: 10px;
-  position: relative;
-}
-
-div.bushnells img {
-  width: 100%;
-}
-
-div.bushnells h4 {
-  position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-family: oswald;
-    font-weight: 800;
-}
-
-div.bushnells h5 {
-  position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 300px;
-    color: white;
-    font-size: 20px;
-  text-align: center;
-  font-family: oswald;
-  font-weight: 800;
-}
-
-div.callaway-coleccion {
-  margin: 10px;
-  position: relative; 
-}
-
-div.callaway-coleccion img {
-  width: 100%;
-}
-
-div.callaway-coleccion h4 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  min-width: 300px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 800;
-  font-family: oswald;
-  font-weight: 800;
-  font-family: oswald;
-}
-
-div.callaway-coleccion h5 {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #eee;
-  font-size: 20px;
-  font-weight: 800;
-  font-family: oswald;
-}
-
-
-div.callaway-coleccion h6 {
-  position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 300px;
-    color: #eee;
-    font-size: 20px;
-    text-align: center;
-    font-weight: 800;
-  font-family: oswald;
-}
-
-
-div.clases-golf {
-  margin: 10px;
-  position: relative;
-}
-
-div.clases-golf img {
-  width: 100%;
-}
-
-div.clases-golf h4{
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  min-width: 300px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 200;
-  font-family: oswald;
-}
-div.clases-golf h5{
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #eee;
-  font-size: 20px;
-  font-weight: 200;
-  font-family: oswald;
-}
-
-div.clases-golf h6{
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 300px;
-  color: #eee;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 200;
-  font-family: oswald;
 }
 
 div.suscripcion-home{
@@ -636,18 +472,28 @@ div.palos-home {
 
 div.palos-home span {
   position: absolute;
-  top: 65PX;
-  left: 62%;
+  top: 40%;
+  left: 15%;
   padding: 10px 10px;
-  color: #000000;
-  opacity: 0.7;
+  color: white;
   min-width: 250px;
   text-align: center;
-  font-size: 30px;
+  font-size: 70px;
   font-family: oswald;
   text-align: center;
-  FONT-WEIGHT: 900;
-  text-decoration: underline;
+  FONT-WEIGHT: 600;
+}
+div.palos-home button{
+  background-color: #3483fa;
+  color: white;
+  font-family: oswald;
+  border-radius: 40px;
+  left: 15%;
+  top: 20%;
+  min-width: 250px;
+  text-align: center;
+  font-weight: 400;
+  
 }
 .final-home{
   width: 100%;
@@ -661,7 +507,48 @@ div.palos-home span {
 }
 
 
-
+section.productos-nuevos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section.productos-nuevos > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.productos-nuevos div div:first-child {
+  width: 40%;
+  text-align: center;
+}
+section.productos-nuevos div div:first-child img {
+  max-width: 300px;
+}
+section.productos-nuevos div div:last-child {
+  width: 60%;
+}
+section.productos-nuevos div div:last-child img {
+  width: 100%;
+}
+section.productos-nuevos div h4 {
+  color: black;
+  font-size: 30px;
+  font-family: oswald;
+  font-weight: 800;
+}
+section.productos-nuevos div h5 {
+  color: black;
+  font-size: 25px;
+  font-family: oswald;
+  font-weight: 800;
+}
+section.productos-nuevos div a {
+  font-size: 18px;
+  font-family: oswald;
+  text-decoration: underline;
+  color: #3483fa;
+}
 
 
 
@@ -682,36 +569,28 @@ div.palos-home span {
 
 /* MAIN */ 
 
-section.productos-nuevos {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: flex-end;
-    justify-content: space-around;
-}
 
-div.palos-titleist {
+/* div.palos-titleist {
   margin: 0;
-  width: 48.5%;
+  width: 39.5%;;
 }
 
 div.bushnells {
   margin: 0;
-  width: 48.5%;
+  width: 39.5%;;
 }
 
 div.callaway-coleccion {
-  width: 48.5%;
+  width: 39.5%;;
   margin: 0;
 }
 
 div.clases-golf {
-  width: 48.5%;
+  width: 39.5%;;;
   margin: 0;
-}
+} */
 
-div.suscripcion-home {
-  margin: 2% 0.75% 2%;
-}
+
 
 }
 
