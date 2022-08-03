@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/bolsas.css"/>
+  </head>
+ 
+<body class="bolsas" >
+
+  <%- include('./partials/header.ejs')  %>     
+
+
+<main>
+ 
+    <h1>BOLSAS DE GOLF</h1>
+
+    <div class="resultado-busqueda">
+      <h2>8 Resultados</h2>
+      <div class="ordenar-buscador">
+        <label for="buscador">Ordenar por</label>
+        <select class="select-buscador" name="buscador" id="">
+          <option value="++">De mas baratos a mas caros</option>
+          <option value="--">De mas caros a mas baratos</option>
+          <option value="top">Mas vendidos</option>
+          <option value="moda">Moda del momento</option>
+        </select>
+      </div>
+    </div>
+    <hr class="hr-1">
+
+    <div class="resultado-busqueda">
+     
+        <ul class="resultado-productos">
+          
+            <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-1.webp" alt="">
+              <div class="tamaño-hr">
+                  <h6>PING</h6>
+                  <p>Hoofer Lite Stand Bag</p>
+                  <h5><span class="span-3">$51.750</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-2.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>TAYLORMADE</h6>
+              <p>Select Stand Bag</p>
+              <h5><span class="span-1">$46.000</span><span class="span-3">$38.000</span></h5>
+              <p class="p-descuento">Ahorra 18%</p>
+              </div>
+              
+          </li>
+
+          <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-3.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>TITLEIST</h6>
+              <p>Hybrid 14 Stand Bag</p>
+              <h5><span class="span-3">$51.990</span><span class="span-3">-</span><span class="span-3">$54.990</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-4.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>TITLEIST</h6>
+              <p>Cart 15 2022 Cart Bag</p>
+              <h5><span class="span-3">$58.450</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-5.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>TITLEIST</h6>
+              <p>Cart 14 2022 Cart Bag</p>
+              <h5><span class="span-3">$49.000</span></h5>
+              </div>
+             
+          </li>
+
+          <li class="producto-bolsas-lista">
+              <img src="/img/bolsas-6.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>TAYLORMADE</h6>
+              <p>Select Cart Bag</p>
+              <h5><span class="span-1">$41.000</span><span class="span-2">$36.900</span></h5>
+              <p class="p-descuento">Ahorra 10%</p>
+              </div>
+              
+          </li>
+
+          <li class="producto-bolsas-lista">
+            <img src="/img/bolsas-7.webp" alt="">
+            <div class="tamaño-hr">
+            <h6>SUN MOUNTAIN</h6>
+            <p>C-130S 2022 Stand Bag</p>
+            <h5><span class="span-3">$49.990</span></h5>
+            </div>
+            
+        </li>
+
+        <li class="producto-bolsas-lista">
+            <img src="/img/bolsas-8.jpeg" alt="">
+            <div class="tamaño-hr">
+            <h6>CALLAWAY</h6>
+            <p>Fairway 14 2022 Stand Bag</p>
+            <h5><span class="span-3">$51.500</span></h5>
+            </div>
+        
+        </li>
+      </ul>
+    </div>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+
+
+
+</body>
+</html>

@@ -6,7 +6,6 @@
     box-sizing: border-box;
     font-family: "Open Sans";
   }
-
   .body-header {
     width: 100%;
   }
@@ -150,7 +149,10 @@
     text-align: center;
     font-size: 17px;
   }
-  
+
+  nav.nav-full-screen {
+    display: none;
+  }
   /* MAIN */ 
 
  .main-home {
@@ -194,16 +196,26 @@ background-color: #fff;
   height: 300px;
   object-fit: cover;
  }
- #juan-slider ul.slider li h1{
+ #juan-slider ul.slider li h1 {
   position: absolute;
-  margin-left: 420px;
-  margin-top: -310px;
+  margin-left: 100px;
+  margin-top: -300px;
   text-align: center;
-  color: white;
-  font-size: 45px;
+  color: black;
+  font-size: 55px;
   font-family: oswald;
-  font-weight: 900
+  font-weight: 800;
  }
+ #juan-slider ul.slider li h4 {
+  position: absolute;
+  margin-left: 24px;
+  margin-top: -223px;
+  color: black;
+  font-size: 17px;
+  font-family: oswald;
+  font-weight: 200;
+ }
+
  #juan-slider ul.slider li h2{
   position: absolute;
   margin-left: 420px;
@@ -215,18 +227,19 @@ background-color: #fff;
   font-weight: 400;
  }
  #juan-slider ul.slider li button{
-  font-family: oswald;
-    width: 180px;
+    font-family: oswald;
+    width: 155px;
     position: absolute;
-    margin-left: -265px;
+    margin-left: -680px;
     margin-top: 240px;
     color: white;
     background-color: blue;
     border: none;
     border-radius: 20px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
+
  
  #juan-slider ul.slider li:first-child {
   opacity: 1;
@@ -511,18 +524,28 @@ div.indumetaria-home {
 }
 
 div.indumetaria-home span {
+  font-weight: 800;
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 80px;
-    color: #000000;
-    background-color: #dc3b41;
-    min-width: 250px;
-    opacity: 0.7;
-    font-size: 25px;
-    font-family: oswald;
-    text-align: center;
+  top: 34PX;
+  left: 600PX;
+  padding: 10px 80px;
+  color: black;
+  min-width: 250px;
+  font-size: 25px;
+  font-family: oswald;
+  text-align: center;
+  text-decoration: underline;
+}
+div.marcas{
+  display: flex;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  margin-left: 102px;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 div.carros-home {
@@ -530,18 +553,18 @@ div.carros-home {
 }
 
 div.carros-home span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 105px;
-    color: #000000;
-    background-color: #dc3b41;
-    opacity: 0.7;
-    min-width: 250px;
-    font-size: 25px;
-    font-family: oswald;
-    text-align: center;
+  position: absolute;
+  top: 15PX;
+  left: 0%;
+  padding: 10px 10px;
+  color: white;
+  min-width: 250px;
+  text-align: center;
+  font-size: 25px;
+  font-family: oswald;
+  text-align: center;
+  FONT-WEIGHT: 800;
+  text-decoration: underline;
 }
 
 div.palos-home {
@@ -550,18 +573,28 @@ div.palos-home {
 
 div.palos-home span {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 65PX;
+  left: 62%;
   padding: 10px 10px;
   color: #000000;
-  background-color: #dc3b41;
   opacity: 0.7;
   min-width: 250px;
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-family: oswald;
   text-align: center;
+  FONT-WEIGHT: 900;
+  text-decoration: underline;
+}
+.final-home{
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #dc3b41;
+  opacity: 0.7;
+ 
+  
+  
 }
 
 
@@ -573,102 +606,9 @@ div.palos-home span {
   /* FOOTER */
 
  
-  div.pie-pagina {
-    margin-top: 60px;
-    background-color:#c6c6c6;
-    opacity: 85%;
-    padding: 0 4%;
-}
-
-  div.pie-pagina .servicio-cliente , .servicios , .informacion-empresa, .subscripcion {
-    margin: auto;
-    width: 80%;
-    text-align: center;
-    padding-bottom: 20px;
-    font-family: oswald;
-}
-
-.red-social {
-  display: flex;
-  background-color: #c6c6c6;
-  margin: 0;
-  padding: 5px;
-  justify-content: center;
-  opacity: 85%;
-}
-
-.red-social span {
-margin: 0 10px;
-font-size: 18px;
-}
-  
-div.pie-pagina h3 {
-    margin-bottom: 10px;
-    font-size: 1.35em;
-    text-decoration: underline;
-}
-
-div.pie-pagina p {
-    margin-bottom: 7px;
-}
-
-div.pie-pagina span {
-    padding: 0 15px;
-}
-
-div.pie-pagina i {
-    font-size: 23px;
-}
-
-div.pie-pagina span.uno {
-    color:BLACK
-}
-div.pie-pagina span.dos {
-    color: BLACK;
-}
-div.pie-pagina span.tres {
-    color: BLACK;
-}
-div.pie-pagina span.cuatro{
-    color: BLACK;
-}
-
-div.pie-pagina input {
-  margin: 10px;
-  width: 100%;
-  padding: 7px 20px;
-  border-radius: 5px;
-  border: none;
-  max-width: 329px;
-}
-
 
 @media (min-width: 420px) {
     
-  header {
-    padding: 0 25px;
-  }
-  
-  header .buscador {
-    display: none;
-  }
-
-  .iconos-compra-location {
-    justify-content: space-around;
-  }
-
- .Compra-item-flex {
-  margin: 0;
- }
-
- header .logo img {
-  max-width: 120px;
- }
-
- 
-.iconos-compra-location span {
-margin-left: 25px;
-}
 
 }
 
@@ -676,39 +616,9 @@ margin-left: 25px;
  
 /*HEADER*/
 
-header {
-flex-wrap: nowrap;
-padding: 25px;
-}
-
-header .btn-menu {
-width: 10%;
-}
-
-header .logo {
-width: 20%;
-text-align: center;
-}
-
-.iconos-compra-location {
-display: none;
-}
-
-header .buscador {
-display: block;
-}
-
-.Compra-item-flex {
-margin: 0 10px 0 0;
-width: 25%;
-}
-
 /*FOOTER*/
 
-div.pie-pagina {
-  display: flex;  
-  margin: 0%;
-}
+
 
 div.pie-pagina .servicio-cliente, .servicios, .informacion-empresa, .red-social, .subscripcion {
   margin: 0;
@@ -750,7 +660,5 @@ div.suscripcion-home {
 }
 
 @media (min-width: 1000px) {
-  header .buscador {
-    min-width: 400px
-  }
+  
 } 

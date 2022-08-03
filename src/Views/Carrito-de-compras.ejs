@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/head.ejs')%>
+  <%- include('./partials/header.ejs')%>
+  <link rel="stylesheet" href="/css/carritocompra.css">
+  <body>
+
+    <main>
+      <div class="container">
+            <div class="product">
+              <img src="/img/PELOTAS/img2.webp" alt="Pelotas Bridgestone Tour B XS" />
+              <div class="product-info">
+                <p>BRIDGESTONE</p>
+                <h3 class="product-name">CAJA PELOTAS BRIDGESTONE TOUR B XS</h3>
+                <span class="span-producto1"><strong>Articulo:   </strong>  </span> <span class="span-producto2"> 147831765</span><br>
+                <span class="span-producto1"><strong>Color:   </strong>  </span> <span class="span-producto2"> Rojo/Blanco/Azul</span><br><br>
+                <span class="span-producto3">Envio a Domicilio</span>
+                <p class="product-quantity">
+                 Cantidad   <input value="1" name="" />
+                </p>
+                <p class="product-remove">
+                  <i class="fa-regular fa-trash-can"></i>
+                  <span class="remove">Remove</span>
+                </p><br>
+                <div class="precio-carrito">
+                <p class="span-producto3"><strong>Precio:</strong></p>
+                <p class="Precio-carrito-p"> <strong>$7899 </strong></p>
+              </div>
+              <div class="total-precio-carrito">
+                <p class="span-producto3"><strong>Total:</strong></p>
+                <p class="Precio-carrito-p"> <strong>$7899 </strong></p>
+              </div>
+              
+              </div>
+              </div>
+              <hr>
+            </div>
+          
+              <div class="subtotal-caja">               
+                  <p class="span-producto3"><strong>Subtotal:</strong></p>
+                  <p class="Precio-carrito-p"> <strong>$7899 </strong></p>         
+              </div>
+            
+              <div class="subtotal-caja2">
+                <hr>
+                <button type="submit" value="comprar" class="button">
+                  Comprar ahora
+                </button>
+                <p class="comprar-texto">Seguir Comprando</p>
+              </div>
+            
+              
+                <div class="articulo-promocion">
+                  <h4> PRODUCTO DESTACADO DEL MES</h4>
+                  <img src="img/vestir/ropadehombre/img25.jpg" alt="Camiseta Berlin">
+                  <p class="marca"><strong> TITLEIST  </strong></p>
+                  <p class="articulo">Camiseta Berlin Callaway</p>
+                  <p class="precio"><strong>  $13999 </strong></p>
+                </div>
+              
+      </div>
+    </main>
+    
+    <%- include('./partials/footer.ejs')  %>
+    
+  </body>
+</html>

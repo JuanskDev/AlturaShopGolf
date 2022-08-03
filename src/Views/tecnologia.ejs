@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/tecnologia.css"/>
+  </head>
+ 
+<body class="tecnologia" >
+
+  <%- include('./partials/header.ejs')  %>     
+
+
+<main>
+ 
+    <h1>APARATOS TECNOLOGICOS</h1>
+
+    <div class="resultado-busqueda">
+      <h2>5 Resultados</h2>
+      <div class="ordenar-buscador">
+        <label for="buscador">Ordenar por</label>
+        <select class="select-buscador" name="buscador" id="">
+          <option value="++">De mas baratos a mas caros</option>
+          <option value="--">De mas caros a mas baratos</option>
+          <option value="top">Mas vendidos</option>
+          <option value="moda">Moda del momento</option>
+        </select>
+      </div>
+    </div>
+    <hr class="hr-1">
+
+    <div class="resultado-busqueda">
+      <ul class="resultado-productos">
+          <li class="producto-tecnologia-lista">
+              <img src="/img/tecnologia/smartwacht/tecnologia-1.webp" alt="">
+              <div class="tamaño-hr">
+                  <h6>GARIN </h6>
+                  <p>Garmin Approach S10 Golf Watch</p>
+                  <h5><span class="span-3">$56.750</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-tecnologia-lista">
+              <img src="/img/tecnologia/smartwacht/tecnologia-2.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>SKYCADDIE</h6>
+              <p>LX5 GPS Watch</p>
+              <h5><span class="span-3">$44.000</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-tecnologia-lista">
+              <img src="/img/tecnologia/telemetros/tecnologia-3.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>VOICE CADDIE</h6>
+              <p>SL2 Active Hybrid GPS Laser Rangefinder</p>
+              <h5><span class="span-3">$125.990</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-tecnologia-lista">
+              <img src="/img/tecnologia/telemetros/tecnologia-4.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>BUSHNELL</h6>
+              <p>Tour V5 SHIFT Rangefinder</p>
+              <h5><span class="span-3">$107.000</span></h5>
+              </div>
+              
+          </li>
+
+          <li class="producto-tecnologia-lista">
+              <img src="/img/tecnologia/telemetros/tecnologia6.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>CALLAWAY</h6>
+              <p>Callaway 250s Laser Rangefinder</p>
+              <h5><span class="span-3">$94.000</span>
+              </div>
+             
+          </li>
+
+      </ul>
+    </div>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+
+
+
+</body>
+</html>

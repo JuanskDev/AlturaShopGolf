@@ -1,0 +1,123 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.palos h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  body.palos .resultado-busqueda {
+    width: 90%;
+    margin: auto;
+    padding: 20px 5px;
+    position: relative;
+  }
+
+  body.palos .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.palos .ordenar-buscador {
+    position: absolute;
+    right: 2%;
+    top: 100%; 
+  }
+
+  .select-buscador {
+    max-width: 17px;
+  }
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.palos ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.palos li.producto-palos-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+  }
+
+  body.palos li.producto-palos-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+  }
+
+  body.palos li.producto-palos-lista h6{
+    text-align: center;
+  }
+
+  body.palos li.producto-palos-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.palos li.producto-palos-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.palos li.producto-palos-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.palos li.producto-palos-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.palos li.producto-palos-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (min-width: 420px) {
+    
+    body.palos h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.palos .resultado-busqueda h2 {
+    text-align: left;
+}
+  }
+
+@media (min-width: 790px) {
+
+    body.palos ul {
+        justify-content: space-around;
+    }  
+
+    body.palos li.producto-palos-lista {
+        width: 27%;
+    }
+    body.palos li.producto-palos-lista img {
+      margin: auto;
+      display: block;
+    } 
+
+}
+
+@media (min-width: 1200px) {
+body.palos li.producto-palos-lista img {
+ height: 65%;
+} 
+}

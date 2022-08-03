@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="css/contacto.css"/>
+     
+  </head>
+ 
+  <body class="contacto">
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main class="contacto">
+
+
+    <div> 
+        <p class="costumer-s-p"> Servicio al Cliente</p>
+    </div>
+
+    <div class="pre-form">
+        <h1>CONTACTANOS</h1>
+        <br>
+        <h3>PREGUNTAS O COMENTARIOS ? </h3>
+        <p class="p-pre-form">Porfavor llama:   03543 011 2959182</p>
+        <br>
+        <h3>HORARIOS ATENCION AL CLIENTE</h3>
+        <span class="span1"><strong>Lunes-Viernes</strong></span> <span class="span2">  8:00 am - 7:00 pm </span><br>
+        <span class="span1"><strong>Sabado y Domingo</strong></span> <span class="span2">  10:00 am - 3:00 pm </span>
+        <p></p>
+        <br>
+        <h3>TIENE ALGUNA PREGUNTA?</h3>
+        <p class="p-pre-form">Para comunicarse con alguno de nuestros expertos o para ayuda para realizar su pedido, llame al 03543 011 2959182 
+            o envie un email a <a href="mailto:alturagolf-costumerservice@gmail.com">alturagolf-customerservice@pgatss.com</a>
+        </p>
+        <div>
+            <p class="requerido"> Necesita llenar este Formulario*</p>
+        </div>
+    </div>
+
+    
+
+    <form action="" method="POST">
+
+        <div class="form-row">
+            <label for="nombre">NOMBRE</label>
+            <input type="text" name="nombre" required>
+        </div>
+
+        <div class="form-row">
+<label for="apellido">APELLIDO</label>
+<input type="text" name="apellido" required>
+        </div>
+
+        <div class="form-row">
+<label for="email">EMAIL</label>
+<input type="email" name="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="celular">TELEFONO</label>
+            <input type="text" name="celular" required>
+        </div>
+
+        <div class="form-row">
+<label for="numero-pedido">NUMERO DE PEDIDO</label>
+<input type="text" name="numero-pedido" id="" required>
+        </div>
+
+        <div class="form-row">
+<label for="pregunta">PREGUNTA</label>
+<select name="pregunta" id="">
+    <option value="compania">Informacion de la Compañia</option>
+    <option value="pedido-nuevo">Nuevo Pedido</option>
+    <option value="pregunta-producto">Pregunta sobre Producto</option>
+    <option value="devolucion">Devoluciones</option>
+    <option value="otro">Otra</option>
+</select>
+        </div>
+
+        <div class="form-row">
+<label for="comentario">COMENTARIOS</label>
+<textarea name="comentario" id="" cols="10" rows="5"></textarea>
+        </div>
+    </form>
+
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+
+
+
+  </body>
+</html>
+

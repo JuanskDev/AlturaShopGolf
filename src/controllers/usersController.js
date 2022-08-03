@@ -2,10 +2,10 @@ const path = require('path');
 
 const usersController = {
     registro: (req , res) => {
-        res.sendFile(path.join(__dirname , '../Views/Registro.html'))
+        res.render(path.join(__dirname , '../Views/Registro.ejs'))
     },
     login: (req,res)  => {
-        res.sendFile(path.join(__dirname, '../views/iniciosesion.html'))
+        res.render(path.join(__dirname, '../views/iniciosesion.ejs'))
     }
 };
 

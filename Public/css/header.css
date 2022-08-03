@@ -1,5 +1,3 @@
-
-
   * {
     margin: 0;
     padding: 0;
@@ -156,7 +154,7 @@
   @media (min-width: 420px) {
     
     header {
-      padding: 0 25px;
+      padding: 0 25px 10px;
     }
     
     header .Compra-item-flex {

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="css/DetalleProducto.css"/>
+</head>
+<body>
+
+  <%- include('./partials/header.ejs')  %>
+
+<main>
+    <nav class="menu-detalle-producto">
+        <a href="">Golf /</a>
+        <a href=""> Zapatos /</a>
+        <a href=""> Hombres /</a>
+        <a href="">Striker V2 zapatos de hombres</a>
+    </nav>
+    <div class="img-primaria">
+      <img src="/img/ZAPATOS/New Balance/img2.webp"  alt="New Balance - Striker V2 hombre">
+    </div>
+    <br>
+    <div class="slider-products">
+      <button type="button" data-role="none" class="prev-img" aria-label="Previus" role="button" style="display: block;"><</button>
+      <img src="/img/ZAPATOS/New Balance/img3.webp" class="img3" width="80" height="60" alt="New Balance - Striker V2 hombre">
+      <img src="/img/ZAPATOS/New Balance/img0.jpg" class="img0" width="80" height="60" alt="New Balance - Striker V2 hombre">
+      <img src="/img/ZAPATOS/New Balance/img.jpg" class="img"width="80" height="60" alt="New Balance - Striker V2 hombre">
+      <img src="/img/ZAPATOS/New Balance/img1.jpg" class="img1"width="80" height="60" alt="New Balance - Striker V2 hombre">
+      <button type="button" data-role="none" class="next-img" aria-label="Next" role="button" style="display: block;">></button>
+      
+    </div>
+    <div class="product-name"><h2 href="#">STRIKER V2 ZAPATOS GOLF HOMBRE</h2>
+      <div class="fila0">
+        <h3 class="antes">$19.995 </h3><h3 class="ahora"> |$14.996</h3><h6>Descuento del 25%</h6>
+        </div>
+    <br>
+        <div class="fila">
+        <label>TALLE:</label>
+        
+        <input type="number" id="number-size" class="input-form" />
+       
+        <label><a href="#">Consulta nuestra tabla de talles aquí.</a></label>
+        
+      </div>
+      <br>
+      <div class="fila2">
+        <label>COLOR:</label>
+        <input type="color" id="color" class="input-form" />
+      </div>
+      <br>
+      <div class="fila3">
+        <label>ANCHO:</label>
+        <input type="text" id="width-shoe" class="input-form" />
+      </div>
+      <br>
+      <div class="subsecciones-container"> 
+        <label for=CANTIDAD:>CANTIDAD:</label>
+     <div class="subsecciones-container">
+      <div class="cantidad-modulo">
+        <label for="Cantidad"></label>
+        <div class="cantidad-modulo-input">
+        <span class="cantidad-menos" tabindex="0" role="button" aria-label="Restando Cantidad">-</span>
+        <input aria-label="Cantidad" type="number" id="Cantidad" name="Cantidad" class="input-text-suppress" maxlength="3.0" min="0" max="30.0" value="1" data-available="0">
+        <span class="cantidad-suma" tabaindex="0" role="button" aria-label="Sumando Cantidad">+</span>
+        </div>
+        <div class="button-remove">
+          <button class="button" type="submit" id="Remover">Remover</button>
+          </div>
+        <div class="button-add-cart">
+          <button class="button" type="submit" id="Add-Cart">Agregar al carrito</button>
+          
+        </div>
+        </div>
+        </div>
+  </div>
+ </div>
+  </main>
+  
+        <%- include('./partials/footer.ejs')  %>
+
+</body>
+</html>
