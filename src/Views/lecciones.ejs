@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/lecciones.css"/>
+  </head>
+
+  <%- include('./partials/head.ejs') %>
+  <body class="lecciones">
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <div class="resultado-busqueda">
+        <h2>LECCIONES DE GOLF</h2>
+        <h4> 3 Resultados</h4>
+        <div class="ordenar-buscador">
+          <label for="buscador">Ordenar por</label>
+          <select class="select-buscador" name="buscador" id="">
+            <option value="++">Adultos Pack 12 Clases</option>
+            <option value="--">Adultos Pack 24 Clases</option>
+            <option value="top" selected>Niños Pack Clases</option>
+          </select>
+        </div>
+        
+      </div>
+      <hr class="hr-1">
+
+      <div class="resultado-busqueda">
+        <ul class="resultado-productos">
+          <li class="producto-lecciones-lista">
+            <img src="/img/Adult-12-Pack-Lessons.webp" alt="">
+            <div class="tamaño-hr">
+            <p class="nuevo">NUEVO</p>
+            <h6>GOLF DE ALTURA STORE</h6>
+            <p>ADULTOS PACK 12 CLASES</p>
+            <h5><span class="span-2">$30.000</span></h5>
+            </div>
+        </li>
+        <li class="producto-lecciones-lista">
+          <img src="/img/Adult-24-Pack-of-Lessons.webp" alt="">
+          <div class="tamaño-hr">
+            <p class="nuevo">NUEVO</p>
+            <h6>GOLF DE ALTURA STORE</h6>
+            <p>ADULTOS PACK 24 CLASES</p>
+            <h5><span class="span-2">$60.000</span></h5>
+          </div>
+      </li>
+    <li class="producto-lecciones-lista">
+        <img src="/img/kids12-Pack-Of-Lessons.webp" alt="">
+        <div class="tamaño-hr">
+        <p class="nuevo">NUEVO</p>
+        <h6>GOLF DE ALTURA STORE</h6>
+        <p>NIÑOS PACK 12 CLASES</p>
+        <h5><span class="span-2">$30.000</span></h5>
+        </div>
+    </li>
+        </ul>
+      </div>
+    </main>
+
+   <%- include('./partials/footer.ejs') %>
+
+  </body>
+</html>

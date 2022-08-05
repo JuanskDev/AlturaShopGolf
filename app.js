@@ -95,16 +95,16 @@ app.get("/productos/vestir", (req, res) => {
   res.render(path.join(__dirname, "src/views/vestir.ejs"));
 });
 //_______________________ROPA-DE-HOMBRE_____________________________//
-app.get("/productos/ropa-de-hombre", (req, res) => {
-  res.render(path.join(__dirname, "src/views/ropa-de-hombre.ejs"));
+app.get("/productos/ropa-hombre", (req, res) => {
+  res.render(path.join(__dirname, "src/views/ropa-hombre.ejs"));
 });
 //_______________________ROPA-DE-MUJER_____________________________//
-app.get("/productos/ropa-de-mujer", (req, res) => {
-  res.render(path.join(__dirname, "src/views/ropa-de-mujer.ejs"));
+app.get("/productos/ropa-mujer", (req, res) => {
+  res.render(path.join(__dirname, "src/views/ropa-mujer.ejs"));
 });
 //_______________________ROPA-DE-NIÑOS_____________________________//
-app.get("/productos/ropa-de-ninos", (req, res) => {
-  res.render(path.join(__dirname, "src/views/ropa-de-ninos.ejs"));
+app.get("/productos/ropa-ninos", (req, res) => {
+  res.render(path.join(__dirname, "src/views/ropa-ninos.ejs"));
 });
 
 //_______________________________________________________________//
@@ -128,14 +128,21 @@ app.get("/productos/smartwatch", (req, res) => {
 app.get("/productos/telemetros", (req, res) => {
   res.render(path.join(__dirname, "src/views/telemetros.ejs"));
 });
-
 //____________________________________________________________//
+//_______________________LECCIONES_____________________________//
+app.get("/productos/lecciones", (req, res) => {
+  res.render(path.join(__dirname, "src/views/lecciones.ejs"));
+});
+//---------------------CAMERONSMITHEQUIPO-----------------------//
+app.get("/productos/cameronSmith", (req, res) => {
+  res.render(path.join(__dirname, "src/views/cameronSmith.ejs"));
+});
 //_______________________ZAPATOS_____________________________//
 app.get("/productos/zapatos", (req, res) => {
   res.render(path.join(__dirname, "src/views/zapatos.ejs"));
 });
 // MVC SYSTEM
-
+  
 // Main Routes
 
 const rutasMain = require("./src/routes/main");

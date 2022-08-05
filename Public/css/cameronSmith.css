@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.cameronSmith h2 {
+    opacity: 0.6;
+    font-family: 'Oswald';
+    color: red;
+    font-size: 30px;
+  }
+  body.cameronSmith h4 {
+    font-family: 'Oswald';
+    color: red;
+    font-size: 15px;
+    float: left;
+  }
+
+  body.cameronSmith .resultado-busqueda {
+    position: relative;
+    padding: 15px;
+  }
+
+  body.cameronSmith .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.cameronSmith .ordenar-buscador {
+    float: right;
+  }
+
+  /* .select-buscador {
+  } */
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.cameronSmith ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    border-bottom: 1px solid gray;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+    
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista h6{
+    text-align: center;
+    font-size: 15px;
+    font-family: oswald;
+    color: rgba(41, 41, 196, 0.892);
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.cameronSmith li.producto-cameronSmith-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: red;
+    text-decoration: underline;
+  }
+  body.cameronSmith li.producto-cameronSmith-lista .nuevo{
+    font-size: 9px;
+    width: 45px;
+    border-radius: 45px;
+    background-color: blue;
+    color: white;
+    font-family: 'Oswald';
+}
+  
+  @media (min-width: 420px) {
+    
+    body.cameronSmith h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.cameronSmith .resultado-busqueda h2 {
+    text-align: left;
+}
+  }
+
+@media (min-width: 790px) {
+
+    body.cameronSmith ul {
+        justify-content: space-around;
+    }  
+
+    body.cameronSmith li.producto-cameronSmith-lista {
+        width: 27%;
+    }
+
+}
+
+@media (min-width: 790px) {
+body.cameronSmith li.producto-cameronSmith-lista img {
+  margin: auto;
+  display: block;
+} 
+}
