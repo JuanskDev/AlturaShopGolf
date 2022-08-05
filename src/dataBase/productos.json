@@ -1,1 +1,11 @@
-
+{
+    "identificador-producto": "number",
+    "nombre-del.producto": "drive",
+    "descripcion-general": "aqui va a ir el modelo del producto junto con las carateristicas generales de cada uno, indistintamente cual sea el producto",
+    "marca": "taylormade, callaway, titleist, ping...etc",
+    "precio": "$",
+    "talle": "s-sm-m-ml-l-xl-xxl/ numbers",
+    "stock":" si se encuentra o no en stock el producto",
+    "imagen": "foto del producto",
+    "categoria": "accesorio: gorras-guantes- fundas- herramientas- tees- toallas y paraguas,bolsas-carros: todo-bolsas y carros, equipo: palos-drive-maderas-hibridos-hierros-wedges y putters, pelotas, vestir: ropa de hombre- ropa de mujer- ropa de niño, tecnologia: gps-simuladores-smartwatch y telemetros, zapatos"
+}
