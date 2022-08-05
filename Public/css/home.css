@@ -416,89 +416,78 @@ div.bloques-productos img {
 /*-------------------------------------------------*/
 div.indumentaria-home {
   position: relative;
+
 }
 div.indumentaria-home div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: absolute;
   top: 5px;
   padding: 10px 15px;
   color: white;
   min-width: 250px;
-  font-size: 55px;
-  font-family: oswald;
-  font-weight: 900;
-  cursor: pointer;
+  cursor:pointer;
   width: 100%;
-  transition: 1.1s;
+  
+}
+div.indumentaria-home div a .text-col1{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: white;
+  font-family: oswald;
+  font-size: 55px;
+  font-weight: 900;
+
 }
 div.indumentaria-home div.col1 {
   left: -100%;
   top: 5%;
-  
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: auto;
+  /* transition: 1.1s; */
 }
 div.indumentaria-home div.col2 {
-  right: -100%;
-}
-div.indumentaria-home div a img {
+  left: -100%;
+  top: 5%;
   width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
   height: auto;
+  /* transition: 1.1s; */
 }
+div.indumentaria-home div.col3 {
+  left: -100%;
+  top: 5%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: auto;
+  /* transition: 1.1s; */
+}
+/* div.indumentaria-home div a img {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: auto;
+  transition: 1.1s;
+} */
 div.indumentaria-home:hover div.col1 {
   left: 0;
 }
 div.indumentaria-home:hover div.col2 {
-  right: -25%;
-  top: 45%;
-  
+  right: 0;;
 }
-/*---------------------------------------------------*/
-/* div.indumetaria-home a img {
-top: 5px;
-padding: 10px 15px;
-color: white;
-min-width: 250px;
-cursor: pointer;
-transition: 1.1s;
-}
-div.indumentaria-home a img:hover{
-color: #94cb39;
-}
-div.indumentaria-home a img:nth-child(1){
-width: 100%;
-left: -100%;
-}
-div.indumentaria-home a img:nth-child(2){
-width: 100%;
-height: 1px;
-bottom: 0;
-right: -100%;
-}
-div.indumentaria-home a img:nth-child(3){
-width: 1px;
-height: 100%;
-bottom: -100%;
-left: 0;
-}
-div.indumentaria-home a img:nth-child(4){
-width: 1px;
-height: 100%;
-top: -100%;
-right: 0;
-}
-div.indumentaria-home:hover a img:nth-child(1){
-  left: 0;
-}
-div.indumentaria-home:hover a img:nth-child(2){
-right: 0;
-}
-div.indumentaria-home:hover a img:nth-child(3){
-bottom: 0;
-}
-div.indumentaria-home:hover a img:nth-child(4){
-top: 0;
+/* div.indumentaria-home:hover div.col3 {
+  right: 0;;
 } */
+
 /*-----------------------------------------------*/
 div.marcas{
 display: flex;
@@ -537,36 +526,11 @@ div.carros-home span:nth-child(1){
 width: 100%;
 left: -100%;
 }
-/* div.carros-home span:nth-child(2){
-width: 100%;
-height: 1px;
-bottom: 0;
-right: -100%;
-}
-div.carros-home span:nth-child(3){
-width: 1px;
-height: 100%;
-bottom: -100%;
-left: 0;
-}
-div.carros-home span:nth-child(4){
-width: 1px;
-height: 100%;
-top: -100%;
-right: 0;
-} */
+
 div.carros-home:hover span:nth-child(1){
   left: 0;
 }
-/* div.carros-home:hover span:nth-child(2){
-right: 0;
-}
-div.carros-home:hover span:nth-child(3){
-bottom: 0;
-}
-div.carros-home:hover span:nth-child(4){
-top: 0;
-} */
+
 /*---------------------------------------------------*/
 div.palos-home {
 position: relative;
@@ -592,36 +556,11 @@ div.palos-home span:nth-child(1){
 width: 100%;
 left: -100%;
 }
-div.palos-home span:nth-child(2){
-width: 100%;
-height: 1px;
-bottom: 0;
-right: -100%;
-}
-div.palos-home span:nth-child(3){
-width: 1px;
-height: 100%;
-bottom: -100%;
-left: 0;
-}
-div.palos-home span:nth-child(4){
-width: 1px;
-height: 100%;
-top: -100%;
-right: 0;
-}
+
 div.palos-home:hover span:nth-child(1){
   left: 0;
 }
-div.palos-home:hover span:nth-child(2){
-right: 0;
-}
-div.palos-home:hover span:nth-child(3){
-bottom: 0;
-}
-div.palos-home:hover span:nth-child(4){
-top: 0;
-}
+
 /*--------------------------------------------*/
 .final-home{
   width: 100%;
@@ -681,7 +620,7 @@ section.productos-nuevos div a {
  
 
 @media (min-width: 420px) {
-    
+  
 
 }
 
@@ -692,8 +631,8 @@ section.productos-nuevos div a {
 
 /* MAIN */ 
 
-
-/* div.palos-titleist {
+/* 
+div.palos-titleist {
   margin: 0;
   width: 39.5%;;
 }
@@ -703,7 +642,7 @@ div.bushnells {
   width: 39.5%;;
 }
 
-div.callaway-coleccion {
+div.golf-coleccion {
   width: 39.5%;;
   margin: 0;
 }
@@ -711,8 +650,11 @@ div.callaway-coleccion {
 div.clases-golf {
   width: 39.5%;;;
   margin: 0;
+}
+div.clases-golf div img {
+  width: 39.5%;;;
+  margin: 0;
 } */
-
 
 
 }
