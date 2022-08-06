@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/telemetros.css"/>
+  </head>
+
+  <%- include('./partials/head.ejs') %>
+  <body class="telemetros">
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <div class="resultado-busqueda">
+        <h2>TELEMETROS</h2>
+        <h4>OPTIMIZA TU MODO DE JUEGO</h4>
+        <div class="ordenar-buscador">
+          <label for="buscador">Ordenar por</label>
+          <select class="select-buscador" name="buscador" id="">
+            <option value="++">De mas baratos a mas caros</option>
+            <option value="--">De mas caros a mas baratos</option>
+            <option value="top" selected>Mas vendidos</option>
+            <option value="moda">Nuevo Ingreso</option>
+          </select>
+        </div>
+        
+      </div>
+      <hr class="hr-1">
+
+      <div class="resultado-busqueda">
+        <ul class="resultado-productos">
+          <li class="producto-telemetros-lista">
+            <img src="/img/telemetro-bushnell.webp" alt="">
+            <div class="tamaño-hr">
+            <p class="nuevo">NUEVO</p>
+            <h6>BUSHNELL - Pro XE Laser</h6>
+            <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+            <h5><span class="span-1">USD$ 549</span><span class="span-2">USD$ 467</span></h5>
+            <p class="p-descuento">Ahorra 15%</p>
+            </div>
+        </li>
+        <li class="producto-telemetros-lista">
+          <img src="/img/telemetro-callaway.webp" alt="">
+          <div class="tamaño-hr"><br><br>
+          <h6>CALLAWAY - Callaway 200s Laser</h6>
+          <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+          <h5><span class="span-2">USD$ 199</span></h5>
+          </div>
+      </li>
+      <li class="producto-telemetros-lista">
+        <img src="/img/telemetro-nikon.webp" alt="">
+        <div class="tamaño-hr"><br><br>
+        <h6>NIKON - Coolshot 50i Laser</h6>
+        <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+        <h5><span class="span-2">USD$ 299</span></h5>
+        </div>
+    </li>
+    <li class="producto-telemetros-lista">
+        <img src="/img/telemtro laser-gps SL2.webp" alt="">
+        <div class="tamaño-hr"><br><br>
+        <h6>VOICE CADDIE - SL2 Active Hybrid GPS Laser</h6>
+        <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+        <h5><span class="span-2">USD$ 599</span></h5>
+        </div>
+    </li>
+    <li class="producto-telemetros-lista">
+        <img src="/img/telemetro-bushnell-hybrid.webp" alt="">
+        <div class="tamaño-hr"><br><br>
+        <h6>BUSHNELL - Hybrid Laser</h6>
+        <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+        <h5><span class="span-2">USD$ 399</span></h5>
+        </div>
+    </li>
+    <li class="producto-telemetros-lista">
+        <img src="/img/telemetro-Leupold-GX-3i.jpg" alt="">
+        <div class="tamaño-hr"><br><br>
+        <h6>LEUPOLD - GX-3i 3 Laser </h6>
+        <p>(Precio en dolares- producto enviado desde el fabricante)</p>
+        <h5><span class="span-2">USD$ 599</span></h5>
+        </div>
+    </li>
+        </ul>
+      </div>
+    </main>
+
+   <%- include('./partials/footer.ejs') %>
+
+  </body>
+</html>

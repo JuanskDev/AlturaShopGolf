@@ -229,6 +229,7 @@ font-family: sans-serif;
 #slide2 {
   background: white url("/img/promo-palos.webp") center center no-repeat;
 }
+
 #slide3 {
   background: white url("/img/atajos-zapatos.png") center center no-repeat;
 }
@@ -243,7 +244,7 @@ font-family: sans-serif;
   background: white url("/img/atajo-pelotas.webp") center center no-repeat;
 }
 
-#slide1 div h2{
+#slide1.slider-item div h1{
   color: white;
   font-family: oswald;
   font-weight: 200;
@@ -251,12 +252,12 @@ font-family: sans-serif;
   margin-top: 30px;
   text-shadow: 4px 4px 2px rgb(0 0 0 / 60%);
   }
-
 #slide1 div a.button-slide{
   margin-top: 25%;
 }
 #slide2 div a.button-slide {
   margin-top: 10%;
+  margin-left: 25%;
 }
 #slide3 div a.button-slide {
   margin-top: 28%;

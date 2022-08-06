@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.smartwatch h2 {
+    opacity: 0.6;
+    font-family: 'Oswald';
+    color: red;
+    font-size: 30px;
+  }
+  body.smartwatch h4 {
+    font-family: 'Oswald';
+    color: red;
+    font-size: 15px;
+    float: left;
+  }
+
+  body.smartwatch .resultado-busqueda {
+    position: relative;
+    padding: 15px;
+  }
+
+  body.smartwatch .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.smartwatch .ordenar-buscador {
+    float: right;
+  }
+
+  /* .select-buscador {
+  } */
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.smartwatch ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    border-bottom: 1px solid gray;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+    
+  }
+
+  body.smartwatch li.producto-smartwatch-lista h6{
+    text-align: center;
+    font-size: 15px;
+    font-family: oswald;
+    color: rgba(41, 41, 196, 0.892);
+  }
+
+  body.smartwatch li.producto-smartwatch-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.smartwatch li.producto-smartwatch-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: red;
+    text-decoration: underline;
+  }
+  body.smartwatch li.producto-smartwatch-lista .nuevo{
+    font-size: 9px;
+    width: 45px;
+    border-radius: 45px;
+    background-color: blue;
+    color: white;
+    font-family: 'Oswald';
+}
+  
+  @media (min-width: 420px) {
+    
+    body.smartwatch h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.smartwatch .resultado-busqueda h2 {
+    text-align: left;
+}
+  }
+
+@media (min-width: 790px) {
+
+    body.smartwatch ul {
+        justify-content: space-around;
+    }  
+
+    body.smartwatch li.producto-smartwatch-lista {
+        width: 27%;
+    }
+
+}
+
+@media (min-width: 790px) {
+body.smartwatch li.producto-smartwatch-lista img {
+  margin: auto;
+  display: block;
+} 
+}
