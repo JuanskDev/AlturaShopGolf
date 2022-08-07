@@ -68,12 +68,6 @@ body.bolsas li.producto-bolsas-lista h6{
   font-family: oswald;
   color: rgba(41, 41, 196, 0.892);
 }
-/* .img:hover{
-  border-radius: 38px;
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-} */
 
 body.bolsas li.producto-bolsas-lista p {
   text-align: center;
@@ -131,7 +125,7 @@ body.bolsas .resultado-busqueda h2 {
   }  
 
   body.bolsas li.producto-bolsas-lista {
-      width: 27%;
+      width: 23%;
   }
 
 }
