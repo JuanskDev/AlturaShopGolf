@@ -21,8 +21,9 @@
     </div>
     <br>
     <div class="fila">
-      <label>COLOR</label>
+      <label class="color">COLOR</label>
       <select name="text" id="color">
+      <option value="color">#</option>
       <option value="color">Black</option>
       <option value="color">Grey</option>
       <option value="color">White</option>
@@ -61,8 +62,8 @@
     </div>
     <br />
     <div class="fila">
-      <label>CATEGORIA</label>
-      <select name="text" id="text">
+      <label class="categoria">CATEGORIA</label>
+      <select name="text" id="categoria">
         <option value="categoria">ACCESORIOS</option>
         <option value="categoria">BOLSAS</option>
         <option value="categoria">CARROS</option>
@@ -75,7 +76,7 @@
     </div>
     <div class="fila">
       <label>CONTROL DE STOCK</label>
-      <input type="text" id="text" class="input-form" value="Stock: "required required/>
+      <input type="number" id="text" class="input-form" value="Stock: "required required/>
     </div>
     <br>
       <div class="fila">
@@ -84,7 +85,7 @@
     </div>
     <br>
     <div class="fila">
-      <label>MARCA</label>
+      <label class="marca">MARCA</label>
       <select name="text" id="marca">
         <option value="marca">ADIDAS</option>
         <option value="marca">AIM</option>
@@ -133,8 +134,8 @@
     </div>
     <br>
     <div class="fila">
-      <label>TALLE</label>
-      <select name="talle" id="number"ass="input-form" value="number"required>
+      <label class="talle">TALLE</label>
+      <select name="number" id="talle"ass="input-form" value="number, text"required>
         <option value="talle">#</option>
         <option value="talle">S</option>
         <option value="talle">S/M</option>
@@ -175,14 +176,14 @@
     </div>
     <br />
     <br />
-    <form action="/uploadfile" enctype="multipart/form-data" method="POST"> 
-      <input type="file" name="myFile" />
-      <input type="submit" value="Subir un Archivo"/>
+    <form class="selectfile" action="/uploadfile" enctype="multipart/form-data" method="POST"> 
+      <input class="file" type="file" name="myFile" />
+      <input class="submit" type="submit" value="Subir un Archivo"/>
     </form>
     <br>
     <br>
     <form action="/guardar" enctype="/form/productos.json" method="POST">
-    <button>GUARDAR</button> 
+    <button type="submit" id="guardar">GUARDAR</button> 
     </form>
     <br>
     <br>  

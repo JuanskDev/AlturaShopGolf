@@ -27,12 +27,10 @@ font-weight: 400;
 }
 
 .contenedor {
-font-family: fantasy;
+font-family:oswald ;
 font-size: 20px;
 display: flex;
 flex-direction: column;
-flex-wrap: wrap;
-justify-content: space-between;
 align-items: center;
 }
 .contenedor .titulo {
@@ -58,38 +56,88 @@ font-weight: 600;
  padding: 0px 25px;
 
 }
+.contenedor .fila label.color{
+    width: 42%;
+}
+#color{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+}
+#categoria{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 5%;
+}
+#marca{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 15%;
+}
+#talle{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 17%;
+}
+
 .contenedor input.input-form {
 width: 100%;
 font-size: 20px;
 padding: 10px;
-color: black;
+color: rgb(160, 160, 160);
 border-radius: 5px;
 }
-.contenedor input.check-form {
-width: 100%;
-height: 35px;
-float: left;
-margin-right: 10px;
-vertical-align: inherit;
-}
 
-#crear-cuenta {
-padding: 15px 20px 15px 20px;
-font-size: 25px;
-font-weight: 600;
-background-color: #dc3b41;
-border-radius: 50px;
-width: 50%;
-color: white;
-border: none;
-margin-bottom: 20px;
-opacity: 65%;
-min-width: 250px;
-max-width: 300px;
+#guardar {
+    padding: 15px 20px 15px 20px;
+    font-size: 23px;
+    font-weight: 600;
+    background-color: #dc3b41;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    min-width: 200px;
+    max-width: 300px;
+}
+.contenedor form.selectfile {
+    margin-left: 80px;
+    display: flex;
+    padding: 15px 10px 15px 10px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.contenedor form.selectfile input.file{
+    font-family: oswald;
+    font-size: 15px;
+    font-weight: 500;
+}
+.contenedor form.selectfile input.file{
+    font-family: oswald;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    width: 100%;
+}
+.contenedor form.selectfile input.submit{
+    font-family: oswald;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    color: white;
+    background-color: rgba(30, 142, 247, 0.892);
+    width: 60%;
 }
 
 .inicia-sesion- {
-font-weight: 550;
+font-weight: 500;
 padding-bottom: 30px;
 }
 
