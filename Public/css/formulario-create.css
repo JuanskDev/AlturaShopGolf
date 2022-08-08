@@ -53,34 +53,59 @@ font-family: oswald;
 font-weight: 600;
 }
 .contenedor .fila label{
- padding: 0px 25px;
+padding: 5px 15px 5px 15px;
+font-size: 30px;
+font-family: oswald;
+font-weight: 500;
+width: 100%;
 
 }
 .contenedor .fila label.color{
-    width: 42%;
+width: 30%;
 }
 #color{
-    width: 60%;
-    height: 50px;
-    border-radius: 5px;
+width: 100%;
+height: 60px;
+border-radius: 5px;
+font-size: 25px;
+font-family:oswald;
+font-weight: 500;
+color:  rgb(160, 160, 160);
+text-align: center;
 }
 #categoria{
-    width: 60%;
-    height: 50px;
-    border-radius: 5px;
-    margin-left: 5%;
+width: 100%;
+height: 60px;
+border-radius: 5px;
+margin-left: 5%;
+font-size: 25px;
+font-family:oswald;
+font-weight: 500;
+color:  rgb(160, 160, 160);
+text-align: center;
 }
 #marca{
-    width: 60%;
-    height: 50px;
-    border-radius: 5px;
-    margin-left: 15%;
+width: 100%;
+height: 60px;
+border-radius: 5px;
+margin-left: 15%;
+font-size: 25px;
+font-family:oswald;
+font-weight: 500;
+color:  rgb(160, 160, 160);
+text-align: center;
+
 }
 #talle{
-    width: 60%;
-    height: 50px;
-    border-radius: 5px;
-    margin-left: 17%;
+width: 100%;
+height: 60px;
+border-radius: 5px;
+margin-left: 17%;
+font-size: 25px;
+font-family:oswald;
+font-weight: 500;
+color:  rgb(160, 160, 160);
+text-align: center;
 }
 
 .contenedor input.input-form {
@@ -89,51 +114,54 @@ font-size: 20px;
 padding: 10px;
 color: rgb(160, 160, 160);
 border-radius: 5px;
+font-size: 25px;
+font-family:oswald;
+font-weight: 500;
 }
 
 #guardar {
-    padding: 15px 20px 15px 20px;
-    font-size: 23px;
-    font-weight: 600;
-    background-color: #dc3b41;
-    border-radius: 25px;
-    color: white;
-    border: none;
-    margin-bottom: 10px;
-    min-width: 200px;
-    max-width: 300px;
+padding: 15px 20px 15px 20px;
+font-size: 23px;
+font-weight: 600;
+background-color: #dc3b41;
+border-radius: 25px;
+color: white;
+border: none;
+margin-bottom: 10px;
+min-width: 200px;
+max-width: 300px;
 }
 .contenedor form.selectfile {
-    margin-left: 80px;
-    display: flex;
-    padding: 15px 10px 15px 10px;
-    justify-content: space-around;
-    flex-direction: column;
+margin-left: 80px;
+display: flex;
+padding: 15px 10px 15px 10px;
+justify-content: space-around;
+flex-direction: column;
 }
 .contenedor form.selectfile input.file{
-    font-family: oswald;
-    font-size: 15px;
-    font-weight: 500;
+font-family: oswald;
+font-size: 15px;
+font-weight: 500;
 }
 .contenedor form.selectfile input.file{
-    font-family: oswald;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 25px;
-    height: 35px;
-    width: 100%;
+font-family: oswald;
+font-size: 20px;
+font-weight: 500;
+border: none;
+border-radius: 25px;
+height: 35px;
+width: 100%;
 }
 .contenedor form.selectfile input.submit{
-    font-family: oswald;
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    border-radius: 25px;
-    height: 35px;
-    color: white;
-    background-color: rgba(30, 142, 247, 0.892);
-    width: 60%;
+font-family: oswald;
+font-size: 20px;
+font-weight: 500;
+border: none;
+border-radius: 25px;
+height: 35px;
+color: white;
+background-color: rgba(30, 142, 247, 0.892);
+width: 60%;
 }
 
 .inicia-sesion- {
