@@ -1,6 +1,9 @@
 const express = require("express"); // MODULO EXPRESS
 const app = express(); // MODULO EXPRESS EN FUNCIONALIDAD EN APP.JS
 const path = require("path"); //  MODULO PATH
+
+// const session = require('express-sessions'); // SESSIONS- MODULE
+
 // const multer = require('multer'); //MODULO PARA SUBIR ARCHIVOS - MULTER
 app.use(express.static("./Public")); // CSS
 
@@ -9,7 +12,9 @@ console.log(__dirname);
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
-//_______________________________________________________________//
+//_____________________SESSIONS____________________________________//
+// app.use(session({secret:'Secreto'}));
+//_________________________________________________________________//
 //_______________________ACCESORIOS_____________________________//
 app.get("/productos/accesorios", (req, res) => {
   res.render(path.join(__dirname, "src/views/accesorios.ejs"));

@@ -13,8 +13,8 @@ border: 1px solid #9b9b9b;
 border-width: 1px 0;
 overflow: hidden;
 width: 100%;
-padding: 5px 0px 5px 85px;
-height: 45px;
+padding: 10px 0px 10px 140px;
+height: 50px;
 }
 .barra-superior a{
 font-family: oswald;
@@ -24,7 +24,7 @@ font-weight: 400;
 margin-left: 15px;
 }
 .barra-superior img{
-  margin-left: 60%;
+margin-left: 75%;
 }
 .barra-superior a:hover{
 background-color: white;
