@@ -22,12 +22,15 @@ color: #fafafa;
 font-size: 20px;
 font-weight: 400;
 margin-left: 15px;
-
+}
+.barra-superior img{
+  margin-left: 60%;
 }
 .barra-superior a:hover{
 background-color: white;
 color: #000000;
 border:1px solid #b9b9b9;
+border-radius: 3px;
 }
 a {
 color: black;
