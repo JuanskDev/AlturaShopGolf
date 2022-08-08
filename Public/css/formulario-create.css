@@ -64,47 +64,47 @@ width: 100%;
 width: 30%;
 }
 #color{
-width: 100%;
+width: auto;
 height: 60px;
 border-radius: 5px;
 font-size: 25px;
 font-family:oswald;
 font-weight: 500;
-color:  rgb(160, 160, 160);
+color:  rgb(112, 112, 112);
 text-align: center;
 }
 #categoria{
-width: 100%;
+width: auto;
 height: 60px;
 border-radius: 5px;
 margin-left: 5%;
 font-size: 25px;
 font-family:oswald;
 font-weight: 500;
-color:  rgb(160, 160, 160);
+color:  rgb(112, 112, 112);
 text-align: center;
 }
 #marca{
-width: 100%;
+width: auto;
 height: 60px;
 border-radius: 5px;
 margin-left: 15%;
 font-size: 25px;
 font-family:oswald;
 font-weight: 500;
-color:  rgb(160, 160, 160);
+color:  rgb(112, 112, 112);
 text-align: center;
 
 }
 #talle{
-width: 100%;
+width: auto;
 height: 60px;
 border-radius: 5px;
 margin-left: 17%;
 font-size: 25px;
 font-family:oswald;
 font-weight: 500;
-color:  rgb(160, 160, 160);
+color:  rgb(112, 112, 112);
 text-align: center;
 }
 
@@ -112,7 +112,7 @@ text-align: center;
 width: 100%;
 font-size: 20px;
 padding: 10px;
-color: rgb(160, 160, 160);
+color: rgb(112, 112, 112);
 border-radius: 5px;
 font-size: 25px;
 font-family:oswald;
