@@ -444,7 +444,7 @@ div.indumentaria-home div a .text-col1{
 }
 div.indumentaria-home div.col1 a img {
   left: 3%;
-  top: 50%;
+  top: 15%;
   width: 130px;
   display: flex;
   justify-content: center;
@@ -458,7 +458,7 @@ div.indumentaria-home div.col1 a img {
 
 div.indumentaria-home div.col2 a img {
   left: 3%;
-  top: 115%;
+  top: 60%;
   width: 115px;
   display: flex;
   justify-content: center;
@@ -470,7 +470,7 @@ div.indumentaria-home div.col2 a img {
 }
 div.indumentaria-home div.col3 a img{
   left: 3%;
-  top: 285%;
+  top: 170%;
   width: 130px;
   display: flex;
   justify-content: center;
@@ -482,7 +482,7 @@ div.indumentaria-home div.col3 a img{
 }
 div.indumentaria-home div.col4 a img{
   left: 3%;
-  top: 355%;
+  top: 235%;
   width: 130px;
   display: flex;
   justify-content: center;
