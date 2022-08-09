@@ -1,9 +1,7 @@
 const express = require("express"); // MODULO EXPRESS
 const app = express(); // MODULO EXPRESS EN FUNCIONALIDAD EN APP.JS
 const path = require("path"); //  MODULO PATH
-
 // const session = require('express-sessions'); // SESSIONS- MODULE
-
 // const multer = require('multer'); //MODULO PARA SUBIR ARCHIVOS - MULTER
 app.use(express.static("./Public")); // CSS
 
@@ -12,6 +10,27 @@ console.log(__dirname);
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
+
+
+
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/src/views')); // Define la ubicación de la carpeta de las Vistas
+
+// MVC SYSTEM
+  
+// Main Routes
+const rutasMain = require("./src/routes/main");
+app.use('/', rutasMain);
+
+// Users Routes
+const rutasUsers = require("./src/routes/users");
+app.use('/users', rutasUsers);
+
+//Products Routes
+const rutasProductos = require("./src/routes/products");
+app.use('/products', rutasProductos);
+
 //_____________________SESSIONS____________________________________//
 // app.use(session({secret:'Secreto'}));
 //_________________________________________________________________//
@@ -146,20 +165,3 @@ app.get("/productos/cameronSmith", (req, res) => {
 app.get("/productos/zapatos", (req, res) => {
   res.render(path.join(__dirname, "src/views/zapatos.ejs"));
 });
-// MVC SYSTEM
-  
-// Main Routes
-
-const rutasMain = require("./src/routes/main");
-app.use(require("./src/routes/main"));
-
-// Users Routes
-
-const rutasUsers = require("./src/routes/users");
-app.use(require("./src/routes/users"));
-
-//Products Routes
-
-const rutasProductos = require("./src/routes/products");
-app.use(require("./src/routes/products"));
-

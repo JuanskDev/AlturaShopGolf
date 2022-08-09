@@ -7,8 +7,8 @@ const usersController = {
     login: (req,res)  => {
         res.render(path.join(__dirname, '../views/iniciosesion.ejs'))
     },
-    formulario: (req , res) => {
-        res.render(path.join(__dirname , '../Views/formulario-create.ejs'))
+    create: (req , res) => {
+        res.render(path.join(__dirname , '../Views/products-create.ejs'))
     },
 };
 

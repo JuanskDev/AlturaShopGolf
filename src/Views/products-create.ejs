@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="css/formulario-create.css"/>
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/products" enctype="multipart/form-data" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>FORMULARIO CARGA ARCHIVOS ADMINISTRADOR</h1>
+        </div>
+          <div class="fila">
+          <label>NOMBRE DEL PRODUCTO:</label>
+          <input type="text" name="" id="nombre-producto" class="input-form"  required/>
+        </div>
+        <br>
+        <div class="fila">
+          <label class="color">COLOR:</label>
+          <select name="text" id="color">
+          <option value="color"></option>
+          <option value="color">Black</option>
+          <option value="color">Grey</option>
+          <option value="color">White</option>
+          <option value="color">Red</option>
+          <option value="color">Blue</option>
+          <option value="color">Green</option>
+          <option value="color">Yellow</option>
+          <option value="color">Orange</option>
+          <option value="color">Tourquoise</option>
+          <option value="color">Cream</option>
+          <option value="color">LigthGreen</option>
+          <option value="color">Pink</option>
+          <option value="color">Black/White</option>
+          <option value="color">Black/Green</option>
+          <option value="color">White/Green</option>
+          <option value="color">Black/Red</option>
+          <option value="color">White/Red</option>
+          <option value="color">Black/Blue</option>
+          <option value="color">White/Blue</option>
+          <option value="color">Black/Yellow</option>
+          <option value="color">White/Yellow</option>
+          <option value="color">Black/Pink</option>
+          <option value="color">White/Pink</option>
+          <option value="color">Grey/Orange</option>
+          <option value="color">Camuflage</option>
+          <option value="color">Black/Red/White</option>
+          <option value="color">Navy/White/Red</option>
+          <option value="color">Blue/Turquoise</option>
+          <option value="color">White/Grey</option>
+          <option value="color">Blue/Red/White</option>
+          <option value="color">Black/White/Red</option>
+          <option value="color">Black/White/Blue</option>
+          <option value="color">Cream/LigthGreen</option>
+          <option value="color">Turquoise/White</option>
+          </select>
+        </div>
+        <br />
+        <div class="fila">
+          <label class="categoria">CATEGORIA:</label>
+          <select name="text" id="categoria">
+            <option value="categoria"></option>
+            <option value="categoria">ACCESORIOS</option>
+            <option value="categoria">BOLSAS-CARROS</option>
+            <option value="categoria">PALOS</option>
+            <option value="categoria">PELOTAS</option>
+            <option value="categoria">TECNOLOGIA</option>
+            <option value="categoria">VESTIR</option>
+            <option value="categoria">ZAPATOS</option>
+          </select>
+        </div>
+        <div class="fila">
+          <label class="categoria">SUBCATEGORIA:</label>
+          <select name="text" id="categoria">
+            <option value="categoria"></option>
+            <option value="categoria">GORRA</option>
+            <option value="categoria">GUANTES</option>
+            <option value="categoria">FUNDAS</option>
+            <option value="categoria">HERRAMIENTAS</option>
+            <option value="categoria">TEES</option>
+            <option value="categoria">TOALLAS</option>
+            <option value="categoria">PARAGUAS</option>
+            <option value="categoria">PALOS</option>
+            <option value="categoria">DRIVE</option>
+            <option value="categoria">MADERAS</option>
+            <option value="categoria">HIBRIDOS</option>
+            <option value="categoria">HIERROS</option>
+            <option value="categoria">WEDGES</option>
+            <option value="categoria">PUTTERS</option>
+            <option value="categoria">BOLSAS</option>
+            <option value="categoria">CARROS</option>
+            <option value="categoria">ROPA DE HOMBRE</option>
+            <option value="categoria">ROPA DE MUJER</option>
+            <option value="categoria">ROPA DE NIÑOS</option>
+            <option value="categoria">GPS</option>
+            <option value="categoria">SIMULADORES</option>
+            <option value="categoria">SMARTWATCH</option>
+            <option value="categoria">TELEMETROS</option>
+          </select>
+        </div>
+        <div class="fila">
+          <label>CONTROL DE STOCK:</label>
+          <input type="number" id="text" class="input-form" value="Stock: "required required/>
+        </div>
+        <br>
+          <div class="fila">
+          <label>DESCRIPCION GENERAL:</label>
+          <input type="text" id="descripcion-general" class="input-form" required/>
+        </div>
+        <br>
+        <div class="fila">
+          <label class="marca">MARCA:</label>
+          <select name="text" id="marca">
+            <option value="marca"></option>
+            <option value="marca">ADIDAS</option>
+            <option value="marca">AIM</option>
+            <option value="marca">BAG BOY</option>
+            <option value="marca">BRIDGESTONE</option>
+            <option value="marca">BUSHNELL</option>
+            <option value="marca">CALLAWAY</option>
+            <option value="marca">CALIBRE</option>
+            <option value="marca">CLEVELAND</option>
+            <option value="marca">CLICGEAR</option>
+            <option value="marca">COBRA</option>
+            <option value="marca">DAPHNES HEADCOVER</option>
+            <option value="marca">EAGLE PLUS</option>
+            <option value="marca">EZ FOLD</option>
+            <option value="marca">FOOTJOY</option>
+            <option value="marca">FULL SWING</option>
+            <option value="marca">GARMIN</option>
+            <option value="marca">HOMMA</option>
+            <option value="marca">KING COBRA</option>
+            <option value="marca">LEUPOLD</option>
+            <option value="marca">MIZUNO</option>
+            <option value="marca">MOTO CADDY</option>
+            <option value="marca">NIKE GOLF</option>
+            <option value="marca">NIKON</option>
+            <option value="marca">NOODLE</option>
+            <option value="marca">ODYSSEY</option>
+            <option value="marca">OPTISHOT</option>
+            <option value="marca">PING</option>
+            <option value="marca">PUMA</option>
+            <option value="marca">SKEACHERS</option>
+            <option value="marca">SKYCADDIE</option>
+            <option value="marca">SRIXON</option>
+            <option value="marca">SUN MOUNTAIN</option>
+            <option value="marca">TAYLORMADE</option>
+            <option value="marca">TITLEIST</option>
+            <option value="marca">UNDER\\GOLF</option>
+            <option value="marca">VOICE CADDIE</option>
+            <option value="marca">VOLVIK</option>
+            <option value="marca">WILSON</option>
+          </select>      
+        </div>
+        <br>
+        <div class="fila">
+          <label>PRECIO:</label>
+          <input type="text"  id="precio" class="input-form" value="$ "required/>
+        </div>
+        <br>
+        <div class="fila">
+          <label class="talle">TALLE:</label>
+          <select name="number" id="talle"ass="input-form" value="number, text"required>
+            <option value="talle"></option>
+            <option value="talle">S</option>
+            <option value="talle">S/M</option>
+            <option value="talle">M</option>
+            <option value="talle">M/L</option>
+            <option value="talle">L</option>
+            <option value="talle">XL</option>
+            <option value="talle">XXL</option>
+            <option value="talle">34</option>
+            <option value="talle">34/5</option>
+            <option value="talle">35</option>
+            <option value="talle">35/5</option>
+            <option value="talle">36</option>
+            <option value="talle">36/5</option>
+            <option value="talle">37</option>
+            <option value="talle">37/5</option>
+            <option value="talle">38</option>
+            <option value="talle">38/5</option>
+            <option value="talle">39</option>
+            <option value="talle">39/5</option>
+            <option value="talle">40</option>
+            <option value="talle">40/5</option>
+            <option value="talle">41</option>
+            <option value="talle">41/5</option>
+            <option value="talle">42</option>
+            <option value="talle">42/5</option>
+            <option value="talle">43</option>
+            <option value="talle">43/5</option>
+            <option value="talle">44</option>
+            <option value="talle">44/5</option>
+            <option value="talle">45</option>
+            <option value="talle">45/5</option>
+            <option value="talle">46</option>
+            <option value="talle">46/5</option>
+            <option value="talle">47</option>
+          </select>
+               
+        </div>
+        <br />
+        <br />
+  
+        <input class="file" type="file" name="myFile" />
+        <input class="submit" value="Subir un Archivo"/>
+     
+        <br>
+        <br>
+        <button type="submit" id="guardar">GUARDAR</button> 
+       
+        <br>
+        <br>  
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+
