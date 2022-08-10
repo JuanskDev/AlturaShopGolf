@@ -53,8 +53,9 @@ body.gorras li.producto-gorras-lista {
 }
 
 body.gorras li.producto-gorras-lista img {
-  max-width: 100%;
+  max-width: 70%;
   padding-bottom: 30px;
+  
 }
 
 div.tamaño-hr {

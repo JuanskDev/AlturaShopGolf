@@ -47,7 +47,7 @@ box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 transform: scale(1.01);
 }
 .product img {
-  min-width: 105px;
+  min-width: 100px;
   width: 30%;
   height: 50%;
 }

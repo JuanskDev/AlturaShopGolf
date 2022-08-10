@@ -8,17 +8,8 @@
   "talle": "s-sm-m-ml-l-xl-xxl/ numbers",
   "stock": " si se encuentra o no en stock el producto",
   "imagen": "foto del producto",
-  "categoria": "accesorio: gorras-guantes- fundas- herramientas- tees- toallas y paraguas,bolsas-carros: todo-bolsas y carros, equipo: palos-drive-maderas-hibridos-hierros-wedges y putters, pelotas, vestir: ropa de hombre- ropa de mujer- ropa de niño, tecnologia: gps-simuladores-smartwatch y telemetros, zapatos"
- },
- {
-  "id": "number1",
-  "text": [
-   "color",
-   "categoria",
-   "categoria",
-   "marca"
-  ],
-  "number": "talle",
-  "image": "myFile-1660076373562.webp"
+  "categoria": "accesorio - bolsas-carros - equipo - pelotas - vestir - tecnologia - zapatos",
+  "subcategoria": "gorras - guantes - fundas - herramientas- tees- toallas y paraguas- todo-bolsas - carros - palos-drive-maderas-hibridos-hierros-wedges - putters -  ropa de hombre- ropa de mujer- ropa de niño - gps-simuladores-smartwatch - telemetros,"
  }
+ 
 ]

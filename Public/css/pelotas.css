@@ -50,7 +50,7 @@ border-bottom: 1px solid gray;
 }
 
 body.pelotas li.producto-pelotas-lista img {
-max-width: 100%;
+max-width: 70%;
 padding-bottom: 30px;
 }  
 div.tamaño-hr{

@@ -53,7 +53,7 @@
   }
   
   body.tees li.producto-tees-lista img {
-    max-width: 100%;
+    max-width: 70%;
     padding-bottom: 30px;
   }
   body.tees li.producto-tees-lista img.nike{
@@ -75,13 +75,7 @@
     font-family: oswald;
     color: rgba(41, 41, 196, 0.892);
   }
-  /* .img:hover{
-    border-radius: 38px;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-  } */
-  
+
   body.tees li.producto-tees-lista p {
     text-align: center;
     font-size: 13px;
