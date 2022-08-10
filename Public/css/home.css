@@ -500,7 +500,7 @@ transition: 1.1s;
 }
 div.indumentaria-home div.col3 a img{
 left: 3%;
-top: 170%;
+top: 200%;
 width: 130px;
 display: flex;
 justify-content: center;
@@ -512,7 +512,7 @@ transition: 1.1s;
 }
 div.indumentaria-home div.col4 a img{
 left: 3%;
-top: 235%;
+top: 260%;
 width: 130px;
 display: flex;
 justify-content: center;

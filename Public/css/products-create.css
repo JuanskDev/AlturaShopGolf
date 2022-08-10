@@ -1,124 +1,46 @@
-
-
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: "Open Sans";
-}
-/* MAIN */
-.container {
-position: absolute;
-left: 50%;
-top: 100%;
-
-padding: 10px;
-}
-.container__menu {
-width: 100%;
-height: 70px;
-background: black;
-padding: 0px 600px;
-}
-.registrarse {
-font-size: 35px;
-color: black;
-font-weight: 400;
-}
-
 .contenedor {
-font-family:oswald ;
-font-size: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
+    padding: 15px;
 }
 .contenedor .titulo {
-background-color: #dc3b41;
-padding: 20px;
-width: 100%;
-color: white;
-top: 15px;
-text-align: center;
-
+    background-color: #dc3b41;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 .contenedor .fila {
-display: flex;
-align-items: center;
-
-margin-top: 25px;
-max-width: 70%;
-width: 100%;
-font-family: oswald;
-font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    font-family: oswald;
+    font-weight: 600;
 }
-.contenedor .fila label{
-padding: 5px 15px 5px 15px;
-font-size: 30px;
-font-family: oswald;
-font-weight: 500;
-width: 100%;
-
+.contenedor .fila .fila-item {
+    padding: 15px;
 }
-.contenedor .fila label.color{
-width: 30%;
+.contenedor .fila label {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: oswald;
+    width: 100%;
 }
-#color{
-width: auto;
-height: 60px;
-border-radius: 5px;
-font-size: 25px;
-font-family:oswald;
-font-weight: 500;
-color:  rgb(112, 112, 112);
-text-align: center;
+.contenedor input.input-form, 
+.contenedor select.input-form {
+    width: 100%;
+    padding: 10px;
+    color: rgb(0 0 0 / 50%);
+    background-color: #fafafa;
+    border-radius: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: oswald;
+    border: 1px solid #dc3b41;
 }
-#categoria{
-width: auto;
-height: 60px;
-border-radius: 5px;
-margin-left: 5%;
-font-size: 25px;
-font-family:oswald;
-font-weight: 500;
-color:  rgb(112, 112, 112);
-text-align: center;
+.contenedor:hover input.input-form, 
+.contenedor:hover select.input-form{
+    color: #dc3b41;
 }
-#marca{
-width: auto;
-height: 60px;
-border-radius: 5px;
-margin-left: 15%;
-font-size: 25px;
-font-family:oswald;
-font-weight: 500;
-color:  rgb(112, 112, 112);
-text-align: center;
-
-}
-#talle{
-width: auto;
-height: 60px;
-border-radius: 5px;
-margin-left: 17%;
-font-size: 25px;
-font-family:oswald;
-font-weight: 500;
-color:  rgb(112, 112, 112);
-text-align: center;
-}
-
-.contenedor input.input-form {
-width: 100%;
-font-size: 20px;
-padding: 10px;
-color: rgb(112, 112, 112);
-border-radius: 5px;
-font-size: 25px;
-font-family:oswald;
-font-weight: 500;
-}
-
 #guardar {
 padding: 15px 20px 15px 20px;
 font-size: 23px;
@@ -127,82 +49,12 @@ background-color: #dc3b41;
 border-radius: 25px;
 color: white;
 border: none;
-margin-bottom: 10px;
 min-width: 200px;
 max-width: 300px;
 }
-.contenedor form.selectfile {
-margin-left: 80px;
-display: flex;
-padding: 15px 10px 15px 10px;
-justify-content: space-around;
-flex-direction: column;
-}
-.contenedor form.selectfile input.file{
-font-family: oswald;
-font-size: 15px;
-font-weight: 500;
-}
-.contenedor form.selectfile input.file{
-font-family: oswald;
-font-size: 20px;
-font-weight: 500;
-border: none;
-border-radius: 25px;
-height: 35px;
-width: 100%;
-}
-.contenedor form.selectfile input.submit{
-font-family: oswald;
-font-size: 20px;
-font-weight: 500;
-border: none;
-border-radius: 25px;
-height: 35px;
-color: white;
-background-color: rgba(30, 142, 247, 0.892);
-width: 60%;
-}
-
-.inicia-sesion- {
-font-weight: 500;
-padding-bottom: 30px;
-}
-
-/* FOOTER */
 
 
 
-
-@media (min-width: 420px) {
-
-
-}
-
-
-
-@media (min-width: 790px) {
-
-/*FOOTER*/
-
-
-/* MAIN */ 
-
-.contenedor .fila {
-text-align: center;
-max-width: 40%;
-}
-.inicia-sesion- {
-margin-bottom: 30px;
-}
-}
-
-@media (min-width: 1000px) {
-
-.contenedor .fila {
-text-align: center;
-max-width: 30%;
-}
-
-
-} 
+/* @media (min-width: 420px) {
+    
+} */
