@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "nombre": "accesorios"
+    },
+    {
+        "id": 2,
+        "nombre": "BOLSAS"
+    },
+    {
+        "id": 3,
+        "nombre": "CARROS"
+    },
+    {
+        "id": 4,
+        "nombre": "PALOS"
+    },
+    {
+        "id": 5,
+        "nombre": "PELOTAS"
+    },
+    {
+        "id": 6,
+        "nombre": "TECNOLOGIA"
+    },
+    {
+        "id": 7,
+        "nombre": "VESTIR"
+    },
+    {
+        "id": 8,
+        "nombre": "ZAPATOS"
+    }
+]
+
+            

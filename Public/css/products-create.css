@@ -37,10 +37,7 @@
     font-family: oswald;
     border: 1px solid #dc3b41;
 }
-.contenedor:hover input.input-form, 
-.contenedor:hover select.input-form{
-    color: #dc3b41;
-}
+
 #guardar {
 padding: 15px 20px 15px 20px;
 font-size: 23px;

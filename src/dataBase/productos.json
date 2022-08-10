@@ -1,15 +1,49 @@
 [
  {
-  "id": "number",
-  "nombre-del.producto": "drive",
-  "descripcion-general": "aqui va a ir el modelo del producto junto con las carateristicas generales de cada uno, indistintamente cual sea el producto",
-  "marca": "taylormade, callaway, titleist, ping...etc",
-  "precio": "$",
-  "talle": "s-sm-m-ml-l-xl-xxl/ numbers",
-  "stock": " si se encuentra o no en stock el producto",
-  "imagen": "foto del producto",
-  "categoria": "accesorio - bolsas-carros - equipo - pelotas - vestir - tecnologia - zapatos",
-  "subcategoria": "gorras - guantes - fundas - herramientas- tees- toallas y paraguas- todo-bolsas - carros - palos-drive-maderas-hibridos-hierros-wedges - putters -  ropa de hombre- ropa de mujer- ropa de niño - gps-simuladores-smartwatch - telemetros,"
+  "id": 0
+ },
+ {
+  "id": 1,
+  "producto": "drive",
+  "categoria": "4",
+  "marca": "marca",
+  "agarre": "manoizquierda",
+  "tipodevara": "regular",
+  "hierrostipodeconjunto": "vara",
+  "talle": "",
+  "image": "myFile-1660167947168.webp"
+ },
+ {
+  "id": 2,
+  "producto": "hierros",
+  "categoria": "4",
+  "marca": "marca",
+  "agarre": "manoizquierda",
+  "tipodevara": "regular",
+  "hierrostipodeconjunto": "vara",
+  "talle": "",
+  "image": "myFile-1660167947168.webp"
+ },
+ {
+  "id": 3,
+  "producto": "funda",
+  "categoria": "4",
+  "marca": "marca",
+  "agarre": "manoizquierda",
+  "tipodevara": "regular",
+  "hierrostipodeconjunto": "vara",
+  "talle": "",
+  "image": "myFile-1660167947168.webp"
+ },
+ {
+  "id": 4,
+  "producto": "gorras",
+  "categoria": "accesorios",
+  "marca": "marca",
+  "agarre": "manoizquierda",
+  "tipodevara": "regular",
+  "hierrostipodeconjunto": "vara",
+  "talle": "SM",
+  "image": "myFile-1660171965265.webp"
  }
- 
 ]
