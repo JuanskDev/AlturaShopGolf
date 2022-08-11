@@ -29,8 +29,15 @@ const productsController = {
         let data = {
             producto: productEdit,
             categorias: categorias,
-            marcas: marcas
-        }
+            marcas: marcas,
+            agarre: agarre,
+            tipodevara: tipodevara,
+            tipodebolsa: tipodebolsa,
+            hierrostipodeconjunto: hierrostipodeconjunto,
+            talle: talle,
+            color: color,
+            image: image
+       }
         res.render('products-edit', { data })
     },
     update: (req, res) => {
