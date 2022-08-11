@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "nombre": "NEGRO"
+    },
+    {
+        "id": 2,
+        "nombre": "BLANCO"
+    },
+    {
+        "id": 3,
+        "nombre": "ROJO"
+    },
+    {
+        "id": 4,
+        "nombre": "AZUL"
+    },
+    {
+        "id": 5,
+        "nombre": "VERDE"
+    },
+    {
+        "id": 6,
+        "nombre": "GRIS"
+    },
+    {
+        "id": 7,
+        "nombre": "GRIS/NARANJA"
+    },
+    {
+        "id": 8,
+        "nombre": "NEGRO/BALNCO"
+    },
+    {
+        "id": 9,
+        "nombre": "NEGRO/ROJO"
+    },
+    {
+        "id": 10,
+        "nombre": "NEGRO/AZUL"
+    },
+    {
+        "id": 11,
+        "nombre": "NEGRO/VERDE"
+    },
+    {
+        "id": 12,
+        "nombre": "ROSA/NEGRO"
+    },
+    {
+        "id": 13,
+        "nombre": "ROSA"
+    },
+    {
+        "id": 14,
+        "nombre": "AZUL/TURQUESA"
+    },
+    {
+        "id": 15,
+        "nombre": "CAMUFLAJE"
+    },
+    {
+        "id": 16,
+        "nombre": "BLANCO/ROJO"
+    },
+    {
+        "id": 17,
+        "nombre": "AZUL/BLANCO"
+    },
+    {
+        "id": 18,
+        "nombre": "VERDE/BLANCO"
+    },
+    {
+        "id": 19,
+        "nombre": "AMARILLO"
+    },
+    {
+        "id": 20,
+        "nombre": "AZUL/NEGRO/ROJO"
+    },
+    {
+        "id": 21,
+        "nombre": "BLANCO/AZUL/ROJO"
+    }
+
+   
+]

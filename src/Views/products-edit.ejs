@@ -18,18 +18,8 @@
         </div>
         <div class="fila">
           <div class="fila-item">
-            <label>PRODUCTO:</label>
-            <select name="producto" class="input-form" id="producto"placeholder="Elegi tu producto">
-              <option value=""></option>
-              <% for (const catSelec of data.producto) { %>
-                <option value="<%= catSelec.id %>" <%= data.producto.producto === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-              <% } %>
-
-            </select>
-          </div>
-          <div class="fila-item">
             <label class="categoria">CATEGORIA:</label>
-            <select name="categoria" class="input-form" id="categoria" placeholder="Elegi la categoria">
+            <select name="categoria" class="input-form" id="categoria" placeholder="Seleccione la categoría">
               <option value=""></option>
               <% for (const catSelec of data.categorias) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.categoria === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -37,8 +27,17 @@
             </select>
           </div>
           <div class="fila-item">
+            <label>PRODUCTO:</label>
+            <select name="producto" class="input-form" id="producto" placeholder="Seleccione un producto">
+              <option value=""></option>
+              <% for (const catSelec of data.producto) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.producto === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila-item">
             <label class="marca">MARCA:</label>
-            <select name="marca" class="input-form" id="marca" placeholder="Elegi la marca">
+            <select name="marca" class="input-form" id="marca" placeholder="Seleccione la marca">
               <option value=""></option>
               <% for (const catSelec of data.marcas) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.marca === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -49,7 +48,7 @@
         <div class="fila">
           <div class="fila-item">
             <label class="marca">AGARRE:</label>
-              <select name="agarre" class="input-form" id="agarre"placeholder="Elegi la mano">
+              <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
               <option value=""></option>
               <% for (const catSelec of data.agarre) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.agarre === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -58,7 +57,7 @@
           </div>
           <div class="fila-item">
             <label class="">TIPO DE VARA:</label>
-            <select name="tipodevara"class="input-form" id="tipodevara"placeholder="Elegi el tipo de vara">
+            <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
               <option value=""></option>
               <% for (const catSelec of data.tipodevara) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.tipodevara === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -67,7 +66,7 @@
           </div>
           <div class="fila-item">
             <label class="bolsa">TIPO DE BOLSA:</label>
-            <select name="tipodebolsa" class="input-form" id="bolsa">
+            <select name="tipodebolsa" class="input-form" id="bolsa"placeholder="Seleccione el tipo de bolsa">
               <option value=""></option>
               <% for (const catSelec of data.tipodebolsa) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.tipodebolsa === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -76,7 +75,7 @@
           </div>
           <div class="fila-item">
             <label class="">HIERROS-TIPO DE CONJUNTO:</label>
-            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Elegi el conjunto de hierros">
+            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Seleccione el conjunto de hierros">
               <option value=""></option>
               <% for (const catSelec of data.hierrostipodeconjunto) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.hierrostipodeconjunto === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -90,22 +89,28 @@
             <span style="position: absolute; left: 19px; top: 57px;position: absolute; color: grey;">$</span>
             <input type="precio"  id="precio" class="input-form" value="0.00" placeholder="Precio" required style="padding-left: 15px;"/>
           </div>
-          <div class="fila-item">
-            <label class="talle">TALLE:</label>
-            <select name="talle" id="talle" class="input-form" placeholder="Elegi el talle">
-              <option value=""></option>
-              <% for (const catSelec of data.talle) { %>
-                <option value="<%= catSelec.id %>" <%= data.producto.talle === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-              <%} %>
-            </select>
+          <div class="fila-item" style="position:relative;">
+            <label>DESCUENTO:</label>
+            <span style="position: absolute; left: 19px; top: 57px;position: absolute; color: grey;">%</span>
+            <input type="descuento"  id="descuento" class="input-form" value="0.00" placeholder="Descuento" required style="padding-left: 15px;"/>
           </div>
+        </div>
+        <div class="fila-item">
+          <label class="talle">TALLES:</label>
+          <select name="talles" id="talles" class="input-form" placeholder="Selecciones el talle">
+            <option value=""></option>
+            <% for (const catSelec of data.talles) { %>
+              <option value="<%= catSelec.id %>" <%= data.talles.nombre === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+            <% } %>
+          </select>
+        </div>
           <div class="fila-item">
             <label>CONTROL DE STOCK:</label>
             <input type="number" id="number" class="input-form" placeholder="Stock: "required/>
           </div>
           <div class="fila-item">
             <label class="color">COLOR:</label>
-            <select name="color" class="input-form" id="color"placeholder="Elegi el color">
+            <select name="color" class="input-form" id="color"placeholder="Seleccione el color">
               <option value=""></option>
               <% for (const catSelec of data.color) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.color === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>

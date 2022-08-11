@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "nombre": "MANO-DERECHA"
+    },
+    {
+        "id": 2,
+        "nombre": "MANO-IZQUIERDA"
+    }
+]

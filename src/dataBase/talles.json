@@ -1,0 +1,142 @@
+[
+    {
+        "id":1,
+        "nombre": "XS"
+    },
+    {
+        "id":2,
+        "nombre": "S"
+    },
+    {
+        "id":3,
+        "nombre": "M"
+    },
+    {
+        "id":1,
+        "nombre": "L"
+    },
+    {
+        "id":4,
+        "nombre": "XL"
+    },
+    {
+        "id":5,
+        "nombre": "XXL"
+    },
+    {
+        "id":6,
+        "nombre": "XXL"
+    },
+    {
+        "id":7,
+        "nombre": "S"
+    },
+    {
+        "id":8,
+        "nombre": "M"
+    },
+    {
+        "id":9,
+        "nombre": "L"
+    },
+    {
+        "id":10,
+        "nombre": "XL"
+    },
+    {
+        "id":11,
+        "nombre": "XXL"
+    },
+    {
+        "id":12,
+        "nombre": "XXXL"
+    },
+    {
+        "id":13,
+        "nombre": "34"
+    },
+    {
+        "id":14,
+        "nombre": "35"
+    },
+    {
+        "id":15,
+        "nombre": "36"
+    },
+    {
+        "id":16,
+        "nombre": "37"
+    },
+    {
+        "id":17,
+        "nombre": "37/5"
+    },
+    {
+        "id":18,
+        "nombre": "38"
+    },
+    {
+        "id":19,
+        "nombre": "38/5"
+    },
+    {
+        "id":20,
+        "nombre": "39"
+    },
+    {
+        "id":21,
+        "nombre": "39/5"
+    },
+    {
+        "id":22,
+        "nombre": "40"
+    },
+    {
+        "id":23,
+        "nombre": "40/5"
+    },
+    {
+        "id":24,
+        "nombre": "41"
+    },
+    {
+        "id":25,
+        "nombre": "41/5"
+    },
+    {
+        "id":26,
+        "nombre": "42"
+    },
+    {
+        "id":27,
+        "nombre": "42/5"
+    },
+    {
+        "id":28,
+        "nombre": "43"
+    },
+    {
+        "id":29,
+        "nombre": "43/5"
+    },
+    {
+        "id":30,
+        "nombre": "44"
+    },
+    {
+        "id":31,
+        "nombre": "44/5"
+    },
+    {
+        "id":32,
+        "nombre": "46"
+    },
+    {
+        "id":33,
+        "nombre": "46/5"
+    },
+    {
+        "id":34,
+        "nombre": "47"
+    }
+]

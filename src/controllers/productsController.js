@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const productsFilePath = path.join(__dirname, '../dataBase/productos.json');
+const productsFilePath = path.join(__dirname, '../dataBase/producto.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const categoriasFilePath = path.join(__dirname, '../dataBase/categorias.json');
@@ -9,6 +9,28 @@ const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
 
 const marcasFilePath = path.join(__dirname, '../dataBase/marcas.json');
 const marcas = JSON.parse(fs.readFileSync(marcasFilePath, 'utf-8'));
+
+const agarreFilePath = path.join(__dirname, '../dataBase/agarre.json');
+const agarre = JSON.parse(fs.readFileSync(agarreFilePath, 'utf-8'));
+
+const tipodevaraFilePath = path.join(__dirname, '../dataBase/tipodevara.json');
+const tipodevara = JSON.parse(fs.readFileSync(tipodevaraFilePath, 'utf-8'));
+
+const tipodebolsaFilePath = path.join(__dirname, '../dataBase/tipodebolsa.json');
+const tipodebolsa = JSON.parse(fs.readFileSync(tipodebolsaFilePath, 'utf-8'));
+
+const hierrostipodeconjuntoFilePath = path.join(__dirname, '../dataBase/hierrostipodeconjunto.json');
+const hierrostipodeconjunto = JSON.parse(fs.readFileSync(hierrostipodeconjuntoFilePath, 'utf-8'));
+
+const descuentoFilePath = path.join(__dirname, '../dataBase/descuento.json');
+const descuento = JSON.parse(fs.readFileSync(descuentoFilePath, 'utf-8'));
+
+const tallesFilePath = path.join(__dirname, '../dataBase/talles.json');
+const talles = JSON.parse(fs.readFileSync(tallesFilePath, 'utf-8'));
+
+const colorFilePath = path.join(__dirname, '../dataBase/color.json');
+const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
+
 
 const productsController = {
     carritoCompra: (req,res) => {
@@ -34,9 +56,10 @@ const productsController = {
             tipodevara: tipodevara,
             tipodebolsa: tipodebolsa,
             hierrostipodeconjunto: hierrostipodeconjunto,
-            talle: talle,
-            color: color,
-            image: image
+            descuento: descuento,
+            talles: talles,
+            color: color
+            // image: image,
        }
         res.render('products-edit', { data })
     },

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const admins = ['Ada' , 'Greta' , 'Vim' , 'Tim'];
+const admins = ['ADMINISTRADOR' , 'REGISTRADO' , 'INVITADO'];
 
 
 function admin(req, res, next){
