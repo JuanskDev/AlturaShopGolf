@@ -10,6 +10,7 @@ const usersController = {
     create: (req , res) => {
         res.render(path.join(__dirname , '../Views/products-create.ejs'))
     },
+    
 };
 
 module.exports = usersController;

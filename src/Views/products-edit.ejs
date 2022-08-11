@@ -11,7 +11,7 @@
     <%- include('./partials/header.ejs')  %>  
 
   <main>
-    <form action="/products" enctype="multipart/form-data" method="POST">
+    <form action="/products <%= products-e+dit.id%>?method=PUT" enctype="multipart/form-data" method="POST">
       <section class="contenedor">
         <div class="titulo">
           <h1>ADMINISTRADOR -  EDICION DE PRODUCTOS</h1>
