@@ -41,7 +41,7 @@ const productsController = {
         res.render('products-edit', { data })
     },
     update: (req, res) => {
-        let productUpdate = products.find(e => e.id === +req.params.id)
+        let productUpdate = products.find(e => e.id === + req.params.id)
         if(productUpdate) // esto para saber si existe o no
         {
             productUpdate.producto = req.body.producto;

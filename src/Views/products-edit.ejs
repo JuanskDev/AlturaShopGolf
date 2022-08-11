@@ -19,76 +19,17 @@
         <div class="fila">
           <div class="fila-item">
             <label>PRODUCTO:</label>
-            <select name="producto" class="input-form" id="producto">
+            <select name="producto" class="input-form" id="producto"placeholder="Elegi tu producto">
               <option value=""></option>
-              <!-- <option value="BOLSAS">BOLSAS</option>
-              <option value="CARROS">CARROS</option>
-              <option value="DRIVES">DRIVES</option>
-              <option value="FUNDAS">FUNDAS</option>
-              <option value="GORRAS">GORRAS</option>
-              <option value="GUANTES">GUANTES</option>
-              <option value="GPS">GPS</option>
-              <option value="HERRAMIENTAS">HERRAMIENTAS</option>
-              <option value="HIBRIDOS">HIBRIDOS</option>
-              <option value="HIERROS">HIERROS</option>
-              <option value="MADERAS">MADERAS</option>
-              <option value="PARAGUAS">PARAGUAS</option>
-              <option value="PELOTAS">PELOTAS</option>
-              <option value="PUTTERS">PUTTERS</option>
-              <option value="ROPA-DE-HOMBR">ROPA DE HOMBRE</option>
-              <option value="ROPA-DE-MUJER">ROPA DE MUJER</option>
-              <option value="ROPA-DE-NIÑO">ROPA DE NIÑO</option>
-              <option value="SIMULADORES">SIMULADORES</option>
-              <option value="SMARTWATCHS">SMARTWATCHS</option>
-              <option value="TEES">TEES</option>
-              <option value="TELEMETROS">TELEMETROS</option>
-              <option value="TOALLAS">TOALLAS</option>
-              <option value="ZAPATOS">ZAPATOS</option> -->
+              <% for (const catSelec of data.producto) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.producto === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+
             </select>
           </div>
-          <!-- <div class="fila-item">
-            <label class="color">COLOR:</label>
-            <select name="color" class="input-form" id="color">
-              <option value="color"></option>
-              <option value="color">Black</option>
-              <option value="color">Grey</option>
-              <option value="color">White</option>
-              <option value="color">Red</option>
-              <option value="color">Blue</option>
-              <option value="color">Green</option>
-              <option value="color">Yellow</option>
-              <option value="color">Orange</option>
-              <option value="color">Tourquoise</option>
-              <option value="color">Cream</option>
-              <option value="color">LigthGreen</option>
-              <option value="color">Pink</option>
-              <option value="color">Black/White</option>
-              <option value="color">Black/Green</option>
-              <option value="color">White/Green</option>
-              <option value="color">Black/Red</option>
-              <option value="color">White/Red</option>
-              <option value="color">Black/Blue</option>
-              <option value="color">White/Blue</option>
-              <option value="color">Black/Yellow</option>
-              <option value="color">White/Yellow</option>
-              <option value="color">Black/Pink</option>
-              <option value="color">White/Pink</option>
-              <option value="color">Grey/Orange</option>
-              <option value="color">Camuflage</option>
-              <option value="color">Black/Red/White</option>
-              <option value="color">Navy/White/Red</option>
-              <option value="color">Blue/Turquoise</option>
-              <option value="color">White/Grey</option>
-              <option value="color">Blue/Red/White</option>
-              <option value="color">Black/White/Red</option>
-              <option value="color">Black/White/Blue</option>
-              <option value="color">Cream/LigthGreen</option>
-              <option value="color">Turquoise/White</option>
-            </select>
-          </div> -->
           <div class="fila-item">
             <label class="categoria">CATEGORIA:</label>
-            <select name="categoria" class="input-form" id="categoria">
+            <select name="categoria" class="input-form" id="categoria" placeholder="Elegi la categoria">
               <option value=""></option>
               <% for (const catSelec of data.categorias) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.categoria === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -97,7 +38,7 @@
           </div>
           <div class="fila-item">
             <label class="marca">MARCA:</label>
-            <select name="marca" class="input-form" id="marca">
+            <select name="marca" class="input-form" id="marca" placeholder="Elegi la marca">
               <option value=""></option>
               <% for (const catSelec of data.marcas) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.marca === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -108,29 +49,38 @@
         <div class="fila">
           <div class="fila-item">
             <label class="marca">AGARRE:</label>
-              <select name="agarre" class="input-form" id="agarre">
+              <select name="agarre" class="input-form" id="agarre"placeholder="Elegi la mano">
               <option value=""></option>
-              <option value="MANOIZQUIERDA">MANO IZQUIERDA</option>
-              <option value="MANODERECHA">MANO DERECHA</option>
+              <% for (const catSelec of data.agarre) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.agarre === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
               </select>  
           </div>
           <div class="fila-item">
             <label class="">TIPO DE VARA:</label>
-            <select name="tipodevara"class="input-form" id="tipodevara">
+            <select name="tipodevara"class="input-form" id="tipodevara"placeholder="Elegi el tipo de vara">
               <option value=""></option>
-              <option value="REGULAR">REGULAR</option>
-              <option value="STIFF">STIFF</option>
-              <option value="XSTIFF">X-STIFF</option>
+              <% for (const catSelec of data.tipodevara) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.tipodevara === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label class="bolsa">TIPO DE BOLSA:</label>
+            <select name="tipodebolsa" class="input-form" id="bolsa">
+              <option value=""></option>
+              <% for (const catSelec of data.tipodebolsa) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.tipodebolsa === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
             </select>
           </div>
           <div class="fila-item">
             <label class="">HIERROS-TIPO DE CONJUNTO:</label>
-            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto">
+            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Elegi el conjunto de hierros">
               <option value=""></option>
-              <option value="5-PWAWSWjuegode8palos">5-PW,AW,SW (juego de 8 palos)</option>
-              <option value="4-PWAWjuegode8palos">4-PW,AW (juego de 8 palos)</option>
-              <option value="5-PWAWjuegode7palos">5-PW,AW (juego de 7 palos)</option>
-              <option value="4-PWjuegode7palos">4-PW (juego de 7 palos)</option>
+              <% for (const catSelec of data.hierrostipodeconjunto) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.hierrostipodeconjunto === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
             </select>
           </div>
         </div>
@@ -138,54 +88,33 @@
           <div class="fila-item" style="position: relative;">
             <label>PRECIO:</label>
             <span style="position: absolute; left: 19px; top: 57px;position: absolute; color: grey;">$</span>
-            <input type="precio"  id="precio" class="input-form" value="0.00" required style="padding-left: 15px;"/>
+            <input type="precio"  id="precio" class="input-form" value="0.00" placeholder="Precio" required style="padding-left: 15px;"/>
           </div>
           <div class="fila-item">
             <label class="talle">TALLE:</label>
-            <select name="talle" id="talle" class="input-form">
+            <select name="talle" id="talle" class="input-form" placeholder="Elegi el talle">
               <option value=""></option>
-              <option value="S">S</option>
-              <option value="SM">S/M</option>
-              <option value="M">M</option>
-              <option value="ML">M/L</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-              <option value="XXL">XXL</option>
-              <option value="34">34</option>
-              <option value="34/5">34/5</option>
-              <option value="35">35</option>
-              <option value="35/5">35/5</option>
-              <option value="36">36</option>
-              <option value="36/5">36/5</option>
-              <option value="37">37</option>
-              <option value="37/5">37/5</option>
-              <option value="38">38</option>
-              <option value="38/5">38/5</option>
-              <option value="39">39</option>
-              <option value="39/5">39/5</option>
-              <option value="40">40</option>
-              <option value="40/5">40/5</option>
-              <option value="41">41</option>
-              <option value="41/5">41/5</option>
-              <option value="42">42</option>
-              <option value="42/5">42/5</option>
-              <option value="43">43</option>
-              <option value="43/5">43/5</option>
-              <option value="44">44</option>
-              <option value="44/5">44/5</option>
-              <option value="45">45</option>
-              <option value="45/5">45/5</option>
-              <option value="46">46</option>
-              <option value="46/5">46/5</option>
-              <option value="47">47</option>
+              <% for (const catSelec of data.talle) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.talle === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
             </select>
           </div>
           <div class="fila-item">
             <label>CONTROL DE STOCK:</label>
             <input type="number" id="number" class="input-form" placeholder="Stock: "required/>
           </div>
+          <div class="fila-item">
+            <label class="color">COLOR:</label>
+            <select name="color" class="input-form" id="color"placeholder="Elegi el color">
+              <option value=""></option>
+              <% for (const catSelec of data.color) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.color === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+              <option value="color"></option>
+            </select>
+          </div>
         </div>
-        
+
         <div class="fila" style="justify-content: flex-end;">
           <div class="fila-item">
             <img alt="" src="/imagenes/<%= data.producto.image %>" >
@@ -194,6 +123,10 @@
             <input class="file input-form" type="file" name="myFile" />
           </div>
         </div>
+        <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">MODIFICAR</button> 
+          </div>
         <div class="fila" style="justify-content: flex-end;">
           <div class="fila-item">
             <button type="submit" id="guardar">GUARDAR</button> 
