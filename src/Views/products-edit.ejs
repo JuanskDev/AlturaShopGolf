@@ -11,7 +11,7 @@
     <%- include('./partials/header.ejs')  %>  
 
   <main>
-    <form action="/products" enctype="multipart/form-data" method="POST">
+    <form action="/products/edit/<%= data.producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
       <section class="contenedor">
         <div class="titulo">
           <h1>ADMINISTRADOR -  EDICION DE PRODUCTOS</h1>
@@ -21,7 +21,7 @@
             <label>PRODUCTO:</label>
             <select name="producto" class="input-form" id="producto">
               <option value=""></option>
-              <option value="BOLSAS">BOLSAS</option>
+              <!-- <option value="BOLSAS">BOLSAS</option>
               <option value="CARROS">CARROS</option>
               <option value="DRIVES">DRIVES</option>
               <option value="FUNDAS">FUNDAS</option>
@@ -43,12 +43,12 @@
               <option value="TEES">TEES</option>
               <option value="TELEMETROS">TELEMETROS</option>
               <option value="TOALLAS">TOALLAS</option>
-              <option value="ZAPATOS">ZAPATOS</option>
+              <option value="ZAPATOS">ZAPATOS</option> -->
             </select>
           </div>
           <!-- <div class="fila-item">
             <label class="color">COLOR:</label>
-            <select name="text" class="input-form" id="color">
+            <select name="color" class="input-form" id="color">
               <option value="color"></option>
               <option value="color">Black</option>
               <option value="color">Grey</option>
@@ -90,58 +90,18 @@
             <label class="categoria">CATEGORIA:</label>
             <select name="categoria" class="input-form" id="categoria">
               <option value=""></option>
-              <option value="ACCESORIOS">ACCESORIOS</option>
-              <option value="BOLSAS">BOLSAS</option>
-              <option value="CARROS">CARROS</option>
-              <option value="PALOS">PALOS</option>
-              <option value="PELOTAS">PELOTAS</option>
-              <option value="TECNOLOGIA">TECNOLOGIA</option>
-              <option value="VESTIR">VESTIR</option>
-              <option value="ZAPATOS">ZAPATOS</option>
+              <% for (const catSelec of data.categorias) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.categoria === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
             </select>
           </div>
           <div class="fila-item">
             <label class="marca">MARCA:</label>
             <select name="marca" class="input-form" id="marca">
               <option value=""></option>
-              <option value="ADIDAS">ADIDAS</option>
-              <option value="AIM">AIM</option>
-              <option value="BAGBOY">BAG BOY</option>
-              <option value="BRIDGESTONE">BRIDGESTONE</option>
-              <option value="BUSHNELL">BUSHNELL</option>
-              <option value="CALLAWAY">CALLAWAY</option>
-              <option value="CALIBRE">CALIBRE</option>
-              <option value="CLEVELAND">CLEVELAND</option>
-              <option value="CLICGEAR">CLICGEAR</option>
-              <option value="COBRA">COBRA</option>
-              <option value="DAPHNESHEADCOVER">DAPHNES HEADCOVER</option>
-              <option value="EAGLEPLUS">EAGLE PLUS</option>
-              <option value="EZFOLD">EZ FOLD</option>
-              <option value="FOOTJOY">FOOTJOY</option>
-              <option value="FULLSWING">FULL SWING</option>
-              <option value="GARMIN">GARMIN</option>
-              <option value="HOMMA">HOMMA</option>
-              <option value="KINGCOBRA">KING COBRA</option>
-              <option value="LEUPOLD">LEUPOLD</option>
-              <option value="MIZUNO">MIZUNO</option>
-              <option value="MOTOCADDY">MOTO CADDY</option>
-              <option value="NIKEGOLF">NIKE GOLF</option>
-              <option value="NIKON">NIKON</option>
-              <option value="NOODLE">NOODLE</option>
-              <option value="ODYSSEY">ODYSSEY</option>
-              <option value="OPTISHOT">OPTISHOT</option>
-              <option value="PING">PING</option>
-              <option value="PUMA">PUMA</option>
-              <option value="SKEACHERS">SKEACHERS</option>
-              <option value="SKYCADDIE">SKYCADDIE</option>
-              <option value="SRIXON">SRIXON</option>
-              <option value="SUNMOUNTAIN">SUN MOUNTAIN</option>
-              <option value="TAYLORMADE">TAYLORMADE</option>
-              <option value="TITLEIST">TITLEIST</option>
-              <option value="UNDER\\GOLF">UNDER\\GOLF</option>
-              <option value="VOICECADDIE">VOICE CADDIE</option>
-              <option value="VOLVIK">VOLVIK</option>
-              <option value="WILSON">WILSON</option>
+              <% for (const catSelec of data.marcas) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.marca === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
             </select>  
           </div>
         </div>

@@ -19,6 +19,6 @@ router.get('/detalleproducto' , productsController.detalleProducto);
 router.get('/create', productsController.create); 
 router.get('/edit/:id', productsController.edit); 
 router.post('/', upload.any(), productsController.store);
-router.put('/', upload.any(), productsController.store)
+router.put('/edit/:id', upload.any(), productsController.update)
 
 module.exports = router;

@@ -21,7 +21,7 @@
             <label>PRODUCTO:</label>
             <select name="producto" class="input-form" id="producto">
               <option value=""></option>
-              <option value="BOLSAS">BOLSAS</option>
+              <!-- <option value="BOLSAS">BOLSAS</option>
               <option value="CARROS">CARROS</option>
               <option value="DRIVES">DRIVES</option>
               <option value="FUNDAS">FUNDAS</option>
@@ -43,68 +43,26 @@
               <option value="TEES">TEES</option>
               <option value="TELEMETROS">TELEMETROS</option>
               <option value="TOALLAS">TOALLAS</option>
-              <option value="ZAPATOS">ZAPATOS</option>>
+              <option value="ZAPATOS">ZAPATOS</option>> -->
             </select>
           </div>
-          <!-- <div class="fila-item">
-            <label class="color">COLOR:</label>
-            <select name="text" class="input-form" id="color">
-              <option value="color"></option>
-              <option value="color">Black</option>
-              <option value="color">Grey</option>
-              <option value="color">White</option>
-              <option value="color">Red</option>
-              <option value="color">Blue</option>
-              <option value="color">Green</option>
-              <option value="color">Yellow</option>
-              <option value="color">Orange</option>
-              <option value="color">Tourquoise</option>
-              <option value="color">Cream</option>
-              <option value="color">LigthGreen</option>
-              <option value="color">Pink</option>
-              <option value="color">Black/White</option>
-              <option value="color">Black/Green</option>
-              <option value="color">White/Green</option>
-              <option value="color">Black/Red</option>
-              <option value="color">White/Red</option>
-              <option value="color">Black/Blue</option>
-              <option value="color">White/Blue</option>
-              <option value="color">Black/Yellow</option>
-              <option value="color">White/Yellow</option>
-              <option value="color">Black/Pink</option>
-              <option value="color">White/Pink</option>
-              <option value="color">Grey/Orange</option>
-              <option value="color">Camuflage</option>
-              <option value="color">Black/Red/White</option>
-              <option value="color">Navy/White/Red</option>
-              <option value="color">Blue/Turquoise</option>
-              <option value="color">White/Grey</option>
-              <option value="color">Blue/Red/White</option>
-              <option value="color">Black/White/Red</option>
-              <option value="color">Black/White/Blue</option>
-              <option value="color">Cream/LigthGreen</option>
-              <option value="color">Turquoise/White</option>
-            </select>
-          </div> -->
           <div class="fila-item">
             <label class="categoria">CATEGORIA:</label>
             <select name="categoria" class="input-form" id="categoria">
-              <option value="categoria"></option>
-              <option value="ACCESORIOS">ACCESORIOS</option>
-              <option value="BOLSAS">BOLSAS</option>
-              <option value="CARROS">CARROS</option>
-              <option value="PALOS">PALOS</option>
-              <option value="PELOTAS">PELOTAS</option>
-              <option value="TECNOLOGIA">TECNOLOGIA</option>
-              <option value="VESTIR">VESTIR</option>
-              <option value="ZAPATOS">ZAPATOS</option>
+              <option value=""></option>
+              <% for (const catSelec of data.categorias) { %>
+                <option value="<%= catSelec.id %>" <%= data.categorias.nombre === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
             </select>
           </div>
           <div class="fila-item">
             <label class="marca">MARCA:</label>
             <select name="marca" class="input-form" id="marca">
               <option value=""></option>
-              <option value="ADIDAS">ADIDAS</option>
+              <% for (const catSelec of data.marcas) { %>
+                <option value="<%= catSelec.id %>" <%= data.marcas.nombre === catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+              <!-- <option value="ADIDAS">ADIDAS</option>
               <option value="AIM">AIM</option>
               <option value="BAGBOY">BAG BOY</option>
               <option value="BRIDGESTONE">BRIDGESTONE</option>
@@ -125,6 +83,7 @@
               <option value="LEUPOLD">LEUPOLD</option>
               <option value="MIZUNO">MIZUNO</option>
               <option value="MOTOCADDY">MOTO CADDY</option>
+              <option value="NIKEGOLF">NEW BALANCE</option>
               <option value="NIKEGOLF">NIKE GOLF</option>
               <option value="NIKON">NIKON</option>
               <option value="NOODLE">NOODLE</option>
@@ -141,7 +100,7 @@
               <option value="UNDER\\GOLF">UNDER\\GOLF</option>
               <option value="VOICECADDIE">VOICE CADDIE</option>
               <option value="VOLVIK">VOLVIK</option>
-              <option value="WILSON">WILSON</option>
+              <option value="WILSON">WILSON</option> -->
             </select>  
           </div>
         </div>
@@ -161,6 +120,14 @@
               <option value="REGULAR">REGULAR</option>
               <option value="STIFF">STIFF</option>
               <option value="XSTIFF">X-STIFF</option>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label class="bolsa">TIPO DE BOLSA:</label>
+            <select name="tipodebolsa" class="input-form" id="bolsa">
+              <option value=""></option>
+              <option value="BOLSA DE CARRO">BOLSA DE CARRO</option>
+              <option value="BOLSA DE PIE">BOLSA DE PIE</option>
             </select>
           </div>
           <div class="fila-item">
@@ -223,6 +190,46 @@
           <div class="fila-item">
             <label>CONTROL DE STOCK:</label>
             <input type="number" id="number" class="input-form" placeholder="Stock: "required/>
+          </div>
+          <div class="fila-item">
+            <label class="color">COLOR:</label>
+            <select name="color" class="input-form" id="color">
+              <option value=""></option>
+              <option value="NEGRO">NEGRO</option>
+              <option value="GRIS">GRIS</option>
+              <option value="BLANCO">BLANCO</option>
+              <option value="ROJO">ROJO</option>
+              <option value="AZUL">AZUL</option>
+              <option value="VERDE">VERDE</option>
+              <option value="AMARILLO">AMARILLO</option>
+              <option value="NARANJA">NARANJA</option>
+              <option value="TURQUESA">TURQUESA</option>
+              <option value="CREMA">CREMA</option>
+              <option value="VERDE CLARO">VERDE CLARO</option>
+              <option value="ROSA">ROSA</option>
+              <option value="NEGRO-BLANCO">NEGRO/BLANCO</option>
+              <option value="NEGRO/VERDE">NEGRO/VERDE</option>
+              <option value="NEGRO/ROJO">NEGRO/ROJO</option>
+              <option value="NEGRO/AZUL">NEGRO/AZUL</option>
+              <option value="NEGRO/AMARILLO">NEGRO/AMARILLO</option>
+              <option value="NEGRO/ROSA">NEGRO/ROSA</option>
+              <option value="NEGRO/NARANJA">NEGRO/NARANJA</option>
+              <option value="BLANCO/NEGRO">BLANCO/NEGRO</option>
+              <option value="BLANCO/VERDE">BLANCO/VERDE</option>
+              <option value="BLANCO/ROJO">BLANCO/ROJO</option>
+              <option value="BLANCO/AZUL">BLANCO/AZUL</option>
+              <option value="BLANCO/AMARILLO">BLANCO/AMARILLO</option>
+              <option value="BLANCO/ROSA">BLANCO/ROSA</option>
+              <option value="BLANCO/NARANJA">BLANCO/NARANJA</option>
+              <option value="GRIS/NARANJA">GRIS/NARANJA</option>
+              <option value="CAMUFLAJE">CAMUFLAJE</option>
+              <option value="BLANCO/GRIS">BLANCO/GRIS</option>
+              <option value="TURQUESA/BLANCO">TURQUESA/BLANCO</option>
+              <option value="TURQUESA/AZUL">TURQUESA/AZUL</option>
+              <option value="NEGRO/ROJO/BLANCO">NEGRO/ROJO/BLANCO</option>
+              <option value="CREMA/VERDE CLARO">CREMA/VERDE CLARO</option>
+              <option value="AZUL/BLANCO/ROJO">AZUL/BLANCO/ROJO</option>
+            </select>
           </div>
         </div>
         

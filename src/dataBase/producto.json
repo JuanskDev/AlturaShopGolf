@@ -1,0 +1,94 @@
+[
+{
+    "id":1,
+    "nombre": "BOLSAS"
+},
+{
+    "id":1,
+    "nombre": "CARROS"
+},
+{
+    "id":1,
+    "nombre": "DRIVES"
+},
+{
+    "id":1,
+    "nombre": "FUNDAS"
+},
+{
+    "id":1,
+    "nombre": "GORRAS"
+},
+{
+    "id":1,
+    "nombre": "GUANTES"
+},
+{
+    "id":1,
+    "nombre": "GPS"
+},
+{
+    "id":1,
+    "nombre": "HERRAMIENTAS"
+},
+{
+    "id":1,
+    "nombre": "HIBRIDOS"
+},
+{
+    "id":1,
+    "nombre": "HIERROS"
+},
+{
+    "id":1,
+    "nombre": "MADERAS"
+},
+{
+    "id":1,
+    "nombre": "PARAGUAS"
+},
+{
+    "id":1,
+    "nombre": "PELOTAS"
+},
+{
+    "id":1,
+    "nombre": "PUTTERS"
+},
+{
+    "id":1,
+    "nombre": "ROPA-DE-HOMBRE"
+},
+{
+    "id":1,
+    "nombre": "ROPA-DE-MUJER"
+},
+{
+    "id":1,
+    "nombre": "ROPA-DE-NIÑOS"
+},
+{
+    "id":1,
+    "nombre": "SIMULADORES"
+},
+{
+    "id":1,
+    "nombre": "SMARTWATCHS"
+},
+{
+    "id":1,
+    "nombre": "TEES"
+},
+{
+    "id":1,
+    "nombre": "TELEMETROS"
+},
+{
+    "id":1,
+    "nombre": "TOALLAS"
+},
+{
+    "id":23,
+    "nombre": "ZAPATOS"
+}
+]

@@ -48,6 +48,7 @@ color: white;
 border: none;
 min-width: 150px;
 max-width: 300px;
+margin-right: 70px;
 }
 #guardar:hover{
 background-color: rgba(161, 161, 161, 0.5);

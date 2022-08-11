@@ -4,6 +4,7 @@ const path = require("path"); //  MODULO PATH
 // const session = require('express-sessions'); // SESSIONS- MODULE
 // const multer = require('multer'); //MODULO PARA SUBIR ARCHIVOS - MULTER
 app.use(express.static("./Public")); // CSS
+var methodOverride = require('method-override');
 
 console.log(__dirname);
 
@@ -11,7 +12,7 @@ app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
 
-
+app.use(methodOverride('_method'));
 
 
 app.set('view engine', 'ejs');

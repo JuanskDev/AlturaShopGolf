@@ -1,82 +1,15 @@
 [
- {
-  "id": 0
- },
- {
-  "id": 1,
-  "producto": "drive",
-  "categoria": "4",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "vara",
-  "talle": "",
-  "image": "myFile-1660167947168.webp"
- },
- {
-  "id": 2,
-  "producto": "hierros",
-  "categoria": "4",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "vara",
-  "talle": "",
-  "image": "myFile-1660167947168.webp"
- },
- {
-  "id": 3,
-  "producto": "funda",
-  "categoria": "4",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "vara",
-  "talle": "",
-  "image": "myFile-1660167947168.webp"
- },
- {
-  "id": 4,
-  "producto": "gorras",
-  "categoria": "accesorios",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "vara",
-  "talle": "SM",
-  "image": "myFile-1660171965265.webp"
- },
- {
-  "id": 5,
-  "producto": "hierros",
-  "categoria": "palos",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "5-PWAWSWjuegode8palos",
-  "talle": "",
-  "image": "myFile-1660177359579.webp"
- },
- {
-  "id": 6,
-  "producto": "bolsas",
-  "categoria": "accesorios",
-  "marca": "marca",
-  "agarre": "manoizquierda",
-  "tipodevara": "regular",
-  "hierrostipodeconjunto": "vara",
-  "talle": "talle",
-  "image": "myFile-1660179974131.png"
- },
- {
-  "id": 7,
-  "producto": "ropa-de-hombre",
-  "categoria": "7",
-  "marca": "marca",
-  "agarre": "",
-  "tipodevara": "",
-  "hierrostipodeconjunto": "",
-  "talle": "",
-  "image": "myFile-1660182911216.webp"
- }
+   {
+      "id": 1,
+      "producto": "HIBRIDOS",
+      "categoria": 2,
+      "tipodebolsa": "BOLSA DE CARRO",
+      "marca": 28,
+      "agarre": "",
+      "tipodevara": "",
+      "hierrostipodeconjunto": "",
+      "talle": "",
+      "color": "color",
+      "image": "myFile-1660222155499.webp"
+   }
 ]
