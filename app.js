@@ -26,7 +26,9 @@ app.use('/', rutasMain);
 // Users Routes
 const rutasUsers = require("./src/routes/users");
 app.use('/users', rutasUsers);
-
+//Registro Routes
+const rutasRegistro = require("./src/routes/registro");
+app.use('/registro', rutasRegistro);
 //Products Routes
 const rutasProductos = require("./src/routes/products");
 app.use('/products', rutasProductos);
