@@ -37,6 +37,10 @@ app.use('/products', rutasProductos);
 //_____________________SESSIONS____________________________________//
 // app.use(session({secret:'Secreto'}));
 //_________________________________________________________________//
+//_______________________CAMPOS________________________________//
+app.get("/productos/campos", (req, res) => {
+  res.render(path.join(__dirname, "src/views/campos.ejs"));
+});
 //_______________________ACCESORIOS_____________________________//
 app.get("/productos/accesorios", (req, res) => {
   res.render(path.join(__dirname, "src/views/accesorios.ejs"));
