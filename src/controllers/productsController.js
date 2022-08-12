@@ -34,10 +34,10 @@ const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
 
 const productsController = {
     carritoCompra: (req,res) => {
-        res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
+        res.render(path.join(__dirname, '../views/Carrito-de-compras.ejs'))
     },
     detalleProducto: (req,res) => {
-        res.render(path.join(__dirname, '../views/detalleproducto.ejs'))
+        res.render(path.join(__dirname, '../views/Detalleproducto.ejs'))
     },
     create:(req,res) =>{
         let data = {
@@ -69,11 +69,12 @@ const productsController = {
         {
             productUpdate.producto = req.body.producto;
             productUpdate.categoria = req.body.categoria;
-            productUpdate.tipodebolsa = req.body.tipodebolsa;
             productUpdate.marca = req.body.marca;
             productUpdate.agarre = req.body.agarre;
             productUpdate.tipodevara = req.body.tipodevara;
+            productUpdate.tipodebolsa = req.body.tipodebolsa; 
             productUpdate.hierrostipodeconjunto = req.body.hierrostipodeconjunto;
+            productUpdate.descuento = req.body.descuento;
             productUpdate.talle = req.body.talle;
             productUpdate.color = req.body.color;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image

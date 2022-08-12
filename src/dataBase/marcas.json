@@ -53,6 +53,10 @@
     },
     {
         "id": 13,
+        "nombre": "EVOLUTION"
+    },
+    {
+        "id": 13,
         "nombre": "EZ-FOLD"
     },
     {
@@ -66,6 +70,10 @@
     {
         "id": 16,
         "nombre": "GARMIN"
+    },
+    {
+        "id": 16,
+        "nombre": "GLOBAL-TOUR-GOLF"
     },
     {
         "id": 17,
