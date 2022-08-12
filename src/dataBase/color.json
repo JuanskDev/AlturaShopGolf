@@ -82,6 +82,22 @@
     {
         "id": 21,
         "nombre": "BLANCO/AZUL/ROJO"
+    },
+    {
+        "id": 22,
+        "nombre": "VERDE/AMARILLO/ROJO"
+    },
+    {
+        "id": 23,
+        "nombre": "GRIS/VERDE"
+    },
+    {
+        "id": 24,
+        "nombre": "GRIS/BLANCO"
+    },
+    {
+        "id": 25,
+        "nombre": "BORDO"
     }
 
    

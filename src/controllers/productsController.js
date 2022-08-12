@@ -1,8 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 
-const productsFilePath = path.join(__dirname, '../dataBase/producto.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../dataBase/productos.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const listaProductsFilePath = path.join(__dirname, '../dataBase/listaproductos.json');
+const listaProductos = JSON.parse(fs.readFileSync(listaProductsFilePath, 'utf-8'));
 
 const categoriasFilePath = path.join(__dirname, '../dataBase/categorias.json');
 const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
@@ -41,15 +44,25 @@ const productsController = {
     },
     create:(req,res) =>{
         let data = {
+            listaproductos: listaProductos,
             categorias: categorias,
-            marcas: marcas
+            marcas: marcas,
+            agarre: agarre,
+            tipodevara: tipodevara,
+            tipodebolsa: tipodebolsa,
+            hierrostipodeconjunto: hierrostipodeconjunto,
+            descuento: descuento,
+            talles: talles,
+            color: color,
+          
         }
         res.render('products-create', { data })
     },
     edit:(req,res) =>{
-        let productEdit = products.find(e => e.id === +req.params.id)
+        let productEdit = productos.find(e => e.id === +req.params.id)
         let data = {
-            producto: productEdit,
+            producto: productEdit, //este es el item de productos.json que se busca en la línea de arriba por el id
+            listaproductos: listaProductos,
             categorias: categorias,
             marcas: marcas,
             agarre: agarre,
@@ -59,12 +72,11 @@ const productsController = {
             descuento: descuento,
             talles: talles,
             color: color
-            // image: image,
        }
         res.render('products-edit', { data })
     },
     update: (req, res) => {
-        let productUpdate = products.find(e => e.id === + req.params.id)
+        let productUpdate = productos.find(e => e.id === + req.params.id)
         if(productUpdate) // esto para saber si existe o no
         {
             productUpdate.producto = req.body.producto;
@@ -75,12 +87,14 @@ const productsController = {
             productUpdate.tipodebolsa = req.body.tipodebolsa; 
             productUpdate.hierrostipodeconjunto = req.body.hierrostipodeconjunto;
             productUpdate.descuento = req.body.descuento;
+            productUpdate.precio = req.body.precio;
             productUpdate.talle = req.body.talle;
+            productUpdate.stock = req.body.stock;
             productUpdate.color = req.body.color;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image
         }
         
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
         res.redirect("/products/edit/" + req.params.id);
         //1 hay que buscar el producto
         //2 editar sus propiedades
@@ -96,16 +110,16 @@ const productsController = {
         image = 'default-image.png'
     }
     let indexId = 1;
-    if(products.length != 0) {
-        indexId = products[products.length - 1].id;
+    if(productos.length != 0) {
+        indexId = productos[productos.length - 1].id;
     }
     let newProduct = {
         id: indexId + 1,
         ...req.body,
         image: image
     };
-    products.push(newProduct)
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    productos.push(newProduct)
+    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
     res.redirect('/products/create');
     }
 };

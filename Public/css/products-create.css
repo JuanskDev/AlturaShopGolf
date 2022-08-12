@@ -19,6 +19,12 @@
 .contenedor .fila .fila-item {
     padding: 15px;
 }
+.contenedor .fila .fila-img img#img-producto{
+    width: 25%;
+    margin-left: 40%;
+    border: 1px solid #c6c6c6;
+    border-radius: 15px;
+}
 .contenedor .fila label {
     font-size: 20px;
     font-weight: 400;

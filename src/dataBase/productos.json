@@ -1,17 +1,35 @@
 [
-   {
-      "id": 1,
-      "producto": "HIBRIDOS",
-      "categoria": 2,
-      "tipodebolsa": "BOLSA DE CARRO",
-      "marca": 28,
-      "agarre": "",
-      "tipodevara": "",
-      "hierrostipodeconjunto": "",
-      "precio": "",
-      "descuento": "",
-      "talle": "",
-      "color": "color",
-      "image": "myFile-1660222155499.webp"
-   }
+ {},
+ {
+  "id": 1,
+  "categoria": "4",
+  "producto": "10",
+  "marca": "34",
+  "agarre": "1",
+  "tipodevara": "1",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "1",
+  "descuento": "0.00",
+  "precio": "125.675",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1660318387783.webp"
+ },
+ {
+  "id": 2,
+  "categoria": "8",
+  "producto": "23",
+  "marca": "22",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "0.00",
+  "precio": "45.325",
+  "talle": "26",
+  "stock": "2",
+  "color": "17",
+  "image": "myFile-1660318612728.webp"
+ }
 ]
