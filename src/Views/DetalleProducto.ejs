@@ -18,6 +18,74 @@
       <a href="">Striker V2 zapatos de hombres</a>
     </nav>
     <div class="product-content">
+      <div class="fila-item">
+        <label class="marca">AGARRE:</label>
+          <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
+          <option value=""></option>
+          <% for (const catSelec of data.agarre) { %>
+            <option value="<%= catSelec.id %>" <%= data.producto.agarre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+          <%} %>
+          </select>  
+      </div>
+      <div class="fila-item">
+        <label class="">TIPO DE VARA:</label>
+        <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
+          <option value=""></option>
+          <% for (const catSelec of data.tipodevara) { %>
+            <option value="<%= catSelec.id %>" <%= data.producto.tipodevara == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+          <%} %>
+        </select>
+      </div>
+      <div class="fila-item">
+        <label class="bolsa">TIPO DE BOLSA:</label>
+        <select name="tipodebolsa" class="input-form" id="bolsa"placeholder="Seleccione el tipo de bolsa">
+          <option value=""></option>
+          <% for (const catSelec of data.tipodebolsa) { %>
+            <option value="<%= catSelec.id %>" <%= data.producto.tipodebolsa == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+          <% } %>
+        </select>
+      </div>
+      <div class="fila-item">
+        <label class="">HIERROS-TIPO DE CONJUNTO:</label>
+        <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Seleccione el conjunto de hierros">
+          <option value=""></option>
+          <% for (const catSelec of data.hierrostipodeconjunto) { %>
+            <option value="<%= catSelec.id %>" <%= data.producto.hierrostipodeconjunto == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+          <%} %>
+        </select>
+      </div>
+    </div>
+    <div class="fila">
+      <div class="fila-item" style="position:relative;">
+        <label>DESCUENTO:</label>
+        <span style="position: absolute; left: 88%; top: 57px;position: absolute; color: grey;">%</span>
+        <input type="descuento"  id="descuento" name="descuento" class="input-form" value="<%= data.producto.descuento %>" placeholder="Descuento" required style="padding-left: 15px;"/>
+      </div>
+      <div class="fila-item" style="position: relative;">
+        <label>PRECIO:</label>
+        <span style="position: absolute; left: 20px; top: 57px;position: absolute; color: grey;">$</span>
+        <input type="precio"  id="precio" name="precio" class="input-form" value="<%= data.producto.precio %>" placeholder="Precio" required style="padding-left: 15px;"/>
+      </div>
+      
+      <div class="fila-item">
+        <label class="talle">TALLES:</label>
+        <select name="talle" id="talle" class="input-form" placeholder="Selecciones el talle">
+          <option value=""></option>
+          <% for (const catSelec of data.talles) { %> 
+            <option value="<%= catSelec.id %>" <%= data.producto.talle == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+          <% } %>
+        </select>
+      </div>
+        <div class="fila-item">
+          <label class="color">COLOR:</label>
+          <select name="color" class="input-form" id="color"placeholder="Seleccione el color">
+            <option value=""></option>
+            <% for (const catSelec of data.color) { %>
+              <option value="<%= catSelec.id %>" <%= data.producto.color == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+            <% } %>
+            <option value="color"></option>
+          </select>
+        </div>
       <div class="img-primaria">
         <img src="/images/zapatos-18.jpg" class="img1"width="80" height="60" alt="New Balance - Striker V2 hombre">
       </div>

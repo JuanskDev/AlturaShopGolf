@@ -1,4 +1,5 @@
 const path = require('path');
+const validationResults= require('express-validator');
 
 const usersController = {
     registro: (req , res) => {

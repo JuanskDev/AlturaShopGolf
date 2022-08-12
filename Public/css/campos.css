@@ -68,6 +68,10 @@
     font-family: oswald;
     color: rgba(41, 41, 196, 0.892);
   }
+  body.campos li.producto-campos-lista h6:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  }
 
   body.campos li.producto-campos-lista p {
     text-align: center;
