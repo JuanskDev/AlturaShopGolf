@@ -1,6 +1,7 @@
 const express = require("express"); // MODULO EXPRESS
 const app = express(); // MODULO EXPRESS EN FUNCIONALIDAD EN APP.JS
 const path = require("path"); //  MODULO PATH
+const compression = require('compression')
 // const session = require('express-sessions'); // SESSIONS- MODULE
 // const multer = require('multer'); //MODULO PARA SUBIR ARCHIVOS - MULTER
 app.use(express.static("./Public")); // CSS
@@ -13,7 +14,7 @@ app.listen(3030, () => {
 });
 
 app.use(methodOverride('_method'));
-
+app.use(compression());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views')); // Define la ubicación de la carpeta de las Vistas
@@ -26,7 +27,7 @@ app.use('/', rutasMain);
 
 // Users Routes
 const rutasUsers = require("./src/routes/users");
-app.use('/users', rutasUsers);
+app.use('/login', rutasUsers);
 //Registro Routes
 const rutasRegistro = require("./src/routes/registro");
 app.use('/registro', rutasRegistro);

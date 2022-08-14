@@ -3,7 +3,7 @@ const validationResults= require('express-validator');
 
 const usersController = {
     registro: (req , res) => {
-        res.render(path.join(__dirname , '../Views/Registro.ejs'))
+        res.render(path.join(__dirname , '../Views/registro.ejs'))
     },
     login: (req,res)  => {
         res.render(path.join(__dirname, '../views/iniciosesion.ejs'))
