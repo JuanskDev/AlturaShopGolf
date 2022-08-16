@@ -8,7 +8,12 @@ font-family: "Open Sans";
 }
 
 /* MAIN */
-
+section.contenedor form{
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 .container {
 position: absolute;
 left: 50%;
@@ -47,13 +52,16 @@ text-align: center;
 .contenedor .fila {
 max-width: 70%;
 width: 100%;
+text-align: center;
 }
 .contenedor input.input-form {
 width: 100%;
-font-size: 25px;
-padding: 15px;
+font-size: 12px;
+padding: 8px;
+font-family: 'Oswald';
+text-align: center;
 color: black;
-border-radius: 5px;
+border-radius: 10px;
 }
 .contenedor input.check-form {
 width: 40px;
@@ -97,16 +105,13 @@ padding-bottom: 30px;
 
 @media (min-width: 790px) {
 
-/*FOOTER*/
-
-
-/* MAIN */ 
 
 .contenedor .fila {
 text-align: center;
 max-width: 40%;
 }
 .inicia-sesion- {
+    
 margin-bottom: 30px;
 }
 }

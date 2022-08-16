@@ -655,12 +655,11 @@ color: #3483fa;
 
 
 @media (min-width: 420px) {
-
-
+    
 }
 
-@media (min-width: 790px) {
-
+@media (max-width: 790px) {
+ 
 /*HEADER*/
 
 
@@ -670,5 +669,5 @@ color: #3483fa;
 }
 
 @media (min-width: 1000px) {
-
+   
 } 
