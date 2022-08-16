@@ -2,13 +2,15 @@
 <html lang="es">
   <head>
     <%- include('./partials/head.ejs')  %>
-    <link rel="stylesheet" href="css/DetalleProducto.css"/>
+    <link rel="stylesheet" href="css/detalleproducto.css"/>
 </head>
 <body>
 
   <%- include('./partials/header.ejs')  %>
 
 <main>
+
+<form action="/detalleproducto" method="POST">
   <div class="main-content">
     <nav class="menu-detalle-producto" style="justify-content: center;">
       <a href="">Golf /</a>
@@ -23,6 +25,7 @@
           <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
           <option value=""></option>
           <% for (const catSelec of data.agarre) { %>
+            
             <option value="<%= catSelec.id %>" <%= data.producto.agarre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
           <%} %>
           </select>  
@@ -146,6 +149,9 @@
       </div>
     </div>
   </div>
+</form>
+
+ 
 </main>
   
         <%- include('./partials/footer.ejs')  %>

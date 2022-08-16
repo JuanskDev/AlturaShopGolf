@@ -35,12 +35,14 @@ const colorFilePath = path.join(__dirname, '../dataBase/color.json');
 const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
 
 
+
+
 const productsController = {
     carritoCompra: (req,res) => {
-        res.render(path.join(__dirname, '../views/Carrito-de-compras.ejs'))
+        res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
-    detalleProducto: (req,res) => {
-        res.render(path.join(__dirname, '../views/Detalleproducto.ejs'))
+    detalleproducto: (req,res) => {
+        res.render(path.join(__dirname, '../views/detalleproducto.ejs'))
     },
     create:(req,res) =>{
         let data = {
@@ -58,6 +60,28 @@ const productsController = {
         }
         res.render('products-create', { data })
     },
+
+    detalleproducto:(req,res) =>{
+        let productEdit = productos.find(e => e.id === +req.params.id)
+        let data = {
+            producto: productEdit, //este es el item de productos.json que se busca en la línea de arriba por el id
+            listaproductos: listaProductos,
+            categorias: categorias,
+            marcas: marcas,
+            agarre: agarre,
+            tipodevara: tipodevara,
+            tipodebolsa: tipodebolsa,
+            hierrostipodeconjunto: hierrostipodeconjunto,
+            descuento: descuento,
+            talles: talles,
+            color: color
+       }
+        res.render('detalleproducto', { data })
+    },
+
+
+
+
     edit:(req,res) =>{
         let productEdit = productos.find(e => e.id === +req.params.id)
         let data = {
