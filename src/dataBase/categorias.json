@@ -5,12 +5,9 @@
     },
     {
         "id": 2,
-        "nombre": "BOLSAS"
+        "nombre": "BOLSAS-CARROS"
     },
-    {
-        "id": 3,
-        "nombre": "CARROS"
-    },
+ 
     {
         "id": 4,
         "nombre": "PALOS"

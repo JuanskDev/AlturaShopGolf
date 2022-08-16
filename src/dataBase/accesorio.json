@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre":"GORRAS"
+    },
+    {
+        "id": 2,
+        "nombre":"GUANTES"
+    },
+    {
+        "id": 3,
+        "nombre":"FUNDAS"
+    },
+    {
+        "id": 4,
+        "nombre":"HERRAMIENTAS"
+    },
+    {
+        "id": 5,
+        "nombre":"TEES"
+    },
+    {
+        "id": 6,
+        "nombre":"PARAGUAS"
+    }
+    
+]

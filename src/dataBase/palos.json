@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "nombre":"DRIVES"
+    },
+    {
+        "id": 2,
+        "nombre":"MADERAS"
+    },
+    {
+        "id": 3,
+        "nombre":"HIBRIDOS"
+    },
+    {
+        "id": 4,
+        "nombre":"HIERROS"
+    },
+    {
+        "id": 5,
+        "nombre":"WEDGES"
+    },
+    {
+        "id": 6,
+        "nombre":"PUTTERS"
+    }
+    
+]

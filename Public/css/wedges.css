@@ -132,7 +132,12 @@
 
 @media (min-width: 790px) {
 body.wedges li.producto-wedges-lista img {
-  margin: auto;
-  display: block;
-} 
+margin: auto;
+display: block;
+margin: auto;
+display: block;
+border: 1px solid #d0d0d0;
+border-radius: 15px;
+box-shadow: 0px 0px 10px rgb(100 100 100);
 }
+} 
