@@ -1,9 +1,6 @@
 const express = require("express"); // MODULO EXPRESS
 const app = express(); // MODULO EXPRESS EN FUNCIONALIDAD EN APP.JS
 const path = require("path"); //  MODULO PATH
-
-// const session = require('express-sessions'); // SESSIONS- MODULE
-// const multer = require('multer'); //MODULO PARA SUBIR ARCHIVOS - MULTER
 app.use(express.static("./Public")); // CSS
 var methodOverride = require('method-override');
 
@@ -35,8 +32,7 @@ app.use('/registro', rutasRegistro);
 const rutasProductos = require("./src/routes/products");
 app.use('/products', rutasProductos);
 
-//_____________________SESSIONS____________________________________//
-// app.use(session({secret:'Secreto'}));
+
 //_________________________________________________________________//
 //_______________________CAMPOS________________________________//
 app.get("/productos/campos", (req, res) => {
