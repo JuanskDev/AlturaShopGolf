@@ -1,12 +1,9 @@
+const path = require("path");
 const {validationResult} = require('express-validator')
 
 module.exports = {
     index: function(req, res){
-        if(req.session.name){
-            let data = req.session
-            return res.render('registro', {data})
-        }
-        res.render("../src/views/registro.ejs");
+        res.render(path.join(__dirname , '../views/registro.ejs'))
     },
     store: function(req, res){
         let errors = validationResult(req)
@@ -26,17 +23,5 @@ module.exports = {
 
             res.redirect('/')
            }   
-    },
-    color: function(req, res){
-        if(req.session.name){
-            let data = req.session
-            return res.render('color', {data})
-        }
-        res.render('color')
-    },
-    borrar: (req, res) => {
-		req.session.color = null;
-		res.cookie('color', null, { maxAge: -1 });
-		res.send('Color borrado');
-	},
+    }
 }
