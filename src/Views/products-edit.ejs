@@ -31,7 +31,7 @@
             <select name="producto" class="input-form" id="producto" placeholder="Seleccione un producto">
               <option value=""></option>
               <% for (const item of data.listaproductos) { %>
-                <option value="<%= item.id %>" <%= data.producto.producto == item.id ? "selected" : null %> ><%= item.nombre %></option>
+                <option value="<%= item.nombre %>" <%= data.listaproductos.nombre == item.nombre ? "selected" : null %> ><%= item.nombre %></option>
               <% } %>
             </select>
           </div>
@@ -40,8 +40,8 @@
             <select name="marca" class="input-form" id="marca" placeholder="Seleccione la marca">
               <option value=""></option>
               <% for (const catSelec of data.marcas) { %>
-                <option value="<%= catSelec.id %>" <%= data.producto.marca == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-              <%} %>
+                <option value="<%= catSelec.nombre %>" <%= data.marcas.nombre == catSelec.nombre ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
             </select>  
           </div>
           <div class="fila-img">

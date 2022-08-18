@@ -75,96 +75,93 @@
         "id": 16,
         "nombre": "GLOBAL-TOUR-GOLF"
     },
+    
     {
         "id": 17,
-        "nombre": "HOMMA"
-    },
-    {
-        "id": 18,
         "nombre": "KING-COBRA"
     },
     {
-        "id": 19,
+        "id": 18,
         "nombre": "LEUPOLD"
     },
     {
-        "id": 20,
+        "id": 19,
         "nombre": "MIZUNO"
     },
     {
-        "id": 21,
+        "id": 20,
         "nombre": "MOTTOCADDY"
     },
     {
-        "id": 22,
+        "id": 21,
         "nombre": "NEW-BALANCE"
     },
     {
-        "id": 23,
+        "id": 22,
         "nombre": "NIKE-GOLF"
     },
     {
-        "id": 24,
+        "id": 23,
         "nombre": "NIKON"
     },
     {
-        "id": 25,
+        "id": 24,
         "nombre": "NOODLE"
     },
     {
-        "id": 26,
+        "id": 25,
         "nombre": "ODYSSEY"
     },
     {
-        "id": 27,
+        "id": 26,
         "nombre": "OPTISHOT"
     },
     {
-        "id": 28,
+        "id": 27,
         "nombre": "PING"
     },
     {
-        "id": 29,
+        "id": 28,
         "nombre": "PUMA"
     },
     {
-        "id": 30,
+        "id": 29,
         "nombre": "SKEACHERS"
     },
     {
-        "id": 31,
+        "id": 30,
         "nombre": "SKYCADDIE"
     },
     {
-        "id": 32,
+        "id": 31,
         "nombre": "SRIXON"
     },
     {
-        "id": 33,
+        "id": 32,
         "nombre": "SUN-MOUNTAIN"
     },
     {
-        "id": 34,
+        "id": 33,
         "nombre": "TAYLORMADE"
     },
     {
-        "id": 35,
+        "id": 34,
         "nombre": "TITLEIST"
     },
     {
-        "id": 36,
+        "id": 35,
         "nombre": "UNDER\\GOLF"
     },
     {
-        "id": 37,
+        "id": 36,
         "nombre": "VOICE-CADDIE"
     },
     {
-        "id": 38,
+        "id": 37,
         "nombre": "VOLVIK"
     },
     {
-        "id": 39,
+        "id": 38,
         "nombre": "WILSON"
     }
     

@@ -34,7 +34,7 @@ const talles = JSON.parse(fs.readFileSync(tallesFilePath, 'utf-8'));
 const colorFilePath = path.join(__dirname, '../dataBase/color.json');
 const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
 
-
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const productsController = {
@@ -81,7 +81,6 @@ const productsController = {
 
 
 
-
     edit:(req,res) =>{
         let productEdit = productos.find(e => e.id === +req.params.id)
         let data = {
@@ -125,6 +124,29 @@ const productsController = {
         //3 actualizar el archivo productos.json con los nuevos datos
 
     },
+    showProductCategory: (req,res) => {
+        // categoria que llega por parametro-url
+        let category = req.params.category
+        // categoria que coincide parametro con el valor de la categoria en json
+        let productCategory = productos.filter(product => product.categoria == category)
+        // // Marca de listado de marcas que coincide con listado de productos
+        // let productCategoryName = marcas.find(marca => marca.id == marcaEncontrada)
+        // // Quiero que product.marca == marca.id y que retorne marca.nombre
+        // for(i = 0; i <= productCategory.length; i++){
+        //     let marcaEncontrada = productCategory[i].marca === marca.id
+        //     return marcaEncontrada
+        // }
+        res.render(path.join(__dirname, '../views/products-test.ejs'), {productCategory, toThousand})
+    } 
+    ,
+    showProductSubcategory: (req,res) => {
+        let subcategory = req.params.subcategory
+        let productSubcategory = productos.filter(product => product.producto == subcategory)
+        res.render(path.join(__dirname, '../views/products-test-2.ejs'), {productSubcategory, toThousand})
+    },
+    
+    
+
     store: (req, res) => {
     let image
     
@@ -146,6 +168,9 @@ const productsController = {
     fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
     res.redirect('/products/create');
     }
+
+    
+
 };
 
 

@@ -1,4 +1,5 @@
 const express = require('express');
+const router = express.Router();
 const path = require("path");
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
@@ -12,17 +13,23 @@ const storage = multer.diskStorage({
     }
 })
 var upload = multer({storage: storage})
-var router = express.Router();
 
+//---------------RUTAS CARRITO DE COMPRAS Y DETALLE PRODUCTO-------------------------------------------------//
 router.get('/carritodecompras' , productsController.carritoCompra);
 router.get('/detalleproducto' , productsController.detalleproducto);
 
-router.get('/create', productsController.create); //formulario create
+//--------------FORMULARIO CREAR PRODUCTOS-----------------------//
+router.get('/create', productsController.create); 
 router.post('/create', upload.any(), productsController.store);
 
+//--------------------FORMULARIO EDITAR PRODUCTOS-------------------//
 router.get('/edit/:id', productsController.edit); // formulario edit
 router.put('/edit/:id', upload.any(), productsController.update);
 
-// router.delete('/delete/:id', productsController.destroy);-----// borrar un producto de productos.json
+//-----------------------ELIMINAR PRODUCTOS---------------------------//
+// router.delete('/delete/:id', productsController.destroy)
+
+router.get('/test/:category' , productsController.showProductCategory);
+router.get('/test/:category/:subcategory' , productsController.showProductSubcategory);
 
 module.exports = router;

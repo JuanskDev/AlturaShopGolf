@@ -79,5 +79,53 @@
   "stock": "3",
   "color": "",
   "image": "myFile-1660674824473.webp"
+ },
+ {
+  "id": 6,
+  "categoria": "4",
+  "producto": "3",
+  "marca": "33",
+  "agarre": "1",
+  "tipodevara": "2",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "0.00",
+  "precio": "255565",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1660768761442.webp"
+ },
+ {
+  "id": 7,
+  "categoria": "2",
+  "producto": "1",
+  "marca": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "1",
+  "hierrostipodeconjunto": "",
+  "descuento": "0.00",
+  "precio": "2564447",
+  "talle": "",
+  "stock": "2",
+  "color": "10",
+  "image": "myFile-1660768891431.webp"
+ },
+ {
+  "id": 8,
+  "categoria": "4",
+  "producto": "10",
+  "marca": "",
+  "agarre": "1",
+  "tipodevara": "1",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "2",
+  "descuento": "0.00",
+  "precio": "254555",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1660768977175.webp"
  }
 ]
