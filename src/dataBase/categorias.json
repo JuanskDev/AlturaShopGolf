@@ -9,23 +9,23 @@
     },
  
     {
-        "id": 4,
+        "id": 3,
         "nombre": "PALOS"
     },
     {
-        "id": 5,
+        "id": 4,
         "nombre": "PELOTAS"
     },
     {
-        "id": 6,
+        "id": 5,
         "nombre": "TECNOLOGIA"
     },
     {
-        "id": 7,
+        "id": 6,
         "nombre": "VESTIR"
     },
     {
-        "id": 8,
+        "id": 7,
         "nombre": "ZAPATOS"
     }
 ]
