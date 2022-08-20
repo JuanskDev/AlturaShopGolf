@@ -29,7 +29,7 @@ router.put('/edit/:id', upload.any(), productsController.update);
 //-----------------------ELIMINAR PRODUCTOS---------------------------//
 // router.delete('/delete/:id', productsController.destroy)
 
-router.get('/test/:category' , productsController.showProductCategory);
-router.get('/test/:category/:subcategory' , productsController.showProductSubcategory);
+router.get('/:category' , productsController.showProductCategory);
+router.get('/:category/:subcategory' , productsController.showProductSubcategory);
 
 module.exports = router;

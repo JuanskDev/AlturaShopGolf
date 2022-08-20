@@ -15,7 +15,6 @@ module.exports = {
         res.cookie('nombre_cookie_prueba', req.body.nombre, {maxAge: 10000 });
 
         req.session.name = req.body.name;
-           req.session.color = req.body.color;
            req.session.email = req.body.email;
            req.session.age = req.body.age;
            if(req.body.recordar_color){

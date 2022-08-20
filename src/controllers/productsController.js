@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const { render } = require('ejs');
 
 const productsFilePath = path.join(__dirname, '../dataBase/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -13,6 +14,9 @@ const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
 const marcasFilePath = path.join(__dirname, '../dataBase/marcas.json');
 const marcas = JSON.parse(fs.readFileSync(marcasFilePath, 'utf-8'));
 
+const modelosFilePath = path.join(__dirname, '../dataBase/modelos.json');
+const modelos = JSON.parse(fs.readFileSync(modelosFilePath, 'utf-8'));
+
 const agarreFilePath = path.join(__dirname, '../dataBase/agarre.json');
 const agarre = JSON.parse(fs.readFileSync(agarreFilePath, 'utf-8'));
 
@@ -25,8 +29,8 @@ const tipodebolsa = JSON.parse(fs.readFileSync(tipodebolsaFilePath, 'utf-8'));
 const hierrostipodeconjuntoFilePath = path.join(__dirname, '../dataBase/hierrostipodeconjunto.json');
 const hierrostipodeconjunto = JSON.parse(fs.readFileSync(hierrostipodeconjuntoFilePath, 'utf-8'));
 
-const descuentoFilePath = path.join(__dirname, '../dataBase/descuento.json');
-const descuento = JSON.parse(fs.readFileSync(descuentoFilePath, 'utf-8'));
+const descuentoFilePath = path.join(__dirname, '../dataBase/descuentos.json');
+const descuentos = JSON.parse(fs.readFileSync(descuentoFilePath, 'utf-8'));
 
 const tallesFilePath = path.join(__dirname, '../dataBase/talles.json');
 const talles = JSON.parse(fs.readFileSync(tallesFilePath, 'utf-8'));
@@ -49,14 +53,15 @@ const productsController = {
             listaproductos: listaProductos,
             categorias: categorias,
             marcas: marcas,
+            modelos: modelos,
             agarre: agarre,
             tipodevara: tipodevara,
             tipodebolsa: tipodebolsa,
             hierrostipodeconjunto: hierrostipodeconjunto,
-            descuento: descuento,
+            descuentos: descuentos,
             talles: talles,
             color: color,
-          
+
         }
         res.render('products-create', { data })
     },
@@ -68,19 +73,17 @@ const productsController = {
             listaproductos: listaProductos,
             categorias: categorias,
             marcas: marcas,
+            modelo: modelos,
             agarre: agarre,
             tipodevara: tipodevara,
             tipodebolsa: tipodebolsa,
             hierrostipodeconjunto: hierrostipodeconjunto,
-            descuento: descuento,
+            descuentos: descuentos,
             talles: talles,
             color: color
        }
         res.render('detalleproducto', { data })
     },
-
-
-
     edit:(req,res) =>{
         let productEdit = productos.find(e => e.id === +req.params.id)
         let data = {
@@ -88,11 +91,12 @@ const productsController = {
             listaproductos: listaProductos,
             categorias: categorias,
             marcas: marcas,
+            modelos: modelos,
             agarre: agarre,
             tipodevara: tipodevara,
             tipodebolsa: tipodebolsa,
             hierrostipodeconjunto: hierrostipodeconjunto,
-            descuento: descuento,
+            descuentos: descuentos,
             talles: talles,
             color: color
        }
@@ -105,9 +109,10 @@ const productsController = {
             productUpdate.producto = req.body.producto;
             productUpdate.categoria = req.body.categoria;
             productUpdate.marca = req.body.marca;
+            productUpdate.modelo = req.body.modelo;
             productUpdate.agarre = req.body.agarre;
             productUpdate.tipodevara = req.body.tipodevara;
-            productUpdate.tipodebolsa = req.body.tipodebolsa; 
+            productUpdate.tipodebolsa = req.body.tipodebolsa;
             productUpdate.hierrostipodeconjunto = req.body.hierrostipodeconjunto;
             productUpdate.descuento = req.body.descuento;
             productUpdate.precio = req.body.precio;
@@ -116,7 +121,7 @@ const productsController = {
             productUpdate.color = req.body.color;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image
         }
-        
+
         fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
         res.redirect("/products/edit/" + req.params.id);
         //1 hay que buscar el producto
@@ -129,50 +134,127 @@ const productsController = {
         let category = req.params.category
         // categoria que coincide parametro con el valor de la categoria en json
         let productCategory = productos.filter(product => product.categoria == category)
-        // // Marca de listado de marcas que coincide con listado de productos
-        // let productCategoryName = marcas.find(marca => marca.id == marcaEncontrada)
-        // // Quiero que product.marca == marca.id y que retorne marca.nombre
-        // for(i = 0; i <= productCategory.length; i++){
-        //     let marcaEncontrada = productCategory[i].marca === marca.id
-        //     return marcaEncontrada
-        // }
-        res.render(path.join(__dirname, '../views/products-test.ejs'), {productCategory, toThousand})
-    } 
-    ,
-    showProductSubcategory: (req,res) => {
-        let subcategory = req.params.subcategory
-        let productSubcategory = productos.filter(product => product.producto == subcategory)
-        res.render(path.join(__dirname, '../views/products-test-2.ejs'), {productSubcategory, toThousand})
+        
+        productCategory.forEach(item => {
+            //categoría
+            let categoriaId = item.categoria;
+            let category_item = categorias.filter(category => category.id == categoriaId)
+            category_item.forEach(item_ => {
+                item.category_selected = item_.nombre
+            })
+
+            //producto
+            let productoId = item.producto;
+            let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
+            producto_item.forEach(item_ => {
+                item.producto_selected = item_.nombre
+            })
+            //marca
+            let marcaId = item.marca;
+            let marca_item = marcas.filter(marca => marca.id == marcaId)
+            marca_item.forEach(item_ => {
+                item.marca_selected = item_.nombre
+            })
+            //modelo
+            let modeloId = item.modelo;
+            let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
+            modelo_item.forEach(item_ => {
+                 item.modelo_selected = item_.nombre
+            })
+              //agarre
+              let agarreId = item.agarre;
+              let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
+              agarre_item.forEach(item_ => {
+                   item.agarre = item_.nombre
+              })
+            //tipo de vara
+            let tipodevaraId = item.tipodevara;
+            let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
+            tipodevara_item.forEach(item_ => {
+                item.tipodevara_selected = item_.nombre
+            })
+             //tipo de bolsa
+             let tipodebolsaId = item.tipodebolsa;
+             let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
+             tipodebolsa_item.forEach(item_ => {
+                 item.tipodebolsa_selected = item_.nombre
+             })
+        });
+        
+        res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
     },
-    
-    
+    showProductSubcategory: (req,res) => {
+        let category = req.params.category
+        let subcategory = req.params.subcategory
+        let productCategory = productos.filter(product => product.categoria == category && product.producto == subcategory)
+       
+        productCategory.forEach(item => {
+            //categoría
+            let categoriaId = item.categoria;
+            let category_item = categorias.filter(category => category.id == categoriaId)
+            category_item.forEach(item_ => {
+                item.category_selected = item_.nombre
+            })
 
+            //producto
+            let productoId = item.producto;
+            let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
+            producto_item.forEach(item_ => {
+                item.producto_selected = item_.nombre
+            })
+            //marca
+            let marcaId = item.marca;
+            let marca_item = marcas.filter(marca => marca.id == marcaId)
+            marca_item.forEach(item_ => {
+                item.marca_selected = item_.nombre
+            })
+            //modelo
+            let modeloId = item.modelo;
+            let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
+            modelo_item.forEach(item_ => {
+                 item.modelo_selected = item_.nombre
+            })
+              //agarre
+              let agarreId = item.agarre;
+              let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
+              agarre_item.forEach(item_ => {
+                   item.agarre = item_.nombre
+              })
+            //tipo de vara
+            let tipodevaraId = item.tipodevara;
+            let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
+            tipodevara_item.forEach(item_ => {
+                item.tipodevara_selected = item_.nombre
+            })
+             //tipo de bolsa
+             let tipodebolsaId = item.tipodebolsa;
+             let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
+             tipodebolsa_item.forEach(item_ => {
+                 item.tipodebolsa_selected = item_.nombre
+             })
+        });
+        res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
+    },
     store: (req, res) => {
-    let image
-    
-    if(req.files[0] != undefined){
-        image = req.files[0].filename
-    } else {
-        image = 'default-image.png'
-    }
-    let indexId = 1;
-    if(productos.length != 0) {
-        indexId = productos[productos.length - 1].id;
-    }
-    let newProduct = {
-        id: indexId + 1,
-        ...req.body,
-        image: image
-    };
-    productos.push(newProduct)
-    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
-    res.redirect('/products/create');
-    }
+        let image
 
-    
-
+        if(req.files[0] != undefined){
+            image = req.files[0].filename
+        } else {
+            image = 'default-image.png'
+        }
+        let indexId = 0;
+        if(productos.length != 0) {
+            indexId = productos[productos.length - 1].id;
+        }
+        let newProduct = {
+            id: indexId + 1,
+            ...req.body,
+            image: image
+        };
+        productos.push(newProduct)
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+        res.redirect('/products/create');
+    }
 };
-
-
-
 module.exports = productsController;

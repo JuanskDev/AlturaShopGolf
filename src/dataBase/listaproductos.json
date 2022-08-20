@@ -90,5 +90,9 @@
 {
     "id":23,
     "nombre": "ZAPATOS"
+},
+{
+    "id":24,
+    "nombre": "WEDGES"
 }
 ]
