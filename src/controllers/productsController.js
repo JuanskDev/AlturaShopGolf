@@ -38,6 +38,13 @@ const talles = JSON.parse(fs.readFileSync(tallesFilePath, 'utf-8'));
 const colorFilePath = path.join(__dirname, '../dataBase/color.json');
 const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
 
+const camposFilePath = path.join(__dirname, '../dataBase/campos.json');
+const campos = JSON.parse(fs.readFileSync(camposFilePath, 'utf-8'));
+
+const leccionesFilePath = path.join(__dirname, '../dataBase/lecciones.json');
+const lecciones = JSON.parse(fs.readFileSync(leccionesFilePath, 'utf-8'));
+
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -61,6 +68,8 @@ const productsController = {
             descuentos: descuentos,
             talles: talles,
             color: color,
+            campos: campos,
+            lecciones: lecciones
 
         }
         res.render('products-create', { data })
@@ -80,9 +89,22 @@ const productsController = {
             hierrostipodeconjunto: hierrostipodeconjunto,
             descuentos: descuentos,
             talles: talles,
-            color: color
+            color: color,
+            
        }
         res.render('detalleproducto', { data })
+    },
+    delete: (req,res) => {
+        for( var i = 0; i < productos.length; i++){ 
+                                   
+            if ( productos[i] === +req.params.id) { 
+                productos.splice(i, 1); 
+                i = productos.length + 10; 
+                fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
+           }
+        }
+
+        res.redirect("/products/create");
     },
     edit:(req,res) =>{
         let productEdit = productos.find(e => e.id === +req.params.id)
@@ -98,7 +120,10 @@ const productsController = {
             hierrostipodeconjunto: hierrostipodeconjunto,
             descuentos: descuentos,
             talles: talles,
-            color: color
+            color: color,
+            campos: campos,
+            lecciones: lecciones
+
        }
         res.render('products-edit', { data })
     },
@@ -119,6 +144,8 @@ const productsController = {
             productUpdate.talle = req.body.talle;
             productUpdate.stock = req.body.stock;
             productUpdate.color = req.body.color;
+            productUpdate.campos = req.body.campos;
+            productUpdate.lecciones = req.body.lecciones;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image
         }
 

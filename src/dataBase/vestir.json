@@ -1,14 +1,34 @@
 [
     {
         "id": 1,
-        "noombre": "ROPA-DE-HOMBRE"
+        "noombre": "CHOMBA"
     },
     {
         "id": 2,
-        "noombre": "ROPA-DE-MUJER"
+        "parezca ropa de hombre sino camiseta o chomba dependieno el tipo de ropa": "CAMISETA"
     },
     {
         "id": 3,
-        "noombre": "ROPA-DE-NIÑO"
+        "noombre": "CHOMBA-NIÑO"
+    },
+    {
+        "id": 4,
+        "noombre": "BERMUDA"
+    },
+    {
+        "id": 5,
+        "noombre": "PANTALON"
+    },
+    {
+        "id": 6,
+        "noombre": "BUZO"
+    },
+    {
+        "id": 7,
+        "noombre": "POLLERA"
+    },
+    {
+        "id": 8,
+        "noombre": "CINTURON"
     }
 ]

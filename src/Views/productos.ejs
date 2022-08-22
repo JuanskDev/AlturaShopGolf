@@ -40,7 +40,8 @@
             <div class="tamaño-hr">
               <p class="nuevo">NUEVO</p>
             <h6><%= product.producto_selected %> <%= product.marca_selected %><h6>
-            <p><%= product.tipodevara_selected%></p>
+            <p><%= product.tipodevara_selected%><%= product.tipodebolsa_selected%></p>
+
             <% if(product.descuento === "0.00"){ %>
                     <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
                 <% } else{ %>  

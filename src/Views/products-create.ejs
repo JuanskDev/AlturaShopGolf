@@ -49,7 +49,7 @@
             <select name="modelo" class="input-form" id="modelo" placeholder="Seleccione el modelos">
               <option value=""></option>
               <% for (const catSelec of data.modelos) { %>
-                <option value="<%= catSelec.id %>" <%= data.modelos.nombre == catSelec.nombre ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>"><%= catSelec.nombre %></option>
               <% } %>
             </select>  
           </div>
@@ -60,7 +60,7 @@
               <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
               <option value=""></option>
               <% for (const catSelec of data.agarre) { %>
-                <option value="<%= catSelec.id %>" <%= data.agarre.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>"><%= catSelec.nombre %></option>
               <% } %>
               </select>  
           </div>

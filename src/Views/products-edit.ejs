@@ -31,7 +31,7 @@
             <select name="producto" class="input-form" id="producto" placeholder="Seleccione un producto">
               <option value=""></option>
               <% for (const item of data.listaproductos) { %>
-                <option value="<%= item.id %>" <%= data.listaproductos.nombre == item.nombre ? "selected" : null %> ><%= item.nombre %></option>
+                <option value="<%= item.id %>" <%= data.producto.producto == item.id ? "selected" : null %> ><%= item.nombre %></option>
               <% } %>
             </select>
           </div>
@@ -40,7 +40,7 @@
             <select name="marca" class="input-form" id="marca" placeholder="Seleccione la marca">
               <option value=""></option>
               <% for (const catSelec of data.marcas) { %>
-                <option value="<%= catSelec.id %>" <%= data.marcas.nombre == catSelec.nombre ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>" <%= data.producto.marca == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
             </select>  
           </div>
@@ -49,7 +49,7 @@
             <select name="modelo" class="input-form" id="modelo" placeholder="Seleccione el modelo">
               <option value=""></option>
               <% for (const catSelec of data.modelos) { %>
-                <option value="<%= catSelec.id %>" <%= data.modelos.nombre == catSelec.nombre ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>" <%= data.producto.modelo == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
             </select>  
           </div>
@@ -72,7 +72,7 @@
             <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
               <option value=""></option>
               <% for (const catSelec of data.tipodevara) { %>
-                <option value="<%= catSelec.id %>" <%= data.tipodevara.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>" <%= data.producto.tipodevara == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
             </select>
           </div>
@@ -100,7 +100,7 @@
             <label>DESCUENTO:</label>
             <select name="descuento"class="input-form" id="descuento" placeholder="Seleccione el descuento" required>
               <% for (const catSelec of data.descuentos) { %>
-                <option value="<%= catSelec.descuento %>" <%= data.descuentos.descuento == catSelec.descuento ? "selected" : null %> ><%= catSelec.descuento %> %</option>
+                <option value="<%= catSelec.descuento %>" <%= data.producto.descuento == catSelec.descuento ? "selected" : null %> ><%= catSelec.descuento %> %</option>
                 <% } %>
             </select>
           </div>
@@ -145,6 +145,7 @@
         <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
           <div class="fila-item">
             <button type="submit" id="guardar">MODIFICAR</button> 
+            <a href="/products/delete/<%=data.producto.id%>">ELIMINAR</a> 
           </div>
       </section>
     </form>

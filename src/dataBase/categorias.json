@@ -27,7 +27,16 @@
     {
         "id": 7,
         "nombre": "ZAPATOS"
+    },
+    {
+        "id": 8,
+        "nombre": "CAMPOS"
+    },
+    {
+        "id": 9,
+        "nombre": "LECCIONES"
     }
+   
 ]
 
             

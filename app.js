@@ -43,21 +43,21 @@ app.get("/productos/accesorios", (req, res) => {
   res.render(path.join(__dirname, "src/views/accesorios.ejs"));
 });
 //_______________________GUANTES____________________________//
-app.get("/productos/accesorios/guantes", (req, res) => {
-  res.render(path.join(__dirname, "src/views/guantes.ejs"));
-});
+// app.get("/productos/accesorios/guantes", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/guantes.ejs"));
+// });
 //_______________________GORRAS_____________________________//
-app.get("/productos/accesorios/gorras", (req, res) => {
-  res.render(path.join(__dirname, "src/views/gorras.ejs"));
-});
+// app.get("/productos/accesorios/gorras", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/gorras.ejs"));
+// });
 //_______________________FUNDAS_____________________________//
-app.get("/productos/accesorios/fundas", (req, res) => {
-  res.render(path.join(__dirname, "src/views/fundas.ejs"));
-});
-//_______________________HERRAMIENTAS_____________________________//
-app.get("/productos/accesorios/herramientas", (req, res) => {
-  res.render(path.join(__dirname, "src/views/herramientas.ejs"));
-});
+// app.get("/productos/accesorios/fundas", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/fundas.ejs"));
+// });
+// //_______________________HERRAMIENTAS_____________________________//
+// app.get("/productos/accesorios/herramientas", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/herramientas.ejs"));
+// });
 //_______________________TEES_____________________________//
 app.get("/productos/accesorios/tees", (req, res) => {
   res.render(path.join(__dirname, "src/views/tees.ejs"));
@@ -66,23 +66,23 @@ app.get("/productos/accesorios/tees", (req, res) => {
 app.get("/productos/accesorios/toallas", (req, res) => {
   res.render(path.join(__dirname, "src/views/toallas.ejs"));
 });
-//_______________________PARAGUAS_____________________________//
-app.get("/productos/accesorios/paraguas", (req, res) => {
-  res.render(path.join(__dirname, "src/views/paraguas.ejs"));
-});
+// //_______________________PARAGUAS_____________________________//
+// app.get("/productos/accesorios/paraguas", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/paraguas.ejs"));
+// });
 //__________________________________________________________________//
 //_______________________BOLSAS-CARROS_____________________________//
 app.get("/productos/bolsas-carros", (req, res) => {
   res.render(path.join(__dirname, "src/views/bolsas-carros.ejs"));
 });
 //_______________________BOLSAS_____________________________//
-app.get("/productos/bolsas", (req, res) => {
-  res.render(path.join(__dirname, "src/views/bolsas.ejs"));
-});
-//_______________________CARROS_____________________________//
-app.get("/productos/carros", (req, res) => {
-  res.render(path.join(__dirname, "src/views/carros.ejs"));
-});
+// app.get("/productos/bolsas", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/bolsas.ejs"));
+// });
+// //_______________________CARROS_____________________________//
+// app.get("/productos/carros", (req, res) => {
+//   res.render(path.join(__dirname, "src/views/carros.ejs"));
+// });
 //__________________________________________________________//
 //_______________________PALOS_____________________________//
 app.get("/productos/palos", (req, res) => {

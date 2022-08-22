@@ -27,7 +27,7 @@ router.get('/edit/:id', productsController.edit); // formulario edit
 router.put('/edit/:id', upload.any(), productsController.update);
 
 //-----------------------ELIMINAR PRODUCTOS---------------------------//
-// router.delete('/delete/:id', productsController.destroy)
+router.delete('/delete/:id', productsController.delete)
 
 router.get('/:category' , productsController.showProductCategory);
 router.get('/:category/:subcategory' , productsController.showProductSubcategory);

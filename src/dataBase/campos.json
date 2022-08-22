@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "nombre": "LA ESTANCIA DE CAFAYATE WINE & GOLF "
+    },
+    {
+        "id": 2,
+        "nombre": "CARILO GOLF CLUB "
+    },
+
+    {
+        "id": 3,
+        "nombre": "TERMAS DE RIO HONDO GOLF CLUB "
+    },
+
+    {
+        "id": 4,
+        "nombre": "LLAO LLAO HOTEL & RESORT - GOLF "
+    },
+
+    {
+        "id": 5,
+        "nombre": "VILLA ALLENDE GOLF CLUB "
+    }
+]
