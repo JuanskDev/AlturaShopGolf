@@ -5,7 +5,7 @@
     },
     {
         "id": 2,
-        "parezca ropa de hombre sino camiseta o chomba dependieno el tipo de ropa": "CAMISETA"
+        "nombre": "CAMISETA"
     },
     {
         "id": 3,
@@ -30,5 +30,13 @@
     {
         "id": 8,
         "noombre": "CINTURON"
+    },
+    {
+        "id": 9,
+        "noombre": "REMERA"
+    },
+    {
+        "id": 8,
+        "noombre": "CAMPERA"
     }
 ]

@@ -16,7 +16,7 @@ var upload = multer({storage: storage})
 
 //---------------RUTAS CARRITO DE COMPRAS Y DETALLE PRODUCTO-------------------------------------------------//
 router.get('/carritodecompras' , productsController.carritoCompra);
-router.get('/detalleproducto' , productsController.detalleproducto);
+router.get('/detalle/:id' , productsController.detalleproducto);
 
 //--------------FORMULARIO CREAR PRODUCTOS-----------------------//
 router.get('/create', productsController.create); 

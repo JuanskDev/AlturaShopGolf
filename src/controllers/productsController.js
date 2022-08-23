@@ -52,9 +52,6 @@ const productsController = {
     carritoCompra: (req,res) => {
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
-    detalleproducto: (req,res) => {
-        res.render(path.join(__dirname, '../views/detalleproducto.ejs'))
-    },
     create:(req,res) =>{
         let data = {
             listaproductos: listaProductos,
@@ -76,33 +73,67 @@ const productsController = {
     },
 
     detalleproducto:(req,res) =>{
-        let productEdit = productos.find(e => e.id === +req.params.id)
+        let productDetail = productos.find(e => e.id === +req.params.id)
         let data = {
-            producto: productEdit, //este es el item de productos.json que se busca en la línea de arriba por el id
-            listaproductos: listaProductos,
-            categorias: categorias,
-            marcas: marcas,
-            modelo: modelos,
+            producto: productDetail,
             agarre: agarre,
             tipodevara: tipodevara,
             tipodebolsa: tipodebolsa,
             hierrostipodeconjunto: hierrostipodeconjunto,
-            descuentos: descuentos,
             talles: talles,
-            color: color,
-            
-       }
-        res.render('detalleproducto', { data })
+            color: color
+        };
+
+            //categoría
+            let categoriaId = productDetail.categoria;
+            let category_item = categorias.filter(category => category.id == categoriaId)
+            category_item.forEach(item_ => {
+                data.category_selected = item_.nombre
+            })
+
+            // //producto
+            // let productoId = item.producto;
+            // let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
+            // producto_item.forEach(item_ => {
+            //     data.producto_selected = item_.nombre
+            // })
+            // //marca
+            // let marcaId = item.marca;
+            // let marca_item = marcas.filter(marca => marca.id == marcaId)
+            // marca_item.forEach(item_ => {
+            //     data.marca_selected = item_.nombre
+            // })
+            // //modelo
+            // let modeloId = item.modelo;
+            // let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
+            // modelo_item.forEach(item_ => {
+            //     data.modelo_selected = item_.nombre
+            // })
+            //   //agarre
+            //   let agarreId = item.agarre;
+            //   let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
+            //   agarre_item.forEach(item_ => {
+            //     data.agarre = item_.nombre
+            //   })
+            // //tipo de vara
+            // let tipodevaraId = item.tipodevara;
+            // let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
+            // tipodevara_item.forEach(item_ => {
+            //     data.tipodevara_selected = item_.nombre
+            // })
+            //  //tipo de bolsa
+            //  let tipodebolsaId = item.tipodebolsa;
+            //  let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
+            //  tipodebolsa_item.forEach(item_ => {
+            //     data.tipodebolsa_selected = item_.nombre
+            //  })
+
+        res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data })
     },
     delete: (req,res) => {
-        for( var i = 0; i < productos.length; i++){ 
-                                   
-            if ( productos[i] === +req.params.id) { 
-                productos.splice(i, 1); 
-                i = productos.length + 10; 
-                fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
-           }
-        }
+        let index = productos.findIndex(e => e.id === +req.params.id)
+        productos.splice(index, 1); 
+        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
 
         res.redirect("/products/create");
     },

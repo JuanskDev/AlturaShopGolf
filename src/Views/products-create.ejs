@@ -19,7 +19,7 @@
         <div class="fila">
           <div class="fila-item">
             <label class="categoria">CATEGORIA:</label>
-            <select name="categoria" class="input-form" id="categoria" placeholder="Seleccione la categoría">
+            <select name="categoria" class="input-form" id="categoria" placeholder="Seleccione la categoría" onchange="filtrarModelos()">
               <option value=""></option>
               <% for (const catSelec of data.categorias) { %>
                 <option value="<%= catSelec.id %>" <%= data.categorias.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -49,7 +49,7 @@
             <select name="modelo" class="input-form" id="modelo" placeholder="Seleccione el modelos">
               <option value=""></option>
               <% for (const catSelec of data.modelos) { %>
-                <option value="<%= catSelec.id %>"><%= catSelec.nombre %></option>
+                <option value="<%= catSelec.id %>" data-categoriaid="<%=catSelec.categoriaId%>"><%= catSelec.nombre %></option>
               <% } %>
             </select>  
           </div>

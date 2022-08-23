@@ -17,49 +17,70 @@
       <hr class="hr-1">
 
       <div class="resultado-busqueda">
+
         <ul class="resultado-productos">
-          <li class="producto-campos-lista">
-            <img src="/images/CAMPOS/2/club-house-de-la-estancia.jpg" alt="">
-            <div class="tamaño-hr">
-            <h6>LA ESTANCIA DE CAFAYATE WINE & GOLF - ARGENTINA</h6>
-            <p>RN40, A4427 Cafayate, Salta</p>
-            <p>Teléfono: 0387 422-3146</p>
-            </div>
-            </li>
+          
+          <% campos.forEach(function(campo){%>
             <li class="producto-campos-lista">
-              <img src="/images/CAMPOS/Carilo-Golf-Club/carilo-golf-club.jpg" alt="">
+              <img src="<%= campo.imagen %>" alt="">
               <div class="tamaño-hr">
-              <h6>CARILO GOLF CLUB - ARGENTINA</h6>
-              <p>Ñandu 964, B7167 Cariló, Provincia de Buenos Aires</p>
-              <p>Teléfono: 02254 47-0044</p>
+                <h6><%=campo.nombre%></h6>
+                <p>Dirección: <strong><%=campo.direccion%></strong></p>
+                <p>Teléfono: <strong><%=campo.telefono%></strong></p>
               </div>
-          </li>
-          <li class="producto-campos-lista">
-            <img src="/images/CAMPOS/IMAGES - Termas de Rio Hondo Golf Club/termas-aereo.jpg" alt="">
-            <div class="tamaño-hr">
-            <h6>TERMAS DE RIO HONDO GOLF CLUB - ARGENTINA</h6>
-            <p>Av. Costanera s/n, G4220 Termas de Río Hondo, Santiago del Estero</p>
-            <p>Teléfono: 0385 15-413-2073</p>
-            </div>
-        </li>
-          <li class="producto-campos-lista">
-            <img src="/images/CAMPOS/Llao Llao Golf Club/golf-detail1.jpg" alt="">
-            <div class="tamaño-hr">
-            <h6>LLAO LLAO HOTEL & RESORT ARGENTINA</h6>
-            <p>Av. Ezequiel Bustillo Km. 25, R8401 San Carlos de Bariloche, Río Negro</p>
-            <p>Teléfono: 0294 444-8530</p>
-            </div>
-        </li>
-        <li class="producto-campos-lista">
-          <img src="/images/CAMPOS/villa-allende/slide2.jpg" alt="">
-          <div class="tamaño-hr">
-          <h6>VILLA ALLENDE GOLF CLUB - ARGENTINA</h6>
-          <p>Santiago Derqui 30, Villa Allende Golf, X5105JAB Villa Allende, Córdoba</p>
-          <p>Teléfono: 03543 43-2561</p>
-          </div>
-        </li>
-    </ul>
-    
+            </li>
+          <% }) %>
+        </ul>
+
+
+
+
+
+
+
+    //     <ul class="resultado-productos">
+    //       <li class="producto-campos-lista">
+    //         <img src="/images/CAMPOS/2/club-house-de-la-estancia.jpg" alt="">
+    //         <div class="tamaño-hr">
+    //         <h6>LA ESTANCIA DE CAFAYATE WINE & GOLF - ARGENTINA</h6>
+    //         <p>RN40, A4427 Cafayate, Salta</p>
+    //         <p>Teléfono: 0387 422-3146</p>
+    //         </div>
+    //         </li>
+    //         <li class="producto-campos-lista">
+    //           <img src="/images/CAMPOS/Carilo-Golf-Club/carilo-golf-club.jpg" alt="">
+    //           <div class="tamaño-hr">
+    //           <h6>CARILO GOLF CLUB - ARGENTINA</h6>
+    //           <p>Ñandu 964, B7167 Cariló, Provincia de Buenos Aires</p>
+    //           <p>Teléfono: 02254 47-0044</p>
+    //           </div>
+    //       </li>
+    //       <li class="producto-campos-lista">
+    //         <img src="/images/CAMPOS/IMAGES - Termas de Rio Hondo Golf Club/termas-aereo.jpg" alt="">
+    //         <div class="tamaño-hr">
+    //         <h6>TERMAS DE RIO HONDO GOLF CLUB - ARGENTINA</h6>
+    //         <p>Av. Costanera s/n, G4220 Termas de Río Hondo, Santiago del Estero</p>
+    //         <p>Teléfono: 0385 15-413-2073</p>
+    //         </div>
+    //     </li>
+    //       <li class="producto-campos-lista">
+    //         <img src="/images/CAMPOS/Llao Llao Golf Club/golf-detail1.jpg" alt="">
+    //         <div class="tamaño-hr">
+    //         <h6>LLAO LLAO HOTEL & RESORT ARGENTINA</h6>
+    //         <p>Av. Ezequiel Bustillo Km. 25, R8401 San Carlos de Bariloche, Río Negro</p>
+    //         <p>Teléfono: 0294 444-8530</p>
+    //         </div>
+    //     </li>
+    //     <li class="producto-campos-lista">
+    //       <img src="/images/CAMPOS/villa-allende/slide2.jpg" alt="">
+    //       <div class="tamaño-hr">
+    //       <h6>VILLA ALLENDE GOLF CLUB - ARGENTINA</h6>
+    //       <p>Santiago Derqui 30, Villa Allende Golf, X5105JAB Villa Allende, Córdoba</p>
+    //       <p>Teléfono: 03543 43-2561</p>
+    //       </div>
+    //     </li>
+    // </ul>
+    </div>
   </div>
 </main>
 

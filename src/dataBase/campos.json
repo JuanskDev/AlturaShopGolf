@@ -1,25 +1,40 @@
 [
     {
         "id": 1,
-        "nombre": "LA ESTANCIA DE CAFAYATE WINE & GOLF "
+        "nombre": "LA ESTANCIA DE CAFAYATE WINE & GOLF ",
+        "direccion": "RN40, A4427 Cafayate, Salta",
+        "telefono": "0387 422-3146",
+        "imagen":"/images/CAMPOS/2/club-house-de-la-estancia.jpg"
     },
     {
         "id": 2,
-        "nombre": "CARILO GOLF CLUB "
+        "nombre": "CARILO GOLF CLUB ",
+        "direccion": "Ñandu 964, B7167 Cariló, Provincia de Buenos Aires",
+        "telefono": "02254 47-0044",
+        "imagen":"/images/CAMPOS/Carilo-Golf-Club/carilo-golf-club.jpg"
     },
 
     {
         "id": 3,
-        "nombre": "TERMAS DE RIO HONDO GOLF CLUB "
+        "nombre": "TERMAS DE RIO HONDO GOLF CLUB ",
+        "direccion": "RN40, A4427 Cafayate, Salta",
+        "telefono": "0387 422-3146",
+        "imagen":"/images/CAMPOS/2/club-house-de-la-estancia.jpg"
     },
 
     {
         "id": 4,
-        "nombre": "LLAO LLAO HOTEL & RESORT - GOLF "
+        "nombre": "LLAO LLAO HOTEL & RESORT - GOLF ",
+        "direccion": "RN40, A4427 Cafayate, Salta",
+        "telefono": "0387 422-3146",
+        "imagen":"/images/CAMPOS/2/club-house-de-la-estancia.jpg"
     },
 
     {
         "id": 5,
-        "nombre": "VILLA ALLENDE GOLF CLUB "
+        "nombre": "VILLA ALLENDE GOLF CLUB ",
+        "direccion": "RN40, A4427 Cafayate, Salta",
+        "telefono": "0387 422-3146",
+        "imagen":"/images/CAMPOS/2/club-house-de-la-estancia.jpg"
     }
 ]

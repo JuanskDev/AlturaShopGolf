@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="/css/lecciones.css"/>
   </head>
 
-  <%- include('./partials/head.ejs') %>
   <body class="lecciones">
     <%- include('./partials/header.ejs') %>
     <main>
@@ -26,33 +25,17 @@
 
       <div class="resultado-busqueda">
         <ul class="resultado-productos">
-          <li class="producto-lecciones-lista">
-            <img src="/images/Adult-12-Pack-Lessons.webp" alt="">
-            <div class="tamaño-hr">
-            <p class="nuevo">NUEVO</p>
-            <h6>GOLF DE ALTURA STORE</h6>
-            <p>ADULTOS PACK 12 CLASES</p>
-            <h5><span class="span-2">$30.000</span></h5>
-            </div>
-        </li>
-        <li class="producto-lecciones-lista">
-          <img src="/images/Adult-24-Pack-of-Lessons.webp" alt="">
-          <div class="tamaño-hr">
-            <p class="nuevo">NUEVO</p>
-            <h6>GOLF DE ALTURA STORE</h6>
-            <p>ADULTOS PACK 24 CLASES</p>
-            <h5><span class="span-2">$60.000</span></h5>
-          </div>
-      </li>
-    <li class="producto-lecciones-lista">
-        <img src="/images/kids12-Pack-Of-Lessons.webp" alt="">
-        <div class="tamaño-hr">
-        <p class="nuevo">NUEVO</p>
-        <h6>GOLF DE ALTURA STORE</h6>
-        <p>NIÑOS PACK 12 CLASES</p>
-        <h5><span class="span-2">$30.000</span></h5>
-        </div>
-    </li>
+          
+          <% lecciones.forEach(function(leccion){%>
+            <li class="producto-lecciones-lista">
+              <img src="<%= leccion.imagen %>" alt="">
+              <div class="tamaño-hr">
+                <h6><%=leccion.nombre%></h6>
+                <p><strong><%=leccion.paquete%></strong></p>
+                <p> <strong><%=leccion.precio%></strong></p>
+              </div>
+            </li>
+          <% }) %>  
         </ul>
       </div>
     </main>

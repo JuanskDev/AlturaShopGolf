@@ -1,192 +1,234 @@
 [
     {
         "id": 1,
-        "nombre": "SIM2"
+        "nombre": "SIM2",
+        "categoriaId": "3"
     },
     {
         "id": 2,
-        "nombre": "SIM2-MAX"
+        "nombre": "SIM2-MAX",
+        "categoriaId": "3"
     },
     {
         "id": 3,
-        "nombre": "STEALTH"
+        "nombre": "STEALTH",
+        "categoriaId": "3"
     },
     {
         "id": 4,
-        "nombre": "M4"
+        "nombre": "M4",
+        "categoriaId": "3"
     },
     {
         "id": 5,
-        "nombre": "G-425"
+        "nombre": "G-425",
+        "categoriaId": "3"
     },
     {
         "id": 6,
-        "nombre": "G-410"
+        "nombre": "G-410",
+        "categoriaId": "3"
     },
     {
         "id": 7,
-        "nombre": "i-525"
+        "nombre": "i-525",
+        "categoriaId": "3"
     },
     {
         "id": 8,
-        "nombre": "ST"
+        "nombre": "ST",
+        "categoriaId": "3"
     },
     {
         "id": 9,
-        "nombre": "MAVERIK"
+        "nombre": "MAVERIK",
+        "categoriaId": "3"
     },
     {
         "id": 10,
-        "nombre": "BIG-BERTHA"
+        "nombre": "BIG-BERTHA",
+        "categoriaId": "3"
     },
     {
         "id": 11,
-        "nombre": "EPIC-MAX"
+        "nombre": "EPIC-MAX",
+        "categoriaId": "3"
     },
     {
         "id": 12,
-        "nombre": "EPIC-SUPERHYBRID"
+        "nombre": "EPIC-SUPERHYBRID",
+        "categoriaId": "3"
     },
     {
         "id": 13,
-        "nombre": "ROUGE-ST MAX"
+        "nombre": "ROUGE-ST MAX",
+        "categoriaId": "3"
     },
     {
         "id": 14,
-        "nombre": "TSi3"
+        "nombre": "TSi3",
+        "categoriaId": "3"
     },
     {
         "id": 15,
-        "nombre": "TSi2"
+        "nombre": "TSi2",
+        "categoriaId": "3"
     },
     {
         "id": 16,
-        "nombre": "620-FORGED"
+        "nombre": "620-FORGED",
+        "categoriaId": "3"
     },
     {
         "id": 17,
-        "nombre": "T-200"
+        "nombre": "T-200",
+        "categoriaId": "3"
     },
     {
         "id": 18,
-        "nombre": "T-300"
+        "nombre": "T-300",
+        "categoriaId": "3"
     },
     {
         "id": 19,
-        "nombre": "Z-25"
+        "nombre": "Z-25",
+        "categoriaId": "3"
     },
     {
         "id": 20,
-        "nombre": "ZX-5"
+        "nombre": "ZX-5",
+        "categoriaId": "3"
     },
     {
         "id": 21,
-        "nombre": "D90"
+        "nombre": "D90",
+        "categoriaId": "3"
     },
     {
         "id": 22,
-        "nombre": "LTDX-LS"
+        "nombre": "LTDX-LS",
+        "categoriaId": "3"
     },
     {
         "id": 23,
-        "nombre": "RADSPEED"
+        "nombre": "RADSPEED",
+        "categoriaId": "3"
     },
     {
         "id": 24,
-        "nombre": "LAUNCHER-XL"
+        "nombre": "LAUNCHER-XL",
+        "categoriaId": "3"
     },
     {
         "id": 25,
-        "nombre": "JPX-921"
+        "nombre": "JPX-921",
+        "categoriaId": "3"
     },
     {
         "id": 26,
-        "nombre": "P-790"
+        "nombre": "P-790",
+        "categoriaId": "3"
     },
     {
         "id": 27,
-        "nombre": "KING FORGED TEC"
+        "nombre": "KING FORGED TEC",
+        "categoriaId": "3"
     },
     {
         "id": 28,
-        "nombre": "D7PRO-225"
+        "nombre": "D7PRO-225",
+        "categoriaId": "3"
     },
     {
         "id": 29,
-        "nombre": "ZX"
+        "nombre": "ZX",
+        "categoriaId": "3"
     },
     {
         "id": 30,
-        "nombre": "D300"
+        "nombre": "D300",
+        "categoriaId": "3"
     },
     {
         "id": 31,
-        "nombre": "SPECIAL SELECT NEWPORT-2"
+        "nombre": "SPECIAL SELECT NEWPORT-2",
+        "categoriaId": "3"
     },
     {
         "id": 32,
-        "nombre": "2-BALL TEN"
+        "nombre": "2-BALL TEN",
+        "categoriaId": "3"
     },
     {
         "id": 33,
-        "nombre": "PHANTOM"
+        "nombre": "PHANTOM",
+        "categoriaId": "3"
     },
     {
         "id": 34,
-        "nombre": "SPIDER TOUR"
+        "nombre": "SPIDER TOUR",
+        "categoriaId": "3"
     },
     {
         "id": 35,
-        "nombre": "ANSER"
+        "nombre": "ANSER",
+        "categoriaId": "3"
     },
     {
         "id": 36,
-        "nombre": "WHITE HOT OG"
+        "nombre": "WHITE HOT OG",
+        "categoriaId": "3"
     },
     {
         "id": 37,
-        "nombre": "OMOI-02"
+        "nombre": "OMOI-02",
+        "categoriaId": "3"
     },
     {
         "id": 38,
-        "nombre": "WORKS"
+        "nombre": "WORKS",
+        "categoriaId": "3"
     },
     {
         "id": 39,
-        "nombre": "TYNE-C"
+        "nombre": "TYNE-C",
+        "categoriaId": "3"
     },
     {
         "id": 40,
-        "nombre": "GL2-ECHO"
+        "nombre": "GL2-ECHO",
+        "categoriaId": "3"
     },
     {
         "id": 41,
-        "nombre": "GT"
+        "nombre": "GT",
+        "categoriaId": "3"
     },
     {
         "id": 42,
-        "nombre": "FRONTLINE"
+        "nombre": "FRONTLINE",
+        "categoriaId": "3"
     },
     {
         "id": 43,
-        "nombre": "RTX"
+        "nombre": "RTX",
+        "categoriaId": "3"
     },
     {
         "id": 44,
-        "nombre": "TP-5"
+        "nombre": "TP-5",
+        "categoriaId": "4"
     },
     {
         "id": 45,
-        "nombre": "SUPERSOFT"
+        "nombre": "SUPERSOFT",
+        "categoriaId": "4"
     },
     {
         "id": 46,
-        "nombre": "PRO V1x"
+        "nombre": "PRO V1x",
+        "categoriaId": "4"
     }
-
-
-
-
 ]
 
 
