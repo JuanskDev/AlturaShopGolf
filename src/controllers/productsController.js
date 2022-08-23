@@ -91,24 +91,30 @@ const productsController = {
                 data.category_selected = item_.nombre
             })
 
-            // //producto
-            // let productoId = item.producto;
-            // let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
-            // producto_item.forEach(item_ => {
-            //     data.producto_selected = item_.nombre
-            // })
-            // //marca
-            // let marcaId = item.marca;
-            // let marca_item = marcas.filter(marca => marca.id == marcaId)
-            // marca_item.forEach(item_ => {
-            //     data.marca_selected = item_.nombre
-            // })
-            // //modelo
-            // let modeloId = item.modelo;
-            // let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
-            // modelo_item.forEach(item_ => {
-            //     data.modelo_selected = item_.nombre
-            // })
+            //producto
+            let productoId = productDetail.producto;
+            let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
+            producto_item.forEach(item_ => {
+                data.producto_selected = item_.nombre
+            })
+            //marca
+            let marcaId = productDetail.marca;
+            let marca_item = marcas.filter(marca => marca.id == marcaId)
+            marca_item.forEach(item_ => {
+                data.marca_selected = item_.nombre
+            })
+            //modelo
+            let modeloId = productDetail.modelo;
+            let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
+            modelo_item.forEach(item_ => {
+                data.modelo_selected = item_.nombre
+            })
+            //talles
+            let talleId = productDetail.talle;
+            let talle_item = talles.filter(talle => talle.id == talleId)
+            talle_item.forEach(item_ => {
+                data.talle_selected = item_.nombre
+            })
             //   //agarre
             //   let agarreId = item.agarre;
             //   let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
@@ -127,8 +133,9 @@ const productsController = {
             //  tipodebolsa_item.forEach(item_ => {
             //     data.tipodebolsa_selected = item_.nombre
             //  })
+        
 
-        res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data })
+        res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })
     },
     delete: (req,res) => {
         let index = productos.findIndex(e => e.id === +req.params.id)
