@@ -39,7 +39,7 @@
   "image": "myFile-1661011381084.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "WILSON"
+  "marca_selected": "VOLVIK"
  },
  {
   "id": 3,
@@ -47,7 +47,7 @@
   "producto": "10",
   "marca": "34",
   "modelo": "18",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "2",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "1",
@@ -59,7 +59,7 @@
   "image": "myFile-1661018081019.webp",
   "category_selected": "PALOS",
   "producto_selected": "HIERROS",
-  "marca_selected": "TITLEIST",
+  "marca_selected": "TAYLORMADE",
   "modelo_selected": "T-300",
   "tipodevara_selected": "STIFF"
  },
@@ -81,7 +81,7 @@
   "image": "myFile-1661018160636.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "PARAGUAS",
-  "marca_selected": "MIZUNO"
+  "marca_selected": "LEUPOLD"
  },
  {
   "id": 6,
@@ -101,7 +101,7 @@
   "image": "myFile-1661019316272.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "TAYLORMADE"
+  "marca_selected": "SUN-MOUNTAIN"
  },
  {
   "id": 7,
@@ -121,7 +121,7 @@
   "image": "myFile-1661019366682.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "PING"
+  "marca_selected": "OPTISHOT"
  },
  {
   "id": 8,
@@ -141,7 +141,7 @@
   "image": "myFile-1661019404946.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "TITLEIST"
+  "marca_selected": "TAYLORMADE"
  },
  {
   "id": 9,
@@ -161,7 +161,7 @@
   "image": "myFile-1661019843671.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "PUMA"
+  "marca_selected": "PING"
  },
  {
   "id": 10,
@@ -181,7 +181,7 @@
   "image": "myFile-1661019909790.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "UNDER\\GOLF"
+  "marca_selected": "TITLEIST"
  },
  {
   "id": 11,
@@ -201,7 +201,7 @@
   "image": "myFile-1661019942638.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "PING"
+  "marca_selected": "OPTISHOT"
  },
  {
   "id": 12,
@@ -221,7 +221,7 @@
   "image": "myFile-1661019974362.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "SRIXON"
+  "marca_selected": "SKYCADDIE"
  },
  {
   "id": 13,
@@ -281,7 +281,7 @@
   "image": "myFile-1661020120434.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GORRAS",
-  "marca_selected": "TITLEIST"
+  "marca_selected": "TAYLORMADE"
  },
  {
   "id": 16,
@@ -329,7 +329,7 @@
   "producto": "6",
   "marca": "4",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -349,7 +349,7 @@
   "producto": "6",
   "marca": "14",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -369,7 +369,7 @@
   "producto": "6",
   "marca": "27",
   "modelo": "",
-  "agarre": "2",
+  "agarre": "MANO-IZQUIERDA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -381,7 +381,7 @@
   "image": "myFile-1661020540985.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GUANTES",
-  "marca_selected": "PING"
+  "marca_selected": "OPTISHOT"
  },
  {
   "id": 21,
@@ -389,7 +389,7 @@
   "producto": "6",
   "marca": "22",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -401,7 +401,7 @@
   "image": "myFile-1661020933918.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GUANTES",
-  "marca_selected": "NIKE-GOLF"
+  "marca_selected": "NEW-BALANCE"
  },
  {
   "id": 22,
@@ -409,7 +409,7 @@
   "producto": "6",
   "marca": "34",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -421,7 +421,7 @@
   "image": "myFile-1661020969168.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GUANTES",
-  "marca_selected": "TITLEIST"
+  "marca_selected": "TAYLORMADE"
  },
  {
   "id": 23,
@@ -429,7 +429,7 @@
   "producto": "6",
   "marca": "38",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -441,7 +441,7 @@
   "image": "myFile-1661021005149.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GUANTES",
-  "marca_selected": "WILSON"
+  "marca_selected": "VOLVIK"
  },
  {
   "id": 24,
@@ -449,7 +449,7 @@
   "producto": "6",
   "marca": "33",
   "modelo": "",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -461,7 +461,7 @@
   "image": "myFile-1661021102023.webp",
   "category_selected": "ACCESORIOS",
   "producto_selected": "GUANTES",
-  "marca_selected": "TAYLORMADE"
+  "marca_selected": "SUN-MOUNTAIN"
  },
  {
   "id": 25,
@@ -667,7 +667,7 @@
   "image": "myFile-1661021816991.webp",
   "category_selected": "PELOTAS",
   "producto_selected": "PELOTAS",
-  "marca_selected": "TITLEIST",
+  "marca_selected": "TAYLORMADE",
   "modelo_selected": "PRO V1x"
  },
  {
@@ -685,7 +685,10 @@
   "talle": "",
   "stock": "8",
   "color": "2",
-  "image": "myFile-1661022017828.webp"
+  "image": "myFile-1661022017828.webp",
+  "category_selected": "PELOTAS",
+  "producto_selected": "PELOTAS",
+  "marca_selected": "BRIDGESTONE"
  },
  {
   "id": 36,
@@ -742,7 +745,10 @@
   "talle": "",
   "stock": "2",
   "color": "",
-  "image": "myFile-1661120265973.jpg"
+  "image": "myFile-1661120265973.jpg",
+  "category_selected": "ACCESORIOS",
+  "producto_selected": "FUNDAS",
+  "marca_selected": "DAPHNES-HEADCOVER"
  },
  {
   "id": 39,
@@ -799,7 +805,7 @@
   "image": "myFile-1661179436512.webp",
   "category_selected": "TECNOLOGIA",
   "producto_selected": "GPS",
-  "marca_selected": "GLOBAL-TOUR-GOLF"
+  "marca_selected": "GARMIN"
  },
  {
   "id": 43,
@@ -833,7 +839,10 @@
   "talle": "4",
   "stock": "6",
   "color": "2",
-  "image": "myFile-1661180870024.webp"
+  "image": "myFile-1661180870024.webp",
+  "category_selected": "VESTIR",
+  "producto_selected": "CHOMBA HOMBRE",
+  "marca_selected": "FOOTJOY"
  },
  {
   "id": 45,
@@ -898,7 +907,7 @@
   "category_selected": "PALOS",
   "producto_selected": "DRIVES",
   "marca_selected": "TITLEIST",
-  "modelo_selected": "TSi2",
+  "modelo_selected": "TSi3",
   "tipodevara_selected": "REGULAR"
  },
  {
@@ -973,7 +982,7 @@
   "producto": "9",
   "marca": "6",
   "modelo": "9",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "1",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -982,7 +991,12 @@
   "talle": "",
   "stock": "2",
   "color": "",
-  "image": "myFile-1661205391933.webp"
+  "image": "myFile-1661205391933.webp",
+  "category_selected": "PALOS",
+  "producto_selected": "HIBRIDOS",
+  "marca_selected": "CALLAWAY",
+  "modelo_selected": "MAVERIK",
+  "tipodevara_selected": "REGULAR"
  },
  {
   "id": 52,
@@ -990,7 +1004,7 @@
   "producto": "9",
   "marca": "28",
   "modelo": "5",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "2",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -999,7 +1013,12 @@
   "talle": "",
   "stock": "2",
   "color": "",
-  "image": "myFile-1661205427955.webp"
+  "image": "myFile-1661205427955.webp",
+  "category_selected": "PALOS",
+  "producto_selected": "HIBRIDOS",
+  "marca_selected": "PING",
+  "modelo_selected": "G-425",
+  "tipodevara_selected": "STIFF"
  },
  {
   "id": 53,
@@ -1007,7 +1026,7 @@
   "producto": "9",
   "marca": "8",
   "modelo": "24",
-  "agarre": "1",
+  "agarre": "MANO-DERECHA",
   "tipodevara": "2",
   "tipodebolsa": "",
   "hierrostipodeconjunto": "",
@@ -1016,6 +1035,65 @@
   "talle": "",
   "stock": "1",
   "color": "",
-  "image": "myFile-1661205509443.webp"
+  "image": "myFile-1661205509443.webp",
+  "category_selected": "PALOS",
+  "producto_selected": "HIBRIDOS",
+  "marca_selected": "CLEVELAND",
+  "modelo_selected": "LAUNCHER-XL",
+  "tipodevara_selected": "STIFF"
+ },
+ {
+  "id": 54,
+  "categoria": "6",
+  "producto": "15",
+  "marca": "1",
+  "modelo": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "0.00",
+  "precio": "9800",
+  "talle": "",
+  "stock": "2",
+  "color": "2",
+  "image": "myFile-1661394885695.png",
+  "category_selected": "VESTIR",
+  "producto_selected": "CHOMBA HOMBRE",
+  "marca_selected": "ADIDAS"
+ },
+ {
+  "id": 55,
+  "categoria": "7",
+  "producto": "23",
+  "marca": "14",
+  "modelo": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "5.00",
+  "precio": "25600",
+  "talle": "30",
+  "stock": "0",
+  "color": "2",
+  "image": "myFile-1661395123089.jpg"
+ },
+ {
+  "id": 56,
+  "categoria": "1",
+  "producto": "12",
+  "marca": "34",
+  "modelo": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "5.00",
+  "precio": "24000",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1661398124076.webp"
  }
 ]
