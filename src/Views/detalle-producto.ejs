@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <%- include('./partials/head.ejs')  %>
-    <link rel="stylesheet" href="css/detalleproducto.css"/>
+    <link rel="stylesheet" href="/css/detalleproducto.css"/>
 </head>
 <body>
 
@@ -20,62 +20,63 @@
       <a href="">Striker V2 zapatos de hombres</a>
     </nav>
     <div class="product-content">
-      <%=JSON.stringify(data.producto)%>
-      
-      <div class="img-primaria">
+      <div class="col1 img-primaria">
         <img src="/images/products/<%=data.producto.image%>" class="img1"width="80" height="60" alt="New Balance - Striker V2 hombre">
       </div>
-      <br>
-      <div class="slider-products">
-        <button type="button" data-role="none" class="prev-img" aria-label="Previus" role="button" style="display: block;"><</button>
-        <img src="/images/zapatos-18-2.webp" class="img3" width="80" height="60" alt="New Balance - Striker V2 hombre">
-        <img src="/images/zapatos-18-1.jpg" class="img0" width="80" height="60" alt="New Balance - Striker V2 hombre">
-        <img src="/images/zapatos-18-3.webp" class="img"width="80" height="60" alt="New Balance - Striker V2 hombre">
-        <img src="/images/zapatos-18-back.jpg" class="img1"width="80" height="60" alt="New Balance - Striker V2 hombre">
-        <button type="button" data-role="none" class="next-img" aria-label="Next" role="button" style="display: block;">></button>
-        
-      </div>
-      <div class="product-name"><h2 href="#">STRIKER V2 ZAPATOS GOLF HOMBRE</h2>
-        <div class="fila0">
-          <h3 class="antes">$19.995 </h3><h3 class="ahora"> |$14.996</h3><h6>Descuento del 25%</h6>
-          </div>
-      <br>
-          <div class="fila">
+      <div class="col2">
+        <div class="product-name">
+          <% let finalPrice = (data.producto.precio * ((100 - data.producto.descuento) / 100)).toFixed(0)%>
+          <% if(data.producto.descuento === "0.00"){ %>
+            <h5><span class="span-2">  $ <%= toThousand(data.producto.precio) %> </span> </h5>
+          <% } else{ %>  
+            <h5><span class="span-1">$ <%= toThousand(data.producto.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+            <p class="p-descuento">Ahorra <%= data.producto.descuento %> % </p>
+          <% } %>
+        </div>
+<!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras y guantes y zapatos mostrás el talle -->
+        <% if(data.producto.categoria == "3" || 
+              data.producto.producto == "5" || 
+              data.producto.producto == "6" ||
+              data.producto.categoria == "7"
+              ) { 
+          %>
+        <div class="fila">
           <label>TALLE:</label>
-          
-          <input type="number" id="number-size" class="input-form" />
-        
-          <label><a href="#">Consulta nuestra tabla de talles aquí.</a></label>
-          
+          <select name="talle" id="talle" class="input-form" placeholder="Seleccione el talle">
+            <option value=""></option>
+            <% for (const item of data.talles) { %>
+              <option value="<%= item.id %>" <%= data.talle_selected == item.nombre ? "selected" : null %> ><%= item.nombre %></option>
+            <% } %>
+          </select>
+          <label><a href="/images/tabla-talles-ropa.jpg">Consulta nuestra tabla de talles aquí.</a></label>
         </div>
-        <br>
-        <div class="fila2">
+        <% } %>
+        <div class="fila fila2">
           <label>COLOR:</label>
-          <input type="color" id="color" class="input-form" />
+          <select name="color" class="input-form" id="color" placeholder="Seleccione el color">
+            <option value=""></option>
+            <% for (const catSelec of data.color) { %>
+              <option value="<%= catSelec.id %>" <%= data.color.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+            <% } %>
+          </select>
         </div>
-        <br>
-        <div class="fila3">
-          <label>ANCHO:</label>
-          <input type="text" id="width-shoe" class="input-form" />
-        </div>
-        <br>
         <div class="subsecciones-container"> 
           <label for=CANTIDAD:>CANTIDAD:</label>
-        <div class="subsecciones-container">
-          <div class="cantidad-modulo">
-            <label for="Cantidad"></label>
-            <div class="cantidad-modulo-input">
-            <span class="cantidad-menos" tabindex="0" role="button" aria-label="Restando Cantidad">-</span>
-            <input aria-label="Cantidad" type="number" id="Cantidad" name="Cantidad" class="input-text-suppress" maxlength="3.0" min="0" max="30.0" value="1" data-available="0">
-            <span class="cantidad-suma" tabaindex="0" role="button" aria-label="Sumando Cantidad">+</span>
-            </div>
-            <div class="button-remove">
-              <button class="button" type="submit" id="Remover">Remover</button>
+          <div class="subsecciones-container">
+            <div class="cantidad-modulo">
+            <input name="cantidad"type="number" id="cantidad" value="0" class="input-form" placeholder="cantidad: "required/>
+              <!-- <label for="Cantidad"></label>
+              <div class="cantidad-modulo-input">
+                <span class="cantidad-menos" tabindex="0" role="button" aria-label="Restando Cantidad"></span>
+                <input aria-label="Cantidad" type="number" id="Cantidad" name="Cantidad" class="input-text-suppress" maxlength="3.0" min="0" max="30.0" value="1" data-available="0">
+                <span class="cantidad-suma" tabaindex="0" role="button" aria-label="Sumando Cantidad"></span>
+              </div> -->
+              <div class="button-remove">
+                <button class="button" type="submit" id="Remover">Remover</button>
               </div>
-            <div class="button-add-cart">
-              <button class="button" type="submit" id="Add-Cart">Agregar al carrito</button>
-              
-            </div>
+              <div class="button-add-cart">
+                <button class="button" type="submit" id="Add-Cart">Agregar al carrito</button>
+              </div>
             </div>
           </div>
         </div>

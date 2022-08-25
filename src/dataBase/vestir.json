@@ -25,7 +25,7 @@
     },
     {
         "id": 7,
-        "noombre": "POLLERA"
+        "noombre": "FALDA"
     },
     {
         "id": 8,
@@ -36,7 +36,23 @@
         "noombre": "REMERA"
     },
     {
-        "id": 8,
-        "noombre": "CAMPERA"
+        "id": 10,
+        "noombre": "BLUSAS"
+    },
+    {
+        "id": 11,
+        "noombre": "BLUSA SIN MANGAS"
+    },
+    {
+        "id": 12,
+        "noombre": "CAMISETA MANGA LARGA"
+    },
+    {
+        "id": 13,
+        "noombre": "CAPRIS"
+    },
+    {
+        "id": 14,
+        "noombre": "VESTIDOS"
     }
 ]
