@@ -216,17 +216,157 @@
     },
     {
         "id": 44,
-        "nombre": "TP-5",
-        "categoriaId": "4"
+        "nombre": "JAWS RAW",
+        "categoriaId": "3"
     },
     {
         "id": 45,
-        "nombre": "SUPERSOFT",
-        "categoriaId": "4"
+        "nombre": "VOKEY SM9",
+        "categoriaId": "3"
     },
     {
         "id": 46,
-        "nombre": "PRO V1x",
+        "nombre": "GLIDE",
+        "categoriaId": "3"
+    },
+    {
+        "id": 47,
+        "nombre": "SMART SOLE 4",
+        "categoriaId": "3"
+    },
+    {
+        "id": 48,
+        "nombre": "MACK DADDY CB",
+        "categoriaId": "3"
+    },
+    {
+        "id": 49,
+        "nombre": "MG HI-TOE",
+        "categoriaId": "3"
+    },
+    {
+        "id": 50,
+        "nombre": "CBX-2",
+        "categoriaId": "3"
+    },
+    {
+        "id": 51,
+        "nombre": "RTX ZIPCORE",
+        "categoriaId": "3"
+    },
+    { 
+        "id": 52,
+        "nombre": "MILLED GRIND 3",
+        "categoriaId": "3"
+    },
+    { 
+        "id": 53,
+        "nombre": "CHROME SOFT X LS",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 54,
+        "nombre": "Pro V1",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 55,
+        "nombre": "Pro V1x",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 56,
+        "nombre": "SUPERSOFT",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 57,
+        "nombre": "AVX",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 58,
+        "nombre": "TRUFEEL",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 59,
+        "nombre": "E12-CONTACT",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 60,
+        "nombre": "E6",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 61,
+        "nombre": "ERC SOFT TRIPLE TRACK",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 62,
+        "nombre": "TP5x",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 63,
+        "nombre": "TOUR RESPONSE",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 64,
+        "nombre": "TP5",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 65,
+        "nombre": "TP5 Pix 2.0",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 66,
+        "nombre": "E6 Lady",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 67,
+        "nombre": "VELOCITY",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 68,
+        "nombre": "Q-Star Tour Divide",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 69,
+        "nombre": "Tour B RX",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 70,
+        "nombre": "Long & Soft Double",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 71,
+        "nombre": "Chrome Soft X Triple Track",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 72,
+        "nombre": "VIVID",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 73,
+        "nombre": "TRAID",
+        "categoriaId": "4"
+    },
+    { 
+        "id": 74,
+        "nombre": "Crystal White",
         "categoriaId": "4"
     }
 ]

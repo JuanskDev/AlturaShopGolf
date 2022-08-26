@@ -26,5 +26,8 @@
     "path": "^0.12.7",
     "sequelize": "^6.21.4",
     "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
   }
 }

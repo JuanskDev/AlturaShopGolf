@@ -481,7 +481,7 @@
   "image": "myFile-1661021187006.webp",
   "category_selected": "BOLSAS-CARROS",
   "producto_selected": "BOLSAS",
-  "marca_selected": "TITLEIST",
+  "marca_selected": "TAYLORMADE",
   "tipodebolsa_selected": "BOLSA-DE-PIE"
  },
  {
@@ -502,7 +502,7 @@
   "image": "myFile-1661021224305.jpg",
   "category_selected": "BOLSAS-CARROS",
   "producto_selected": "BOLSAS",
-  "marca_selected": "TAYLORMADE",
+  "marca_selected": "SUN-MOUNTAIN",
   "tipodebolsa_selected": "BOLSA-DE-PIE"
  },
  {
@@ -523,7 +523,7 @@
   "image": "myFile-1661021264345.webp",
   "category_selected": "BOLSAS-CARROS",
   "producto_selected": "BOLSAS",
-  "marca_selected": "PING",
+  "marca_selected": "OPTISHOT",
   "tipodebolsa_selected": "BOLSA-DE-PIE"
  },
  {
@@ -544,7 +544,7 @@
   "image": "myFile-1661021369461.webp",
   "category_selected": "BOLSAS-CARROS",
   "producto_selected": "BOLSAS",
-  "marca_selected": "SRIXON",
+  "marca_selected": "SKYCADDIE",
   "tipodebolsa_selected": "BOLSA-DE-PIE"
  },
  {
@@ -606,7 +606,7 @@
   "image": "myFile-1661021601790.webp",
   "category_selected": "BOLSAS-CARROS",
   "producto_selected": "CARROS",
-  "marca_selected": "SUN-MOUNTAIN"
+  "marca_selected": "SRIXON"
  },
  {
   "id": 32,
@@ -765,7 +765,10 @@
   "talle": "",
   "stock": "30",
   "color": "",
-  "image": "myFile-1661165842625.webp"
+  "image": "myFile-1661165842625.webp",
+  "category_selected": "ACCESORIOS",
+  "producto_selected": "HERRAMIENTAS",
+  "marca_selected": "TAYLORMADE"
  },
  {
   "id": 41,
@@ -822,7 +825,9 @@
   "talle": "",
   "stock": "20",
   "color": "19",
-  "image": "myFile-1661179508187.jpg"
+  "image": "myFile-1661179508187.jpg",
+  "category_selected": "ACCESORIOS",
+  "producto_selected": "TEES"
  },
  {
   "id": 44,
@@ -841,7 +846,7 @@
   "color": "2",
   "image": "myFile-1661180870024.webp",
   "category_selected": "VESTIR",
-  "producto_selected": "CHOMBA HOMBRE",
+  "producto_selected": "ROPA HOMBRE",
   "marca_selected": "FOOTJOY"
  },
  {
@@ -1059,7 +1064,7 @@
   "color": "2",
   "image": "myFile-1661394885695.png",
   "category_selected": "VESTIR",
-  "producto_selected": "CHOMBA HOMBRE",
+  "producto_selected": "ROPA HOMBRE",
   "marca_selected": "ADIDAS"
  },
  {
@@ -1077,7 +1082,10 @@
   "talle": "30",
   "stock": "0",
   "color": "2",
-  "image": "myFile-1661395123089.jpg"
+  "image": "myFile-1661395123089.jpg",
+  "category_selected": "ZAPATOS",
+  "producto_selected": "ZAPATOS",
+  "marca_selected": "FOOTJOY"
  },
  {
   "id": 56,
@@ -1094,6 +1102,43 @@
   "talle": "",
   "stock": "2",
   "color": "",
-  "image": "myFile-1661398124076.webp"
+  "image": "myFile-1661398124076.webp",
+  "category_selected": "ACCESORIOS",
+  "producto_selected": "PARAGUAS",
+  "marca_selected": "TAYLORMADE"
+ },
+ {
+  "id": 57,
+  "categoria": "3",
+  "producto": "24",
+  "marca": "8",
+  "modelo": "43",
+  "agarre": "1",
+  "tipodevara": "1",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "15.00",
+  "precio": "55999",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1661513311459.webp"
+ },
+ {
+  "id": 58,
+  "categoria": "3",
+  "producto": "23",
+  "marca": "6",
+  "modelo": "44",
+  "agarre": "1",
+  "tipodevara": "2",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "0.00",
+  "precio": "75999",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1661515112217.webp"
  }
 ]
