@@ -3,6 +3,10 @@ const router = express.Router();
 const path = require("path");
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
+<<<<<<< HEAD
+=======
+// const { get } = require('./users');
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){

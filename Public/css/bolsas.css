@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -126,13 +127,138 @@ body.bolsas .resultado-busqueda h2 {
 
   body.bolsas li.producto-bolsas-lista {
       width: 23%;
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.bolsas h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  body.bolsas .resultado-busqueda {
+    width: 90%;
+    margin: auto;
+    padding: 20px 5px;
+    position: relative;
+  }
+
+  body.bolsas .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.bolsas .ordenar-buscador {
+    position: absolute;
+    right: 2%;
+    top: 100%; 
+  }
+
+  .select-buscador {
+    max-width: 17px;
+  }
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.bolsas ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.bolsas li.producto-bolsas-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    max-width: 100%;
+  }
+
+  body.bolsas li.producto-bolsas-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+  }
+
+  body.bolsas li.producto-bolsas-lista h6{
+    text-align: center;
+  }
+
+  body.bolsas li.producto-bolsas-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.bolsas li.producto-bolsas-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.bolsas li.producto-bolsas-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.bolsas li.producto-bolsas-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.bolsas li.producto-bolsas-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (min-width: 420px) {
+
+    body.bolsas h1 {
+        text-align: left;
+        margin-left: 40px;
+    }
+  
+    body.bolsas .resultado-busqueda h2 {
+      text-align: left;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
   }
 
 }
 
 @media (min-width: 790px) {
+<<<<<<< HEAD
 body.bolsas li.producto-bolsas-lista img {
 margin: auto;
 display: block;
 } 
+=======
+
+    div.tamano-hr {
+        margin-bottom: 40px;
+    }
+
+    body.bolsas ul {
+        justify-content: space-around;
+    }  
+
+    body.bolsas li.producto-bolsas-lista {
+        width: 27%;
+    }
+
+}
+
+@media (min-width: 790px) {
+
+body.bolsas li.producto-bolsas-lista img {
+    display: block;
+    margin: auto;
+}
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }

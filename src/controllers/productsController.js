@@ -52,6 +52,7 @@ const productsController = {
     carritoCompra: (req,res) => {
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
+<<<<<<< HEAD
     create:(req,res) =>{
         let data = {
             listaproductos: listaProductos,
@@ -320,6 +321,10 @@ const productsController = {
         productos.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
         res.redirect('/products/create');
+=======
+    detalleProducto: (req,res) => {
+        res.render(path.join(__dirname, '../views/detalleproducto.ejs'))
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
     }
 };
 module.exports = productsController;

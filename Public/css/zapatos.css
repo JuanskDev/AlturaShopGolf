@@ -50,12 +50,20 @@
   }
 
   body.zapatos li.producto-zapatos-lista img {
+<<<<<<< HEAD
     max-width: 70%;
+=======
+    max-width: 100%;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
     padding-bottom: 30px;
   }
 
   div.tamaño-hr {
+<<<<<<< HEAD
     height: 35%;
+=======
+    height: 25%;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
   }
 
   body.zapatos li.producto-zapatos-lista h6{
@@ -87,8 +95,11 @@
     margin-top: 5px;
     text-align: center;
     font-size: 12px;
+<<<<<<< HEAD
     color: red;
     text-decoration: underline;
+=======
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
   }
 
   @media (min-width: 420px) {
@@ -117,12 +128,23 @@
     body.zapatos li.producto-zapatos-lista {
         width: 27%;
     }
+<<<<<<< HEAD
+=======
+    body.zapatos li.producto-zapatos-lista img {
+      margin: auto;
+      display: block;
+  }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 }
 
 @media (min-width : 1200px) {
   body.zapatos li.producto-zapatos-lista img {
+<<<<<<< HEAD
     margin: auto;
     display: block;
+=======
+    height: 65%;   
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }
 }

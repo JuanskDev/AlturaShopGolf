@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "oswald";
+=======
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
   }
   .body-header {
   width: 100%;
@@ -196,6 +204,7 @@
   background-color: #FAFAFA;
   }
   @media (min-width: 420px) {
+<<<<<<< HEAD
   header {
   padding: 0 25px 10px;
   }
@@ -214,6 +223,34 @@
   header .logo img {
   max-width: 120px;
   }
+=======
+    
+    header {
+      padding: 0 25px 10px;
+    }
+    
+    header .Compra-item-flex {
+      display: none;
+    }
+
+    header .buscador {
+      width: 80%;
+    }
+  
+    .iconos-compra-location {
+      justify-content: space-around;
+    }
+  
+   .Compra-item-flex {
+    margin: 0;
+   }
+  
+   header .logo img {
+    max-width: 120px;
+   }
+  
+   
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
   .iconos-compra-location span {
   margin-left: 25px;
   }

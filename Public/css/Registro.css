@@ -1,11 +1,24 @@
 
 
+<<<<<<< HEAD
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: "Open Sans";
 }
+=======
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+
+
+  /* MAIN */
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 /* MAIN */
 section.contenedor form{
@@ -87,8 +100,13 @@ max-width: 300px;
 }
 
 .inicia-sesion- {
+<<<<<<< HEAD
 font-weight: 550;
 padding-bottom: 30px;
+=======
+  font-weight: 550;
+  padding-bottom: 30px;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }
 
 /* FOOTER */
@@ -97,14 +115,27 @@ padding-bottom: 30px;
 
 
 @media (min-width: 420px) {
-
-
+<<<<<<< HEAD
+=======
+    
+  
 }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
+
+
 
 
 
 @media (min-width: 790px) {
+<<<<<<< HEAD
 
+=======
+ 
+/*FOOTER*/
+
+
+/* MAIN */ 
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 .contenedor .fila {
 text-align: center;
@@ -118,10 +149,17 @@ margin-bottom: 30px;
 
 @media (min-width: 1000px) {
 
+<<<<<<< HEAD
 .contenedor .fila {
 text-align: center;
 max-width: 30%;
 }
+=======
+  .contenedor .fila {
+    text-align: center;
+    max-width: 30%;
+  }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 
 } 

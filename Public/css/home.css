@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 * {
 margin: 0;
 padding: 0;
@@ -38,6 +39,17 @@ margin-right: 5px;
 display: flex;
 margin-left: 15px;
 }
+=======
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+  .body-header {
+    width: 100%;
+  }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 .iconos-compra-location a {
 display: flex;
@@ -80,6 +92,7 @@ z-index: 9999;
 
 
 
+<<<<<<< HEAD
 header .btn-menu span.fa {
 color: #dc3b41;
 font-size: 40px;
@@ -130,6 +143,20 @@ color: white;
 line-height: 37px;
 align-items: center;
 }
+=======
+  .Compra-item-flex {
+    width: 100%;
+    margin: 20px 10px;
+    color: red;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  nav.nav-full-screen {
+    display: none;
+  }
+  /* MAIN */ 
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 .Compra-item-flex {
 width: 100%;
@@ -147,7 +174,96 @@ display: none;
 .main-home {
 background-color: lightgrey;
 font-family: sans-serif;
+<<<<<<< HEAD
 }
+=======
+ }
+
+ #juan-slider {
+  margin: auto;
+  background-color: white;
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+ }
+
+ #juan-slider ul,li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+ }
+
+ #juan-slider ul.slider {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  height: 300px;
+ }
+
+ #juan-slider ul.slider li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: inherit;
+  height: inherit;
+  transition: opacity .5s;
+background-color: #fff;
+ }
+
+ #juan-slider ul.slider li img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+ }
+ #juan-slider ul.slider li h1 {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -300px;
+  text-align: center;
+  color: black;
+  font-size: 55px;
+  font-family: oswald;
+  font-weight: 800;
+ }
+ #juan-slider ul.slider li h4 {
+  position: absolute;
+  margin-left: 24px;
+  margin-top: -223px;
+  color: black;
+  font-size: 17px;
+  font-family: oswald;
+  font-weight: 200;
+ }
+
+ #juan-slider ul.slider li h2{
+  position: absolute;
+  margin-left: 420px;
+  margin-top: -185px;
+  text-align: center;
+  color: white;
+  font-size: 19px;
+  font-family: oswald;
+  font-weight: 400;
+ }
+ #juan-slider ul.slider li button{
+    font-family: oswald;
+    width: 155px;
+    position: absolute;
+    margin-left: -680px;
+    margin-top: 240px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+ 
+ #juan-slider ul.slider li:first-child {
+  opacity: 1;
+ }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 #juan-slider {
 margin: auto;
@@ -523,6 +639,7 @@ margin-bottom: 5px;
 transition: 1.1s;
 }
 
+<<<<<<< HEAD
 /*-----------------------------------------------*/
 div.marcas{
 display: flex;
@@ -531,6 +648,31 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 padding: 15px 15px 0 15px;
+=======
+div.indumetaria-home span {
+  font-weight: 800;
+  position: absolute;
+  top: 34PX;
+  left: 600PX;
+  padding: 10px 80px;
+  color: black;
+  min-width: 250px;
+  font-size: 25px;
+  font-family: oswald;
+  text-align: center;
+  text-decoration: underline;
+}
+div.marcas{
+  display: flex;
+  background-color: white;
+  width: 45px;
+  height: 45px;
+  margin-left: 102px;
+  align-content: center;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }
 div.marcas img{
 margin-bottom: 15px;
@@ -543,6 +685,7 @@ position: relative;
 display: grid;
 }
 div.carros-home span {
+<<<<<<< HEAD
 position: absolute;
 top: 5px;
 padding: 10px 15px;
@@ -560,6 +703,20 @@ color: #a54042;
 div.carros-home span:nth-child(1){
 width: 100%;
 left: -100%;
+=======
+  position: absolute;
+  top: 15PX;
+  left: 0%;
+  padding: 10px 10px;
+  color: white;
+  min-width: 250px;
+  text-align: center;
+  font-size: 25px;
+  font-family: oswald;
+  text-align: center;
+  FONT-WEIGHT: 800;
+  text-decoration: underline;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }
 
 div.carros-home:hover span:nth-child(1){
@@ -573,6 +730,7 @@ display: grid;
 bottom: 1px;
 }
 div.palos-home span {
+<<<<<<< HEAD
 position: absolute;
 top: 48%;
 padding: 10px 15px;
@@ -646,10 +804,38 @@ font-family: oswald;
 text-decoration: underline;
 color: #3483fa;
 }
+=======
+  position: absolute;
+  top: 65PX;
+  left: 62%;
+  padding: 10px 10px;
+  color: #000000;
+  opacity: 0.7;
+  min-width: 250px;
+  text-align: center;
+  font-size: 30px;
+  font-family: oswald;
+  text-align: center;
+  FONT-WEIGHT: 900;
+  text-decoration: underline;
+}
+.final-home{
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: #dc3b41;
+  opacity: 0.7;
+ 
+  
+  
+}
+
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 
 
 
+<<<<<<< HEAD
 /* FOOTER */
 
 
@@ -657,17 +843,41 @@ color: #3483fa;
 @media (min-width: 420px) {
     
 }
+=======
+
+
+  /* FOOTER */
+
+ 
+
+@media (min-width: 420px) {
+    
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 @media (max-width: 790px) {
  
 /*HEADER*/
 
+<<<<<<< HEAD
 
+=======
+/*FOOTER*/
+
+
+
+div.pie-pagina .servicio-cliente, .servicios, .informacion-empresa, .red-social, .subscripcion {
+  margin: 0;
+}
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 /* MAIN */ 
 
 }
 
 @media (min-width: 1000px) {
+<<<<<<< HEAD
    
+=======
+  
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 } 

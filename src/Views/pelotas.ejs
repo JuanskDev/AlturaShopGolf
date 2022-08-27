@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/pelotas.css"/>
+  </head>
+
+  <%- include('./partials/head.ejs') %>
+  <body class="pelotas">
+    <%- include('./partials/header.ejs') %>
+    <main>
+      
+      <h1>PELOTAS DE GOLF</h1>
+
+      <div class="resultado-busqueda">
+        <h2>6 Resultados</h2>
+        <div class="ordenar-buscador">
+          <label for="buscador">Ordenar por</label>
+          <select class="select-buscador" name="buscador" id="">
+            <option value="++">De mas baratos a mas caros</option>
+            <option value="--">De mas caros a mas baratos</option>
+            <option value="top">Mas vendidos</option>
+            <option value="moda">Moda del momento</option>
+          </select>
+        </div>
+      </div>
+      <hr class="hr-1">
+
+      <div class="resultado-busqueda">
+        <ul class="resultado-productos">
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-1.webp" alt="">
+                <div class="tamaño-hr">
+                    <h6>TITLEIST</h6>
+                    <p>PRO V1 Golf Balls</p>
+                    <h5><span>$20.500</span></h5>
+                </div>
+                <hr>
+            </li>
+
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-2.png" alt="">
+                <div class="tamaño-hr">
+                <h6>TITLEIST</h6>
+                <p>TruFeel Red Golf Balls</p>
+                <h5><span class="span-2">$18.990</span></h5>
+                
+                </div>
+                <hr>
+            </li>
+
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-3.jpeg" alt="">
+                <div class="tamaño-hr">
+                <h6>NITRO GOLF</h6>
+                <p>Crossfire Golf Balls - 45 Pack</p>
+                <h5><span class="span-3">$17.000</span></h5>
+                <p class="p-descuento"></p>
+                </div>
+                <hr>
+            </li>
+
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-4.png" alt="">
+                <div class="tamaño-hr">
+                <h6>TITLEIST</h6>
+                <p>Tour Speed Golf Balls</p>
+                <h5><span class="span-2">$18.500</span></h5>
+              
+                </div>
+                <hr>
+            </li>
+
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-5.png" alt="">
+                <div class="tamaño-hr">
+                <h6>XXIO</h6>
+                <p>XXIO Eleven Golf Balls </p>
+                <h5><span class="span-2">$18.900</span></h5>
+                </div>
+                <hr>
+            </li>
+
+            <li class="producto-pelotas-lista">
+                <img src="/img/pelotas-6.jpeg" alt="">
+                <div class="tamaño-hr">
+                <h6>BRIDGESTONE</h6>
+                <p>TOUR B XS Golf Balls</p>
+                <h5><span class="span-2">$16.400</span></h5>
+                <p class="p-descuento">Ahorra 10%</p>
+                </div>
+                <hr class="separadora-producto">
+            </li>
+        </ul>
+      </div>
+    </main>
+
+   <%- include('./partials/footer.ejs') %>
+
+  </body>
+</html>

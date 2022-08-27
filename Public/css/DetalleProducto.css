@@ -1,8 +1,27 @@
+<<<<<<< HEAD
 .product-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 30px;
+=======
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+/*HEADER*/
+
+
+  /*MAIN*/
+nav.menu-detalle-producto{
+  color: #000000;
+  font-size: 15px;  
+  text-decoration: none;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }
 .product-content .col1 {
   align-items: center;
@@ -242,4 +261,8 @@ div.subsecciones-container label{
 
 @media (min-width: 1000px) {
 
+<<<<<<< HEAD
 } 
+=======
+} 
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2

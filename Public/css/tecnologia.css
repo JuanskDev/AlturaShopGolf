@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.tecnologia h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  body.tecnologia .resultado-busqueda {
+    width: 90%;
+    margin: auto;
+    padding: 20px 5px;
+    position: relative;
+  }
+
+  body.tecnologia .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.tecnologia .ordenar-buscador {
+    position: absolute;
+    right: 2%;
+    top: 100%; 
+  }
+
+  .select-buscador {
+    max-width: 17px;
+  }
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.tecnologia ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    max-width: 100%;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista h6{
+    text-align: center;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.tecnologia li.producto-tecnologia-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (min-width: 420px) {
+   
+    body.tecnologia h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.tecnologia .resultado-busqueda h2 {
+    text-align: left;
+}
+
+}
+
+@media (min-width: 790px) {
+
+    div.tamaño-hr {
+        margin-bottom: 20px;
+    }
+
+    body.tecnologia ul {
+        justify-content: space-around;
+    }  
+
+    body.tecnologia li.producto-tecnologia-lista {
+        width: 27%;
+    }
+    body.tecnologia li.producto-tecnologia-lista img {
+        margin: auto;
+        display: block;
+    }
+
+}
+
+@media (min-width : 1200px) {
+  body.tecnologia li.producto-tecnologia-lista img {
+    height: 65%;
+}
+}

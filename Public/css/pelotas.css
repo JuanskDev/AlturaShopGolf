@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -151,5 +152,127 @@ body.pelotas li.producto-pelotas-lista {
 body.pelotas li.producto-pelotas-lista img {
 margin: auto;
 display: block;
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.pelotas h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  body.pelotas .resultado-busqueda {
+    width: 90%;
+    margin: auto;
+    padding: 20px 5px;
+    position: relative;
+  }
+
+  body.pelotas .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.pelotas .ordenar-buscador {
+    position: absolute;
+    right: 2%;
+    top: 100%; 
+  }
+
+  .select-buscador {
+    max-width: 17px;
+  }
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.pelotas ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.pelotas li.producto-pelotas-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+  }
+
+  body.pelotas li.producto-pelotas-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+  }
+
+  body.pelotas li.producto-pelotas-lista h6{
+    text-align: center;
+  }
+
+  body.pelotas li.producto-pelotas-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.pelotas li.producto-pelotas-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.pelotas li.producto-pelotas-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.pelotas li.producto-pelotas-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.pelotas li.producto-pelotas-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (min-width: 420px) {
+    
+    body.pelotas h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.pelotas .resultado-busqueda h2 {
+    text-align: left;
+}
+  }
+
+@media (min-width: 790px) {
+
+    body.pelotas ul {
+        justify-content: space-around;
+    }  
+
+    body.pelotas li.producto-pelotas-lista {
+        width: 27%;
+    }
+    body.pelotas li.producto-pelotas-lista img {
+      margin: auto;
+      display: block;
+    } 
+
+}
+
+@media (min-width: 1200px) {
+body.pelotas li.producto-pelotas-lista img {
+ height: 65%;
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 } 
 }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/zapatos.css"/>
+  </head>
+ 
+<body class="zapatos" >
+
+  <%- include('./partials/header.ejs')  %>     
+
+
+<main>
+ 
+    <h1>ZAPATOS DE GOLF</h1>
+
+    <div class="resultado-busqueda">
+      <h2>8 Resultados</h2>
+      <div class="ordenar-buscador">
+        <label for="buscador">Ordenar por</label>
+        <select class="select-buscador" name="buscador" id="">
+          <option value="++">De mas baratos a mas caros</option>
+          <option value="--">De mas caros a mas baratos</option>
+          <option value="top">Mas vendidos</option>
+          <option value="moda">Moda del momento</option>
+        </select>
+      </div>
+    </div>
+    <hr class="hr-1">
+
+    <div class="resultado-busqueda">
+      <ul class="resultado-productos">
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-1.webp" alt="">
+              <div class="tamaño-hr">
+                  <h6>ADIDAS</h6>
+                  <p>CODECHAOS 22 Men's Golf Shoe</p>
+                  <h5><span class="span-3">$26.750</span></h5>
+              </div>
+              <hr>
+          </li>
+
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-2.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>ADIDAS</h6>
+              <p>CODECHAOS 22 Women's Golf Shoe</p>
+              <h5><span class="span-3">$26.000</span></h5>
+              </div>
+              <hr>
+              
+          </li>
+
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-3.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>ADIDAS</h6>
+              <p>CODECHAOS 22 BOA Men's Golf Shoe</p>
+              <h5><span class="span-3">$29.990</span></h5>
+              </div>
+              <hr>
+          </li>
+
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-4.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>UNDER ARMOUR</h6>
+              <p>UA HOVR Fade 2 SL Wide Men's Golf Shoe</p>
+              <h5><span class="span-3">$21.990</span></h5>
+              </div>
+              <hr>
+          </li>
+
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-5.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>ADIDAS</h6>
+              <p>ZG21 Men's Golf Shoe</p>
+              <h5><span class="span-1">$33.000</span><span class="span-2">$29.500</span></h5>
+              <p class="p-descuento">Ahorra 11%</p>
+              </div>
+             <hr>
+          </li>
+
+          <li class="producto-zapatos-lista">
+              <img src="/img/zapatos-6.webp" alt="">
+              <div class="tamaño-hr">
+              <h6>FOOTJOY</h6>
+              <p>Traditions Men's Golf Shoe</p>
+              <h5><span class="span-3">$24.990</span></h5>
+              </div>
+              <hr>
+          </li>
+
+          <li class="producto-zapatos-lista">
+            <img src="/img/zapatos-7.webp" alt="">
+            <div class="tamaño-hr">
+            <h6>FOOTJOY</h6>
+            <p>Premiere Series - Tarlow Men's Golf Shoe</p>
+            <h5><span class="span-3">$34.990</span></h5>
+            </div>
+            <hr>
+        </li>
+
+        <li class="producto-zapatos-lista">
+            <img src="/img/zapatos-8.webp" alt="">
+            <div class="tamaño-hr">
+            <h6>UNDER ARMOUR</h6>
+            <p>Spieth 4 GTX Men's Golf Shoe</p>
+            <h5><span class="span-3">$34.500</span></h5>
+            </div>
+        <hr>
+        </li>
+      </ul>
+    </div>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+
+
+
+</body>
+</html>

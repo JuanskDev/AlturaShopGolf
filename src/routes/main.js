@@ -6,6 +6,7 @@ const mainController = require('../controllers/mainController');
 var router = express.Router();
 
 router.get('/' , mainController.index);
+<<<<<<< HEAD
 router.get('/head' , mainController.head);
 router.get('/header' , mainController.header);
 router.get('/footer' , mainController.footer);
@@ -17,5 +18,10 @@ router.get('/footer' , mainController.footer);
 //     req.session.numeroVistas++;
 //     res.send('Session tiene el numero:' + req.session.numeroVistas);
 // });
+=======
+// router.get('/head' , mainController.head);
+// router.get('/header' , mainController.header);
+// router.get('/footer' , mainController.footer);
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 
 module.exports = router;

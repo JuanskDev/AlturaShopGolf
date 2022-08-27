@@ -1,0 +1,130 @@
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+
+  p.costumer-s-p {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+  }
+
+  div.pre-form {
+    width: 90%;
+    margin: auto;
+  }
+
+  div.pre-form h1 {
+    font-weight: 400;
+  }
+
+  div.pre-form h3 {
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  div.pre-form p.p-pre-form {
+    font-size: 13px;
+  }
+
+  div.pre-form a {
+    color: #0854e2;
+    font-size: 13px;
+  }
+
+  div.pre-form span.span1 {
+    font-size: 13px;
+  }
+
+  div.pre-form span.span2 {
+    font-size: 13px;
+}
+
+p.requerido {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+body.contacto form {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+body.contacto form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+body.contacto form input {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    border: black 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+body.contacto form select {
+  
+    display: block;
+    margin-bottom: 5px;
+    border: black 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+body.contacto form textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    border: black 1px solid;
+    padding: 2px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 420) {
+
+}
+
+@media (min-width: 790px){
+    body.contacto {
+        text-align: center;
+    }
+    
+    body.contacto form {
+        margin-bottom: 30px;
+    }
+
+    body.contacto form label {
+        margin-top: 11px;
+        margin-bottom: 4px;
+    }
+
+    body.contacto form input {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    body.contacto form textarea  {
+        max-width: 400px;
+        margin: auto;
+    }
+
+    body.contacto form select {
+        max-width: 400px;
+        margin: auto;
+    }
+
+
+
+
+
+}

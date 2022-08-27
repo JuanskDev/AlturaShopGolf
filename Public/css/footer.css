@@ -27,6 +27,7 @@ footer .red-social {
     display: flex;
     padding: 15px;
     justify-content: center;
+    opacity: 90%;
 }
 
 footer .red-social span {
@@ -51,11 +52,30 @@ footer i {
     font-size: 23px;
 }
 
+<<<<<<< HEAD
 footer input {
+=======
+.red-social span {
+    font-size: 22px;
+}
+
+div.pie-pagina input {
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
     margin: 10px;
     width: 100%;
     padding: 7px 20px;
     border-radius: 5px;
     border: none;
     max-width: 300px;
+<<<<<<< HEAD
+=======
+}
+
+@media (min-width: 860px) {
+
+    div.pie-pagina {
+        display: flex;
+        
+    }
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
 }

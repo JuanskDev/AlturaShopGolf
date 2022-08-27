@@ -10,9 +10,13 @@
   "keywords": [],
   "description": "",
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
+=======
+    "cjs": "^0.0.11",
+>>>>>>> 69ae88f32f073b3a683f9258d55c7b917dfab6c2
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-sessions": "^1.0.6",

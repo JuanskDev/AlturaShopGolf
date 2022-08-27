@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.indumentaria h1 {
+    text-align: center;
+    margin: auto;
+  }
+
+  body.indumentaria .resultado-busqueda {
+    width: 90%;
+    margin: auto;
+    padding: 20px 5px;
+    position: relative;
+  }
+
+  body.indumentaria .resultado-busqueda h2 {
+    text-align: right;
+  }
+
+  body.indumentaria .ordenar-buscador {
+    position: absolute;
+    right: 2%;
+    top: 100%; 
+  }
+
+  .select-buscador {
+    max-width: 17px;
+  }
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.indumentaria ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    max-width: 100%;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista img {
+    max-width: 100%;
+    padding-bottom: 30px;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista h6{
+    text-align: center;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista h5 {
+    display: flex;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.indumentaria li.producto-indumentaria-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  @media (min-width: 420px) {
+   
+    body.tecnologia h1 {
+      text-align: left;
+      margin-left: 40px;
+  }
+
+  body.indumentaria .resultado-busqueda h2 {
+    text-align: left;
+}
+
+}
+
+@media (min-width: 790px) {
+
+    div.tamaño-hr {
+        margin-bottom: 20px;
+    }
+
+    body.indumentaria ul {
+        justify-content: space-around;
+    }  
+
+    body.indumentaria li.producto-indumentaria-lista {
+        width: 27%;
+    }
+    body.indumentaria li.producto-indumentaria-lista img {
+        margin: auto;
+        display: block;
+    }
+
+}
+
+@media (min-width : 1200px) {
+  body.indumentaria li.producto-indumentaria-lista img {
+   height: 65%;
+}
+}
