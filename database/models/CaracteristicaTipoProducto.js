@@ -1,15 +1,16 @@
 //Este model va a contener las diferentes características
 //para los diferentes tipo de productos, por ejemplo:
 //id: 1
-//tipoProductoId: 1 (GORRA)
+//tipoProductoId: 5 (GORRA)
 //caracteristicaId: 1 (COLOR)
 //Valor: 'NEGRO'
 //id: 2
-//tipoProductoId: 1 (GORRA)
+//tipoProductoId: 6 (GUANTE)
 //caracteristicaId: 1 (COLOR)
-//Valor: 'ROJO'
+//Valor: 'AZUL'
 //id: 3
-//tipoProductoId: 2 (PALO)
+//CategoriaId: 3 (PALO)
+//tipoProductoId 14 (PUTTER)
 //caracteristicaId: 2 (AGARRE)
 //Valor: 'MANO DERECHA'
 //id: 4
