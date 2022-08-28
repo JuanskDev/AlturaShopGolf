@@ -377,7 +377,12 @@
     { 
         "id": 76,
         "nombre": "CXR-POWER",
-        "categoriaId": "3"
+        "categoriaId": "4"
+    },
+    { 
+        "id": 77,
+        "nombre": "DISTANCE",
+        "categoriaId": "4"
     }
 ]
 
