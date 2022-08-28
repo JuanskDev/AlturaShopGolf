@@ -373,6 +373,11 @@
         "id": 75,
         "nombre": "STZ-200",
         "categoriaId": "3"
+    },
+    { 
+        "id": 76,
+        "nombre": "CXR-POWER",
+        "categoriaId": "3"
     }
 ]
 

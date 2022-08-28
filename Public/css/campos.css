@@ -115,6 +115,14 @@
     color: white;
     font-family: 'Oswald';
 }
+.Promo-Campos{
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: oswald;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+
   
   @media (min-width: 420px) {
     
