@@ -368,7 +368,13 @@
         "id": 74,
         "nombre": "Crystal White",
         "categoriaId": "4"
+    },
+    { 
+        "id": 75,
+        "nombre": "STZ-200",
+        "categoriaId": "3"
     }
 ]
+
 
 
