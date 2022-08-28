@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "nombre": "REGULAR"
+        "nombre": "VARA REGULAR"
     },
     {
         "id": 2,
-        "nombre": "STIFF"
+        "nombre": "VARA STIFF"
     },
     {
         "id": 3,
-        "nombre": "X-STIFF"
+        "nombre": "VARA X-STIFF"
     }
 ]

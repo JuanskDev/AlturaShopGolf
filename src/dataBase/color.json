@@ -16,89 +16,95 @@
         "nombre": "AZUL"
     },
     {
-        "id": 5,
-        "nombre": "VERDE"
-    },
-    {
-        "id": 6,
-        "nombre": "GRIS"
-    },
-    {
-        "id": 7,
-        "nombre": "GRIS/NARANJA"
-    },
-    {
-        "id": 8,
-        "nombre": "NEGRO/BALNCO"
-    },
-    {
-        "id": 9,
-        "nombre": "NEGRO/ROJO"
-    },
-    {
-        "id": 10,
-        "nombre": "NEGRO/AZUL"
-    },
-    {
-        "id": 11,
-        "nombre": "NEGRO/VERDE"
-    },
-    {
-        "id": 12,
-        "nombre": "ROSA/NEGRO"
-    },
-    {
-        "id": 13,
-        "nombre": "ROSA"
-    },
-    {
-        "id": 14,
-        "nombre": "AZUL/TURQUESA"
-    },
-    {
-        "id": 15,
-        "nombre": "CAMUFLAJE"
-    },
-    {
-        "id": 16,
-        "nombre": "BLANCO/ROJO"
-    },
-    {
-        "id": 17,
-        "nombre": "AZUL/BLANCO"
-    },
-    {
-        "id": 18,
-        "nombre": "VERDE/BLANCO"
-    },
-    {
-        "id": 19,
+        "id":5,
         "nombre": "AMARILLO"
     },
     {
+        "id": 6,
+        "nombre": "VERDE"
+    },
+    {
+        "id": 7,
+        "nombre": "GRIS"
+    },
+    {
+        "id": 8,
+        "nombre": "ROSA"
+    },
+    {
+        "id": 9,
+        "nombre": "NARANJA"
+    },
+    {
+        "id": 10,
+        "nombre": "BORDO"
+    },
+    {
+        "id": 11,
+        "nombre": "BLANCO/NARANJA"
+    },
+    {
+        "id": 12,
+        "nombre": "NEGRO/BALNCO"
+    },
+    {
+        "id": 13,
+        "nombre": "NEGRO/ROJO"
+    },
+    {
+        "id": 14,
+        "nombre": "NEGRO/AZUL"
+    },
+    {
+        "id": 15,
+        "nombre": "NEGRO/VERDE"
+    },
+    {
+        "id": 16,
+        "nombre": "ROSA/NEGRO"
+    },
+   
+    {
+        "id": 17,
+        "nombre": "AZUL/TURQUESA"
+    },
+    {
+        "id": 18,
+        "nombre": "CAMUFLAJE"
+    },
+    {
+        "id": 19,
+        "nombre": "BLANCO/ROJO"
+    },
+    {
         "id": 20,
-        "nombre": "AZUL/NEGRO/ROJO"
+        "nombre": "AZUL/BLANCO"
     },
     {
         "id": 21,
-        "nombre": "BLANCO/AZUL/ROJO"
+        "nombre": "VERDE/BLANCO"
     },
     {
         "id": 22,
-        "nombre": "VERDE/AMARILLO/ROJO"
+        "nombre": "AZUL/NEGRO/ROJO"
     },
     {
         "id": 23,
-        "nombre": "GRIS/VERDE"
+        "nombre": "BLANCO/AZUL/ROJO"
     },
     {
         "id": 24,
-        "nombre": "GRIS/BLANCO"
+        "nombre": "VERDE/AMARILLO/ROJO"
     },
     {
         "id": 25,
-        "nombre": "BORDO"
+        "nombre": "GRIS/VERDE"
+    },
+    {
+        "id": 26,
+        "nombre": "GRIS/BLANCO"
     }
+ 
 
    
 ]
