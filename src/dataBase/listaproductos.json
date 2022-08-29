@@ -1,27 +1,27 @@
 [
 {
     "id":1,
-    "nombre": "BOLSAS"
+    "nombre": "BOLSA"
 },
 {
     "id":2,
-    "nombre": "CARROS"
+    "nombre": "CARRO"
 },
 {
     "id":3,
-    "nombre": "DRIVES"
+    "nombre": "DRIVE"
 },
 {
     "id":4,
-    "nombre": "FUNDAS"
+    "nombre": "FUNDA"
 },
 {
     "id":5,
-    "nombre": "GORRAS"
+    "nombre": "GORRA"
 },
 {
     "id":6,
-    "nombre": "GUANTES"
+    "nombre": "GUANTE"
 },
 {
     "id":7,
@@ -29,19 +29,19 @@
 },
 {
     "id":8,
-    "nombre": "HERRAMIENTAS"
+    "nombre": "HERRAMIENTA"
 },
 {
     "id":9,
-    "nombre": "HIBRIDOS"
+    "nombre": "HIBRIDO"
 },
 {
     "id":10,
-    "nombre": "HIERROS"
+    "nombre": "HIERROs"
 },
 {
     "id":11,
-    "nombre": "MADERAS"
+    "nombre": "MADERA-3"
 },
 {
     "id":12,
@@ -53,27 +53,27 @@
 },
 {
     "id":14,
-    "nombre": "PUTTERS"
+    "nombre": "PUTTER"
 },
 {
     "id":15,
-    "nombre": "ROPA HOMBRE"
+    "nombre": "ROPA DE HOMBRE"
 },
 {
     "id":16,
-    "nombre": "ROPA MUJER"
+    "nombre": "ROPA DE MUJER"
 },
 {
     "id":17,
-    "nombre": "ROPA NIÑOS"
+    "nombre": "ROPA DE NIÑO"
 },
 {
     "id":18,
-    "nombre": "SIMULADORES"
+    "nombre": "SIMULADOR"
 },
 {
     "id":19,
-    "nombre": "SMARTWATCHS"
+    "nombre": "SMARTWATCH"
 },
 {
     "id":20,
@@ -81,18 +81,19 @@
 },
 {
     "id":21,
-    "nombre": "TELEMETROS"
+    "nombre": "TELEMETRO"
 },
 {
     "id":22,
-    "nombre": "TOALLAS"
+    "nombre": "TOALLA"
 },
 {
     "id":23,
-    "nombre": "WEDGES"
+    "nombre": "WEDGE"
 },
 {
     "id":24,
-    "nombre": "ZAPATOS"
+    "nombre": "ZAPATO"
 }
+
 ]

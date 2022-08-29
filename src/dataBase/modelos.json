@@ -383,6 +383,70 @@
         "id": 77,
         "nombre": "DISTANCE",
         "categoriaId": "4"
+    },
+    {
+        "id":78,
+        "nombre": "CHOMBA-MEN'S"
+    },
+    {
+        "id":79,
+        "nombre": "PANTALON-MEN'S"
+    },
+    {
+        "id":80,
+        "nombre": "CAMPERA-MEN'S"
+    },
+    {
+        "id":81,
+        "nombre": "BERMUDA-MEN'S"
+    },
+    {
+        "id":82,
+        "nombre": "CHOMBA-WOMAN'S"
+    },
+    {
+        "id":83,
+        "nombre": "PANTALON-WOMAN'S"
+    },
+    {
+        "id":84,
+        "nombre": "BERMUDA-WOMAN'S"
+    },
+    {
+        "id":85,
+        "nombre": "POLLERA-WOMAN'S"
+    },
+    {
+        "id":86,
+        "nombre": "CAPRI-WOMAN'S"
+    },
+    {
+        "id":87,
+        "nombre": "CAMISETA-WOMAN'S"
+    },
+    {
+        "id":88,
+        "nombre": "CAMPERA-WOMAN'S"
+    },
+    {
+        "id":89,
+        "nombre": "BUZO-WOMAN'S"
+    },
+    {
+        "id":90,
+        "nombre": "BUZO-MEN'S"
+    },
+    {
+        "id":91,
+        "nombre": "CHOMBA-KID'S"
+    },
+    {
+        "id":92,
+        "nombre": "PANTALON-KID'S"
+    },
+    {
+        "id":93,
+        "nombre": "BERMUDA-KID'S"
     }
 ]
 

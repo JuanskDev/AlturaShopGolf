@@ -1,3 +1,5 @@
+//id: 1
+//nombre: Accesorios
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Categoria';
     let cols = {
