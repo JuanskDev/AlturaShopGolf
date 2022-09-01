@@ -145,7 +145,9 @@
         <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
           <div class="fila-item">
             <button type="submit" id="guardar">MODIFICAR</button> 
-            <a href="/products/delete/<%=data.producto.id%>">ELIMINAR</a> 
+            <form action="/products/delete/<%= finalProducts.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
           </div>
       </section>
     </form>
