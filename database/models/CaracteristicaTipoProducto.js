@@ -15,8 +15,9 @@
 //Valor: 'MANO DERECHA'
 //id: 4
 //tipoProductoId: 2 (PALO)
-//caracteristicaId: 2 (AGARRE)
-//Valor: 'MANO IZQUIERDA'
+//tipoProductoId 10 (HIERROS)
+//caracteristicaId: 2 (AGARRE), 1 (HIERROSTIPO DE CONJUNTO)
+//Valor: 'MANO IZQUIERDA', '5-PW-AW-SW(CONJUNTO DE 8 PALOS)'
 //ETC
 module.exports = (sequelize, dataTypes) => {
     let alias = 'CaracteristicaTipoProducto';
