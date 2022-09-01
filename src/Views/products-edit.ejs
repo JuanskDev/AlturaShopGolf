@@ -3,17 +3,13 @@
   <head>
     <%- include('./partials/head.ejs')  %>
     <link rel="stylesheet" href="/css/products-create-edit.css"/>
-     
   </head>
- 
   <body>
-   
-    <%- include('./partials/header.ejs')  %>  
-
+    <%- include('./partials/header.ejs')  %>
   <main>
-    <form action="/products/edit/<%= data.producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
       <section class="contenedor">
         <div class="titulo">
+          <form action="/products/edit/<%= data.producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
           <h1>ADMINISTRADOR -  EDICION DE PRODUCTOS</h1>
         </div>
         <div class="fila">
@@ -42,7 +38,7 @@
               <% for (const catSelec of data.marcas) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.marca == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
-            </select>  
+            </select>
           </div>
           <div class="fila-item">
             <label>MODELO:</label>
@@ -51,7 +47,7 @@
               <% for (const catSelec of data.modelos) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.modelo == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
-            </select>  
+            </select>
           </div>
           <div class="fila-img">
             <img id="img-producto" alt="" src="/images/products/<%= data.producto.image %>">
@@ -65,7 +61,7 @@
               <% for (const catSelec of data.agarre) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.agarre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <%} %>
-              </select>  
+              </select>
           </div>
           <div class="fila-item">
             <label class="">TIPO DE VARA:</label>
@@ -109,12 +105,11 @@
             <span style="position: absolute; left: 20px; top: 57px;position: absolute; color: grey;">$</span>
             <input type="precio"  id="precio" name="precio" class="input-form" value="<%= data.producto.precio %>" placeholder="Precio" required style="padding-left: 15px;"/>
           </div>
-          
           <div class="fila-item">
             <label class="talle">TALLES:</label>
             <select name="talle" id="talle" class="input-form" placeholder="Selecciones el talle">
               <option value=""></option>
-              <% for (const catSelec of data.talles) { %> 
+              <% for (const catSelec of data.talles) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.talle == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
               <% } %>
             </select>
@@ -134,9 +129,7 @@
               </select>
             </div>
         </div>
-     
         </div>
-
         <div class="fila" style="justify-content: flex-end;">
           <div class="fila-item">
             <input class="file input-form" type="file" name="myFile" />
@@ -144,18 +137,14 @@
         </div>
         <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
           <div class="fila-item">
-            <button type="submit" id="guardar">MODIFICAR</button> 
-            <form action="/products/delete/<%= finalProducts.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="action-button delete">ELIMINAR</button>
-						</form>
+            <button type="submit" id="guardar">MODIFICAR</button>
+                </form>
+            <form action="/products/delete/<%= data.producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+              <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
           </div>
       </section>
-    </form>
-
 </main>
-
 <%- include('./partials/footer.ejs')  %>
- 
 </body>
 </html>
-
