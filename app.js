@@ -1,23 +1,41 @@
 const express = require("express"); // MODULO EXPRESS
 const app = express(); // MODULO EXPRESS EN FUNCIONALIDAD EN APP.JS
 const path = require("path"); //  MODULO PATH
-app.use(express.static("./Public")); // CSS
-var methodOverride = require('method-override');
+const session = require('express-session')
+const cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');//GET-POST-PUT-DELETE
 
 console.log(__dirname);
+
+app.use(express.static("./Public")); // CSS
 
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
 
-app.use(methodOverride('_method'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+app.use(methodOverride('_method'));// Sustituye a las clases de los metodos principales nos permite utilziar el Get,Post,Put;Delete...etc
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views')); // Define la ubicación de la carpeta de las Vistas
 
+//---------SESSION--------------------//
+app.use(session({
+  secret: "GASSESSION",
+  resave: false,
+  saveUninitialized: true,
+
+}));
+
+app.use(cookieParser());
+
+
 // MVC SYSTEM
   
+
+
 // Main Routes
 const rutasMain = require("./src/routes/main");
 app.use('/', rutasMain);

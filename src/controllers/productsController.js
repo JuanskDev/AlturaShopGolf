@@ -51,6 +51,7 @@ const productsController = {
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
     create:(req,res) =>{
+        res.locals.sessiondata = req.session;
         let data = {
             listaproductos: listaProductos,
             categorias: categorias,
@@ -71,6 +72,7 @@ const productsController = {
     },
 
     detalleproducto:(req,res) =>{
+        res.locals.sessiondata = req.session;
         let productDetail = productos.find(e => e.id === +req.params.id)
         let data = {
             producto: productDetail,
@@ -143,6 +145,7 @@ const productsController = {
         res.redirect("/products/create");
     },
     edit:(req,res) =>{
+        res.locals.sessiondata = req.session;
         let productEdit = productos.find(e => e.id === +req.params.id)
         let data = {
             producto: productEdit, //este es el item de productos.json que se busca en la línea de arriba por el id
@@ -193,6 +196,7 @@ const productsController = {
 
     },
     showProductCategory: (req,res) => {
+        res.locals.sessiondata = req.session;
         // categoria que llega por parametro-url
         let category = req.params.category
         // categoria que coincide parametro con el valor de la categoria en json
@@ -247,6 +251,7 @@ const productsController = {
         res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
     },
     showProductSubcategory: (req,res) => {
+        res.locals.sessiondata = req.session;
         let category = req.params.category
         let subcategory = req.params.subcategory
         let productCategory = productos.filter(product => product.categoria == category && product.producto == subcategory)

@@ -202,7 +202,13 @@ div.olvidar-contraseña {
   font-size: 16px;
 }
 
-
+.message-login {
+  text-align: center;
+    padding: 15px;
+    background-color: gray;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
 
 /*FOOTER*/
 }

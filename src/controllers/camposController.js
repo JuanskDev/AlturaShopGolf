@@ -6,6 +6,7 @@ const campos = JSON.parse(fs.readFileSync(camposFilePath, 'utf-8'));
 
 const camposController = {
     index: (req, res)  => {
+        res.locals.sessiondata = req.session
         res.render(path.join(__dirname, '../views/campos.ejs'), {campos})
     }
 };

@@ -6,6 +6,7 @@ const lecciones = JSON.parse(fs.readFileSync(leccionesFilePath, 'utf-8'));
 
 const leccionesController = {
     index: (req, res)  => {
+        res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/lecciones.ejs'), {lecciones})
     }
 };

@@ -1,0 +1,3 @@
+
+El usuario undefined cerró su sesión 
+El usuario ingreso en: /iniciosesion

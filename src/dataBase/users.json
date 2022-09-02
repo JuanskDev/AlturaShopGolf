@@ -1,4 +1,10 @@
 [
-    {
-    }
+ {
+  "id": 1,
+  "nombre": "Agustin",
+  "apellido": "Contreras",
+  "email": "agustincontrerasvidal@gmail.com",
+  "telefono": "4258000",
+  "hash": "$2a$10$QktDnEvQf6ZYs/.tMkli3uZOB21Wh72YKiCGPQI/ut65tmyvWXfz6"
+ }
 ]
