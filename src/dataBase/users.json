@@ -1,9 +1,4 @@
-{
-    "id":1,
-    "Nombre/s": "Agustin Alejandro",
-    "Apellido/s": "Contreras Vidal",
-    "email": "agustincontrerasvidal@gmail.com",
-    "contraseña":"xxxxxxxx",
-    "categoria": "administrador/ ususario/invitado",
-    "imagen":"default.jpg"
+[
+    {
     }
+]

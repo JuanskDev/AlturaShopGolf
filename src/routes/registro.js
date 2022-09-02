@@ -5,7 +5,6 @@ const {body, check} = require('express-validator')
 
 /* GET home page. */
 router.get('/', registroController.index);
-
 router.post('/',[
     check('nombre').isLength({min:5}).withMessage('Debe ingresar un nombre'),
     check('apellido').isLength({min:1}).withMessage('Debe ingresar un apellido'),
@@ -20,8 +19,6 @@ router.post('/',[
             return true;
         }
     })
-
-
 ], registroController.store);
 
 module.exports = router;

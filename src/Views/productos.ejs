@@ -36,7 +36,7 @@
               let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
             %>
           <li class="producto-palos-lista">
-            <img src="/images/products/<%= product.image %>" alt="">
+            <a href="/products/detalle/<%=product.id%>" target="_blank"><img src="/images/products/<%= product.image %>" alt=""></a>
             <div class="tamaño-hr">
               <p class="nuevo">NUEVO</p>
             <h6><%= product.producto_selected %> <%= product.marca_selected %><%= product.modelos_selected %><h6>

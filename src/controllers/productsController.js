@@ -113,24 +113,24 @@ const productsController = {
             talle_item.forEach(item_ => {
                 data.talle_selected = item_.nombre
             })
-              //agarre
-              let agarreId = item.agarre;
-              let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
-              agarre_item.forEach(item_ => {
+            //agarre
+            let agarreId = productDetail.agarre;
+            let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
+            agarre_item.forEach(item_ => {
                 data.agarre = item_.nombre
-              })
+            })
             //tipo de vara
-            let tipodevaraId = item.tipodevara;
+            let tipodevaraId = productDetail.tipodevara;
             let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
             tipodevara_item.forEach(item_ => {
                 data.tipodevara_selected = item_.nombre
             })
-             //tipo de bolsa
-             let tipodebolsaId = item.tipodebolsa;
-             let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
-             tipodebolsa_item.forEach(item_ => {
+            //tipo de bolsa
+            let tipodebolsaId = productDetail.tipodebolsa;
+            let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
+            tipodebolsa_item.forEach(item_ => {
                 data.tipodebolsa_selected = item_.nombre
-             })
+            })
         
 
         res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })

@@ -14,7 +14,6 @@
 <section class="contenedor">
         <div class="notificaciones"></div>
     <div class="contacto"></div>
-    
     <div class="titulo">
       <h1>MI CUENTA</h1>
       <h2>HOME / MI CUENTA</h2>
@@ -26,17 +25,17 @@
     <form action="/registro" method="POST">
       <div class="fila">
         <label>Nombre/s*</label>
-        <input type="text" id="nombre" class="input-form" required/>
+        <input type="text" id="nombre" name="nombre" class="input-form" required/>
       </div>
       <br>
         <div class="fila">
         <label>Apellido/s*</label>
-        <input type="text" id="apellido" class="input-form" required/>
+        <input type="text" id="apellido" name="apellido" class="input-form" required/>
       </div>
       <br>
       <div class="fila">
         <label>Dirección de correo*</label>
-        <input type="text" id="email" class="input-form" required/>
+        <input type="text" id="email" name="email" class="input-form" required/>
       </div>
       <br>
       <div class="fila">
@@ -46,13 +45,13 @@
       <br>
       <div class="fila">
         <label>Numero de Telefono*</label>
-        <input type="number" id="phone-number" class="input-form" required/>
+        <input type="number" id="telefono" name="telefono" class="input-form" required/>
         <label class="fila" style="font-size: 15px; color: gray;" >Ej: 333-3333333 (sin 0 y 15).</label>
       </div>
       <br />
       <div class="fila">
         <label>Contraseña*</label>
-        <input type="password" id="password" class="input-form" required/>
+        <input type="password" id="password" name="password" class="input-form" required/>
       </div>
       <br />
       <div class="fila">
@@ -61,7 +60,7 @@
       </div>
       <br />
       <div class="fila">
-        <input type="checkbox" id="terminos" class="check-form" required/>
+        <input type="checkbox" id="terminos" name="terminos" class="check-form" required/>
         <span>*Al marcar esta casilla y crear una cuenta, acepto los Términos de uso y la Política de privacidad . Ordeno a GOLF DE ALTURA Store que comparta mi información con AAG (Asociación Argentina de Golf) y acepto los Términos y la Política de privacidad de AAG.</span>
       </div>
       <br />
