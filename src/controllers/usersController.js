@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { render } = require('ejs');
+// const { render } = require('ejs');
 const bcrypt = require('bcryptjs');
 
 

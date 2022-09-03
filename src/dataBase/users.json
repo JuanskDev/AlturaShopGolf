@@ -6,5 +6,13 @@
   "email": "agustincontrerasvidal@gmail.com",
   "telefono": "4258000",
   "hash": "$2a$10$QktDnEvQf6ZYs/.tMkli3uZOB21Wh72YKiCGPQI/ut65tmyvWXfz6"
+ },
+ {
+  "id": 2,
+  "nombre": "Juan",
+  "apellido": "Scarafia",
+  "email": "juanscarafia@gmail.com",
+  "telefono": "42582226",
+  "hash": "$2a$10$aa7pzD.7SsXVHWlqGFSnxesq.K30VW8GFVHUSGK0EDKtIolxZhx6q"
  }
 ]
