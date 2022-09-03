@@ -138,10 +138,9 @@ const productsController = {
         res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })
     },
     delete: (req,res) => {
-        let index = productos.findIndex(e => e.id === +req.params.id)
-        productos.splice(index, 1); 
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
-
+        let id = req.params.id;
+        let finalProducts = productos.filter(product => product.id != id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
         res.redirect("/products/create");
     },
     edit:(req,res) =>{
