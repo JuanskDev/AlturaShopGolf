@@ -25,7 +25,6 @@ const usersController = {
             if(passwordCorrect) {
                 //Guardar la información del usuario en variable de session
                 req.session.nombre = user.nombre;
-                //res.cookie('cookie_nombre', req.body.nombre, {maxAge: 10000 });
                 req.session.apellido = user.apellido;
                 req.session.email = user.email;
             }

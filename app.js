@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, '/src/views')); // Define la ubicación de
 
 //---------SESSION--------------------//
 app.use(session({
-  secret: "GASSESSION",
+  secret: "gas session",
   resave: false,
   saveUninitialized: true,
 
