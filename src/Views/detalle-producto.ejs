@@ -37,9 +37,37 @@
         <% if(data.producto.categoria == "3" || 
               data.producto.producto == "5" || 
               data.producto.producto == "6" ||
-              data.producto.categoria == "7"
+              data.producto.categoria == "7"||
+              data.producto.agarre =="1, 2"
               ) { 
           %>
+          <div class="fila">
+            <label class="marca">AGARRE:</label>
+              <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
+              <option value=""></option>
+              <% for (const catSelec of data.agarre) { %>
+                <option value="<%= catSelec.id %>"><%= catSelec.nombre %></option>
+              <% } %>
+              </select>  
+          </div>
+          <div class="fila">
+            <label class="">TIPO DE VARA:</label>
+            <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
+              <option value=""></option>
+              <% for (const catSelec of data.tipodevara) { %>
+                <option value="<%= catSelec.id %>" <%= data.tipodevara.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila">
+            <label class="">CONJUNTO:</label>
+            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto" placeholder="Seleccione el conjunto de hierros">
+              <option value=""></option>
+              <% for (const catSelec of data.hierrostipodeconjunto) { %>
+                <option value="<%= catSelec.id %>" <%= data.hierrostipodeconjunto.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+            </select>
+          </div>
         <div class="fila">
           <label>TALLE:</label>
           <select name="talle" id="talle" class="input-form" placeholder="Seleccione el talle">
@@ -48,7 +76,7 @@
               <option value="<%= item.id %>" <%= data.talle_selected == item.nombre ? "selected" : null %> ><%= item.nombre %></option>
             <% } %>
           </select>
-          <label><a href="/images/tabla-talles-ropa.jpg">Consulta nuestra tabla de talles aquí.</a></label>
+          <label><a href="/images/tabla-talles-ropa.jpg"target="_blank">Consulta nuestra tabla de talles aquí.</a></label>
         </div>
         <% } %>
         <div class="fila fila2">
@@ -61,16 +89,11 @@
           </select>
         </div>
         <div class="subsecciones-container"> 
-          <label for=CANTIDAD: </label>
+          <label>CANTIDAD: </label> 
           <div class="subsecciones-container">
             <div class="cantidad-modulo">
             <input name="cantidad"type="number" id="cantidad" value="0" class="input-form" placeholder="cantidad: "required/>
-              <!-- <label for="Cantidad"></label>
-              <div class="cantidad-modulo-input">
-                <span class="cantidad-menos" tabindex="0" role="button" aria-label="Restando Cantidad"></span>
-                <input aria-label="Cantidad" type="number" id="Cantidad" name="Cantidad" class="input-text-suppress" maxlength="3.0" min="0" max="30.0" value="1" data-available="0">
-                <span class="cantidad-suma" tabaindex="0" role="button" aria-label="Sumando Cantidad"></span>
-              </div> -->
+              <label for="Cantidad"></label>
               <div class="button-remove">
                 <button class="button" type="submit" id="Remover">Remover</button>
               </div>

@@ -3260,39 +3260,5 @@
   "stock": "1",
   "color": "",
   "image": "myFile-1661776228532.webp"
- },
- {
-  "id": 159,
-  "categoria": "6",
-  "producto": "15",
-  "marca": "1",
-  "modelo": "78",
-  "agarre": "",
-  "tipodevara": "",
-  "tipodebolsa": "",
-  "hierrostipodeconjunto": "",
-  "descuento": "2.00",
-  "precio": "10700",
-  "talle": "6",
-  "stock": "2",
-  "color": "2",
-  "image": "myFile-1661777541067.png"
- },
- {
-  "id": 160,
-  "categoria": "7",
-  "producto": "24",
-  "marca": "14",
-  "modelo": "",
-  "agarre": "",
-  "tipodevara": "",
-  "tipodebolsa": "",
-  "hierrostipodeconjunto": "",
-  "descuento": "2.00",
-  "precio": "45236",
-  "talle": "15",
-  "stock": "2",
-  "color": "",
-  "image": "myFile-1662139359373.jpg"
  }
 ]

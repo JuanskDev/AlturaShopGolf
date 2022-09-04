@@ -8,3 +8,10 @@ Reconocer que el bienestar de los negocios no puede separarse del bienestar de l
 GOLF DE ALTURA STORE se asocia de muchas maneras diferentes con torneos y eventos benéficos en las comunidades. 
 Si usted o su organización están organizando un torneo o evento de golf y desea que uno de nuestros coordinadores de eventos se comunique con usted, comuniquese por medio de la opcion contacto en nuestro home. 
 En conjunto con los clubes del pais, asociados a GOLF DE ALTURA STORE y con los representantes de la AAG (Asociación Argentina de golf), estamos a su disposición para ayudarlos en la organizacion de eventos o torneos  para aficionados o profesionales del circuito Argentino.
+
+ 
+Integrante de el Proyecto: GAS: " Golf de Altura Store".
+Bruno Ciarlo:
+Lucas Pages:
+Juan Scarafia:
+Agustin COntreras: Edad 39 años, Trabajo como administrativo en Poder Judicial de la Provincia de Salta/ Tribunal Electoral de la Provincia. Soltero con 2 hijos. Estudiante de Digital House Curso de FullStack Developer.
