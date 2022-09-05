@@ -34,40 +34,13 @@
           <% } %>
         </div>
 <!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras y guantes y zapatos mostrás el talle -->
-        <% if(data.producto.categoria == "3" || 
+        <% if(data.producto.categoria == "1" || 
               data.producto.producto == "5" || 
               data.producto.producto == "6" ||
-              data.producto.categoria == "7"||
-              data.producto.agarre =="1, 2"
+              data.producto.categoria == "7"
               ) { 
           %>
-          <div class="fila">
-            <label class="marca">AGARRE:</label>
-              <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
-              <option value=""></option>
-              <% for (const catSelec of data.agarre) { %>
-                <option value="<%= catSelec.id %>"><%= catSelec.nombre %></option>
-              <% } %>
-              </select>  
-          </div>
-          <div class="fila">
-            <label class="">TIPO DE VARA:</label>
-            <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
-              <option value=""></option>
-              <% for (const catSelec of data.tipodevara) { %>
-                <option value="<%= catSelec.id %>" <%= data.tipodevara.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-              <% } %>
-            </select>
-          </div>
-          <div class="fila">
-            <label class="">CONJUNTO:</label>
-            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto" placeholder="Seleccione el conjunto de hierros">
-              <option value=""></option>
-              <% for (const catSelec of data.hierrostipodeconjunto) { %>
-                <option value="<%= catSelec.id %>" <%= data.hierrostipodeconjunto.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-              <% } %>
-            </select>
-          </div>
+         <!-- <% else() -->
         <div class="fila">
           <label>TALLE:</label>
           <select name="talle" id="talle" class="input-form" placeholder="Seleccione el talle">

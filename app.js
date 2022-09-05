@@ -26,15 +26,11 @@ app.use(session({
   secret: "gas session",
   resave: false,
   saveUninitialized: true,
-
 }));
-
+//-------------COOKIE---------------------//
 app.use(cookieParser());
 
-
 // MVC SYSTEM
-  
-
 
 // Main Routes
 const rutasMain = require("./src/routes/main");
@@ -55,7 +51,6 @@ app.use('/campos', rutasCampos);
 //Lecciones Routes
 const rutasLecciones = require("./src/routes/lecciones");
 app.use('/lecciones', rutasLecciones);
-
 
 //---------------------CAMERONSMITHEQUIPO-----------------------//
 app.get("/productos/cameronSmith", (req, res) => {

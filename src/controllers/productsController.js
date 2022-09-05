@@ -195,6 +195,8 @@ const productsController = {
 
     },
     showProductCategory: (req,res) => {
+        //En el response se asigna lo que tenga la variable de session, 
+        //Si tiene algo o no se analiza en header.ejs línea 18-26
         res.locals.sessiondata = req.session;
         // categoria que llega por parametro-url
         let category = req.params.category
