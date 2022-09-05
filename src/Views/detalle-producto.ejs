@@ -37,10 +37,10 @@
         <% if(data.producto.categoria == "1" || 
               data.producto.producto == "5" || 
               data.producto.producto == "6" ||
-              data.producto.categoria == "7"
+              data.producto.categoria == "7"||
+              data.producto.producto =="24"
               ) { 
           %>
-         <!-- <% else() -->
         <div class="fila">
           <label>TALLE:</label>
           <select name="talle" id="talle" class="input-form" placeholder="Seleccione el talle">
@@ -52,6 +52,39 @@
           <label><a href="/images/tabla-talles-ropa.jpg"target="_blank">Consulta nuestra tabla de talles aquí.</a></label>
         </div>
         <% } %>
+        <!-- acá teneés que modificar la condición según la necesidad -->
+        <% if(data.producto.categoria == "1" || 
+          data.producto.producto == "6" || 
+          data.producto.categoria == "3"||
+          data.producto.producto == "3"||
+          data.producto.producto == "9"||
+          data.producto.producto == "10"||
+          data.producto.producto == "11"||
+          data.producto.producto == "14"||
+          data.producto.producto == "23"
+        ) { 
+        %>
+          <!--por ejemplo acá deberías cambiar color y poner otra cosa -->
+          <div class="fila fila2">
+            <label class="marca">AGARRE:</label>
+              <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
+              <option value=""></option>
+              <% for (const catSelec of data.agarre) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.agarre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
+              </select>
+          </div>
+        <% } %>
+        <!--hasta acá hay que copiar por cada opción-->
+     
+  
+
+
+
+
+
+
+<!-- 
         <div class="fila fila2">
           <label>COLOR:</label>
           <select name="color" class="input-form" id="color" placeholder="Seleccione el color">
@@ -60,7 +93,7 @@
               <option value="<%= catSelec.id %>" <%= data.color.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
             <% } %>
           </select>
-        </div>
+        </div> -->
         <div class="subsecciones-container"> 
           <label>CANTIDAD: </label> 
           <div class="subsecciones-container">
