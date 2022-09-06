@@ -39,8 +39,7 @@
               data.producto.producto =="15"||
               data.producto.producto =="16"||
               data.producto.producto =="17"||
-              data.producto.categoria == "7"||
-              data.producto.producto =="24"
+              data.producto.categoria == "7"
               ) { 
           %>
         <div class="fila">
@@ -124,8 +123,17 @@
               <% } %>
             </select>
           </div>
-
-          <div class="fila fila2">
+          <% } %>
+          <% if(data.producto.categoria == "2" || 
+          data.producto.categoria == "7" ||
+          data.producto.producto == "5" ||
+          data.producto.producto == "6" ||
+          data.producto.producto =="15"||
+          data.producto.producto =="16"||
+          data.producto.producto =="17"
+          ) { 
+          %>
+            <div class="fila fila2">
               <label class="color">COLOR:</label>
               <select name="color" class="input-form" id="color"placeholder="Seleccione el color">
                 <option value=""></option>
@@ -136,6 +144,7 @@
               </select>
             </div>
           <% } %>
+
         <div class="subsecciones-container"> 
           <label>CANTIDAD: </label> 
           <div class="subsecciones-container">
