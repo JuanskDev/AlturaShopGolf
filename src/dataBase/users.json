@@ -14,5 +14,21 @@
   "email": "juanscarafia@gmail.com",
   "telefono": "42582226",
   "hash": "$2a$10$aa7pzD.7SsXVHWlqGFSnxesq.K30VW8GFVHUSGK0EDKtIolxZhx6q"
+ },
+ {
+  "id": 3,
+  "nombre": "Bruno",
+  "apellido": "Ciarlo",
+  "email": "brunociarlo@gmail.com",
+  "telefono": "35189565525",
+  "hash": "$2a$10$H0kR1QKdTh3uG/wueP1L7.MvZdWa6RqTAX9gqjkwNTf90vPEPYZge"
+ },
+ {
+  "id": 4,
+  "nombre": "Lucas",
+  "apellido": "Pages",
+  "email": "lucaspages88@gmail.com",
+  "telefono": "25245556989",
+  "hash": "$2a$10$NYLWHdO9RZjj1h2VvzIaf.2SKZrjIbzROpX0vhYYsdolORn5iLWRG"
  }
 ]

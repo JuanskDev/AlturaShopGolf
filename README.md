@@ -14,4 +14,4 @@ Integrante de el Proyecto: GAS: " Golf de Altura Store".
 Bruno Ciarlo:
 Lucas Pages:
 Juan Scarafia:
-Agustin COntreras: Edad 39 años, Trabajo como administrativo en Poder Judicial de la Provincia de Salta/ Tribunal Electoral de la Provincia. Soltero con 2 hijos. Estudiante de Digital House Curso de FullStack Developer.
+Agustin COntreras: Edad 39 años, Trabajo: Administrativo en Poder Judicial de la Provincia de Salta(Tribunal Electoral de la Provincia). Soltero con 2 hijos. Estudiante de Digital House Curso de FullStack.
