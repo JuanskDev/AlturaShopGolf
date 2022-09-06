@@ -1,3 +1,5 @@
+//este modelo para poner los distintos productos y marcas que utilizan los distintos jugadores.
+
 module.exports = (sequelize, dataTypes) => {
     let alias = 'JugadorProductos';
     let cols = {

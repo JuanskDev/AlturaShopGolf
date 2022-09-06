@@ -1,3 +1,4 @@
+//modelo con la variedad de marcas a utilizar basado en los distintos productos
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Marca';
     let cols = {

@@ -25,10 +25,9 @@
 }
 .product-content .fila {
   margin-bottom: 15px;
+  border-bottom: 1px solid grey;
+  padding: 8px 0;
 }
-
-
-
 .button-add-cart button{
   display: flex;
   font-size: 15px;
@@ -50,7 +49,6 @@
   font-size: 15px;
   font-weight: 500;
 }
-
 nav.menu-detalle-producto{
   display: flex;
   color: #0854e0;
@@ -58,11 +56,9 @@ nav.menu-detalle-producto{
   font-family: oswald;
   font-weight: 500;
   padding: 15px 5px 15px  5px;
- 
 }
 div.slider-products{
   display: flex;
-
 }
 img.img3{
   border: 0.2px solid #dc3b41;
@@ -120,7 +116,6 @@ button.prev-img{
 .product-name h5 .span2{
   text-decoration: line-through;
 }
-
 .product-name.span-1{
 text-decoration:line-through,
 }
@@ -213,29 +208,22 @@ div.subsecciones-container label{
   font-size: 15px;
   text-decoration: underline;
   font-weight: 800;
+  margin-top: 30px;
 }
 
 
 
   /*FOOTER*/
 
-
-  
-
-
 @media (min-width: 420px) {
-  
 
 }
-
 @media (min-width: 790px) {
  
 /*HEADER*/
 
 
 /*FOOTER*/
-
-
 
 }
 
