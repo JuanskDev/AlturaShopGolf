@@ -33,11 +33,9 @@
             <p class="p-descuento">Ahorra <%= data.producto.descuento %> % </p>
           <% } %>
         </div>
-<!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras y guantes y zapatos mostrás el talle -->
-        <% if(data.producto.categoria == "1" || 
-              data.producto.producto == "5" || 
+<!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras, guantes, ropa y zapatos mostrás el talle -->
+        <% if(data.producto.producto == "5" || 
               data.producto.producto == "6" ||
-              data.producto.categoria == "6"||
               data.producto.producto =="15"||
               data.producto.producto =="16"||
               data.producto.producto =="17"||
@@ -57,8 +55,7 @@
         </div>
         <% } %>
         <!--acá teneés que modificar la condición según la necesidad -->
-        <% if(data.producto.categoria == "1" || 
-          data.producto.producto == "5" || 
+        <% if(data.producto.producto == "6" || 
           data.producto.categoria == "3"||
           data.producto.producto == "3"||
           data.producto.producto == "9"||
@@ -83,7 +80,6 @@
         <% if(data.producto.categoria == "3" || 
           data.producto.producto == "3"||
           data.producto.producto == "9"||
-          data.producto.producto == "10"||
           data.producto.producto == "11"||
           data.producto.producto == "14"||
           data.producto.producto == "23"
@@ -98,6 +94,12 @@
               <% } %>
             </select>
           </div>
+          <% } %>
+
+          <% if(data.producto.producto == "10"||
+          data.producto.producto == "10"
+        ) { 
+        %>
           <div class="fila fila2">
             <label class="">CONJUNTO:</label>
             <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Seleccione el conjunto de hierros">
@@ -122,6 +124,7 @@
               <% } %>
             </select>
           </div>
+
           <div class="fila fila2">
               <label class="color">COLOR:</label>
               <select name="color" class="input-form" id="color"placeholder="Seleccione el color">
