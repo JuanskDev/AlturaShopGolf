@@ -44,6 +44,9 @@ const campos = JSON.parse(fs.readFileSync(camposFilePath, 'utf-8'));
 const leccionesFilePath = path.join(__dirname, '../dataBase/lecciones.json');
 const lecciones = JSON.parse(fs.readFileSync(leccionesFilePath, 'utf-8'));
 
+const contactosFilePath = path.join(__dirname, '../dataBase/contactos.json');
+const contactos = JSON.parse(fs.readFileSync(contactosFilePath, 'utf-8'));
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
@@ -65,7 +68,8 @@ const productsController = {
             talles: talles,
             color: color,
             campos: campos,
-            lecciones: lecciones
+            lecciones: lecciones,
+            contactos: contactos
 
         }
         res.render('products-create', { data })
@@ -160,7 +164,8 @@ const productsController = {
             talles: talles,
             color: color,
             campos: campos,
-            lecciones: lecciones
+            lecciones: lecciones,
+            contactos: contactos
 
        }
         res.render('products-edit', { data })
@@ -184,6 +189,7 @@ const productsController = {
             productUpdate.color = req.body.color;
             productUpdate.campos = req.body.campos;
             productUpdate.lecciones = req.body.lecciones;
+            productUpdate.contactos = req.body.contactos;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image
         }
 
