@@ -5,8 +5,8 @@
 //TIPO DE VARA
 //TIPO DE BOLSA
 //TALLE
-//HIERROS TIPO DE CONJUNTO
-//PESO, ETC
+//HIERROS-CONJUNTO
+// ETC
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Caracteristica';
     let cols = {

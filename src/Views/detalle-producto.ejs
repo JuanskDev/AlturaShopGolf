@@ -36,9 +36,7 @@
 <!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras, guantes, ropa y zapatos mostrás el talle -->
         <% if(data.producto.producto == "5" || 
               data.producto.producto == "6" ||
-              data.producto.producto =="15"||
-              data.producto.producto =="16"||
-              data.producto.producto =="17"||
+              data.producto.categoria =="6"||
               data.producto.categoria == "7"
               ) { 
           %>
@@ -55,13 +53,7 @@
         <% } %>
         <!--acá teneés que modificar la condición según la necesidad -->
         <% if(data.producto.producto == "6" || 
-          data.producto.categoria == "3"||
-          data.producto.producto == "3"||
-          data.producto.producto == "9"||
-          data.producto.producto == "10"||
-          data.producto.producto == "11"||
-          data.producto.producto == "14"||
-          data.producto.producto == "23"
+          data.producto.categoria == "3"
         ) { 
         %>
           <!--por ejemplo acá deberías cambiar color y poner otra cosa -->
@@ -76,12 +68,7 @@
           </div>
         <% } %>
         <!--hasta acá hay que copiar por cada opción-->
-        <% if(data.producto.categoria == "3" || 
-          data.producto.producto == "3"||
-          data.producto.producto == "9"||
-          data.producto.producto == "11"||
-          data.producto.producto == "14"||
-          data.producto.producto == "23"
+        <% if(data.producto.categoria == "3" 
         ) { 
         %>
         <div class="fila fila2">
@@ -95,8 +82,7 @@
           </div>
           <% } %>
 
-          <% if(data.producto.producto == "10"||
-          data.producto.producto == "10"
+          <% if(data.producto.producto == "10"
         ) { 
         %>
           <div class="fila fila2">
@@ -109,9 +95,8 @@
             </select>
           </div>
           <% } %>
-          <% if(data.producto.categoria == "2" || 
-          data.producto.producto == "1"||
-          data.producto.producto == "2"
+          <% if( 
+          data.producto.producto == "1"
         ) { 
         %>
         <div class="fila fila2">
