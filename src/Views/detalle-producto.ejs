@@ -32,6 +32,7 @@
             <h5><span class="span-1">$ <%= toThousand(data.producto.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
             <p class="p-descuento">Ahorra <%= data.producto.descuento %> % </p>
           <% } %>
+<<<<<<< HEAD
         </div>
 <!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras, guantes, ropa y zapatos mostrás el talle -->
         <% if(data.producto.producto == "5" || 
@@ -51,6 +52,9 @@
           <label><a href="/images/tabla-talles-ropa.jpg"target="_blank">Consulta nuestra tabla de talles aquí.</a></label>
         </div>
         <% } %>
+=======
+        </div>   
+>>>>>>> 001c2fea3e68aa4ca9e3eb7c3e04c3c60f3b5e0b
         <!--acá teneés que modificar la condición según la necesidad -->
         <% if(data.producto.producto == "6" || 
           data.producto.categoria == "3"
@@ -59,7 +63,7 @@
           <!--por ejemplo acá deberías cambiar color y poner otra cosa -->
           <div class="fila fila2">
             <label class="marca">AGARRE:</label>
-              <select name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
+              <select name="agarre" class="input-form" id="agarre">
               <option value=""></option>
               <% for (const catSelec of data.agarre) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.agarre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -68,12 +72,16 @@
           </div>
         <% } %>
         <!--hasta acá hay que copiar por cada opción-->
+<<<<<<< HEAD
         <% if(data.producto.categoria == "3" 
+=======
+        <% if(data.producto.categoria == "3"
+>>>>>>> 001c2fea3e68aa4ca9e3eb7c3e04c3c60f3b5e0b
         ) { 
         %>
         <div class="fila fila2">
             <label class="">TIPO DE VARA:</label>
-            <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
+            <select name="tipodevara"class="input-form" id="tipodevara">
               <option value=""></option>
               <% for (const catSelec of data.tipodevara) { %>
                 <option value="<%= catSelec.id %>" <%= data.producto.tipodevara == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
@@ -81,8 +89,13 @@
             </select>
           </div>
           <% } %>
+<<<<<<< HEAD
 
           <% if(data.producto.producto == "10"
+=======
+          <% if(data.producto.producto == "10"||
+          data.producto.producto == "10"
+>>>>>>> 001c2fea3e68aa4ca9e3eb7c3e04c3c60f3b5e0b
         ) { 
         %>
           <div class="fila fila2">
@@ -95,8 +108,12 @@
             </select>
           </div>
           <% } %>
+<<<<<<< HEAD
           <% if( 
           data.producto.producto == "1"
+=======
+          <% if(data.producto.producto == "1"
+>>>>>>> 001c2fea3e68aa4ca9e3eb7c3e04c3c60f3b5e0b
         ) { 
         %>
         <div class="fila fila2">
@@ -109,13 +126,11 @@
             </select>
           </div>
           <% } %>
-          <% if(data.producto.categoria == "2" || 
-          data.producto.categoria == "7" ||
-          data.producto.producto == "5" ||
-          data.producto.producto == "6" ||
-          data.producto.producto =="15"||
-          data.producto.producto =="16"||
-          data.producto.producto =="17"
+          <% if(data.producto.categoria == "7" || 
+            data.producto.categoria == "6" ||
+            data.producto.producto == "1"||
+            data.producto.producto == "5"||
+            data.producto.producto == "6"
           ) { 
           %>
             <div class="fila fila2">
@@ -129,7 +144,24 @@
               </select>
             </div>
           <% } %>
-
+<!-- //SI la categoría o producto (propiedades del productos.json) ES VESTIR - gorras, guantes, ropa y zapatos mostrás el talle -->
+          <% if(data.producto.categoria == "6" || 
+          data.producto.categoria == "7" ||
+          data.producto.producto =="5"||
+          data.producto.producto =="6"
+          ) { 
+      %>
+    <div class="fila fila2">
+      <label>TALLE:</label>
+      <select name="talle" id="talle" class="input-form">
+        <option value=""></option>
+        <% for (const item of data.talles) { %>
+          <option value="<%= item.id %>" <%= data.talle_selected == item.nombre ? "selected" : null %> ><%= item.nombre %></option>
+        <% } %>
+      </select>
+      <label><a href="/images/tabla-talles-ropa.jpg"target="_blank">Consulta nuestra tabla de talles aquí.</a></label>
+    </div>
+    <% } %>
         <div class="subsecciones-container"> 
           <label class="cantidad">CANTIDAD: </label> 
           <div class="subsecciones-container">

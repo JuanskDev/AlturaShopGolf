@@ -51,6 +51,9 @@ app.use('/campos', rutasCampos);
 //Lecciones Routes
 const rutasLecciones = require("./src/routes/lecciones");
 app.use('/lecciones', rutasLecciones);
+//Contacto Routes
+const rutasContactos = require("./src/routes/contactos");
+app.use('/contactos', rutasContactos);
 
 //---------------------CAMERONSMITHEQUIPO-----------------------//
 app.get("/productos/cameronSmith", (req, res) => {

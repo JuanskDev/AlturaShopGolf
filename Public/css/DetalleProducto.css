@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 30%;
   align-items: center;
 }
 .product-content .col1 {
@@ -10,16 +10,18 @@
 }
 .product-content .col2 {
   align-items: flex-start;
+  margin-top: 15%;
 }
+
 .product-content .img-primaria img {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   transition: 0.5s;
   object-fit: cover;
-  margin-top: 25px;
+  margin-top: 100%;
 }
 .product-content .img-primaria img:hover {
-  transform: scale(1.2);
+  transform: scale(2.2);
   border: 1px solid rgb(216, 216, 216);
   border-radius: 5px;
 }
@@ -112,6 +114,7 @@ button.prev-img{
   color: #0854e0;
   align-items: center;
   margin-bottom: 7px;
+  font-size: 25px;
 }
 .product-name h5 .span2{
   text-decoration: line-through;
@@ -121,9 +124,9 @@ text-decoration:line-through,
 }
 .product-name p{
   color: #dc3b41;
-  align-items: center;
   margin-bottom: 30px;
-  font-size: 12px;
+  font-size: 20px;
+  margin-left: 40px;
 }
 div.fila0{
   display: flex;
@@ -154,11 +157,29 @@ div.fila input{
   width: 165px;
   margin-left: 15px;
 }
+div.fila .input-form{
+  width: 100%;
+  border: 3px solid #969696;
+  text-align: center;
+  font-weight: 500;
+  padding: 7px;
+  border-radius: 5px;
+  color: blue;
+}
+div .cantidad-modulo{
+  width: 100%;
+}
+#cantidad{
+  width: 50%;
+  text-align: center;
+  border: 3px solid grey;
+  padding: 10px 5px 10px 5px;
+  margin-left: 20px;
+}
 div.fila label a{
   display: flex;
   font-size: 9px;
   color: #0854e0;
-  
   width: 165px;
   margin-left: 90px;
   text-decoration: underline;
@@ -195,7 +216,8 @@ div.subsecciones-container label{
   margin-left: 15px;
   font-size: 20px;
   font-family: oswald;
-  font-weight: 600 
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .button-remove{
