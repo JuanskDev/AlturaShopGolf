@@ -15,11 +15,19 @@
 }
 
 .product-content .img-primaria img {
+<<<<<<< HEAD
+  width: 230px;
+  height: 230px;
+  transition: 0.5s;
+  object-fit: cover;
+  margin-top: 25px;
+=======
   width: 250px;
   height: 250px;
   transition: 0.5s;
   object-fit: cover;
   margin-top: 100%;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 .product-content .img-primaria img:hover {
   transform: scale(2.2);
@@ -53,6 +61,10 @@
   font-weight: 500;
   width: 120px;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 nav.menu-detalle-producto{
   display: flex;
   color: #0854e0;
@@ -60,10 +72,17 @@ nav.menu-detalle-producto{
   font-family: oswald;
   font-weight: 500;
   padding: 15px 5px 15px  5px;
+<<<<<<< HEAD
+ 
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
-
 div.slider-products{
   display: flex;
+<<<<<<< HEAD
+
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 img.img3{
   border: 0.2px solid #dc3b41;
@@ -117,19 +136,32 @@ button.prev-img{
   color: #0854e0;
   align-items: center;
   margin-bottom: 7px;
+<<<<<<< HEAD
+=======
   font-size: 25px;
 }
 .product-name h5 .span2{
   text-decoration: line-through;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
+.product-name h5 .span2{
+  text-decoration: line-through;
+}
+
 .product-name.span-1{
 text-decoration:line-through,
 }
 .product-name p{
   color: #dc3b41;
+<<<<<<< HEAD
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 12px;
+=======
   margin-bottom: 30px;
   font-size: 20px;
   margin-left: 40px;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 div.fila0{
   display: flex;
