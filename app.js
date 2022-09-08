@@ -12,12 +12,10 @@ app.use(express.static("./Public")); // CSS
 app.listen(3030, () => {
   console.log("Servidor funcionando");
 });
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride('_method'));// Sustituye a las clases de los metodos principales nos permite utilziar el Get,Post,Put;Delete...etc
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/src/views')); // Define la ubicación de la carpeta de las Vistas
 
@@ -29,7 +27,6 @@ app.use(session({
 }));
 //-------------COOKIE---------------------//
 app.use(cookieParser());
-
 // MVC SYSTEM
 
 // Main Routes
@@ -51,7 +48,9 @@ app.use('/campos', rutasCampos);
 //Lecciones Routes
 const rutasLecciones = require("./src/routes/lecciones");
 app.use('/lecciones', rutasLecciones);
-
+//Contacto Routes
+const rutasContactos = require("./src/routes/contactos");
+app.use('/contactos', rutasContactos);
 //---------------------CAMERONSMITHEQUIPO-----------------------//
 app.get("/productos/cameronSmith", (req, res) => {
   res.render(path.join(__dirname, "src/views/cameronSmith.ejs"));

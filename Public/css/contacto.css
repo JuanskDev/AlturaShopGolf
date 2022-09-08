@@ -1,0 +1,41 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Open Sans"; 
+}
+
+body.contacto{
+    width: 100%;
+    font-family: oswald;
+    font-size: 25px;
+    justify-content: center;
+}
+
+div.logo-gas{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+div.logo-gas img{
+    width: 15%;
+}
+div.logo-gas img:hover{
+transform:rotate(360deg);
+transition: all 1.5s;
+}
+div.info{
+    margin-left: 15%;
+    text-align: center;
+}
+ .info-personal{
+    width: 100%;
+    margin-left: 15px;
+    text-align: justify;
+}
+.info-personal h3{
+    
+}

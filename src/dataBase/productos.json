@@ -1884,7 +1884,7 @@
   "color": "",
   "image": "myFile-1661623373517.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "TAYLORMADE",
   "modelo_selected": "STEALTH",
   "tipodevara_selected": "VARA REGULAR"
@@ -1906,7 +1906,7 @@
   "color": "",
   "image": "myFile-1661623446708.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "CALLAWAY",
   "modelo_selected": "EPIC-MAX",
   "tipodevara_selected": "VARA STIFF"
@@ -1928,7 +1928,7 @@
   "color": "",
   "image": "myFile-1661623649764.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "COBRA",
   "modelo_selected": "RADSPEED",
   "tipodevara_selected": "VARA STIFF"
@@ -1950,7 +1950,7 @@
   "color": "",
   "image": "myFile-1661639501221.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "WILSON",
   "modelo_selected": "D300",
   "tipodevara_selected": "VARA STIFF"
@@ -1972,7 +1972,7 @@
   "color": "",
   "image": "myFile-1661640395260.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "TAYLORMADE",
   "modelo_selected": "SIM2-MAX",
   "tipodevara_selected": "VARA REGULAR"
@@ -1994,7 +1994,7 @@
   "color": "",
   "image": "myFile-1661640572839.webp",
   "category_selected": "PALOS",
-  "producto_selected": "MADERAS",
+  "producto_selected": "MADERA-3",
   "marca_selected": "CALLAWAY",
   "modelo_selected": "ROUGE-ST MAX",
   "tipodevara_selected": "VARA STIFF"
@@ -2520,7 +2520,7 @@
   "color": "",
   "image": "myFile-1661703122371.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "TITLEIST",
   "modelo_selected": "SPECIAL SELECT NEWPORT-2",
   "tipodevara_selected": "VARA REGULAR"
@@ -2542,7 +2542,7 @@
   "color": "",
   "image": "myFile-1661703235174.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "TAYLORMADE",
   "modelo_selected": "GT",
   "tipodevara_selected": "VARA REGULAR"
@@ -2564,7 +2564,7 @@
   "color": "",
   "image": "myFile-1661704979338.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "PING",
   "modelo_selected": "ANSER",
   "tipodevara_selected": "VARA REGULAR"
@@ -2586,7 +2586,7 @@
   "color": "",
   "image": "myFile-1661705083992.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "ODYSSEY",
   "modelo_selected": "2-BALL TEN",
   "tipodevara_selected": "VARA REGULAR"
@@ -2608,7 +2608,7 @@
   "color": "",
   "image": "myFile-1661705736173.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "PING",
   "modelo_selected": "TYNE-C",
   "tipodevara_selected": "VARA REGULAR"
@@ -2630,7 +2630,7 @@
   "color": "",
   "image": "myFile-1661705793762.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "TITLEIST",
   "modelo_selected": "PHANTOM",
   "tipodevara_selected": "VARA REGULAR"
@@ -2652,7 +2652,7 @@
   "color": "",
   "image": "myFile-1661706127352.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "CLEVELAND",
   "modelo_selected": "FRONTLINE",
   "tipodevara_selected": "VARA REGULAR"
@@ -2674,7 +2674,7 @@
   "color": "",
   "image": "myFile-1661706191695.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "ODYSSEY",
   "modelo_selected": "WORKS",
   "tipodevara_selected": "VARA REGULAR"
@@ -2696,7 +2696,7 @@
   "color": "",
   "image": "myFile-1661706234615.webp",
   "category_selected": "PALOS",
-  "producto_selected": "PUTTERS",
+  "producto_selected": "PUTTER",
   "marca_selected": "MIZUNO",
   "modelo_selected": "OMOI-02",
   "tipodevara_selected": "VARA REGULAR"
@@ -3260,5 +3260,39 @@
   "stock": "1",
   "color": "",
   "image": "myFile-1661776228532.webp"
+ },
+ {
+  "id": 159,
+  "categoria": "6",
+  "producto": "15",
+  "marca": "1",
+  "modelo": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "2.00",
+  "precio": "15800",
+  "talle": "6",
+  "stock": "2",
+  "color": "2",
+  "image": "myFile-1662479912617.png"
+ },
+ {
+  "id": 160,
+  "categoria": "7",
+  "producto": "24",
+  "marca": "1",
+  "modelo": "",
+  "agarre": "",
+  "tipodevara": "",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "",
+  "descuento": "3.00",
+  "precio": "29799",
+  "talle": "23",
+  "stock": "2",
+  "color": "2",
+  "image": "myFile-1662480011371.jpg"
  }
 ]

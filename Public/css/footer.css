@@ -6,11 +6,13 @@ footer {
     flex-direction: column;
 }
 
-footer .footer-image {
-    background: transparent url('/images/CAMPOS/2/bg-footer.webp') center center no-repeat;
+footer .footer-images {
+    background: transparent url(/images/CAMPOS/2/slide3.png) center center no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 700px;
     border-bottom: 4px solid #dc3b41;
+    opacity: 60%;
+    border-top: 4px solid #dc3b41;
 }
 
 footer .footer-content {

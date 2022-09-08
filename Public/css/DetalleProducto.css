@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 30%;
   align-items: center;
 }
 .product-content .col1 {
@@ -10,25 +10,35 @@
 }
 .product-content .col2 {
   align-items: flex-start;
+  margin-top: 15%;
+  text-align: center;
 }
+
 .product-content .img-primaria img {
+<<<<<<< HEAD
   width: 230px;
   height: 230px;
   transition: 0.5s;
   object-fit: cover;
   margin-top: 25px;
+=======
+  width: 250px;
+  height: 250px;
+  transition: 0.5s;
+  object-fit: cover;
+  margin-top: 100%;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 .product-content .img-primaria img:hover {
-  transform: scale(1.2);
+  transform: scale(2.2);
   border: 1px solid rgb(216, 216, 216);
   border-radius: 5px;
 }
 .product-content .fila {
   margin-bottom: 15px;
+  border-bottom: 1px solid grey;
+  padding: 8px 0;
 }
-
-
-
 .button-add-cart button{
   display: flex;
   font-size: 15px;
@@ -37,10 +47,10 @@
   border-radius: 15px;
   height: 30%;
   padding: 0px 5px 5px 5px;
-  width: 120px;
+  width: 110px;
   border: none;
-  margin-left: 110%;
-  margin-top: -20px;
+  margin-left: 90%;
+  margin-top: -25px;
 }
 .button-add-cart button:hover{
   background-color: white;
@@ -49,8 +59,12 @@
   font-family: oswald;
   font-size: 15px;
   font-weight: 500;
+  width: 120px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 nav.menu-detalle-producto{
   display: flex;
   color: #0854e0;
@@ -58,11 +72,17 @@ nav.menu-detalle-producto{
   font-family: oswald;
   font-weight: 500;
   padding: 15px 5px 15px  5px;
+<<<<<<< HEAD
  
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 div.slider-products{
   display: flex;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 img.img3{
   border: 0.2px solid #dc3b41;
@@ -116,6 +136,13 @@ button.prev-img{
   color: #0854e0;
   align-items: center;
   margin-bottom: 7px;
+<<<<<<< HEAD
+=======
+  font-size: 25px;
+}
+.product-name h5 .span2{
+  text-decoration: line-through;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 .product-name h5 .span2{
   text-decoration: line-through;
@@ -126,9 +153,15 @@ text-decoration:line-through,
 }
 .product-name p{
   color: #dc3b41;
+<<<<<<< HEAD
   align-items: center;
   margin-bottom: 30px;
   font-size: 12px;
+=======
+  margin-bottom: 30px;
+  font-size: 20px;
+  margin-left: 40px;
+>>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
 }
 div.fila0{
   display: flex;
@@ -159,13 +192,34 @@ div.fila input{
   width: 165px;
   margin-left: 15px;
 }
+div.fila .input-form{
+  display: flex;
+  width: 100%;
+  border: 3px solid #969696;
+  text-align: center;
+  font-weight: 500;
+  padding: 7px;
+  border-radius: 5px;
+  color: #0854e0;
+}
+
+div .cantidad-modulo{
+  width: 100%;
+}
+#cantidad{
+  width: 50%;
+  text-align: center;
+  border: 3px solid grey;
+  padding: 10px 5px 10px 5px;
+  margin-left: 20px;
+}
 div.fila label a{
   display: flex;
   font-size: 9px;
   color: #0854e0;
-  
-  width: 165px;
-  margin-left: 90px;
+  margin-top: -25px;
+  width: 135px;
+  margin-left: 70px;
   text-decoration: underline;
 }
 div.fila2 label{
@@ -200,7 +254,8 @@ div.subsecciones-container label{
   margin-left: 15px;
   font-size: 20px;
   font-family: oswald;
-  font-weight: 600 
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .button-remove{
@@ -213,29 +268,22 @@ div.subsecciones-container label{
   font-size: 15px;
   text-decoration: underline;
   font-weight: 800;
+  margin-top: 30px;
 }
 
 
 
   /*FOOTER*/
 
-
-  
-
-
 @media (min-width: 420px) {
-  
 
 }
-
 @media (min-width: 790px) {
  
 /*HEADER*/
 
 
 /*FOOTER*/
-
-
 
 }
 

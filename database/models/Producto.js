@@ -1,3 +1,4 @@
+//modelo de los productos con sus especificaciones como ser marca, precio y demas
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Producto';
     let cols = {

@@ -447,6 +447,42 @@
     {
         "id":93,
         "nombre": "BERMUDA-KID'S"
+    },
+    {
+        "id": 94,
+        "nombre": "HIERROS-HEADCOVER"
+    },
+    {
+        "id": 95,
+        "nombre": "PUTTER-HEADCOVER"
+    },
+    {
+        "id": 96,
+        "nombre": "CANASTO-PRACTICA APROACH"
+    },
+    {
+        "id": 97,
+        "nombre": "RED PRACTICA"
+    },
+    {
+        "id": 98,
+        "nombre": "CAÑA PARA PELOTAS"
+    },
+    {
+        "id": 99,
+        "nombre": "MARCA GREEN"
+    },
+    {
+        "id": 100,
+        "nombre": "LEVANTA PIQUE"
+    },
+    {
+        "id": 101,
+        "nombre": "PUTING PRACTICA"
+    },
+    {
+        "id": 102,
+        "nombre": "CEPILLO - PALOS"
     }
 ]
 
