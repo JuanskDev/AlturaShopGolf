@@ -1,3 +1,9 @@
 
 El usuario ingreso en: /iniciosesion
 El usuario juanscarafia@gmail.com cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario agustincontrerasvidal@gmail.com cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario undefined cerró su sesión 
+El usuario undefined cerró su sesión 
+El usuario ingreso en: /iniciosesion

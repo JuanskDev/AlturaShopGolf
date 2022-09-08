@@ -37,6 +37,10 @@
         <% if(data.producto.categoria == "1" || 
               data.producto.producto == "5" || 
               data.producto.producto == "6" ||
+              data.producto.categoria == "6"||
+              data.producto.producto =="15"||
+              data.producto.producto =="16"||
+              data.producto.producto =="17"||
               data.producto.categoria == "7"||
               data.producto.producto =="24"
               ) { 
@@ -52,9 +56,9 @@
           <label><a href="/images/tabla-talles-ropa.jpg"target="_blank">Consulta nuestra tabla de talles aquí.</a></label>
         </div>
         <% } %>
-        <!-- acá teneés que modificar la condición según la necesidad -->
+        <!--acá teneés que modificar la condición según la necesidad -->
         <% if(data.producto.categoria == "1" || 
-          data.producto.producto == "6" || 
+          data.producto.producto == "5" || 
           data.producto.categoria == "3"||
           data.producto.producto == "3"||
           data.producto.producto == "9"||
@@ -76,24 +80,59 @@
           </div>
         <% } %>
         <!--hasta acá hay que copiar por cada opción-->
-     
-  
-
-
-
-
-
-
-<!-- 
+        <% if(data.producto.categoria == "3" || 
+          data.producto.producto == "3"||
+          data.producto.producto == "9"||
+          data.producto.producto == "10"||
+          data.producto.producto == "11"||
+          data.producto.producto == "14"||
+          data.producto.producto == "23"
+        ) { 
+        %>
         <div class="fila fila2">
-          <label>COLOR:</label>
-          <select name="color" class="input-form" id="color" placeholder="Seleccione el color">
-            <option value=""></option>
-            <% for (const catSelec of data.color) { %>
-              <option value="<%= catSelec.id %>" <%= data.color.nombre == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
-            <% } %>
-          </select>
-        </div> -->
+            <label class="">TIPO DE VARA:</label>
+            <select name="tipodevara"class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
+              <option value=""></option>
+              <% for (const catSelec of data.tipodevara) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.tipodevara == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila fila2">
+            <label class="">CONJUNTO:</label>
+            <select name="hierrostipodeconjunto"class="input-form" id="hierrostipodeconjunto"placeholder="Seleccione el conjunto de hierros">
+              <option value=""></option>
+              <% for (const catSelec of data.hierrostipodeconjunto) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.hierrostipodeconjunto == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <%} %>
+            </select>
+          </div>
+          <% } %>
+          <% if(data.producto.categoria == "2" || 
+          data.producto.producto == "1"||
+          data.producto.producto == "2"
+        ) { 
+        %>
+        <div class="fila fila2">
+            <label class="bolsa">TIPO DE BOLSA:</label>
+            <select name="tipodebolsa" class="input-form" id="bolsa"placeholder="Seleccione el tipo de bolsa">
+              <option value=""></option>
+              <% for (const catSelec of data.tipodebolsa) { %>
+                <option value="<%= catSelec.id %>" <%= data.producto.tipodebolsa == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila fila2">
+              <label class="color">COLOR:</label>
+              <select name="color" class="input-form" id="color"placeholder="Seleccione el color">
+                <option value=""></option>
+                <% for (const catSelec of data.color) { %>
+                  <option value="<%= catSelec.id %>" <%= data.producto.color == catSelec.id ? "selected" : null %> ><%= catSelec.nombre %></option>
+                <% } %>
+                <option value="color"></option>
+              </select>
+            </div>
+          <% } %>
         <div class="subsecciones-container"> 
           <label>CANTIDAD: </label> 
           <div class="subsecciones-container">
