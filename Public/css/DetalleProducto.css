@@ -15,11 +15,11 @@
 }
 
 .product-content .img-primaria img {
-  width: 250px;
+  width: 300px;
   height: 250px;
   transition: 0.5s;
   object-fit: cover;
-  margin-top: 100%;
+  margin-top: 40%;
 }
 .product-content .img-primaria img:hover {
   transform: scale(2.2);

@@ -7,11 +7,6 @@ El usuario ingreso en: /iniciosesion
 El usuario undefined cerró su sesión 
 El usuario undefined cerró su sesión 
 El usuario ingreso en: /iniciosesion
-<<<<<<< HEAD
-=======
 El usuario ingreso en: /iniciosesion
-<<<<<<< HEAD
 El usuario ingreso en: /iniciosesion
-=======
->>>>>>> b30c0529a60e4d3ec150b265b2950d4b01eb0c0c
->>>>>>> 561fff1c5e695369d666dffcf6abe0a3d1fd5024
+El usuario ingreso en: /iniciosesion

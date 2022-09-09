@@ -30,5 +30,13 @@
   "email": "lucaspages88@gmail.com",
   "telefono": "25245556989",
   "hash": "$2a$10$NYLWHdO9RZjj1h2VvzIaf.2SKZrjIbzROpX0vhYYsdolORn5iLWRG"
+ },
+ {
+  "id": 5,
+  "nombre": "Juan",
+  "apellido": "caro",
+  "email": "juan@jccaro.com..ar",
+  "telefono": "2215957338",
+  "hash": "$2a$10$Xkdpg0NAk5IeyFs3clFQ/e/TATrtyzqSJKhAGUApEl930EmdyKlLy"
  }
 ]

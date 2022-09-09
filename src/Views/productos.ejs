@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% include('./partials/head.ejs') %>
+    <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="/css/palos.css"/>
   </head>
 
 
   <body class="palos">
-    <% include('./partials/header.ejs') %>
+    <%- include('./partials/header.ejs') %>
     <main>
       <div class="resultado-busqueda">
         <% if(productCategory.length === 1){ %>
@@ -32,29 +32,30 @@
       <div class="resultado-busqueda">
         <ul class="resultado-productos">
           
-          <% productCategory.forEach(function(product){
-            let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
-          %>
-            <li class="producto-palos-lista">
-              <a href="/products/detalle/<%=product.id%> "><img src="/images/products/<%= product.image %>" alt=""></a>
-              <div class="tamaño-hr">
-                <p class="nuevo">NUEVO</p>
-              <h6><%= product.producto_selected %> <%= product.marca_selected %><%= product.modelos_selected %><h6>
-              <p><%= product.tipodevara_selected%><%= product.tipodebolsa_selected%></p>
-              <% if(product.descuento === "0.00"){ %>
-                  <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
-              <% } else{ %>  
-                  <h5><span class="span-1">$ <%= toThousand(product.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
-                  <p class="p-descuento">Ahorra <%= product.descuento %> % </p>
-              <% } %>
-              </div>
-          </li>
-        <% }) %>
+            <% productCategory.forEach(function(product){
+              let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
+            %>
+          <li class="producto-palos-lista">
+            <a href="/products/detalle/<%=product.id%> "target="_blank"><img src="/images/products/<%= product.image %>" alt=""></a>
+            <div class="tamaño-hr">
+              <p class="nuevo">NUEVO</p>
+            <h6><%= product.producto_selected %> <%= product.marca_selected %><%= product.modelos_selected %><h6>
+            <p><%= product.tipodevara_selected%><%= product.tipodebolsa_selected%></p>
+
+            <% if(product.descuento === "0.00"){ %>
+                    <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
+                <% } else{ %>  
+                    <h5><span class="span-1">$ <%= toThousand(product.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+                    <p class="p-descuento">Ahorra <%= product.descuento %> % </p>
+                <% } %>
+                </div>
+            </li>
+          <% }) %>
     </ul>
   </div>
   </main>
 
-   <% include('./partials/footer.ejs') %>
+   <%- include('./partials/footer.ejs') %>
 
   </body>
 </html>
