@@ -18,8 +18,7 @@
     <% if(sessiondata != undefined &&  sessiondata.nombre != undefined && sessiondata.nombre != ''){%>
         <a href="/users/cerrarsesion">CERRAR SESION</a>
         <span class="welcome-user">Bienvenido <%=sessiondata.email%></span>
-    <%}
-    else{%>
+    <%} else {%>
       <a href="/registro">REGISTRO</a>
       <a href="/users/iniciosesion">INICIO SESION</a>
     <%}%>
