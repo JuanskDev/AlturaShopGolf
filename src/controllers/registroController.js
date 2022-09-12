@@ -1,26 +1,34 @@
-const path = require("path");
-const {validationResult} = require('express-validator')
+const path = require('path');
+const fs = require('fs');
+const { render } = require('ejs');
+const {validationResult} = require('express-validator');
+const bcrypt = require('bcryptjs');
+const usersFilePath = path.join(__dirname, '../dataBase/users.json');
 
-module.exports = {
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+const registroController = {
     index: function(req, res){
+        res.locals.sessiondata = req.session;
         res.render(path.join(__dirname , '../views/registro.ejs'))
     },
-    store: function(req, res){
-        let errors = validationResult(req)
-        
-        if(!errors.isEmpty()){
-            return res.render("../src/views/registro.ejs", {errors: errors.errors});
-        } 
-        req.session.nombre = req.body.nombre;
-        res.cookie('nombre_cookie_prueba', req.body.nombre, {maxAge: 10000 });
-
-        req.session.name = req.body.name;
-           req.session.email = req.body.email;
-           req.session.age = req.body.age;
-           if(req.body.recordar_color){
-            res.cookie('color', req.body.color, {maxAge: 60 * 1000});
-
-            res.redirect('/')
-           }   
+    store: (req, res) => {
+        let indexId = 0;
+        if(users.length != 0) {
+            indexId = users[users.length - 1].id;
+        }
+        let hash_ = bcrypt.hashSync(req.body.password, 10)
+        let newUser = {
+            id: indexId + 1,
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            telefono: req.body.telefono,
+            hash: hash_
+        };
+        users.push(newUser)
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+        res.redirect('/users/iniciosesion');
     }
 }
+module.exports = registroController;

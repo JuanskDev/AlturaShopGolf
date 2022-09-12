@@ -9,6 +9,7 @@
 }
 .product-content .col2 {
   align-items: flex-start;
+  position: relative;
 }
 .product-content .img-primaria img {
   width: 200px;
@@ -22,23 +23,25 @@
   border-radius: 5px;
 }
 .product-content .fila {
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
-
+ select {
+  right: 1px;
+  max-width: 119px;
+  position: absolute;
+ }
 
 
 .button-add-cart button{
-  display: flex;
   font-size: 15px;
   color: white;
   background-color: #0854e0;
   border-radius: 15px;
-  height: 30%;
   padding: 0px 5px 5px 5px;
   width: 120px;
   border: none;
-  margin-left: 110%;
-  margin-top: -20px;
+  position: absolute;
+  bottom: 10px;
 }
 .button-add-cart button:hover{
   background-color: white;
@@ -119,7 +122,6 @@ button.prev-img{
   justify-content: center;
 }
 .product-name h5{
-  margin-top: 40px;
   font-family: oswald;
   color:#0854e0;
   align-items: center;
@@ -130,6 +132,8 @@ text-decoration:line-through,
 .product-name p{
   color: #dc3b41;
   align-items: center;
+  font-size: 12px;
+  margin-left: 10px;
 }
 div.fila0{
   display: flex;
@@ -209,11 +213,16 @@ div.subsecciones-container label{
 }
 .button-remove button{
   border: none;
-  background-color: white;
-  color: #0854e0;
+  border-radius: 15px;
+  color: white;
   font-size: 15px;
-  text-decoration: underline;
-  font-weight: 800;
+  padding: 0 5px 5px 5px;
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  right: -30px;
+  background-color: #0854c0;
+
 }
 
 

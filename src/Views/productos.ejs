@@ -45,7 +45,7 @@
             <% if(product.descuento === "0.00"){ %>
                     <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
                 <% } else{ %>  
-                    <h5><span class="span-1">$ <%= toThousand(product.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+                    <h5><span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
                     <p class="p-descuento">Ahorra <%= product.descuento %> % </p>
                 <% } %>
                 </div>

@@ -20,26 +20,6 @@
   "marca_selected": "CALLAWAY"
  },
  {
-  "id": 2,
-  "categoria": "1",
-  "producto": "5",
-  "marca": "23",
-  "modelo": "",
-  "agarre": "",
-  "tipodevara": "",
-  "tipodebolsa": "",
-  "hierrostipodeconjunto": "",
-  "descuento": "0.00",
-  "precio": "9400",
-  "talle": "5",
-  "stock": "2",
-  "color": "2",
-  "image": "myFile-1661608595206.webp",
-  "category_selected": "ACCESORIOS",
-  "producto_selected": "GORRAS",
-  "marca_selected": "NIKE-GOLF"
- },
- {
   "id": 3,
   "categoria": "1",
   "producto": "5",

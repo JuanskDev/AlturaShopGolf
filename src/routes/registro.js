@@ -3,7 +3,9 @@ var router = express.Router();
 var registroController = require('../controllers/registroController')
 const {body, check} = require('express-validator')
 
+
 /* GET home page. */
+
 router.get('/', registroController.index);
 
 router.post('/',[
@@ -20,8 +22,6 @@ router.post('/',[
             return true;
         }
     })
-
-
 ], registroController.store);
 
 module.exports = router;

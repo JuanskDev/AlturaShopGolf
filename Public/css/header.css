@@ -16,8 +16,11 @@
   padding: 20px;
   height: 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content:flex-end;
   }
+  .barra-superior-izq{
+    display: none
+      }
   .sideA {
     display: none;
   }
@@ -68,7 +71,7 @@
   }
   .iconos-compra-location {
   display: flex;
-  align-items: center;
+  justify-content: flex-end
   }
   .iconos-compra-location i {
   font-size: 30px;
@@ -205,9 +208,7 @@
   header .buscador {
   width: 80%;
   }
-  .iconos-compra-location {
-  justify-content: space-around;
-  }
+ 
   .Compra-item-flex {
   margin: 0 100%;
   }
@@ -244,6 +245,12 @@
     flex-direction: row;
     width: 100%;
   }
+  .barra-superior-izq{
+    display: block
+      }
+      .barra-superior{
+        justify-content: space-between;
+      }
   }
   @media (min-width: 1000px) {
     .sideA {
