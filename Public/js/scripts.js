@@ -72,9 +72,6 @@ function mostrarMenu(menu) {
 //     if(textValue.toUpperCase() . indexOf(filter) > -1){
 //         li[i].Style.display = "";
 
-
-
-
 //     } else{
 //         li [i].style.display = "none";
 //     }
