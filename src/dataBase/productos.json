@@ -3294,5 +3294,22 @@
   "stock": "2",
   "color": "2",
   "image": "myFile-1662480011371.jpg"
+ },
+ {
+  "id": 161,
+  "categoria": "3",
+  "producto": "10",
+  "marca": "34",
+  "modelo": "3",
+  "agarre": "1",
+  "tipodevara": "1",
+  "tipodebolsa": "",
+  "hierrostipodeconjunto": "2",
+  "descuento": "3.00",
+  "precio": "137999",
+  "talle": "",
+  "stock": "2",
+  "color": "",
+  "image": "myFile-1662766316424.webp"
  }
 ]

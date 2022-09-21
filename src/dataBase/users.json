@@ -38,5 +38,13 @@
   "email": "juan@jccaro.com..ar",
   "telefono": "2215957338",
   "hash": "$2a$10$Xkdpg0NAk5IeyFs3clFQ/e/TATrtyzqSJKhAGUApEl930EmdyKlLy"
+ },
+ {
+  "id": 6,
+  "nombre": "jose maria",
+  "apellido": "Suarez",
+  "email": "josemariasuarez@gmail.com",
+  "telefono": "3874258000",
+  "hash": "$2a$10$mNlSA.wlpoZymsoCJ4NtHOkMuewdvHneNTIgHuF.yeEyaEpXUP/Ia"
  }
 ]
