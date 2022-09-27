@@ -17,6 +17,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         imagen: {
             type: dataTypes.STRING 
+        },
+          descuentoId: {
+            type: dataTypes.INTEGER 
         }
     };
     let config = {
