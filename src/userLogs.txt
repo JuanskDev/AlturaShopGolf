@@ -12,3 +12,14 @@ El usuario ingreso en: /iniciosesion
 El usuario ingreso en: /iniciosesion
 El usuario ingreso en: /iniciosesion
 El usuario josemariasuarez@gmail.com cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario nehuenlopez@gmail.com cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario undefined cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario agustincontrerasvidal@gmail.com cerró su sesión 
+El usuario ingreso en: /iniciosesion
+El usuario agustincontrerasvidal@gmail.com cerró su sesión 
+El usuario undefined cerró su sesión 
+El usuario undefined cerró su sesión 
+El usuario undefined cerró su sesión 

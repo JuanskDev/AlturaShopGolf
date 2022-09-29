@@ -34,7 +34,7 @@ if(slider) {
         if(interval >= 6) interval = 0;
         interval++;
         mostrarSlide(interval);
-    }, 7000);
+    }, 75000);
 }
 
 function mostrarMenu(menu) {
@@ -51,10 +51,10 @@ function mostrarMenu(menu) {
     }
 }
 
+//----------------------------------------------------------------------------------------//
 
 // // creando filtrado de busqueda en el header
 // inputSearch = document.getElementById('inputSearch');
-
 
 // document.getElementById("inputSearch"). addEventListener("keyup", buscador_interno);
 

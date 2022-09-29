@@ -239,6 +239,11 @@ color: white;
 font-weight: 900;
 text-shadow: 4px 4px 2px rgb(0 0 0 / 60%);
 }
+#slide2 h1{
+display: flex;
+margin-left: 130%;
+margin-top: 15%;
+}
 
 #slide3 {
 background: white url("/images/atajos-zapatos.png") center center no-repeat;
