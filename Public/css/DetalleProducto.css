@@ -244,17 +244,19 @@ div.subsecciones-container label{
 
 
 
-  /*FOOTER*/
 
 @media (min-width: 420px) {
+.main-content{
+display: flex;
+width: 100%;
+flex-direction: column;
 
+}
+  
 }
 @media (min-width: 790px) {
  
-/*HEADER*/
 
-
-/*FOOTER*/
 
 }
 

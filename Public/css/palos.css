@@ -127,12 +127,9 @@
     body.palos li.producto-palos-lista {
         width: 23%;
     }
-
+    body.palos li.producto-palos-lista img {
+      margin: auto;
+      display: block;
+    } 
 }
 
-@media (min-width: 790px) {
-body.palos li.producto-palos-lista img {
-  margin: auto;
-  display: block;
-} 
-}
