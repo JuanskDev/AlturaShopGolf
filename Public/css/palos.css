@@ -106,6 +106,12 @@
     font-family: 'Oswald';
 }
   
+body.palos li.producto-palos-lista a {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
   @media (min-width: 420px) {
     
     body.palos h1 {

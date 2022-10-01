@@ -152,7 +152,7 @@
   header .buscador input {
   width: 100%;
   min-width: 250px;
-  padding: 5px 15px 10px 15px;
+  padding: 5px 15px 9px 15px;
   height: auto;
   transition: all 0.6s ease;
   color: grey;
@@ -310,3 +310,8 @@
     top: 4px;
     font-size: 12px;
   }
+
+  /*flex*/
+.justify-content-space-between {
+  justify-content: space-between;
+}

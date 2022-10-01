@@ -452,28 +452,38 @@ border: none;
 
 }
 div.bloques-productos img {
-width: 100%;
 position: relative;
+max-height: 370px;
 }
 /*-------------------------------------------------*/
 div.indumentaria-home {
-position: relative;
+    position: relative;
+    background-color: #f0ecd9;
 }
 
-div.indumentaria-home div {
+div.indumentaria-home div.text-indumentaria {
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-position: absolute;
-top: 5px;
-padding: 10px 0px 0px 0%;
 cursor: pointer;
 }
-div.indumentaria-home div.text-indumentaria a span{
-margin-left: 50%;
-font-size: 20px;
-font-family: oswald;
-margin-top: 15px;
+div.indumentaria-home div.text-indumentaria a {
+    font-size: 20px;
+    font-family: oswald;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+div.indumentaria-home div.text-indumentaria a span {
+    font-size: 25px;
+    font-family: oswald;
+    font-weight: 700;
+    color: white;
+    text-shadow: 4px 4px 2px rgb(0 0 0 / 60%);
+}
+
+div.indumentaria-home div.text-indumentaria {
+    text-align: center;
 }
 
 div.indumentaria-home div.col1 a img {
@@ -488,9 +498,7 @@ width: 100px;
 
 }
 div.indumentaria-home div.col3 a img{
-left: 3%;
-top: 200%;
-width: 130px;
+    width: 130px;
 }
 div.indumentaria-home div.col4 a img{
 left: 3%;
@@ -633,8 +641,16 @@ color: #3483fa;
 }
 
 /*RESPONSIVE*/
-@media (min-width: 420px) {
 
+@media (max-width: 420px) {
+    .product-content .img-primaria img {
+        width: 200px;
+    }
+}
+@media (max-width: 480px) {
+    .bloques-productos, .carros-home, .palos-home {
+       display: none!important;
+    }
 }
 
 @media (max-width: 790px) {
@@ -659,7 +675,11 @@ color: #3483fa;
     } 
 }
 
-
-@media (max-width: 1000px) {
-
- }
+@media (max-width: 900px) {
+    #slide2 div h1 {
+        font-size: 50px!important;
+    }
+    .text-indumentaria > img {
+        display: none;;
+    }
+}

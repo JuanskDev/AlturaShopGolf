@@ -16,7 +16,7 @@
 
 .product-content .img-primaria img {
   width: 300px;
-  height: 250px;
+  height: auto;
   transition: 0.5s;
   object-fit: cover;
   margin-top: 40%;
@@ -31,18 +31,13 @@
   border-bottom: 1px solid grey;
   padding: 8px 0;
 }
-.button-add-cart button{
-  display: flex;
+.button-add-cart {
   font-size: 15px;
   color: white;
   background-color: #0854e0;
   border-radius: 15px;
-  height: 30%;
-  padding: 0px 5px 5px 5px;
-  width: 110px;
+  padding: 5px 10px 8px 10px;
   border: none;
-  margin-left: 90%;
-  margin-top: -25px;
 }
 .button-add-cart button:hover{
   background-color: white;
@@ -125,8 +120,8 @@ button.prev-img{
   text-decoration: line-through;
 }
 
-.product-name.span-1{
-text-decoration:line-through,
+.product-name h5 .span-1{
+  text-decoration:line-through;
 }
 .product-name p{
   color: #dc3b41;
@@ -174,15 +169,11 @@ div.fila .input-form{
   color: #0854e0;
 }
 
-div .cantidad-modulo{
-  width: 100%;
-}
 #cantidad{
   width: 50%;
   text-align: center;
   border: 3px solid grey;
   padding: 10px 5px 10px 5px;
-  margin-left: 20px;
 }
 div.fila label a{
   display: flex;
@@ -220,41 +211,57 @@ div.fila3 input{
 div.subsecciones-container{
   display: flex;
   width: 100%;
+  align-items: center;
 }
 div.subsecciones-container label{
-  margin-left: 15px;
   font-size: 20px;
   font-family: oswald;
   font-weight: 600;
-  margin-top: 10px;
 }
 
-.button-remove{
- margin-left: 35px; 
-}
-.button-remove button{
+.button-remove {
   border: none;
   background-color: white;
   color: #0854e0;
   font-size: 15px;
   text-decoration: underline;
   font-weight: 800;
-  margin-top: 30px;
 }
 
 
 
 
-@media (min-width: 420px) {
-.main-content{
-display: flex;
-width: 100%;
-flex-direction: column;
+@media (max-width: 420px) {
+  .main-content{
+    width: 100%;
+  }
+  .product-content .img-primaria img {
+    margin-top: 5%;
+  }
+  .product-content .img-primaria img:hover{
+    transform: none;
+    border: none;
+  }
+  .product-content{
+    flex-direction: column;
+  }
+  .product-content .col1,
+  .product-content .col2 {
+    width: 100%;
+    text-align: center;
+  }
+  .product-content .col2 {
+    margin-top: 0;
+  }
+}
 
+@media (max-width: 520px) {
+  .product-content .img-primaria img {
+    width: 200px;
+  }
 }
-  
-}
-@media (min-width: 790px) {
+
+@media (max-width: 790px) {
  
 
 
