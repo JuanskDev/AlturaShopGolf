@@ -11,12 +11,17 @@
     <a href="/">GOLF</a>
     <a href="/lecciones">LECCIONES</a>
     <a href="/campos">CAMPOS</a>
-    <a href="/productos/contacto">CONTACTO</a>
+    <a href="/contacto">CONTACTO</a>
   </div>
   <div class="barra-superior-der">
   <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
-    <a href="/registro">REGISTRO</a>
-    <a href="/users/iniciosesion">INICIO SESION</a>
+  <% if(locals && locals.sessiondata != undefined &&  locals.sessiondata.nombre != undefined){%>
+    <span class="welcome-user">Bienvenido <%=sessiondata.nombre%></span>
+    <a href="/users/cerrarsesion">CERRAR SESION</a>
+<%} else {%>
+  <a href="/registro">REGISTRO</a>
+  <a href="/users/iniciosesion">INICIO SESION</a>
+<%}%>
     </div>
   </div>
   
@@ -78,13 +83,18 @@
     </div>
     <div class="iconos-compra-location">
 
-      <span class="location-icon"><i class="fa fa-location-dot"></i> </span>
+      <span class="location-icon"> </span>
     </div>
+
+
     <div class="buscador item-flex">
-      <input type="text" placeholder="¿Que podemos ayudarte a encontrar?">
-      <div class="btn">
-        <i class="fa fa-search"></i>
-      </div>
+      <form action="/search" method="GET" class="search-form">
+      <input type="text" name="'keywords" placeholder="¿Que podemos ayudarte a encontrar?" class="search-form_input">
+      <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+    </form>
+      
+
+
     <div class="Compra-item-flex">
         <p>Devoluciones gratuitas y garantía en la devolución de su dinero</p>
       </div>

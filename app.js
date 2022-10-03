@@ -5,9 +5,9 @@ app.use(express.static("./Public")); // CSS
 const cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 const session = require('express-session')
-console.log(__dirname);
+const bodyParser = require('body-parser')
 
-app.listen(3030, () => {
+app.listen(3001, () => {
   console.log("Servidor funcionando");
 });
 
@@ -55,3 +55,5 @@ app.use('/lecciones', rutasLecciones);
 app.get("/productos/cameronSmith", (req, res) => {
   res.render(path.join(__dirname, "src/views/cameronSmith.ejs"));
 });
+
+

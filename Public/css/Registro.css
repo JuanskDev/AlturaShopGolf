@@ -54,14 +54,19 @@ max-width: 70%;
 width: 100%;
 text-align: center;
 }
-.contenedor input.input-form {
+
+.contenedor .fila-checkbox {
+    max-width: 70%;
 width: 100%;
-font-size: 12px;
-padding: 8px;
-font-family: 'Oswald';
 text-align: center;
-color: black;
-border-radius: 10px;
+}
+.contenedor input.input-form {
+    width: 100%;
+    padding: 13px;
+    font-family: 'Oswald';
+    text-align: center;
+    color: black;
+    border-radius: 7px;
 }
 .contenedor input.check-form {
 width: 40px;
@@ -72,18 +77,17 @@ vertical-align: inherit;
 }
 
 #crear-cuenta {
-padding: 15px 20px 15px 20px;
-font-size: 25px;
-font-weight: 600;
-background-color: #dc3b41;
-border-radius: 50px;
-width: 50%;
-color: white;
-border: none;
-margin-bottom: 20px;
-opacity: 65%;
-min-width: 250px;
-max-width: 300px;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #dc3b41;
+    border-radius: 20px;
+    width: 35%;
+    color: white;
+    border: none;
+    opacity: 65%;
+    max-width: 300px;
+    min-width: 200px
 }
 
 .inicia-sesion- {
@@ -97,7 +101,9 @@ padding-bottom: 30px;
 
 
 @media (min-width: 420px) {
-
+    .contenedor input.input-form {
+        max-width: 500px;
+    }
 
 }
 
@@ -105,23 +111,29 @@ padding-bottom: 30px;
 
 @media (min-width: 790px) {
 
-
+label {
+display: block;
+ }
+    
 .contenedor .fila {
 text-align: center;
-max-width: 40%;
+max-width: 100%;
+
 }
 .inicia-sesion- {
     
 margin-bottom: 30px;
 }
+
+.contenedor .fila-checkbox {
+    max-width: 60%;
 }
+}
+
 
 @media (min-width: 1000px) {
 
-.contenedor .fila {
-text-align: center;
-max-width: 30%;
-}
+
 
 
 } 

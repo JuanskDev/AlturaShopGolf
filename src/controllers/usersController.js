@@ -28,7 +28,8 @@ const usersController = {
             }
             else {
                 error = 'No fué posible iniciar sesión';
-                res.redirect('/users/iniciosesion');
+                res.redirect('/users/iniciosesion')
+                ;
             }
         }
         else {

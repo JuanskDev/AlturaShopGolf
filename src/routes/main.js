@@ -9,7 +9,8 @@ router.get('/' , mainController.index);
 router.get('/head' , mainController.head);
 router.get('/header' , mainController.header);
 router.get('/footer' , mainController.footer);
-
+router.get('/contacto' , mainController.contacto) 
+router.get('/search', mainController.search)
 // router.get('/pruebaSession', function(req, res){
 //     if(req.session.numeroVistas == undifined){
 //         req.session.numeroVistas = 0;

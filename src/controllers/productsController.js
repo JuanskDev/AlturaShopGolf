@@ -50,9 +50,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
     carritoCompra: (req,res) => {
+        res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
     create:(req,res) =>{
+        res.locals.sessiondata = req.session;
         let data = {
             listaproductos: listaProductos,
             categorias: categorias,
@@ -69,6 +71,7 @@ const productsController = {
             lecciones: lecciones
 
         }
+
         res.render('products-create', { data })
     },
 
@@ -134,13 +137,14 @@ const productsController = {
             //     data.tipodebolsa_selected = item_.nombre
             //  })
         
-
+            res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })
     },  
     delete : (req, res) => {
 		let id = req.params.id;
 		let finalProducts = productos.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+        res.locals.sessiondata = req.session;
         res.redirect("/products/create");
     },
     edit:(req,res) =>{
@@ -162,6 +166,7 @@ const productsController = {
             lecciones: lecciones
 
        }
+       res.locals.sessiondata = req.session;
         res.render('products-edit', { data })
     },
     update: (req, res) => {
@@ -185,7 +190,7 @@ const productsController = {
             productUpdate.lecciones = req.body.lecciones;
             productUpdate.image = req.file ? req.file.filename : productUpdate.image
         }
-
+        res.locals.sessiondata = req.session;
         fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
         res.redirect("/products/edit/" + req.params.id);
         //1 hay que buscar el producto
@@ -198,7 +203,7 @@ const productsController = {
         let category = req.params.category
         // categoria que coincide parametro con el valor de la categoria en json
         let productCategory = productos.filter(product => product.categoria == category)
-        
+         res.locals.sessiondata = req.session; // PREGUNTAR ESTO
         productCategory.forEach(item => {
             //categoría
             let categoriaId = item.categoria;
@@ -244,11 +249,12 @@ const productsController = {
                  item.tipodebolsa_selected = item_.nombre
              })
         });
-        
+        res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
     },
     showProductSubcategory: (req,res) => {
         let category = req.params.category
+         res.locals.sessiondata = req.session; // PREGUNTAR ESTO
         let subcategory = req.params.subcategory
         let productCategory = productos.filter(product => product.categoria == category && product.producto == subcategory)
        
