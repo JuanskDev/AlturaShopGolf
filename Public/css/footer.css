@@ -23,6 +23,9 @@ footer .footer-content {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+footer .footer-content a p:hover{
+    color: #3483fa;
+}
   
 footer .red-social {
     background-color: #d6d6d6;
@@ -34,6 +37,19 @@ footer .red-social {
 footer .red-social span {
     margin: 0 10px;
     font-size: 22px;
+}
+footer .red-social a .uno:hover{
+color: #1877f2;
+}
+footer .red-social a .dos:hover{
+
+color: #fa583f;
+}
+footer .red-social a .tres:hover{
+color: #1d9bf0;
+}
+footer .red-social a .cuatro:hover{
+color: #ff0000;
 }
 
 footer h3 {

@@ -455,6 +455,7 @@ div.bloques-productos img {
 position: relative;
 max-height: 370px;
 }
+
 /*-------------------------------------------------*/
 div.indumentaria-home {
     position: relative;
@@ -488,6 +489,7 @@ div.indumentaria-home div.text-indumentaria {
 
 div.indumentaria-home div.col1 a img {
 width: 100px;
+border: 1px solid white;
 }
 
 
@@ -495,16 +497,10 @@ div.indumentaria-home div.col2 a img {
 left: 3%;
 top: 35%;
 width: 100px;
+border: 1px solid white;
 
 }
-div.indumentaria-home div.col3 a img{
-    width: 130px;
-}
-div.indumentaria-home div.col4 a img{
-left: 3%;
-top: 280%;
-width: 130px;
-}
+
 
 /*-----------------------------------------------*/
 div.marcas{
@@ -532,11 +528,11 @@ position: relative;
 display: grid;
 }
 div.carros-home span {
+display: flex;
 position: absolute;
 top: 5px;
 padding: 10px 15px;
 color: white;
-min-width: 250px;
 font-size: 55px;
 font-family: oswald;
 font-weight: 900;
@@ -544,17 +540,16 @@ cursor: pointer;
 transition: 1.1s;
 }
 div.carros-home span:hover{
-color: #a54042;
+    color: #a54042
+
 }
 div.carros-home span:nth-child(1){
 width: 100%;
 left: -100%;
 }
-
 div.carros-home:hover span:nth-child(1){
 left: 0;
 }
-
 /*---------------------------------------------------*/
 div.palos-home {
     position: relative;
@@ -588,7 +583,6 @@ left: -100%;
 div.palos-home:hover span:nth-child(1){
 left: 0;
 }
-
 /*--------------------------------------------*/
 .final-home{
 width: 100%;
@@ -608,6 +602,10 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 }
+section.productos-nuevos > div >
+div.palos-titleist , div.bushnells , div.golf-coleccion , div.nike-coleccion , div.clases-golf {
+    margin: 20px;
+}
 section.productos-nuevos div div:first-child {
 width: 40%;
 text-align: center;
@@ -621,27 +619,38 @@ width: 60%;
 section.productos-nuevos div div:last-child img {
 width: 100%;
 }
+section.productos-nuevos div div:last-child video{
+    width: 97%;
+}
 section.productos-nuevos div h4 {
 color: black;
 font-size: 30px;
 font-family: oswald;
 font-weight: 800;
-}
-section.productos-nuevos div h5 {
-color: black;
-font-size: 25px;
-font-family: oswald;
-font-weight: 800;
+margin-bottom: 25px;
 }
 section.productos-nuevos div a {
-font-size: 18px;
-font-family: oswald;
-text-decoration: underline;
+position: relative;
+display: inline-block;
 color: #3483fa;
+letter-spacing: 4px;
+font-size: 18px;
+text-decoration: underline;
+transition: 0.2s;
+font-family: oswald;
 }
-
+section.productos-nuevos div a:hover{
+background: #3483fa;
+width: 40%;
+height: auto;
+color: white;
+text-decoration: none;
+box-shadow: 0 0 10px #3483fa, 0 0 40px #3483fa, 0 0 80px #3483fa;
+transition-delay: 0.2s;
+border-radius: 20px;
+font-weight: 600;
+}
 /*RESPONSIVE*/
-
 @media (max-width: 420px) {
     .product-content .img-primaria img {
         width: 200px;
@@ -652,7 +661,6 @@ color: #3483fa;
        display: none!important;
     }
 }
-
 @media (max-width: 790px) {
     #juan-slider{
         display:none;
@@ -674,7 +682,6 @@ color: #3483fa;
     text-shadow: 4px 4px 2px rgb(0 0 0 / 60%);
     } 
 }
-
 @media (max-width: 900px) {
     #slide2 div h1 {
         font-size: 50px!important;
