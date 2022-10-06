@@ -4,6 +4,19 @@ const path = require("path"); //  MODULO PATH
 const session = require('express-session')
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');//GET-POST-PUT-DELETE
+// const Sequelize = require('sequelize')
+// const sequelize = new Sequelize('gas_db', 'root', '', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+// })
+
+// sequelize.authenticate()
+//   .then(() => {
+//     console.log('Conectado')
+//   })
+//   .catch(err => {
+//     console.log('No se conecto')
+//   })
 
 console.log(__dirname);
 
