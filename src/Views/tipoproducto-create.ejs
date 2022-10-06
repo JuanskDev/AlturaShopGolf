@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <!-- <link rel="stylesheet" href="/css/tipoproducto-create-edit.css"/> -->
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/tipo-productos/create" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR -  ALTA DE TIPOS DE PRODUCTOS</h1>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label class="categoria">CATEGORIA:</label>
+            <select name="categoriaid" class="input-form" id="categoriaid" placeholder="Seleccione la categoría">
+              <option value=""></option>
+              <% for (const categoria of categorias) { %>
+                <option value="<%= categoria.id %>" <%= categorias.nombre == categoria.id ? "selected" : null %> ><%= categoria.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label>TIPO DE PRODUCTO:</label>
+            <input name="nombre" type="text"  id="nombre" class="input-form" value=""/>
+          </div>
+          
+        </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> <a href="/tipo-productos">Volver a la lista</a>
+          </div>
+        </div>
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

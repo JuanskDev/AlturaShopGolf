@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <!-- <link rel="stylesheet" href="/css/tipoproducto-create-edit.css"/> -->
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/caracteristica-tipo-productos/edit/<%= data.caracteristicatipoproducto[0].id %>?_method=PUT" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR -  EDICIÓN DE CARACTERÍSTICA DE TIPOS DE PRODUCTOS</h1>
+        </div>
+        <input type="hidden" id="id" name="id" value="<%=data.caracteristicatipoproducto[0].id%>"/>
+        <div class="fila">
+          <div class="fila-item">
+            <label class="categoria">TIPO DE PRODUCTO:</label>
+            <select name="tipoproductoid" class="input-form" id="tipoproductoid" placeholder="Seleccione el tipo de producto">
+              <option value=""></option>
+              <% for (const categoria of data.tipoproductos) { %>
+                <option value="<%= categoria.id %>" <%= data.tipoproducto[0].categoriaId == categoria.id ? "selected" : null %> ><%= categoria.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label>TIPO DE PRODUCTO:</label>
+            <input name="nombre" type="text"  id="nombre" class="input-form" value="<%=data.tipoproducto[0].nombre%>"/>
+          </div>
+          
+        </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> <a href="/tipo-productos">Volver a la lista</a>
+          </div>
+        </div>
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

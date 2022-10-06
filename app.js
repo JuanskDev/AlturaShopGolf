@@ -64,6 +64,13 @@ app.use('/lecciones', rutasLecciones);
 //Contacto Routes
 const rutasContactos = require("./src/routes/contactos");
 app.use('/contactos', rutasContactos);
+
+/*ADMINISTRACIÓN*/
+const rutasTipoProductos = require("./src/routes/tipoProducto");
+app.use('/tipo-productos', rutasTipoProductos);
+const rutasCaracteristicaTipoProductos = require("./src/routes/caracteristicaTipoProducto");
+app.use('/caracteristica-tipo-productos', rutasCaracteristicaTipoProductos);
+
 //---------------------CAMERONSMITHEQUIPO-----------------------//
 app.get("/productos/cameronSmith", (req, res) => {
   res.render(path.join(__dirname, "src/views/cameronSmith.ejs"));

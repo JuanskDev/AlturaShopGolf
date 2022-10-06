@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <!-- <link rel="stylesheet" href="/css/tipoproducto-create-edit.css"/> -->
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR - CRUD TIPOS DE PRODUCTOS</h1>
+        </div>
+
+        <p><a href="/tipo-productos/create">Crear un nuevo tipo de producto</a></p>
+
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+          <% for (const tipoProducto of tipoProductos) { %>
+            <div style="padding: 15px;">
+              <p>Tipo producto: <%=tipoProducto.tp_nombre%></p>
+              <p>Categoría: <%=tipoProducto.c_nombre%></p>
+              <p><a href="/tipo-productos/edit/<%=tipoProducto.tp_id%>">Editar</a></p>
+              <p><hr></p>
+            </div>
+          <% } %>
+        </div>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+
