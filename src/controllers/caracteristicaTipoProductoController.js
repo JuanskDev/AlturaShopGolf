@@ -1,7 +1,7 @@
 const path = require('path');
 const Sequelize = require('sequelize')
 const { render } = require('ejs');
-const sequelize = new Sequelize('gas', 'root', '', {
+const sequelize = new Sequelize('gas_db', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 })
@@ -9,14 +9,14 @@ const sequelize = new Sequelize('gas', 'root', '', {
 const caracteristicaTipoProductoController = {
     list:(req,res) =>{
         res.locals.sessiondata = req.session;
-        let sqlScript = "select ctp.valor, c.id as c_id, c.nombre as c_nombre, tp.id as tp_id, tp.nombre as tp_nombre " +
+        let sqlScript = "select ctp.valor as ctp_valor, c.id as c_id, c.nombre as c_nombre, tp.id as tp_id, tp.nombre as tp_nombre " +
         "from caracteristicatipoproducto ctp " +
         "join caracteristica c on c.id = ctp.caracteristicaId " +
         "join tipoproducto tp on tp.id = ctp.tipoProductoId " +
         "order by tp.nombre, c.nombre" 
         sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
-        .then(caracteristicaTipoProductos => {
-            res.render('caracteristicatipoproducto', {caracteristicaTipoProductos})
+        .then(caracteristicasTipoProductos => {
+            res.render('caracteristicatipoproducto', {caracteristicasTipoProductos})
         })
         .catch(err => {
             console.log(err)
@@ -26,25 +26,24 @@ const caracteristicaTipoProductoController = {
     create:(req,res) =>{
         res.locals.sessiondata = req.session;
         let data = {};
-        sequelize.query("Select * from `caracteristica` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
-        .then(caracteristicas => {
-            data.caracteristicas = caracteristicas
-        })
-        .catch(err => {
-            console.log(err)
-        }
-        )
 
         sequelize.query("Select * from `tipoproducto` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
-        .then(tipoProducto => {
-            data.tipoProducto = tipoProducto
+        .then(tipoProductos => {
+            data.tipoProductos = tipoProductos;
+            sequelize.query("Select * from `caracteristica` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
+            .then(caracteristicas => {
+                data.caracteristicas = caracteristicas
+                res.render('caracteristicatipoproducto-create', {data})
+            })
+            .catch(err => {
+                console.log(err)
+            }
+            )
         })
         .catch(err => {
             console.log(err)
         }
         )
-
-        res.render('caracteristica-tipoproducto-create', {data})
     },
     insert: (req,res) => {
         let sqlScript = "insert caracteristicatipoproducto (tipoproductoid, caracteristicaid, valor) " + 
@@ -69,25 +68,23 @@ const caracteristicaTipoProductoController = {
         sequelize.query("Select * from `caracteristica` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
         .then(caracteristicas => {
             data.caracteristicas = caracteristicas
-        })
-        .catch(err => {
-            console.log(err)
-        }
-        )
-
-        sequelize.query("Select * from `tipoproducto` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
-        .then(tipoProducto => {
-            data.tipoProducto = tipoProducto
-        })
-        .catch(err => {
-            console.log(err)
-        }
-        )
-
-        sequelize.query("Select * from `caracteristicatipoproducto` where id = " +req.params.id, { nest: true,  type: Sequelize.QueryTypes.SELECT})
-        .then(caracterisitcaTipoProducto => {
-            data.caracterisitcaTipoProducto = caracterisitcaTipoProducto;
-            res.render('caracteristica-tipoproducto-edit', {data})
+            sequelize.query("Select * from `tipoproducto` order by nombre", { nest: true,  type: Sequelize.QueryTypes.SELECT})
+            .then(tipoProductos => {
+                data.tipoProductos = tipoProductos
+                sequelize.query("Select * from `caracteristicatipoproducto` where id = " +req.params.id, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+                .then(caracteristicaTipoProductos => {
+                    data.caracteristicaTipoProductos = caracteristicaTipoProductos;
+                    res.render('caracteristicatipoproducto-edit', {data})
+                })
+                .catch(err => {
+                    console.log(err)
+                }
+                )
+            })
+            .catch(err => {
+                console.log(err)
+            }
+            )
         })
         .catch(err => {
             console.log(err)

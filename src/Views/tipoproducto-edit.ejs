@@ -21,7 +21,6 @@
           <div class="fila-item">
             <label class="categoria">CATEGORIA:</label>
             <select name="categoriaid" class="input-form" id="categoriaid" placeholder="Seleccione la categoría">
-              <option value=""></option>
               <% for (const categoria of data.categorias) { %>
                 <option value="<%= categoria.id %>" <%= data.tipoproducto[0].categoriaId == categoria.id ? "selected" : null %> ><%= categoria.nombre %></option>
               <% } %>

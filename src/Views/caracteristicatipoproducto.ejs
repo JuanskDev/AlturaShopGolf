@@ -20,11 +20,12 @@
         <p><a href="/caracteristica-tipo-productos/create">Crear una nueva característica</a></p>
 
         <div style="display:flex; flex-direction:row; justify-content: flex-start;">
-          <% for (const caracteristica of caracteristicasTipoProductos) { %>
+          <% for (const item of caracteristicasTipoProductos) { %>
             <div style="padding: 15px;">
-              <p>Tipo producto: <%=tipoProducto.tp_nombre%></p>
-              <p>Categoría: <%=tipoProducto.c_nombre%></p>
-              <p><a href="/tipo-productos/edit/<%=tipoProducto.tp_id%>">Editar</a></p>
+              <p>Tipo producto: <%=item.tp_nombre%></p>
+              <p>Categoría: <%=item.c_nombre%></p>
+              <p>Valor: <%=item.ctp_valor%></p>
+              <p><a href="/caracteristica-tipo-productos/edit/<%=item.tp_id%>">Editar</a></p>
               <p><hr></p>
             </div>
           <% } %>

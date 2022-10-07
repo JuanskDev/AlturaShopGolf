@@ -1,6 +1,6 @@
 const path = require('path');
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('gas', 'root', '', {
+const sequelize = new Sequelize('gas_db', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 })

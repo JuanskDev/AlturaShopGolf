@@ -21,7 +21,7 @@
             <label class="tipoproductoid">TIPO DE PRODUCTO:</label>
             <select name="tipoproductoid" class="input-form" id="tipoproductoid" placeholder="Seleccione el tipo de producto">
               <option value=""></option>
-              <% for (const item of data.tipoproductos) { %>
+              <% for (const item of data.tipoProductos) { %>
                 <option value="<%= item.id %>"><%= item.nombre %></option>
               <% } %>
             </select>
