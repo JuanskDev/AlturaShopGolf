@@ -23,6 +23,11 @@ footer .footer-content {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.servicio-cliente,.servicios,
+.informacion-empresa,.subscripcion{
+letter-spacing: 2px;
+}
+
 footer .footer-content a p:hover{
     color: #3483fa;
 }

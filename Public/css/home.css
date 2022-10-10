@@ -375,8 +375,8 @@ border-radius: 100%;
 border: 1px solid #dc3b41;
 }
 #juan-slider .menu-de-a li a.active {
-background-color: #dc3b41;
-border: 1px solid white;
+background-color: white;
+border: 1px solid #dc3b41;
 }
 
 div.suscripcion-home{
@@ -499,9 +499,9 @@ margin-right: 5px;
 color: grey;
 }
 div.marcas img:hover{
-    transform: scale(1.5);
+    transform: scale(1.4);
     border: 1px solid rgb(216, 216, 216);
-    border-radius: 3px;
+    border-radius: 1px;
   
 }
 /*-------------------------*/
@@ -633,7 +633,6 @@ border-radius: 20px;
 font-weight: 600;
 }
 div.text-slide2{
-display: inline-block;
 position: relative;
 text-align: center;
 letter-spacing: 10px;
@@ -650,15 +649,8 @@ opacity: calc(0.5);
 bottom: 0;
 left: 0;
 background-color: #000000;
-transform: scale(0);
-transform-origin: bottom right;
-transition: transfomr 0.6s ease-out;
 }
-div.text-slide2:hover:after{
-transform: scaleX(1);
-transform-origin: bottom left;
 
-}
 
 
 .indumentaria-home ul {
