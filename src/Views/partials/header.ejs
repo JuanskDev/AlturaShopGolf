@@ -7,7 +7,6 @@
 
 <body class="body-header">
   <div class="barra-superior">
-   
     <a href="/">GOLF</a>
     <a href="/lecciones">LECCIONES</a>
     <a href="/campos">CAMPOS</a>
@@ -15,13 +14,12 @@
     <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
     <% if(sessiondata != undefined &&  sessiondata.nombre != undefined && sessiondata.nombre != ''){%>
         <a href="/users/cerrarsesion">CERRAR SESION</a>
-        <a href="/create" class="administracion">ADMINISTRACION</a> 
+        <a href="/products/create" class="administrador">ADMINISTRADOR</a> 
         <span class="welcome-user">Bienvenido <%=sessiondata.email%></span>
     <%} else {%>
       <a href="/registro">REGISTRO</a>
       <a href="/users/iniciosesion">INICIO SESION</a>
     <%}%>
-  
   </div>
   
   <header>

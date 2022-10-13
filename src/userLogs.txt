@@ -25,3 +25,4 @@ El usuario undefined cerró su sesión
 El usuario undefined cerró su sesión 
 El usuario ingreso en: /iniciosesion
 El usuario ingreso en: /iniciosesion
+El usuario ingreso en: /iniciosesion
