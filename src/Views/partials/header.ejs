@@ -12,11 +12,10 @@
     <a href="/lecciones">LECCIONES</a>
     <a href="/campos">CAMPOS</a>
     <a href="/contactos">CONTACTO</a>
-    <!-- <a href=""><p style="text-decoration: underline;font-size: 15px;font-family: oswald;">Argentina</p></a> -->
-     <!-- <img src="/images/argentina.png" width="25px" height="25px" alt=""> -->
     <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
     <% if(sessiondata != undefined &&  sessiondata.nombre != undefined && sessiondata.nombre != ''){%>
         <a href="/users/cerrarsesion">CERRAR SESION</a>
+        <a href="/create" class="administracion">ADMINISTRACION</a> 
         <span class="welcome-user">Bienvenido <%=sessiondata.email%></span>
     <%} else {%>
       <a href="/registro">REGISTRO</a>

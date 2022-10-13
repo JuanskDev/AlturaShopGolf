@@ -1,7 +1,7 @@
 const path = require('path');
 const Sequelize = require('sequelize')
 const { render } = require('ejs');
-const sequelize = new Sequelize('gas_db', 'root', '', {
+const sequelize = new Sequelize('db_grupo_2', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 })

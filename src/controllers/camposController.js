@@ -1,6 +1,6 @@
 const path = require('path');
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('gas_db', 'root', '', {
+const sequelize = new Sequelize('db_grupo_2', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 })
@@ -14,8 +14,8 @@ const camposController = {
         .then(campos => {
             res.render(path.join(__dirname, '../views/campos.ejs'), {campos})
         })
-        .catch(err => {
-            console.log(err)
+        .catch(error => {
+            console.log(error)
         }
         )
     }
