@@ -1,0 +1,96 @@
+.contenedor {
+    padding: 15px;
+}
+.contenedor .titulo {
+    background-color: #dc3b41;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contenedor .fila {
+    display: flex;
+    flex-direction: row;
+    font-family: oswald;
+    font-weight: 600;
+}
+.contenedor .fila .fila-item {
+    padding: 15px;
+}
+.contenedor .fila .fila-img img#img-producto{
+    width: 25%;
+    margin-left: 40%;
+    border: 1px solid #c6c6c6;
+    border-radius: 15px;
+}
+.contenedor .fila label {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: oswald;
+    width: 100%;
+}
+.contenedor input.input-form, 
+.contenedor select.input-form {
+    width: 100%;
+    padding: 10px;
+    color: rgb(0 0 0 / 50%);
+    background-color: #fafafa;
+    border-radius: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: oswald;
+    border: 1px solid #dc3b41;
+}
+
+#guardar {
+padding: 5px 5px 5px 5px;
+font-size: 20px;
+font-weight: 600;
+background-color: #dc3b41;
+border-radius: 25px;
+color: white;
+border: none;
+min-width: 150px;
+margin-right: 40px;
+}
+#guardar:hover,
+.action-buttondelete:hover{
+background-color: rgba(161, 161, 161, 0.5);
+color: #dc3b41;
+border: 1px solid white;
+}
+.action-buttondelete{
+border: none;
+color: white;
+background-color: #dc3b41;
+border-radius: 31px;
+width: 105px;
+height: 38px;
+font-family: oswald;
+font-size: 20px;
+font-weight: 900;
+}
+
+
+.fila-item a{
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #dc3b41;
+    border-radius: 25px;
+    min-width: 150px;
+    color: white;
+    border: none;
+}
+.fila-item a:hover{
+    background-color: rgba(161, 161, 161, 0.5);
+    color: #dc3b41;
+    border: 1px solid white;
+    }
+
+
+/* @media (min-width: 420px) {
+    
+} */

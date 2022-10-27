@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/categoria.css"/>
   </head>
  
   <body>
@@ -19,8 +20,8 @@
           <% for (const item of categorias) { %>
             <div style="padding: 15px;">
               <p>Categoría: <%=item.nombre%></p>
-              <p><a href="/categorias/edit/<%=item.id%>">Editar</a></p>
-              <p><a href="/categorias/delete/<%=item.id%>">Eliminar</a></p>
+              <p><a href="/categorias/edit/<%=item.id%>" class="editar">Editar</a></p>
+              <p><a href="/categorias/delete/<%=item.id%>" class="eliminar">Eliminar</a></p>
               <p><hr></p>
             </div>
           <% } %>
