@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/categorias/edit/<%= categorias[0].id %>?_method=PUT" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR -  EDICIÓN DE CATEGORÍAS</h1>
+        </div>
+        <input type="hidden" id="id" name="id" value="<%=categorias[0].id%>"/>
+        <div class="fila">
+          <div class="fila-item">
+            <label>CATEGORÍA:</label>
+            <input name="nombre" type="text"  id="nombre" class="input-form" value="<%=categorias[0].nombre%>"/>
+          </div>
+          
+        </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> <a href="/categorias">Volver a la lista</a>
+          </div>
+        </div>
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

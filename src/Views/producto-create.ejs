@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/products-create-edit.css"/>
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/productos/create" enctype="multipart/form-data" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR -  ALTA DE PRODUCTOS</h1>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label for="categoria_id" class="categoria">CATEGORIA:</label>
+            <select name="categoria_id" class="input-form" id="categoria_id" placeholder="Seleccione la categoría">
+              <option value=""></option>
+              <% for (const item of data.categorias) { %>
+                <option value="<%= item.id %>"><%= item.nombre %></option>
+              <% } %>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label>PRODUCTO:</label>
+            <input name="nombre" type="text" id="nombre" class="input-form" />
+          </div>
+          <div class="fila-item">
+            <label class="marca">MARCA:</label>
+            <input name="marca" type="text" id="marca" class="input-form" />
+          </div>
+          <div class="fila-item">
+            <label>MODELO:</label>
+            <input name="modelo" type="text" id="modelo" class="input-form" />
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label class="marca">AGARRE:</label>
+            <input name="agarre" type="text" id="agarre" class="input-form" />
+          </div>
+          <div class="fila-item">
+            <label class="">TIPO DE VARA:</label>
+            <input name="tipoDeVara" type="text" id="tipoDeVara" class="input-form" />
+          </div>
+          <div class="fila-item">
+            <label class="bolsa">TIPO DE BOLSA:</label>
+            <input name="tipoDeBolsa" type="text" id="tipoDeBolsa" class="input-form" />
+          </div>
+          <div class="fila-item">
+            <label class="">HIERROS-TIPO DE CONJUNTO:</label>
+            <input name="hierroTipoDeConjunto" type="text" id="hierroTipoDeConjunto" class="input-form" />
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item" style="position: relative;">
+            <label>PRECIO:</label>
+            <span style="position: absolute; left: 17px; top: 57px; color:grey">$</span>
+            <input name="precio" type="number" id="precio" class="input-form" value="" required style="padding-left: 15px;"/>
+          </div>
+          <div class="fila-item" style="position:relative;">
+            <label for>DESCUENTO:</label>
+            <input name="descuento" type="number" value="" id="descuento" class="input-form" placeholder="Descuento: " />
+          </div>
+          <div class="fila-item">
+            <label for="stock">STOCK:</label>
+            <input name="stock" type="number" id="stock" value="0" class="input-form" placeholder="Stock: " required/>
+          </div>
+          <div class="fila-item">
+            <label for="color" class="color">COLOR:</label>
+            <input name="color" type="text" id="color" class="input-form"/>
+          </div>
+        </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <input class="file input-form" type="file" name="myFile" />
+          </div>
+        </div>
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> 
+          </div>
+        </div>
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

@@ -93,6 +93,11 @@
           </div>
         </div>
         <div class="fila">
+          <div class="fila-item" style="position: relative;">
+            <label>PRECIO:</label>
+            <span style="position: absolute; left: 17px; top: 57px; color:grey">$</span>
+            <input name="precio" type="precio"  id="precio" class="input-form" value="" required style="padding-left: 15px;"/>
+          </div>
           <div class="fila-item" style="position:relative;">
             <label>DESCUENTO:</label>
             <select name="descuento"class="input-form" id="descuento" placeholder="Seleccione el descuento" required>
@@ -100,11 +105,6 @@
                 <option value="<%= catSelec.descuento %>" <%= data.descuentos.descuento == catSelec.descuento ? "selected" : null %> ><%= catSelec.descuento %> %</option>
               <% } %>
             </select>
-          </div>
-          <div class="fila-item" style="position: relative;">
-            <label>PRECIO:</label>
-            <span style="position: absolute; left: 17px; top: 57px; color:grey">$</span>
-            <input name="precio" type="precio"  id="precio" class="input-form" value="" required style="padding-left: 15px;"/>
           </div>
           <div class="fila-item">
             <label class="talle">TALLES:</label>

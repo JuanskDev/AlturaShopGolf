@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+  </head>
+ 
+  <body>
+    <%- include('./partials/header.ejs')  %>  
+    <main>
+    
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR - CATEGORÍAS</h1>
+        </div>
+
+        <p><a href="/categorias/create">Crear una nueva categoría</a></p>
+
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+          <% for (const item of categorias) { %>
+            <div style="padding: 15px;">
+              <p>Categoría: <%=item.nombre%></p>
+              <p><a href="/categorias/edit/<%=item.id%>">Editar</a></p>
+              <p><a href="/categorias/delete/<%=item.id%>">Eliminar</a></p>
+              <p><hr></p>
+            </div>
+          <% } %>
+        </div>
+
+  </main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

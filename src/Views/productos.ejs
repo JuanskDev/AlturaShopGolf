@@ -1,61 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-    <%- include('./partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/palos.css"/>
+    <%- include('./partials/head.ejs')  %>
   </head>
-
-
-  <body class="palos">
-    <%- include('./partials/header.ejs') %>
+ 
+  <body>
+    <%- include('./partials/header.ejs')  %>  
     <main>
-      <div class="resultado-busqueda">
-        <% if(productCategory.length === 1){ %>
-          <h4> <%= productCategory.length %>  Resultado</h4>
-        <% } else{ %>  
-          <h4> <%= productCategory.length %>  Resultados</h4>
-       <% } %>
-        <div class="ordenar-buscador">
-          <label for="buscador">Ordenar por</label>
-          <select class="select-buscador" name="buscador" id="">
-            <option value="++">De mas baratos a mas caros</option>
-            <option value="--">De mas caros a mas baratos</option>
-            <option value="top" selected>Mas vendidos</option>
-            <option value="moda">Nuevo Ingreso</option>
-          </select>
+    
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR - PRODUCTOS</h1>
         </div>
 
-     
-        
-      </div>
-      <hr class="hr-1">
-      <div class="resultado-busqueda">
-        <ul class="resultado-productos">
-          
-            <% productCategory.forEach(function(product){
-              let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
-            %>
-          <li class="producto-palos-lista">
-            <a href="/products/detalle/<%=product.id%> "><img src="/images/products/<%= product.image %>" alt=""></a>
-            <div class="tamaño-hr">
-              <p class="nuevo">NUEVO</p>
-            <h6><%= product.producto_selected %> <%= product.marca_selected %><%= product.modelos_selected %><h6>
-            <p><%= product.tipodevara_selected%><%= product.tipodebolsa_selected%></p>
+        <p><a href="/productos/create">Crear una nuevo producto</a></p>
 
-            <% if(product.descuento === "0.00"){ %>
-                    <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
-                <% } else{ %>  
-                    <h5><span class="span-1">$ <%= toThousand(product.precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
-                    <p class="p-descuento">Ahorra <%= product.descuento %> % </p>
-                <% } %>
-                </div>
-            </li>
-          <% }) %>
-    </ul>
-  </div>
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+          <% for (const item of productos) { %>
+            <div style="padding: 15px;">
+              <p>Producto: <%=item.p_nombre%></p>
+              <p>Categoría: <%=item.c_nombre%></p>
+              <p>Marca: <%=item.marca%></p>
+              <p>Modelo: <%=item.modelo%></p>
+              
+              <p><img id="img-producto" alt="" src="/images/productos/<%= item.imagen %>" style="width: 150px; height: auto;"></p>
+              <p><a href="/productos/edit/<%=item.p_id%>">Editar</a></p>
+              <p><a href="/productos/delete/<%=item.p_id%>">Eliminar</a></p>
+              <p><hr></p>
+            </div>
+          <% } %>
+        </div>
+
   </main>
 
-   <%- include('./partials/footer.ejs') %>
-
-  </body>
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
 </html>
+

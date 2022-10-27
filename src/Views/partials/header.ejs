@@ -14,7 +14,7 @@
     <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
     <% if(sessiondata != undefined &&  sessiondata.nombre != undefined && sessiondata.nombre != ''){%>
         <a href="/users/cerrarsesion">CERRAR SESION</a>
-        <a href="/products/create" class="administrador">ADMINISTRADOR</a> 
+        <a href="/productos/create" class="administrador">ADMINISTRADOR</a> 
         <span class="welcome-user">Bienvenido <%=sessiondata.email%></span>
     <%} else {%>
       <a href="/registro">REGISTRO</a>
@@ -66,7 +66,7 @@
         <a href="#" onclick="mostrarMenu('nav-accesorios')"> ACCESORIOS</a>
         <div id="nav-accesorios" class="nav-submenu">
           <ul>
-            <li><a href="/products/1"> TODO </a></li>
+            <li><a href="/productos/5"> TODO </a></li>
             <li><a href="/products/1/5"> GORRAS</a></li>
             <li><a href="/products/1/6"> GUANTES</a></li>
             <li><a href="/products/1/4"> FUNDAS</a></li>
