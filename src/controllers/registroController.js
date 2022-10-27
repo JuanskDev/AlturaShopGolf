@@ -1,10 +1,11 @@
 const path = require('path');
 const fs = require('fs');
-const { render } = require('ejs');
-const {validationResult} = require('express-validator');
-const bcrypt = require('bcryptjs');
-const usersFilePath = path.join(__dirname, '../dataBase/users.json');
 
+const bcryptjs = require('bcryptjs');
+const {	validationResult } = require('express-validator');
+
+
+const usersFilePath = path.join(__dirname, '../dataBase/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const registroController = {
@@ -12,7 +13,21 @@ const registroController = {
         res.locals.sessiondata = req.session;
         res.render(path.join(__dirname , '../views/registro.ejs'))
     },
-    store: (req, res) => {
+    create: (req, res) => {
+        
+      const errors = validationResult(req);
+        //res.send(errors)
+        //res.send(errors.errors)
+        if(!errors.isEmpty()) {
+            //console.log('hay errores');
+           // res.send(errors.mapped())
+            return res.render('Registro'), {
+              errores: errors.mapped()
+              ,  old: req.body
+            }};
+            console.log('hay errores');
+            
+
         let indexId = 0;
         if(users.length != 0) {
             indexId = users[users.length - 1].id;
@@ -28,7 +43,7 @@ const registroController = {
         };
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-        res.redirect('/users/iniciosesion');
+      
     }
 }
 module.exports = registroController;

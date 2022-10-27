@@ -49,6 +49,10 @@ width: 100%;
 color: white;
 text-align: center;
 }
+.contenedor .titulo h1 {
+font-size: 32px
+}
+
 .contenedor .fila {
 max-width: 70%;
 width: 100%;
@@ -97,8 +101,16 @@ padding-bottom: 30px;
 
 /* FOOTER */
 
+ li {
+    font-size: 15.5px;
+    color: red;
+    text-align: center;
+    list-style: none;
+}
 
-
+#errores {
+    margin-bottom: 15px;
+}
 
 @media (min-width: 420px) {
     .contenedor input.input-form {

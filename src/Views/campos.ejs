@@ -20,13 +20,13 @@
 
         <ul class="resultado-productos">
           
-          <% campos.forEach(function(campo){%>
+          <% campos.forEach(function(campos){%>
             <li class="producto-campos-lista">
-              <img src="<%= campo.imagen %>"  alt="Campos con convenio a Golf de Altura Store">
-              <div class="tamaño-hr"><br><br>
-                <h6><%=campo.nombre%></h6>
-                <p>Dirección: <strong><%=campo.direccion%></strong></p>
-                <p>Teléfono: <strong><%=campo.telefono%></strong></p>
+              <img src="<%= campos.imagen %>"  alt="Campos con convenio a Golf de Altura Store">
+              <div class="tamaño-hr"><br>
+                <h6><%=campos.nombre%></h6>
+                <p>Dirección: <strong><%=campos.direccion%></strong></p>
+                
               </div>
             </li>
           <% }) %>

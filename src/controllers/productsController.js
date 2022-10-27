@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const { render } = require('ejs');
+
 
 const productsFilePath = path.join(__dirname, '../dataBase/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -38,9 +38,6 @@ const talles = JSON.parse(fs.readFileSync(tallesFilePath, 'utf-8'));
 const colorFilePath = path.join(__dirname, '../dataBase/color.json');
 const color = JSON.parse(fs.readFileSync(colorFilePath, 'utf-8'));
 
-const camposFilePath = path.join(__dirname, '../dataBase/campos.json');
-const campos = JSON.parse(fs.readFileSync(camposFilePath, 'utf-8'));
-
 const leccionesFilePath = path.join(__dirname, '../dataBase/lecciones.json');
 const lecciones = JSON.parse(fs.readFileSync(leccionesFilePath, 'utf-8'));
 
@@ -67,7 +64,6 @@ const productsController = {
             descuentos: descuentos,
             talles: talles,
             color: color,
-            campos: campos,
             lecciones: lecciones
 
         }
@@ -162,7 +158,6 @@ const productsController = {
             descuentos: descuentos,
             talles: talles,
             color: color,
-            campos: campos,
             lecciones: lecciones
 
        }

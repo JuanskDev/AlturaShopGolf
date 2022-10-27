@@ -12,15 +12,19 @@ module.exports = (sequelize, dataTypes) => {
         apellido: {
             type: dataTypes.STRING 
         },
-        mail: {
+        correo: {
             type: dataTypes.STRING 
         },
-        hash: {
-            type: dataTypes.STRING 
+        telefono: {
+            type: dataTypes.INTEGER 
         },
-        passwordhash: {
+        contraseña: {
+            type: dataTypes.INTEGER 
+        },
+        categoria: {
             type: dataTypes.STRING 
         }
+        
     };
     let config = {
         tableName: 'usuarios',

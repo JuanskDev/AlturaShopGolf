@@ -10,21 +10,18 @@
     font-family: 'Oswald';
     color: red;
     font-size: 30px;
+    text-align: center;
   }
   body.campos h4 {
     font-family: 'Oswald';
     color: red;
     font-size: 15px;
-    float: left;
+    text-align: center;
   }
 
   body.campos .resultado-busqueda {
     position: relative;
     padding: 15px;
-  }
-
-  body.campos .resultado-busqueda h2 {
-    text-align: right;
   }
 
   body.campos .ordenar-buscador {
@@ -42,6 +39,7 @@
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   body.campos li.producto-campos-lista {
@@ -50,6 +48,7 @@
     margin: 0 1.5% 20px;
     background: #fff;
     border-bottom: 1px solid gray;
+    min-width: 300px;
   }
 
   body.campos li.producto-campos-lista img {
@@ -124,17 +123,25 @@
   
   }
 
-  body.campos .resultado-busqueda h2 {
-    text-align: left;
-}
   }
-
+  @media (min-width: 480px) {
+    body.campos li.producto-campos-lista {
+      min-width: 209px;
+ }
+  }
 
 
 @media (min-width: 790px) {
 
+  body.campos h2 {
+    text-align: left;
+  }
+  body.campos h4 {
+  text-align: left;
+  }
+  
     body.campos ul {
-        justify-content: space-around;
+        justify-content: space-between;
     }  
 
     body.campos li.producto-campos-lista {
@@ -144,9 +151,10 @@
 
 }
 
-@media (min-width: 790px) {
-body.campos li.producto-campos-lista img {
-  margin: auto;
-  display: block;
-} 
+@media (min-width: 1000px) {
+
+
+
 }
+
+

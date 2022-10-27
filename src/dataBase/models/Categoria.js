@@ -14,6 +14,15 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'categorias',
         timestamps: false
     };
+    
     const Categoria = sequelize.define(alias, cols, config)
+    
+    Categoria.associate = function(models) {
+        Categoria.hasMany(models.Producto, { // models.Movies -> Movie es el valor de alias en movie.js
+            as: "productos", // El nombre del modelo pero en plural
+            foreignKey: "categoria_id"
+        })
+    }
+    
     return Categoria
 }

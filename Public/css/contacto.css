@@ -5,6 +5,12 @@
     font-family: "Open Sans";
     }
 
+h1 {
+    background-color: #dc3b41;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
 
 .main-div {
     padding: 0 20px 35px;
@@ -13,7 +19,8 @@
 div.titulo p {
     font-style: italic;
     text-align: center;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
+    margin-top: 30px;
 }
 
 div.contacto-info h1 {
@@ -37,6 +44,8 @@ div.contacto-formulario span {
     display: block;
     padding-bottom: 12px;
 }
+
+
 
 div.field-wrapper {
     margin-top: 5px;
@@ -79,6 +88,21 @@ button.submit {
 }
 
 @media (min-width: 600px) {
+
+    div.contacto-info b.dias-1 {
+        position: relative;
+        right: 22px;
+    }
+    
+    div.contacto-info span.horario-1 {
+        position: relative;
+        left: 20px;
+    }
+    
+    div.contacto-info span.horario-2 {
+        position: relative;
+        left: 6px;
+    }
 
 .main-div {
     text-align: center;

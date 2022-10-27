@@ -1,0 +1,46 @@
+<main>
+    <div class="resultado-busqueda">
+      <% if(productosCategoria.length === 1){ %>
+        <h4> <%= productosCategoria.length %>  Resultado</h4>
+      <% } else{ %>  
+        <h4> <%= productosCategoria.length %>  Resultados</h4>
+     <% } %>
+      <div class="ordenar-buscador">
+        <label for="buscador">Ordenar por</label>
+        <select class="select-buscador" name="buscador" id="">
+          <option value="++">De mas baratos a mas caros</option>
+          <option value="--">De mas caros a mas baratos</option>
+          <option value="top" selected>Mas vendidos</option>
+          <option value="moda">Nuevo Ingreso</option>
+        </select>
+      </div>
+
+   
+      
+    </div>
+    <hr class="hr-1">
+    <div class="resultado-busqueda">
+      <ul class="resultado-productos">
+        
+          <% productosCategoria.forEach(function(product){
+            let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
+          %>
+        <li class="producto-palos-lista">
+          <img src="/images/products/<%= product.image %>" alt="">
+          <div class="tamaño-hr">
+            <p class="nuevo">NUEVO</p>
+          <h6><%= product.nombre %> <%= product.marca %><%= product.modelo %><h6>
+          <p><%= product.tipoDeVara%><%= product.tipoDeBolsa%></p>
+
+          <% if(product.descuento === 0 ){ %>
+                  <h5><span class="span-2">  $ <%= toThousand(product.precio) %> </span> </h5>
+              <% } else{ %>  
+                  <h5><span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+                  <p class="p-descuento">Ahorra <%= product.descuento %> % </p>
+              <% } %>
+              </div>
+          </li>
+        <% }) %>
+  </ul>
+</div>
+</main>

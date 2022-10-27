@@ -6,28 +6,43 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        tipoProductoId: {
-            type: dataTypes.INTEGER 
-        },
         nombre: {
+            type: dataTypes.STRING 
+        },
+        marca: {
             type: dataTypes.STRING
         },
-        marcaId: {
-            type: dataTypes.INTEGER
+        modelo: {
+            type: dataTypes.STRING
         },
-        modeloId: {
-            type: dataTypes.INTEGER
+        agarre: {
+            type: dataTypes.STRING
+        },
+        tipoDeVara: {
+            type: dataTypes.STRING
+        },
+        tipoDeBolsa: {
+            type: dataTypes.STRING
+        },
+        hierroTipoDeConjunto: {
+            type: dataTypes.STRING
         },
         precio: {
-            type: dataTypes.INTEGER
+            type: dataTypes.DECIMAL
         },
-        descuentoId: {
+        descuento: {
             type: dataTypes.INTEGER
-        },
-        imagen: {
-            type: dataTypes.STRING
         },
         stock: {
+            type: dataTypes.INTEGER
+        },
+        color: {
+            type: dataTypes.STRING
+        },
+        imagen: {
+            type: dataTypes.BLOB
+        },
+        categoria_id: {
             type: dataTypes.INTEGER
         }
     };
@@ -35,6 +50,15 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'productos',
         timestamps: false
     };
-    const Producto = sequelize.define(alias, cols, config)
+    const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function(models) {
+        Producto.belongsTo(models.Categoria, { 
+            as: "categorias",
+            foreignKey: "categoria_id"
+        })
+    }
+
+
     return Producto
 }

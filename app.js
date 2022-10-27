@@ -7,8 +7,10 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const bodyParser = require('body-parser')
 
-app.listen(3001, () => {
-  console.log("Servidor funcionando");
+const port = '3010'
+
+app.listen(port, () => {
+  console.log(`servidor funcionando${port}`);
 });
 
 app.use(methodOverride('_method'));
@@ -56,4 +58,7 @@ app.get("/productos/cameronSmith", (req, res) => {
   res.render(path.join(__dirname, "src/views/cameronSmith.ejs"));
 });
 
+app.get("/productos/test", (req, res) => {
+  res.render(path.join(__dirname, "src/views/products-test2.ejs"));
+});
 
