@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/detalleproducto.css"/>
+</head>
+<body>
+
+  <%- include('./partials/header.ejs')  %>
+
+<main>
+
+
+  <div class="main-content">
+    <nav class="menu-detalle-producto" style="justify-content: center;">
+      <p class="producto-seleccionado"><a href="/">GOLF DE ALTURA STORE - PRODUCTO SELECCIONADO</a></p> 
+    </nav>
+    <div class="product-content">
+      <div class="col1 img-primaria">
+        <img src="/images/productos/<%=producto[0].imagen %>" class="img1"width="80" height="60" alt="">
+      </div>
+      <div class="col2">
+        <div class="product-name">
+          <% let finalPrice = (producto[0].precio * ((100 - producto[0].descuento) / 100)).toFixed(0)%>
+          <% if(producto[0].descuento === "0.00"){ %>
+            <h5><span class="span-2">  $ <%= toThousand(producto[0].precio) %> </span> </h5>
+          <% } else{ %>  
+            <h5><span class="span-1">$ <%= toThousand(producto[0].precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+            <p class="p-descuento">Ahorra <%= producto[0].descuento %> % </p>
+          <% } %>
+        </div>  
+          
+        <% if(producto[0].marca != "") {  %>
+          <div class="fila fila2">
+            <label class="marca">MARCA</label>
+            <p><%= producto[0].marca %></P>
+          </div>
+        <% } %>
+
+        <% if(producto[0].modelo != "") {  %>
+          <div class="fila fila2">
+            <label class="marca">MODELO</label>
+            <p><%= producto[0].modelo %></P>
+          </div>
+        <% } %>
+
+        <% if(producto[0].agarre != "") {  %>
+          <div class="fila fila2">
+            <label class="marca">AGARRE</label>
+            <p><%= producto[0].agarre %></P>
+          </div>
+        <% } %>
+
+        <% if(producto[0].tipoDeVara != "") {  %>
+          <div class="fila fila2">
+            <label class="marca">TIPO DE VARA</label>
+            <p><%= producto[0].tipoDeVara %></P>
+          </div>
+        <% } %>
+          
+        <% if(producto[0].tipoDeBolsa != "") {  %>
+          <div class="fila fila2">
+            <label class="marca">TIPO DE BOLSA</label>
+            <p><%= producto[0].tipoDeBolsa %></P>
+          </div>
+        <% } %>
+
+        <% if(producto[0].hierroTipoDeConjunto != "") {  %>
+          <div class="fila fila2">
+            <label class="marca"> CONJUNTO HIERROS</label>
+            <p><%= producto[0].hierroTipoDeConjunto %></P>
+          </div>
+        <% } %>
+
+        <% if(producto[0].color != "") {  %>
+          <div class="fila fila2">
+            <label class="marca"> COLOR</label>
+            <p><%= producto[0].color %></P>
+          </div>
+        <% } %>
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ 
+</main>
+  
+        <%- include('./partials/footer.ejs')  %>
+
+</body>
+</html>

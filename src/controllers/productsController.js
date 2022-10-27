@@ -255,7 +255,7 @@ const productsController = {
              })
         });
         
-        res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
+        res.render(path.join(__dirname, '../views/products.ejs'), {productCategory, toThousand})
     },
     showProductSubcategory: (req,res) => {
         res.locals.sessiondata = req.session;
@@ -308,7 +308,7 @@ const productsController = {
                  item.tipodebolsa_selected = item_.nombre
              })
         });
-        res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
+        res.render(path.join(__dirname, '../views/products.ejs'), {productCategory, toThousand})
     },
     store: (req, res) => {
         let image
