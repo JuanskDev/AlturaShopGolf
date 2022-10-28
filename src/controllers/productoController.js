@@ -128,8 +128,49 @@ const productoController = {
     },
     showProductCategory: (req,res) => {
         res.locals.sessiondata = req.session;
-        let categoria_id = req.params.categoria_id
-        
+        let categoria_id = req.params.categoria_id;
+        let data = {};
+        let sqlScript = "select p.id as p_id, " +
+        "p.nombre as p_nombre, " +
+        "marca, " +
+        "modelo, " +
+        "agarre, " +
+        "tipoDeVara, " +
+        "tipoDeBolsa, " +
+        "hierroTipoDeConjunto, " +
+        "precio, " +
+        "descuento, " +
+        "stock, " +
+        "color, " +
+        "imagen, " +
+        "categoria_id, " +
+        "c.id as c_id, " +
+        "c.nombre as c_nombre " +
+        "from productos p " +
+        "join categorias c on c.id = p.categoria_id " +
+        "where categoria_id = " + categoria_id
+        "order by p.nombre"; 
+        sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+        .then(productos => {
+            data.productos = productos;
+            sqlScript = "select distinct nombre, categoria_id " +
+            "from productos " +
+            "where categoria_id = " + categoria_id + " " 
+            "order by nombre";
+            sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+            .then(subcategorias => {
+                data.subcategorias = subcategorias;
+                res.render('producto-categoria', {data, toThousand})
+            })
+            .catch(err => { console.log(err) })
+        })
+        .catch(err => { console.log(err) })
+    },
+    showProductSubcategory: (req,res) => {
+        res.locals.sessiondata = req.session;
+        let categoria_id = req.params.categoria_id;
+        let subcategoria = req.params.subcategoria;
+        let data = {};
         let sqlScript = "select p.id as p_id, " +
         "p.nombre as p_nombre, " +
         "marca, " +
@@ -147,18 +188,28 @@ const productoController = {
         "c.nombre as c_nombre " +
         "from productos p " +
         "join categorias c on c.id = p.categoria_id " +
-        "where categoria_id = " + categoria_id
-        "order by p.nombre" 
+        "where categoria_id = " + categoria_id + " and p.nombre = '" + subcategoria + "' "
+        "order by p.nombre"; 
         sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
         .then(productos => {
-            res.render('producto-categoria', {productos, toThousand})
+            data.productos = productos;
+            sqlScript = "select distinct nombre, categoria_id " +
+            "from productos " +
+            "where categoria_id = " + categoria_id + " " 
+            "order by nombre";
+            sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+            .then(subcategorias => {
+                data.subcategorias = subcategorias;
+                res.render('producto-categoria', {data, toThousand})
+            })
+            .catch(err => { console.log(err) })
         })
         .catch(err => { console.log(err) })
     },
     detalleproducto:(req,res) =>{
         res.locals.sessiondata = req.session;
         let producto_id = req.params.id
-        
+        let data = {};
         let sqlScript = "select p.id as p_id, " +
         "p.nombre as p_nombre, " +
         "marca, " +
@@ -172,6 +223,7 @@ const productoController = {
         "stock, " +
         "color, " +
         "imagen, " +
+        "categoria_id, " +
         "c.id as c_id, " +
         "c.nombre as c_nombre " +
         "from productos p " +
@@ -179,63 +231,20 @@ const productoController = {
         "where p.id = " + producto_id
         sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
         .then(producto => {
-            console.log(producto);
-            res.render('producto-detalle', {producto, toThousand})
+            data.producto = producto;
+            sqlScript = "select distinct nombre, categoria_id " +
+            "from productos " +
+            "where categoria_id = " + producto[0].categoria_id + " " 
+            "order by nombre";
+            sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+            .then(subcategorias => {
+                data.subcategorias = subcategorias;
+                res.render('producto-detalle', {data, toThousand})
+            })
+            .catch(err => { console.log(err) })
+            
         })
         .catch(err => { console.log(err) })
-    },
-    // showProductSubcategory: (req,res) => {
-    //     res.locals.sessiondata = req.session;
-    //     let category = req.params.category
-    //     let subcategory = req.params.subcategory
-    //     let productCategory = productos.filter(product => product.categoria == category && product.producto == subcategory)
-       
-    //     productCategory.forEach(item => {
-    //         //categoría
-    //         let categoriaId = item.categoria;
-    //         let category_item = categorias.filter(category => category.id == categoriaId)
-    //         category_item.forEach(item_ => {
-    //             item.category_selected = item_.nombre
-    //         })
-
-    //         //producto
-    //         let productoId = item.producto;
-    //         let producto_item = listaProductos.filter(listaproducto => listaproducto.id == productoId)
-    //         producto_item.forEach(item_ => {
-    //             item.producto_selected = item_.nombre
-    //         })
-    //         //marca
-    //         let marcaId = item.marca;
-    //         let marca_item = marcas.filter(marca => marca.id == marcaId)
-    //         marca_item.forEach(item_ => {
-    //             item.marca_selected = item_.nombre
-    //         })
-    //         //modelo
-    //         let modeloId = item.modelo;
-    //         let modelo_item = modelos.filter(modelo => modelo.id == modeloId)
-    //         modelo_item.forEach(item_ => {
-    //              item.modelo_selected = item_.nombre
-    //         })
-    //           //agarre
-    //           let agarreId = item.agarre;
-    //           let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
-    //           agarre_item.forEach(item_ => {
-    //                item.agarre = item_.nombre
-    //           })
-    //         //tipo de vara
-    //         let tipodevaraId = item.tipodevara;
-    //         let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
-    //         tipodevara_item.forEach(item_ => {
-    //             item.tipodevara_selected = item_.nombre
-    //         })
-    //          //tipo de bolsa
-    //          let tipodebolsaId = item.tipodebolsa;
-    //          let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
-    //          tipodebolsa_item.forEach(item_ => {
-    //              item.tipodebolsa_selected = item_.nombre
-    //          })
-    //     });
-    //     res.render(path.join(__dirname, '../views/products.ejs'), {productCategory, toThousand})
-    // },
+    }
 };
 module.exports = productoController;

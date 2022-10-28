@@ -9,73 +9,89 @@
   <%- include('./partials/header.ejs')  %>
 
 <main>
-
+  <%if(data != null && data.subcategorias != null & data.subcategorias.length > 0) {%>
+    <div class="submenu-productos">
+      <nav class="nav-full-screen">
+        <div>
+          <a href="/productos/<%= data.producto[0].categoria_id%>">TODO</a>
+        </div>
+        <% data.subcategorias.forEach(function(subcategoria){%>
+          <div>
+            <a href="/productos/<%= subcategoria.categoria_id%>/<%= subcategoria.nombre%>">
+              <%= subcategoria.nombre%>
+            </a>
+          </div>
+        %>
+        <% }) %>
+      </nav>
+    </div>
+    <%}%>
 
   <div class="main-content">
     <nav class="menu-detalle-producto" style="justify-content: center;">
-      <p class="producto-seleccionado"><a href="/">GOLF DE ALTURA STORE - PRODUCTO SELECCIONADO</a></p> 
+      <p class="producto-seleccionado"><a href="/">GOLF DE ALTURA STORE - PRODUCTO SELECCIONADO <%=data.producto[0].p_nombre%></a></p> 
     </nav>
     <div class="product-content">
       <div class="col1 img-primaria">
-        <img src="/images/productos/<%=producto[0].imagen %>" class="img1"width="80" height="60" alt="">
+        <img src="/images/productos/<%=data.producto[0].imagen %>" class="img1"width="80" height="60" alt="">
       </div>
       <div class="col2">
         <div class="product-name">
-          <% let finalPrice = (producto[0].precio * ((100 - producto[0].descuento) / 100)).toFixed(0)%>
-          <% if(producto[0].descuento === "0.00"){ %>
-            <h5><span class="span-2">  $ <%= toThousand(producto[0].precio) %> </span> </h5>
+          <% let finalPrice = (data.producto[0].precio * ((100 - data.producto[0].descuento) / 100)).toFixed(0)%>
+          <% if(data.producto[0].descuento === "0.00"){ %>
+            <h5><span class="span-2">  $ <%= toThousand(data.producto[0].precio) %> </span> </h5>
           <% } else{ %>  
-            <h5><span class="span-1">$ <%= toThousand(producto[0].precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
-            <p class="p-descuento">Ahorra <%= producto[0].descuento %> % </p>
+            <h5><span class="span-1">$ <%= toThousand(data.producto[0].precio) %> </span> <span class="span-2">$ <%= toThousand(finalPrice) %> </span></h5>
+            <p class="p-descuento">Ahorra <%= data.producto[0].descuento %> % </p>
           <% } %>
         </div>  
           
-        <% if(producto[0].marca != "") {  %>
+        <% if(data.producto[0].marca != "") {  %>
           <div class="fila fila2">
             <label class="marca">MARCA</label>
-            <p><%= producto[0].marca %></P>
+            <p><%= data.producto[0].marca %></P>
           </div>
         <% } %>
 
-        <% if(producto[0].modelo != "") {  %>
+        <% if(data.producto[0].modelo != "") {  %>
           <div class="fila fila2">
             <label class="marca">MODELO</label>
-            <p><%= producto[0].modelo %></P>
+            <p><%= data.producto[0].modelo %></P>
           </div>
         <% } %>
 
-        <% if(producto[0].agarre != "") {  %>
+        <% if(data.producto[0].agarre != "") {  %>
           <div class="fila fila2">
             <label class="marca">AGARRE</label>
-            <p><%= producto[0].agarre %></P>
+            <p><%= data.producto[0].agarre %></P>
           </div>
         <% } %>
 
-        <% if(producto[0].tipoDeVara != "") {  %>
+        <% if(data.producto[0].tipoDeVara != "") {  %>
           <div class="fila fila2">
             <label class="marca">TIPO DE VARA</label>
-            <p><%= producto[0].tipoDeVara %></P>
+            <p><%= data.producto[0].tipoDeVara %></P>
           </div>
         <% } %>
           
-        <% if(producto[0].tipoDeBolsa != "") {  %>
+        <% if(data.producto[0].tipoDeBolsa != "") {  %>
           <div class="fila fila2">
             <label class="marca">TIPO DE BOLSA</label>
-            <p><%= producto[0].tipoDeBolsa %></P>
+            <p><%= data.producto[0].tipoDeBolsa %></P>
           </div>
         <% } %>
 
-        <% if(producto[0].hierroTipoDeConjunto != "") {  %>
+        <% if(data.producto[0].hierroTipoDeConjunto != "") {  %>
           <div class="fila fila2">
             <label class="marca"> CONJUNTO HIERROS</label>
-            <p><%= producto[0].hierroTipoDeConjunto %></P>
+            <p><%= data.producto[0].hierroTipoDeConjunto %></P>
           </div>
         <% } %>
 
-        <% if(producto[0].color != "") {  %>
+        <% if(data.producto[0].color != "") {  %>
           <div class="fila fila2">
             <label class="marca"> COLOR</label>
-            <p><%= producto[0].color %></P>
+            <p><%= data.producto[0].color %></P>
           </div>
         <% } %>
             

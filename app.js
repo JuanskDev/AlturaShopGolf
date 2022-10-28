@@ -52,9 +52,6 @@ app.use('/users', rutasUsers);
 //Registro Routes
 const rutasRegistro = require("./src/routes/registro");
 app.use('/registro', rutasRegistro);
-//Products Routes
-const rutasProductos = require("./src/routes/products");
-app.use('/products', rutasProductos);
 //Campos Routes
 const rutasCampos = require("./src/routes/campos");
 app.use('/campos', rutasCampos);
@@ -65,9 +62,9 @@ app.use('/lecciones', rutasLecciones);
 const rutasContactos = require("./src/routes/contactos");
 app.use('/contactos', rutasContactos);
 
-/*ADMINISTRACIÓN*/
+/*ADMINISTRACIÓN y FRONTEND*/
 const rutasCategorias = require("./src/routes/categoria");
 app.use('/categorias', rutasCategorias);
-const rutasProductosAdmin = require("./src/routes/producto");
-app.use('/productos', rutasProductosAdmin);
+const rutasProductos = require("./src/routes/producto");
+app.use('/productos', rutasProductos);
 

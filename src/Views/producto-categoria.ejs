@@ -9,11 +9,28 @@
   <body class="palos">
     <%- include('./partials/header.ejs') %>
     <main>
+      <%if(data != null && data.subcategorias != null & data.subcategorias.length > 0) {%>
+      <div class="submenu-productos">
+        <nav class="nav-full-screen">
+          <div>
+            <a href="/productos/<%= data.productos[0].categoria_id%>">TODO</a>
+          </div>
+          <% data.subcategorias.forEach(function(subcategoria){%>
+            <div>
+              <a href="/productos/<%= subcategoria.categoria_id%>/<%= subcategoria.nombre%>">
+                <%= subcategoria.nombre%>
+              </a>
+            </div>
+          %>
+          <% }) %>
+        </nav>
+      </div>
+      <%}%>
       <div class="resultado-busqueda">
-        <% if(productos.length === 1){ %>
-          <h4> <%= productos.length %>  Resultado</h4>
+        <% if(data.productos.length === 1){ %>
+          <h4> <%= data.productos.length %>  Resultado</h4>
         <% } else{ %>  
-          <h4> <%= productos.length %>  Resultados</h4>
+          <h4> <%= data.productos.length %>  Resultados</h4>
        <% } %>
         <div class="ordenar-buscador">
           <label for="buscador">Ordenar por</label>
@@ -30,7 +47,7 @@
       <div class="resultado-busqueda">
         <ul class="resultado-productos">
           
-            <% productos.forEach(function(product){
+            <% data.productos.forEach(function(product){
               let finalPrice = (product.precio * ((100 - product.descuento) / 100)).toFixed(0)
             %>
           <li class="producto-palos-lista">

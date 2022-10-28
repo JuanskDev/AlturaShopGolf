@@ -29,11 +29,10 @@ router.put('/edit/:id', upload.any(), productoController.update);
 router.get('/delete/:id', productoController.delete)
 //---------------------------------
 
-
 //FRONT END - PRODUCTOS POR CATEGORIA
 router.get('/:categoria_id' , productoController.showProductCategory);
 router.get('/detalle/:id' , productoController.detalleproducto);
-//router.get('/:categoria_id/:subcategory' , productoController.showProductSubcategory);
+router.get('/:categoria_id/:subcategoria' , productoController.showProductSubcategory);
 //----------
 
 

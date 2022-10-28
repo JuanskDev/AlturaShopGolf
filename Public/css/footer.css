@@ -82,3 +82,6 @@ footer input {
     border: none;
     max-width: 300px;
 }
+.submenu-productos .nav-full-screen {
+    background-color: #ddd;
+}
