@@ -11,22 +11,20 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const registroController = {
     index: function(req, res){
         res.locals.sessiondata = req.session;
-        res.render(path.join(__dirname , '../views/registro.ejs'))
+        res.render("registro.ejs");
     },
     create: (req, res) => {
         
       const errors = validationResult(req);
-        //res.send(errors)
-        //res.send(errors.errors)
+      
         if(!errors.isEmpty()) {
-            //console.log('hay errores');
-           // res.send(errors.mapped())
-            return res.render('Registro'), {
-              errores: errors.mapped()
-              ,  old: req.body
-            }};
-            console.log('hay errores');
             
+            res.render("registro.ejs", {
+                errores: errors.errors,
+                old: req.body
+            })
+
+        } else {
 
         let indexId = 0;
         if(users.length != 0) {
@@ -44,6 +42,6 @@ const registroController = {
         users.push(newUser)
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
       
-    }
+    }}
 }
 module.exports = registroController;

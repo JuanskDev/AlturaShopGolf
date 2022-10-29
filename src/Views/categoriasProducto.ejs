@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/palos.css"/>
+  </head>
+
+
+  <body class="palos">
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <div class="resultado-busqueda">
+        <% if(productos.length === 1){ %>
+          <h4> <%= productos.length %>  Resultado</h4>
+        <% } else{ %>  
+          <h4> <%= productos.length %>  Resultados</h4>
+       <% } %>
+        <div class="ordenar-buscador">
+          <label for="buscador">Ordenar por</label>
+          <select class="select-buscador" name="buscador" id="">
+            <option value="++">De mas baratos a mas caros</option>
+            <option value="--">De mas caros a mas baratos</option>
+            <option value="top" selected>Mas vendidos</option>
+            <option value="moda">Nuevo Ingreso</option>
+          </select>
+        </div>
+
+     
+        
+      </div>
+      <hr class="hr-1">
+      <div class="resultado-busqueda">
+        <ul class="resultado-productos">
+          
+            <% productos.forEach(function(producto){%>
+          <li class="producto-palos-lista">
+            <img src="/images/productosDB/<%= producto.imagen%>">
+            <div class="tamaño-hr"><br>
+                <h5><%=producto.marca%></h5>
+                <h6><%=producto.nombre%></h6>
+                <p class="tipo"><%= producto.tipoDeBolsa%><%= producto.tipoDeVara%></p>
+                <p>Precio: <strong><%=`${'$ ' + producto.precio}`%></strong></p>
+                
+              </div>
+            </li>
+          <% }) %>
+    </ul>
+  </div>
+  </main>
+
+   <%- include('./partials/footer.ejs') %>
+
+  </body>
+</html>

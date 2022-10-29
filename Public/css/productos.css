@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+  }
+
+  body.campos h2 {
+    opacity: 0.6;
+    font-family: 'Oswald';
+    color: red;
+    font-size: 30px;
+    text-align: center;
+  }
+  body.campos h4 {
+    font-family: 'Oswald';
+    color: red;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  body.campos .resultado-busqueda {
+    position: relative;
+    padding: 15px;
+  }
+
+  body.campos .ordenar-buscador {
+    float: right;
+  }
+
+  /* .select-buscador {
+  } */
+
+  .hr-1 {
+    margin-top: 50px;
+  }
+
+  body.campos ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  body.campos li.producto-campos-lista {
+    width: 47%;
+    padding: 10px 0;
+    margin: 0 1.5% 20px;
+    background: #fff;
+    border-bottom: 1px solid gray;
+    min-width: 300px;
+    display: inline-block;
+    text-align: center;
+
+  }
+
+  body.campos li.producto-campos-lista img {
+    max-width: 100%;
+    box-sizing: border-box;
+    max-width: 260px;
+    max-height: 260px;
+  }
+  body.campos li.producto-campos-lista img:hover{
+    transform: scale(1.0);
+    cursor: pointer;
+  }
+
+  div.tamaño-hr {
+    height: 35%;
+    
+  }
+
+  body.campos li.producto-campos-lista h6{
+    text-align: center;
+    font-size: 15px;
+    font-family: oswald;
+    color: rgba(41, 41, 196, 0.892);
+  }
+  body.campos li.producto-campos-lista h6:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  }
+
+  body.campos li.producto-campos-lista p {
+    text-align: center;
+    font-size: 13px;
+    margin: 5px 0 8px;
+    line-height: 20px;
+  }
+
+  body.campos li.producto-campos-lista h5 {
+    display: flex;
+    font-size: 13px;
+    justify-content: space-evenly;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  body.campos li.producto-campos-lista p.tipo {
+    font-family: oswald;
+    color: rgba(41, 41, 196, 0.892);
+  }
+
+  body.campos li.producto-campos-lista h5 .span-1 {
+    text-decoration: line-through;
+  }
+
+  body.campos li.producto-campos-lista h5 .span-3 {
+    justify-content: center;
+  }
+
+  body.campos li.producto-campos-lista .p-descuento {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    color: red;
+    text-decoration: underline;
+  }
+  body.campos li.producto-campos-lista .nuevo{
+    font-size: 10px;
+    width: 45px;
+    border-radius: 45px;
+    background-color: blue;
+    color: white;
+    font-family: 'Oswald';
+}
+  
+  @media (min-width: 420px) {
+    
+    body.campos h1 {
+      text-align: left;
+      margin-left: 40px;
+  
+  }
+
+  }
+  @media (min-width: 480px) {
+ 
+  }
+
+  @media (min-width: 600px) {
+ 
+    body.campos ul {
+    justify-content: flex-start;
+    }
+    body.campos li.producto-campos-lista {
+        min-width: 209px;
+   }
+  }
+  
+@media (min-width: 790px) {
+
+  body.campos h2 {
+    text-align: left;
+  }
+  body.campos h4 {
+  text-align: left;
+  }
+  
+    body.campos ul {
+        justify-content: space-between;
+    }  
+
+    body.campos li.producto-campos-lista {
+        width: 25%;
+        height: 30%;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+
+
+}
+
+  

@@ -21,22 +21,27 @@
     <br />
     <div class="registrarse"><p>Registro</p></div>
     <br>
-   
-      <div>
-       <ul id="errores"> </ul>
-      </div>
+    
+    <!-- Verificación frontend -->
+    <div>
+      <ul id="errores"> </ul>
+     </div>
 
+     <!-- Verificación backend -->
+     <% if (locals.errores && errores.length > 0) { %>
+       <ul class="backend-validations">
+       <% errores.forEach(error => { %>
+         <li><%= error.msg %> </li>
+       <% }) %>
+       </ul>
+     <% } %>
     
     <form action="/registro" method="post" class="formulario">
       <div class="fila">
         <label>Nombre/s*</label>
         <input type="text" id="nombre" name="nombre" class="input-form" />
        
-        <% if (locals.errores && errores.nombre) { %>
-          <div class="text-danger">
-            <%= errores.nombre.msg %>
-          </div>
-         <% } %>
+     
       
         </div>
       <br>
@@ -91,8 +96,8 @@
      </div>
   </section>
 </main>
-<%- include('./partials/footer.ejs')  %>
-    <script src="/js/registro.js"></script>  
+ <%- include('./partials/footer.ejs')  %> 
+   <script src="/js/registro.js"></script> 
   </body>
 </html>
 

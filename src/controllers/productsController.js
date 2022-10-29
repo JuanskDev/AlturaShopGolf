@@ -1,6 +1,11 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../dataBase/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
+const Productos = db.Producto;
+const Categorias = db.Categoria
 
 const productsFilePath = path.join(__dirname, '../dataBase/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -46,31 +51,67 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const productsController = {
+
+    'list': (req, res) => {
+        db.Producto.findAll()
+            .then(productos => {
+                res.render('productosdb.ejs', { productos })
+            })
+    },
+    'listaCategorias': (req,res) => {
+
+        let productosCategoria = Productos.findAll({
+             where: {
+                categoria_id: req.params.id}
+        })
+        .then(productos => {
+            res.render('categoriasProducto.ejs' , {productos})
+        }) 
+        
+    },
     carritoCompra: (req,res) => {
         res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
     },
     create:(req,res) =>{
         res.locals.sessiondata = req.session;
-        let data = {
-            listaproductos: listaProductos,
-            categorias: categorias,
-            marcas: marcas,
-            modelos: modelos,
-            agarre: agarre,
-            tipodevara: tipodevara,
-            tipodebolsa: tipodebolsa,
-            hierrostipodeconjunto: hierrostipodeconjunto,
-            descuentos: descuentos,
-            talles: talles,
-            color: color,
-            lecciones: lecciones
 
-        }
+        let productosDb = Productos.findAll();
+        let categoriasDb = Categorias.findAll();
+       
+        
+       
+        Promise.all([productosDb, categoriasDb])
+                .then(([allProductos, allCategorias]) => {
+                    return res.render('products-create', { allProductos, allCategorias })
+                })
+                .catch(error => res.send(error))
 
-        res.render('products-create', { data })
     },
+    store: (req, res) => {
+             
+        Productos
+        .create({
+        nombre: req.body.nombre,
+        marca: req.body.marca,
+        modelo: req.body.modelo,
+        agarre: req.body.agarre,
+        tipoDeVara: req.body.tipoDeVara,
+        tipoDeBolsa: req.body.tipoDeBolsa,
+        hierroTipoDeConjunto: req.body.hierroTipoDeConjunto,
+        precio: req.body.precio,
+        descuento: req.body.descuento,
+        stock: req.body.stock,
+        color: req.body.color,
+        categoria_id: req.body.categoria_id,
+        imagen: req.file.filename
+    })
+    .then(() => {
+        return res.redirect('/products')
+    })
+    .catch(error => res.send(error))
 
+    },
     detalleproducto:(req,res) =>{
         let productDetail = productos.find(e => e.id === +req.params.id)
         let data = {
@@ -299,27 +340,6 @@ const productsController = {
              })
         });
         res.render(path.join(__dirname, '../views/productos.ejs'), {productCategory, toThousand})
-    },
-    store: (req, res) => {
-        let image
-
-        if(req.files[0] != undefined){
-            image = req.files[0].filename
-        } else {
-            image = 'default-image.png'
-        }
-        let indexId = 0;
-        if(productos.length != 0) {
-            indexId = productos[productos.length - 1].id;
-        }
-        let newProduct = {
-            id: indexId + 1,
-            ...req.body,
-            image: image
-        };
-        productos.push(newProduct)
-        fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
-        res.redirect('/products/create');
     }
 };
 module.exports = productsController;

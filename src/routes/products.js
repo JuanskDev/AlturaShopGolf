@@ -6,21 +6,24 @@ const productsController = require('../controllers/productsController');
 
 const storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null, 'public/images/products')
+        cb(null,path.resolve(__dirname , '../../public/images/productosDB'))
     },
     filename: function(req,file,cb){
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
+
 var upload = multer({storage: storage})
 
+router.get('/' , productsController.list)
+router.get('/:categoria' , productsController.listaCategorias)
 //---------------RUTAS CARRITO DE COMPRAS Y DETALLE PRODUCTO-------------------------------------------------//
 router.get('/carritodecompras' , productsController.carritoCompra);
 router.get('/detalle/:id' , productsController.detalleproducto);
 
 //--------------FORMULARIO CREAR PRODUCTOS-----------------------//
 router.get('/create', productsController.create); 
-router.post('/create', upload.any(), productsController.store);
+router.post('/create', upload.single('imagen'), productsController.store);
 
 //--------------------FORMULARIO EDITAR PRODUCTOS-------------------//
 router.get('/edit/:id', productsController.edit); // formulario edit

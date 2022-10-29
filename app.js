@@ -7,10 +7,10 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const bodyParser = require('body-parser')
 
-const port = '3010'
+const port = '3030'
 
 app.listen(port, () => {
-  console.log(`servidor funcionando${port}`);
+  console.log(`servidor funcionando en el puerto ${port}`);
 });
 
 app.use(methodOverride('_method'));

@@ -112,6 +112,11 @@ padding-bottom: 30px;
     margin-bottom: 15px;
 }
 
+.backend-validations {
+    position: relative;
+    bottom: 25px;
+}
+
 @media (min-width: 420px) {
     .contenedor input.input-form {
         max-width: 500px;
