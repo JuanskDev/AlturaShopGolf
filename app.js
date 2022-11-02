@@ -35,7 +35,6 @@ app.use(session({
 // Main Routes
 const rutasMain = require("./src/routes/main");
 app.use('/', rutasMain);
-
 // Users Routes
 const rutasUsers = require("./src/routes/users");
 app.use('/users', rutasUsers);
