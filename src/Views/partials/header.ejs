@@ -8,10 +8,9 @@
 <body class="body-header">
   <div class="barra-superior">
    <div class="barra-superior-izq">
-    <a href="/">GOLF</a>
     <a href="/lecciones">LECCIONES</a>
     <a href="/campos">CAMPOS</a>
-    <a href="/contacto">CONTACTO</a>
+    <a href="/users/contacto">CONTACTO</a>
   </div>
   <div class="barra-superior-der">
   <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
@@ -19,7 +18,7 @@
     <span class="welcome-user">Bienvenido <%=sessiondata.nombre%></span>
     <a href="/users/cerrarsesion">CERRAR SESION</a>
 <%} else {%>
-  <a href="/registro">REGISTRO</a>
+  <a href="/users/registro">REGISTRO</a>
   <a href="/users/iniciosesion">INICIO SESION</a>
 <%}%>
     </div>
@@ -32,13 +31,11 @@
       </button>
     </div>
     <nav id="menu-mobile" class="ocultar">
-      <ul>
-        <li><a href="#">INICIO</a></li> 
-        
-        <li>
-          <a href="#">PRODUCTOS</a>
-          <ul>
-            <!-- <li><a href="/productos/"> ACCESORIOS</a></li> -->
+      
+     
+
+     <!-- <ul>
+            <li><a href="/productos/"> ACCESORIOS</a></li> 
             <li><a href="/products/1"> ACCESORIOS</a></li>
             <li><a href="/products/1"> TODO</a></li>
             <li><a href="/products/1/5"> GORRAS</a></li>
@@ -71,7 +68,7 @@
             <li><a href="/products/6"> TODO</a></li>
             <li><a href="/products/6/15"> ROPA DE HOMBRE</a></li>
             <li><a href="/products/6/16"> ROPA DE MUJER</a></li>
-            <li><a href="/products/6/17"> ROPA DE NIÑOS</a></li>
+            <li><a href="/products/6/17"> ROPA DE NIÑOS</a></li> -->
             <div>
               <a href="/products/7/24"> ZAPATOS</a>
             </div>
@@ -101,9 +98,9 @@
     </div>
     <nav class="nav-full-screen">
       <div>
-        <a href="#" onclick="mostrarMenu('nav-accesorios')"> ACCESORIOS</a>
+        <a href="/products/categoria/1" onclick="mostrarMenu('nav-accesorios')"> ACCESORIOS</a>
         <div id="nav-accesorios" class="nav-submenu">
-          <ul>
+         <!-- <ul>
             <li><a href="/products/1"> TODO </a></li>
             <li><a href="/products/1/5"> GORRAS</a></li>
             <li><a href="/products/1/6"> GUANTES</a></li>
@@ -112,23 +109,23 @@
             <li><a href="/products/1/20"> TEES</a></li>
             <li><a href="/products/1/22"> TOALLAS</a></li>
             <li><a href="/products/1/12"> PARAGUAS</a></li>
-          </ul>
+          </ul> -->
         </div>
       </div>
       <div>
-        <a href="#" onclick="mostrarMenu('nav-bolsas-carros')"> BOLSAS-CARROS</a>
+        <a href="/products/categoria/2" onclick="mostrarMenu('nav-bolsas-carros')"> BOLSAS-CARROS</a>
         <div id="nav-bolsas-carros" class="nav-submenu">
-          <ul>
+      <!--    <ul>
             <li><a href="/products/2"> TODO </a></li>
             <li><a href="/products/2/1"> BOLSAS</a></li>
             <li><a href="/products/2/2"> CARROS</a></li>
-          </ul>
+          </ul> -->
         </div>
       </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-palos')"> PALOS</a>
+          <a href="/products/categoria/3" onclick="mostrarMenu('nav-palos')"> PALOS</a>
           <div id="nav-palos" class="nav-submenu">
-            <ul>
+          <!--  <ul>
               <li><a href="/products/3"> TODO</a></li>
               <li><a href="/products/3/3"> DRIVE</a></li>
               <li><a href="/products/3/11"> MADERAS</a></li>
@@ -136,16 +133,16 @@
               <li><a href="/products/3/10"> HIERROS</a></li>
               <li><a href="/products/3/23"> WEDGES</a></li>
               <li><a href="/products/3/14"> PUTTERS</a></li>
-            </ul>
+            </ul> --> 
           </div>
         </div>
         <div>
-          <a href="/products/4/13"> PELOTAS</a>
+          <a href="/products/categoria/4"> PELOTAS</a>
         </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-tecnologia')"> TECNOLOGIA</a>
+          <a href="/products/categoria/5" onclick="mostrarMenu('nav-tecnologia')"> TECNOLOGIA</a>
           <div id="nav-tecnologia" class="nav-submenu">
-            <ul>
+          <!--  <ul>
               <li>
                 <a href="/products/5"> TODO</a>
                 <a href="/products/5/7"> GPS</a>
@@ -153,22 +150,22 @@
                 <a href="/products/5/19"> SMARTWATCHS</a>
                 <a href="/products/5/21"> TELEMETROS</a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-vestir')"> VESTIR</a>
+          <a href="/products/categoria/6" onclick="mostrarMenu('nav-vestir')"> VESTIR</a>
           <div id="nav-vestir" class="nav-submenu">
-            <ul>
+          <!--  <ul>
               <li><a href="/products/6"> TODO</a></li>
               <li><a href="/products/6/15"> ROPA DE HOMBRE</a></li>
               <li><a href="/products/6/16"> ROPA DE MUJER</a></li>
               <li><a href="/products/6/17"> ROPA DE NIÑOS</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div>
-          <a href="/products/7/24"> ZAPATOS</a>
+          <a href="/products/categoria/7"> ZAPATOS</a>
         </div>
     </nav>
   </header>

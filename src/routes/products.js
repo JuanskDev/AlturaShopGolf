@@ -16,7 +16,8 @@ const storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 router.get('/' , productsController.list)
-router.get('/:categoria' , productsController.listaCategorias)
+router.get('/categoria/:id' , productsController.listaCategorias)
+
 //---------------RUTAS CARRITO DE COMPRAS Y DETALLE PRODUCTO-------------------------------------------------//
 router.get('/carritodecompras' , productsController.carritoCompra);
 router.get('/detalle/:id' , productsController.detalleproducto);
@@ -27,12 +28,10 @@ router.post('/create', upload.single('imagen'), productsController.store);
 
 //--------------------FORMULARIO EDITAR PRODUCTOS-------------------//
 router.get('/edit/:id', productsController.edit); // formulario edit
-router.put('/edit/:id', upload.any(), productsController.update);
+router.put('/edit/:id', upload.single('imagen'), productsController.update);
 
 //-----------------------ELIMINAR PRODUCTOS---------------------------//
 router.delete('/delete/:id', productsController.delete)
 
-router.get('/:category' , productsController.showProductCategory);
-router.get('/:category/:subcategory' , productsController.showProductSubcategory);
 
 module.exports = router;

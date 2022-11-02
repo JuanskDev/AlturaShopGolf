@@ -6,7 +6,6 @@ const mainController = require('../controllers/mainController');
 var router = express.Router();
 
 router.get('/' , mainController.index);
-router.get('/contacto' , mainController.contacto) 
 router.get('/search', mainController.search)
 // router.get('/pruebaSession', function(req, res){
 //     if(req.session.numeroVistas == undifined){

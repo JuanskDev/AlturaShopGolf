@@ -81,7 +81,7 @@ div.nombre-usuario label {
 
 div.nombre-usuario input {
   width: 100%;
-    padding: 13px;
+    padding: 10px;
     color: black;
     border-radius: 7px;
     margin: 5px 0;
@@ -99,7 +99,7 @@ div.contraseña-sesion label {
 
 div.contraseña-sesion input {
   width: 100%;
-    padding: 13px;
+    padding: 10px;
     color: black;
     border-radius: 7px;
     margin: 5px 0;
@@ -161,11 +161,11 @@ div.olvidar-contraseña {
 }
 
 div.nombre-usuario input {
-  max-width: 500px;
+  max-width: 400px;
 }
 
 div.contraseña-sesion input{
-  max-width: 500px;
+  max-width: 400px;
 }
 
 div.contraseña-sesion {
@@ -190,20 +190,7 @@ div.nombre-usuario {
 
 
 
-div.nombre-usuario label {
-  font-size: 24px;
-}
 
-
-
-
-div.contraseña-sesion label {
-  font-size: 24px;
-}
-
-div.contraseña-sesion input {
-  max-width: 500px;
-}
 
 div.olvidar-contraseña {
   text-align: center;

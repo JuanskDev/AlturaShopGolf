@@ -8,6 +8,8 @@ font-family: "Open Sans";
 }
 
 /* MAIN */
+label { display: block;}
+
 section.contenedor form{
 text-align: center;
 display: flex;
@@ -66,7 +68,7 @@ text-align: center;
 }
 .contenedor input.input-form {
     width: 100%;
-    padding: 13px;
+    padding: 10px;
     font-family: 'Oswald';
     text-align: center;
     color: black;
@@ -119,7 +121,7 @@ padding-bottom: 30px;
 
 @media (min-width: 420px) {
     .contenedor input.input-form {
-        max-width: 500px;
+        max-width: 400px;
     }
 
 }

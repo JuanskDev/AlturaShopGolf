@@ -6,12 +6,6 @@ const mainController = {
         res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/home.ejs'))
     },
-    
-    contacto: (req,res) => {
-        res.locals.sessiondata = req.session;
-        res.render(path.join(__dirname, '../views/contacto.ejs'))
-       
-    },
     search: (req, res) => {
 		let search = req.query.keywords;
 		let productsToSearch = productos.filter(product => product.producto_selected.toLowerCase().includes(search));	
