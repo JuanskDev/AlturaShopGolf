@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "nombre": "GPS"
+    },
+    {
+        "id": 2,
+        "nombre": "SIMULADORES"
+    },
+    {
+        "id": 3,
+        "nombre": "SMARTWATCHS"
+    },
+    {
+        "id": 4,
+        "nombre": "TELEMETROS"
+    }
+]

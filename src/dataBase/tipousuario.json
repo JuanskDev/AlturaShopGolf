@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "tipo":"ADMINISTRADOR"
+    },
+    {
+        "id":2,
+        "tipo":"REGISTRADO"
+    },
+    {
+        "id":3,
+        "tipo":"INVITADO"
+    }
+]

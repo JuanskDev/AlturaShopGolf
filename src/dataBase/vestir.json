@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "noombre": "CHOMBA"
+    },
+    {
+        "id": 2,
+        "nombre": "CAMISETA"
+    },
+    {
+        "id": 3,
+        "noombre": "CHOMBA-NIÑO"
+    },
+    {
+        "id": 4,
+        "noombre": "BERMUDA"
+    },
+    {
+        "id": 5,
+        "noombre": "PANTALON"
+    },
+    {
+        "id": 6,
+        "noombre": "BUZO"
+    },
+    {
+        "id": 7,
+        "noombre": "FALDA"
+    },
+    {
+        "id": 8,
+        "noombre": "CINTURON"
+    },
+    {
+        "id": 9,
+        "noombre": "REMERA"
+    },
+    {
+        "id": 10,
+        "noombre": "BLUSAS"
+    },
+    {
+        "id": 11,
+        "noombre": "BLUSA SIN MANGAS"
+    },
+    {
+        "id": 12,
+        "noombre": "CAMISETA MANGA LARGA"
+    },
+    {
+        "id": 13,
+        "noombre": "CAPRIS"
+    },
+    {
+        "id": 14,
+        "noombre": "VESTIDOS"
+    }
+]

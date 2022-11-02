@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre":"GOLF DE ALTURA STORE",
+        "paquete": "ADULTOS PACK 12 CLASES",
+        "precio": "$30.000",
+        "imagen": "/images/Adult-12-Pack-Lessons.webp"
+    },
+    {
+        "id": 2, 
+        "nombre":"GOLF DE ALTURA STORE",
+        "paquete": "ADULTOS PACK 24 CLASES",
+        "precio": "$60.000",
+        "imagen": "/images/Adult-24-Pack-of-Lessons.webp"
+    },
+    {
+        "id": 3,
+        "nombre":"GOLF DE ALTURA STORE",
+        "paquete": "NIÑOS PACK 12 CLASES",
+        "precio": "$30.000",
+        "imagen": "/images/kids12-Pack-Of-Lessons.webp"
+    }
+]

@@ -1,0 +1,66 @@
+[
+ {
+  "id": 1,
+  "nombre": "Agustin",
+  "apellido": "Contreras",
+  "email": "agustincontrerasvidal@gmail.com",
+  "telefono": "4258000",
+  "hash": "$2a$10$QktDnEvQf6ZYs/.tMkli3uZOB21Wh72YKiCGPQI/ut65tmyvWXfz6"
+ },
+ {
+  "id": 2,
+  "nombre": "Juan",
+  "apellido": "Scarafia",
+  "email": "juanscarafia@gmail.com",
+  "telefono": "42582226",
+  "hash": "$2a$10$aa7pzD.7SsXVHWlqGFSnxesq.K30VW8GFVHUSGK0EDKtIolxZhx6q"
+ },
+ {
+  "id": 3,
+  "nombre": "Bruno",
+  "apellido": "Ciarlo",
+  "email": "brunociarlo@gmail.com",
+  "telefono": "35189565525",
+  "hash": "$2a$10$H0kR1QKdTh3uG/wueP1L7.MvZdWa6RqTAX9gqjkwNTf90vPEPYZge"
+ },
+ {
+  "id": 4,
+  "nombre": "Lucas",
+  "apellido": "Pages",
+  "email": "lucaspages88@gmail.com",
+  "telefono": "25245556989",
+  "hash": "$2a$10$NYLWHdO9RZjj1h2VvzIaf.2SKZrjIbzROpX0vhYYsdolORn5iLWRG"
+ },
+ {
+  "id": 5,
+  "nombre": "Juan",
+  "apellido": "caro",
+  "email": "juan@jccaro.com..ar",
+  "telefono": "2215957338",
+  "hash": "$2a$10$Xkdpg0NAk5IeyFs3clFQ/e/TATrtyzqSJKhAGUApEl930EmdyKlLy"
+ },
+ {
+  "id": 6,
+  "nombre": "jose maria",
+  "apellido": "Suarez",
+  "email": "josemariasuarez@gmail.com",
+  "telefono": "3874258000",
+  "hash": "$2a$10$mNlSA.wlpoZymsoCJ4NtHOkMuewdvHneNTIgHuF.yeEyaEpXUP/Ia"
+ },
+ {
+  "id": 7,
+  "nombre": "nehuen",
+  "apellido": "lopez",
+  "email": "nehuenlopez@gmail.com",
+  "telefono": "3874043380",
+  "hash": "$2a$10$i5wfidR8QYzD6eQLQQaceev2rxwVcqci5PtqEKJe0yGz1L9jKFWiO"
+ },
+ {
+  "id": 8,
+  "nombre": "Bruno",
+  "apellido": "Montalbetti",
+  "email": "bmontalbettiqa@gmail.com",
+  "telefono": "3874125325",
+  "hash": "$2a$10$lWxH1bDrQrqpMKGA3fUbEuRQUHCx0MbQ.qjIEhKM1s7ByQR23FTYW"
+ }
+]
