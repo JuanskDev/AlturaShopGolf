@@ -31,6 +31,7 @@ module.exports = (sequelize, dataTypes) => {
         stock: {
             type: dataTypes.INTEGER
         }
+     
     };
     let config = {
         tableName: 'productos',
