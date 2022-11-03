@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/contacto.css"/>
+  </head>
+  <body class="contacto">
+    <%- include('../partials/header.ejs') %>
+    <main>
+      <h1>Contactanos</h1>
+      <div class="main-div">
+
+     
+<div class="titulo">
+<p>Atencion al Cliente</p> 
+</div>
+
+<div class="contacto-info">
+<br>
+<h3>PREGUNTAS O COMENTARIOS ?</h3>
+<p>Por favor llama al 0351-152-437784</p>
+<br>
+<h3>HORARIOS DE ATENCION AL CLIENTE</h3>
+<p><b class="dias-1">Lunes-Viernes  </b>
+  <span class="horario-1"> 8:00 am - 7:00 pm </span>
+   <br>
+  <b class="dias-2">Sabados y Domingos  </b> 
+  <span class="horario-2"> 10:00 am - 5:00 pm  </span> </p>
+ <br>
+ <h3>TIENES ALGUNA PREGUNTA?</h3>
+ <p class="pregunta-usuario">Para comunicarte con alguno de nuestros Pros o para sacarte cualquier duda que tengas, porfavor comuniquese al 0351-152-437784 o 
+  envienos un email a <a href="mailto:alturagolfservicios@gmail.com">alturagolfservicios@gmail.com</a>
+ </p>
+ <br>
+</div>
+<div class="contacto-formulario">
+  <span>* Completar</span>
+
+<form action="/contacto" method="POST">
+<div class="form-row">
+<label for="">NOMBRE *</label>
+<div class="field-wrapper">
+<input type="text" name="nombre" class="input-form" required>
+</div>
+</div>
+
+<div class="form-row">
+  <label for="">APELLIDO *</label>
+  <div class="field-wrapper">
+  <input type="text" class="input-form" name="apellido" required>
+  </div>
+</div>
+
+<div class="form-row">
+  <label for="">EMAIL *</label>
+  <div class="field-wrapper">
+  <input type="email" class="input-form" name="email" required>
+  </div>
+</div>
+
+<div class="form-row">
+  <label for="">TELEFONO</label>
+  <div class="field-wrapper">
+  <input type="text" class="input-form" name="telefono" >
+  </div>
+</div>
+
+<div class="form-row">
+  <label for="">NUMERO DE PEDIDO</label>
+  <div class="field-wrapper">
+  <input type="text" class="input-form" name="pedido-numero">
+  </div>
+</div>
+
+<div class="form-row">
+  <label for="">MI PREGUNTA</label>
+  <div class="field-wrapper">
+  <select name="informacion-cliente" id="">
+    <option value="info-nos">Informacion de la Empresa</option>
+    <option value="nuevo-pedido">Nuevo Pedido</option>
+    <option value="info-producto">Informacion de Producto</option>
+    <option value="devolucion">Devoluciones</option>
+    <option value="otro">Otro</option>
+  </select>
+  </div>
+</div>
+
+<div class="form-row">
+  <label for="">DEJANOS TU MENSAJE</label>
+  <div class="field-wrapper">
+ <textarea name="mensaje-cliente" id="" cols="30" rows="10"></textarea>
+  </div>
+</div>
+<div class="div-button">
+<button class="submit">Submit</button>
+</div>
+      </div>
+
+</div>
+</form>
+</div>
+
+</div>
+</main>
+
+   <%- include('../partials/footer.ejs') %>
+
+  </body>
+</html>
+
+<div class="slideshow-container">
