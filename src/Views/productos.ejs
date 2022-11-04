@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
-    <%- include('./partials/head.ejs')  %>
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/productos.css"/>
   </head>
- 
-  <body>
-    <%- include('./partials/header.ejs')  %>  
+
+  <%- include('./partials/head.ejs') %>
+  <body class="campos">
+    <%- include('./partials/header.ejs') %>
     <main>
-    
-      <section class="contenedor">
-        <div class="titulo">
-          <h1>ADMINISTRADOR - PRODUCTOS</h1>
-        </div>
+      <div class="resultado-busqueda">
+        <h2>Productos Gas Store</h2>
+        
+      </div>
+      <hr class="hr-1">
 
-        <p><a href="/productos/create">Crear una nuevo producto</a></p>
+      <div class="resultado-busqueda">
 
-        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
-          <% for (const item of productos) { %>
-            <div style="padding: 15px;">
-              <p>Producto: <%=item.p_nombre%></p>
-              <p>Categoría: <%=item.c_nombre%></p>
-              <p>Marca: <%=item.marca%></p>
-              <p>Modelo: <%=item.modelo%></p>
+        <ul class="resultado-productos">
+          
+          <% productos.forEach(function(producto){%>
+            <li class="producto-campos-lista">
+              <img src="/images/productosDB/<%= producto.imagen%>">
               
-              <p><img id="img-producto" alt="" src="/images/productos/<%= item.imagen %>" style="width: 150px; height: auto;"></p>
-              <p><a href="/productos/edit/<%=item.p_id%>">Editar</a></p>
-              <p><a href="/productos/delete/<%=item.p_id%>">Eliminar</a></p>
-              <p><hr></p>
-            </div>
-          <% } %>
-        </div>
+              <div class="tamaño-hr"><br>
+                <h5><%=producto.marca%></h5>
+                <h6><%=producto.nombre%></h6>
+                <p class="tipo"><%= producto.tipoDeBolsa%><%= producto.tipoDeVara%></p>
+                <p>Precio: <strong><%=`${'$ ' + producto.precio}`%></strong></p>
+                
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+    </div>
+  </div>
+</main>
 
-  </main>
+   <%- include('./partials/footer.ejs') %>
 
-<%- include('./partials/footer.ejs')  %>
- 
-</body>
+  </body>
 </html>
-

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/products-create-edit.css"/>
+     
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/products/create" enctype="multipart/form-data" method="POST">
+     <section class="contenedor">
+      <div class="titulo">
+        <h1>ADMINISTRADOR -  CARGA DE PRODUCTOS</h1>
+      </div>
+        <div class="fila">
+
+          <div class="fila-item">
+            <label class="categoria">Categoria:</label>
+            <select name="categoria_id" class="input-form" id="categoria" placeholder="Seleccione la categoría">
+            <option value="">- Seleccione la Categoria -</option>
+            <% allCategorias.forEach(categoria => { %>
+            <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+            <% }); %>
+            </select>
+          </div> 
+
+          <div class="fila-item">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" class="input-form" id="nombre" placeholder="Nombre del Producto">
+          </div> 
+
+          <div class="fila-item">
+            <label class="marca">Marca:</label>
+             <input type="text" name="marca" class="input-form" id="marca" placeholder="Seleccione la marca" >
+          </div>
+
+          <div class="fila-item">
+            <label>Modelo:</label>
+            <input type="text" name="modelo" class="input-form" id="modelo" placeholder="Seleccione el modelos">
+          </div>
+
+        </div>
+        <div class="fila">
+
+          <div class="fila-item">
+            <label class="marca">Agarre:</label> 
+             <input type="text"  name="agarre" class="input-form" id="agarre" placeholder="Seleccione la mano">
+          </div>
+
+          <div class="fila-item">
+            <label class="">Tipo de Vara:</label>
+            <input type="text" name="tipoDeVara" class="input-form" id="tipodevara" placeholder="Seleccione el tipo de vara">
+          </div>
+
+          <div class="fila-item">
+            <label class="bolsa">Tipo de Bolsa:</label>
+            <input type="text" name="tipoDeBolsa" class="input-form" id="bolsa" placeholder="Seleccione el tipo de bolsa">
+          </div>
+
+          <div class="fila-item">
+            <label class="">Hierros tipo de conjunto:</label>
+            <input type="text" name="hierroTipoDeConjunto"class="input-form" id="hierrostipodeconjunto" placeholder="Seleccione el conjunto de hierros">
+          </div>
+          
+        </div>
+        <div class="fila">
+
+          <div class="fila-item" style="position:relative;">
+            <label>Descuento:</label>
+            <input type="text" name="descuento"class="input-form" id="descuento" placeholder="Seleccione el descuento">
+          </div>
+
+          <div class="fila-item" style="position: relative;">
+            <label>Precio:</label>
+            <span style="position: absolute; left: 17px; top: 57px; color:grey">$</span>
+            <input name="precio" type="precio"  id="precio" class="input-form" value="" required style="padding-left: 15px;"/>
+          </div>
+
+          <div class="fila-item">
+            <label>Stock:</label>
+            <input name="stock" type="number" id="stock" value="0" class="input-form" placeholder="Stock: "/>
+          </div>
+
+          <div class="fila-item">
+            <label class="color">COLOR:</label>
+            <input type="text" name="color" class="input-form" id="color" placeholder="Seleccione el color">
+          </div>
+        </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <input class="file input-form" type="file" name="imagen" />
+          </div>
+        </div>
+       
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> 
+          </div>
+        </div>
+
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    <link rel="stylesheet" href="/css/products-create-edit.css"/>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs')  %>
+  <main>
+      <section class="contenedor">
+       
+        <div class="titulo">
+         
+          <form action="/products/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+           <h1>ADMINISTRADOR -  EDICION DE PRODUCTOS</h1>
+        </div>
+        
+        <div class="fila">
+          <div class="fila-item">
+            <label class="categoria">CATEGORIA:</label>
+            <select name="categoria_id" class="input-form" id="categoria" placeholder="Seleccione la categoría">
+            <option value="">- Seleccione la Categoria -</option>
+            <% allCategorias.forEach(categoria => { %>
+                <option <%= categoria.id == producto.categoria_id ? 'selected' : null %> value="<%= categoria.id %>" ><%= categoria.nombre %></option>
+                <% }); %>
+            </select>
+          </div>
+          <div class="fila-item">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" class="input-form" id="nombre" value="<%= producto.nombre %>" placeholder="Nombre del Producto">
+          </div> 
+
+          <div class="fila-item">
+            <label class="marca">Marca:</label>
+             <input type="text" name="marca" class="input-form" id="marca" value="<%= producto.marca %>" placeholder="Seleccione la marca" >
+          </div>
+
+          <div class="fila-item">
+            <label>Modelo:</label>
+            <input type="text" name="modelo" class="input-form" id="modelo" value="<%= producto.modelo %>" placeholder="Seleccione el modelos">
+          </div>
+
+        </div>
+        <div class="fila">
+
+          <div class="fila-item">
+            <label class="marca">Agarre:</label> 
+             <input type="text"  name="agarre" class="input-form" id="agarre" value="<%= producto.marca %>" placeholder="Seleccione la mano">
+          </div>
+
+          <div class="fila-item">
+            <label class="">Tipo de Vara:</label>
+            <input type="text" name="tipoDeVara" class="input-form" id="tipodevara" value="<%= producto.tipoDeVara %>" placeholder="Seleccione el tipo de vara">
+          </div>
+
+          <div class="fila-item">
+            <label class="bolsa">Tipo de Bolsa:</label>
+            <input type="text" name="tipoDeBolsa" class="input-form" id="bolsa" value="<%= producto.tipoDeBolsa %>" placeholder="Seleccione el tipo de bolsa">
+          </div>
+
+          <div class="fila-item">
+            <label class="">Hierros tipo de conjunto:</label>
+            <input type="text" name="hierroTipoDeConjunto"class="input-form" id="hierrostipodeconjunto" value="<%= producto.hierroTipoDeConjunto %>" placeholder="Seleccione el conjunto de hierros">
+          </div>
+          
+        </div>
+        <div class="fila">
+
+          <div class="fila-item" style="position:relative;">
+            <label>Descuento:</label>
+            <input type="text" name="descuento"class="input-form" id="descuento" value="<%= producto.descuento %>" placeholder="Seleccione el descuento">
+          </div>
+
+          <div class="fila-item" style="position: relative;">
+            <label>Precio:</label>
+            <span style="position: absolute; left: 17px; top: 57px; color:grey">$</span>
+            <input name="precio" type="precio"  id="precio" class="input-form" value="<%= producto.precio %>" required style="padding-left: 15px;"/>
+          </div>
+
+          <div class="fila-item">
+            <label>Stock:</label>
+            <input name="stock" type="number" id="stock" value="<%= producto.stock %>" class="input-form" placeholder="Stock: "/>
+          </div>
+
+          <div class="fila-item">
+            <label class="color">COLOR:</label>
+            <input type="text" name="color" class="input-form" id="color" value="<%= producto.color %>" placeholder="Seleccione el color">
+          </div>
+       </div>
+        
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <input class="file input-form" type="file" name="imagen" />
+          </div>
+        </div>
+
+         <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
+           <div class="fila-item">
+            <button type="submit" id="guardar">MODIFICAR</button>
+       </form>
+            
+       <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <button type="submit" class="action-button delete">ELIMINAR</button>
+       </form>
+          </div>
+      </section>
+</main>
+<%- include('./partials/footer.ejs')  %>
+</body>
+</html>

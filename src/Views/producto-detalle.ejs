@@ -9,23 +9,7 @@
   <%- include('./partials/header.ejs')  %>
 
 <main>
-  <%if(data != null && data.subcategorias != null & data.subcategorias.length > 0) {%>
-    <div class="submenu-productos">
-      <nav class="nav-full-screen">
-        <div>
-          <a href="/productos/<%= data.producto[0].categoria_id%>">TODO</a>
-        </div>
-        <% data.subcategorias.forEach(function(subcategoria){%>
-          <div>
-            <a href="/productos/<%= subcategoria.categoria_id%>/<%= subcategoria.nombre%>">
-              <%= subcategoria.nombre%>
-            </a>
-          </div>
-        %>
-        <% }) %>
-      </nav>
-    </div>
-    <%}%>
+  <!--  -->
 
   <div class="main-content">
     <nav class="menu-detalle-producto" style="justify-content: center;">
@@ -33,7 +17,7 @@
     </nav>
     <div class="product-content">
       <div class="col1 img-primaria">
-        <img src="/images/productos/<%=data.producto[0].imagen %>" class="img1"width="80" height="60" alt="">
+        <img src="/images/productosDB/<%=data.producto[0].imagen %>" class="img1"width="80" height="60" alt="">
       </div>
       <div class="col2">
         <div class="product-name">
@@ -46,49 +30,49 @@
           <% } %>
         </div>  
           
-        <% if(data.producto[0].marca != "") {  %>
+        <% if(data.producto[0].marca != "null" && data.producto[0].marca != "") {  %>
           <div class="fila fila2">
             <label class="marca">MARCA</label>
             <p><%= data.producto[0].marca %></P>
           </div>
         <% } %>
 
-        <% if(data.producto[0].modelo != "") {  %>
+        <% if(data.producto[0].modelo != "null" && data.producto[0].modelo != "") {  %>
           <div class="fila fila2">
             <label class="marca">MODELO</label>
             <p><%= data.producto[0].modelo %></P>
           </div>
         <% } %>
 
-        <% if(data.producto[0].agarre != "") {  %>
+        <% if(data.producto[0].agarre != "null" && data.producto[0].agarre != "") {  %>
           <div class="fila fila2">
             <label class="marca">AGARRE</label>
             <p><%= data.producto[0].agarre %></P>
           </div>
         <% } %>
 
-        <% if(data.producto[0].tipoDeVara != "") {  %>
+        <% if(data.producto[0].tipoDeVara != "null" && data.producto[0].tipoDeVara != "") {  %>
           <div class="fila fila2">
             <label class="marca">TIPO DE VARA</label>
             <p><%= data.producto[0].tipoDeVara %></P>
           </div>
         <% } %>
           
-        <% if(data.producto[0].tipoDeBolsa != "") {  %>
+        <% if(data.producto[0].tipoDeBolsa != 'null' && data.producto[0].tipoDeBolsa != "") {  %>
           <div class="fila fila2">
             <label class="marca">TIPO DE BOLSA</label>
             <p><%= data.producto[0].tipoDeBolsa %></P>
           </div>
         <% } %>
 
-        <% if(data.producto[0].hierroTipoDeConjunto != "") {  %>
+        <% if(data.producto[0].hierroTipoDeConjunto != "null" && data.producto[0].hierroTipoDeConjunto != "") {  %>
           <div class="fila fila2">
             <label class="marca"> CONJUNTO HIERROS</label>
             <p><%= data.producto[0].hierroTipoDeConjunto %></P>
           </div>
         <% } %>
 
-        <% if(data.producto[0].color != "") {  %>
+        <% if(data.producto[0].color != "null" && data.producto[0].color != "") {  %>
           <div class="fila fila2">
             <label class="marca"> COLOR</label>
             <p><%= data.producto[0].color %></P>

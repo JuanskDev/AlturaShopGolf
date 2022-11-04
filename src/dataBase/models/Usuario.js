@@ -12,13 +12,19 @@ module.exports = (sequelize, dataTypes) => {
         apellido: {
             type: dataTypes.STRING 
         },
-        mail: {
+        email: {
             type: dataTypes.STRING 
         },
-        hash: {
+        telefono: {
             type: dataTypes.STRING 
         },
-        passwordhash: {
+        password: {
+            type: dataTypes.STRING 
+        },
+        categoria: {
+            type: dataTypes.STRING 
+        },
+        rol: {
             type: dataTypes.STRING 
         }
     };
