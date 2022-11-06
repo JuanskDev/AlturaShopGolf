@@ -106,11 +106,14 @@
     font-family: 'Oswald';
 }
   
-body.palos li.producto-palos-lista a {
-  display: inline-block;
-  width: 100%;
+body.palos li.producto-palos-lista h6{
   text-align: center;
+  font-size: 15px;
+  font-family: oswald;
 }
+body.palos li.producto-palos-lista h6 a{
+  color: rgba(41, 41, 196, 0.892);
+} 
 
   @media (min-width: 420px) {
     

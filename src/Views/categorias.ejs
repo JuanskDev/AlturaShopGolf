@@ -16,7 +16,7 @@
 
         <p><a href="/categorias/create">Crear una nueva categoría</a></p>
 
-        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;flex-wrap: wrap;">
           <% for (const item of categorias) { %>
             <div style="padding: 15px;">
               <p>Categoría: <%=item.nombre%></p>

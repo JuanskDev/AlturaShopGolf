@@ -37,7 +37,7 @@
             <img src="/images/productosDB/<%= producto.imagen%>">
             <div class="tamaño-hr"><br>
                 <h5><%=producto.marca%></h5>
-                <h6><%=producto.nombre%></h6>
+                <h6><a href="/productos/detalle/<%=producto.id%>"><%=producto.nombre%></a></h6>
                 <p class="tipo"><%= producto.tipoDeBolsa%> <%= producto.tipoDeVara%></p>
                 <p>Precio: <strong><%=`${'$ ' + producto.precio}`%></strong></p>
                 

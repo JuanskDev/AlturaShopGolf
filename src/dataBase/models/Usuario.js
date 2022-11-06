@@ -12,13 +12,13 @@ module.exports = (sequelize, dataTypes) => {
         apellido: {
             type: dataTypes.STRING 
         },
-        email: {
+        correo: {
             type: dataTypes.STRING 
         },
         telefono: {
             type: dataTypes.STRING 
         },
-        password: {
+        hash: {
             type: dataTypes.STRING 
         },
         categoria: {

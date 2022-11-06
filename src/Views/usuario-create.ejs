@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+  </head>
+ 
+  <body>
+   
+    <%- include('./partials/header.ejs')  %>  
+
+  <main>
+    <form action="/users/create" method="POST">
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR -  ALTA DE USUARIOS</h1>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>NOMBRE:</label>
+            <input name="nombre" type="text"  id="nombre" class="input-form" value=""/>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>APELLIDO:</label>
+            <input name="apellido" type="text"  id="apellido" class="input-form" value=""/>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>CORREO:</label>
+            <input name="correo" type="text"  id="correo" class="input-form" value=""/>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>TELÉFONO:</label>
+            <input name="telefono" type="text"  id="telefono" class="input-form" value=""/>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>ROL:</label>
+            <select id="rol" name="rol" required>
+              <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+              <option value="CLIENTE">CLIENTE</option>
+            </select>
+          </div>
+        </div>
+        <div class="fila">
+          <div class="fila-item">
+            <label>CONTRASEÑA:</label>
+            <input name="password" type="text"  id="password" class="input-form" value=""/>
+          </div>
+        </div>
+        <div class="fila" style="justify-content: flex-end;">
+          <div class="fila-item">
+            <button type="submit" id="guardar">GUARDAR</button> <a href="/users">VOLVER A LA LISTA</a>
+          </div>
+        </div>
+      </section>
+    </form>
+
+</main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
+

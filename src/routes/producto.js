@@ -22,6 +22,8 @@ router.get('/categoria/:id' , productsController.listaCategorias)
 router.get('/carritodecompras' , productsController.carritoCompra);
 router.get('/detalle/:id' , productsController.detalleproducto);
 
+//routes de Administración
+router.get('/list' , productsController.listProduct)
 //--------------FORMULARIO CREAR PRODUCTOS-----------------------//
 router.get('/create', productsController.create); 
 router.post('/create', upload.single('imagen'), productsController.store);

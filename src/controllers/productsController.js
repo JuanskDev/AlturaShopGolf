@@ -17,7 +17,6 @@ const productsController = {
             })
     },
     'listaCategorias': (req,res) => {
-      console.log('aca estoy');
       Productos.findAll({
              where: {
                 categoria_id: req.params.id}
@@ -25,12 +24,42 @@ const productsController = {
         .then(productos => {
             res.render('categoriasProducto.ejs' , {productos})
         })
-  
-
     }, 
     carritoCompra: (req,res) => {
         res.locals.sessiondata = req.session;
         res.render(path.join(__dirname, '../views/carrito-de-compras.ejs'))
+    },
+    listProduct:(req,res) =>{
+        //Temporalmente queda así después hay que dejarlo como Juan usando los modelos
+        const Sequelize = require('sequelize')
+        const sequelize = new Sequelize('gas_store', 'root', '', {
+            host: 'localhost',
+            dialect: 'mysql',
+            })
+        res.locals.sessiondata = req.session;
+        let sqlScript = "select p.id as p_id, " +
+        "p.nombre as p_nombre, " +
+        "marca, " +
+        "modelo, " +
+        "agarre, " +
+        "tipoDeVara, " +
+        "tipoDeBolsa, " +
+        "hierroTipoDeConjunto, " +
+        "precio, " +
+        "descuento, " +
+        "stock, " +
+        "color, " +
+        "imagen, " +
+        "c.id as c_id, " +
+        "c.nombre as c_nombre " +
+        "from productos p " +
+        "join categorias c on c.id = p.categoria_id " +
+        "order by p.nombre" 
+        sequelize.query(sqlScript, { nest: true,  type: Sequelize.QueryTypes.SELECT})
+        .then(productos => {
+            res.render('productos-lista', {productos})
+        })
+        .catch(err => { console.log(err) })
     },
     create:(req,res) =>{
         res.locals.sessiondata = req.session;
@@ -40,12 +69,11 @@ const productsController = {
        
         Promise.all([productosDb, categoriasDb])
         .then(([allProductos, allCategorias]) => {
-            return res.render('products-create', { allProductos, allCategorias })
+            return res.render('productos/list', { allProductos, allCategorias })
         })
         .catch(error => res.send(error))
     },
     store: (req, res) => {
-             
         Productos
         .create({
         nombre: req.body.nombre,
@@ -63,17 +91,13 @@ const productsController = {
         imagen: req.file.filename
     })
     .then(() => {
-        return res.redirect('/products')
+        return res.redirect('/productos/list')
     })
     .catch(error => res.send(error))
 
     },
     edit: (req , res) => {
-        console.log('funcionandoc');
-        console.log(req.params.id);
-
          let id = req.params.id
-         console.log(req.params.id);
          let categoriasDb = Categorias.findAll();
          let productoDb = Productos.findByPk(id)
         
@@ -81,16 +105,13 @@ const productsController = {
             .all([ categoriasDb, productoDb ])
             .then(([ allCategorias, producto ]) => {
                 console.log(allCategorias);
-                return res.render('products-edit', { producto , allCategorias })
+                return res.render('productos-edit', { producto , allCategorias })
             })
             .catch(error => res.send(error)) 
-
-   
-        },
+    },
 
      update: (req, res) => {
-  
-            let productoId = req.params.id;
+        let productoId = req.params.id;
         Productos
             .update({
                 nombre: req.body.nombre,
@@ -110,15 +131,13 @@ const productsController = {
                 where: { id: productoId }
             })
             .then(() => {
-                return res.redirect("/products/edit/" + productoId)
+                return res.render('productos-lista')
             })
             .catch(error => res.send(error))
-
         },
     
         detalleproducto:(req,res) =>{
             const Sequelize = require('sequelize')
-
             const sequelize = new Sequelize('gas_store', 'root', '', {
                 host: 'localhost',
                 dialect: 'mysql',
@@ -163,11 +182,15 @@ const productsController = {
             .catch(err => { console.log(err) })
     },  
     delete : (req, res) => {
-		let id = req.params.id;
-		let finalProducts = productos.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-        res.locals.sessiondata = req.session;
-        res.redirect("/products/create");
+		let productoId = req.params.id;
+
+		Productos.delete({
+            where: { id: productoId }
+        })
+        .then(() => {
+            return res.render('productos-lista')
+        })
+        .catch(error => res.send(error))
     }, 
 };
 module.exports = productsController;

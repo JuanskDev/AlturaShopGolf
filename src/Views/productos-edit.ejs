@@ -11,8 +11,8 @@
        
         <div class="titulo">
          
-          <form action="/products/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-           <h1>ADMINISTRADOR -  EDICION DE PRODUCTOS</h1>
+          <form action="/productos/edit/<%= producto.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+           <h1>ADMINISTRADOR -  EDICIÓN DE PRODUCTOS</h1>
         </div>
         
         <div class="fila">
@@ -99,8 +99,9 @@
             <button type="submit" id="guardar">MODIFICAR</button>
        </form>
             
-       <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+       <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
             <button type="submit" class="action-button delete">ELIMINAR</button>
+            <a href="/productos/list">Volver a lista</a>
        </form>
           </div>
       </section>

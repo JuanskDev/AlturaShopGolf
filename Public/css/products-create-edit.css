@@ -55,25 +55,11 @@ border: none;
 min-width: 150px;
 margin-right: 40px;
 }
-#guardar:hover,
-.action-buttondelete:hover{
+#guardar:hover{
 background-color: rgba(161, 161, 161, 0.5);
 color: #dc3b41;
 border: 1px solid white;
 }
-.action-buttondelete{
-border: none;
-color: white;
-background-color: #dc3b41;
-border-radius: 31px;
-width: 105px;
-height: 38px;
-font-family: oswald;
-font-size: 20px;
-font-weight: 900;
-}
-
-
 .fila-item a{
     padding: 5px 5px 5px 5px;
     font-size: 20px;

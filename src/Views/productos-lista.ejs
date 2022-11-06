@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+  </head>
+ 
+  <body>
+    <%- include('./partials/header.ejs')  %>  
+    <main>
+    
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR - PRODUCTOS</h1>
+        </div>
+
+        <p><a href="/product/create">Crear una nuevo producto</a></p>
+
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;flex-wrap: wrap;">
+          <% for (const item of productos) { %>
+            <div style="padding: 15px;">
+              <p>Producto: <%=item.p_nombre%></p>
+              <p>Categoría: <%=item.c_nombre%></p>
+              <p>Marca: <%=item.marca%></p>
+              <p>Modelo: <%=item.modelo%></p>
+              
+              <p><img id="img-producto" alt="" src="/images/productosDB/<%= item.imagen %>" style="width: 150px; height: auto;"></p>
+              <p><a href="/productos/edit/<%=item.p_id%>">Editar</a></p>
+              <p><a href="/productos/delete/<%=item.p_id%>">Eliminar</a></p>
+              <p><hr></p>
+            </div>
+          <% } %>
+        </div>
+
+  </main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>

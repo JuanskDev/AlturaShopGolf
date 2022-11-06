@@ -1,61 +1,48 @@
-const path = require('path');
-const fs = require('fs');
 const bcrypt = require('bcryptjs');
 const db = require('../dataBase/models');
 const Usuarios = db.Usuario;
-const usersFilePath = path.join(__dirname, '../dataBase/users.json');
-//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const validationResults= require('express-validator');
 
 const usersController = {
     index: (req, res)  => {
+        let error = '';
+
         res.locals.sessiondata = req.session;
-        res.locals.mensaje = '';
-        if(req.session.nombre != undefined) {
-            res.locals.mensaje = "Ya inició una sesión"
+        if(req.session != undefined && req.session.rol != 'ADMINISTRADOR') {
+            error="Ya inició una sesión";
         }
-        res.render(path.join(__dirname, '../views/iniciosesion.ejs'))
+        res.render('iniciosesion', { error });
     },
     login: (req, res) => {
-        let error = '';
-        let user = users.find(e => e.email === req.body.email);
+        let usuario = Usuarios.findAll({
+            where: { correo: req.body.correo }
+        });
+        
+        Promise
+           .all([ usuario ])
+           .then(([ usuario ]) => {
+                let error = '';
 
-
-        Usuarios.findAll({
-            where: {
-               correo: req.body.email}
-       })
-       .then(usuarios => {
-            if(usuarios != null) {
-                let user = {
-                    id: usuarios.id,
-                    nombre: usuarios.nombre,
-                    apellido: usuarios.apellido,
-                    correo: usuarios.correo,
-                    rol: usuarios.rol
-                }
-                let passwordCorrect = bcrypt.compareSync(req.body.password, usuarios.hash);
-                if(passwordCorrect) {
-                    //Guardar la información del usuario en variable de session
-                    req.session.nombre = user.nombre;
-                    req.session.apellido = user.apellido;
-                    req.session.email = user.email;
-                    req.session.rol = user.rol;
+                if(usuario.length == 0) {
+                     error = 'No fué posible iniciar sesión';
                 }
                 else {
-                    error = 'No fué posible iniciar sesión';
-                    res.redirect('/users/iniciosesion');
+                    let passwordCorrect = bcrypt.compareSync(req.body.password, usuario[0].hash);
+                    if(!passwordCorrect) {
+                        //Guardar la información del usuario en variable de session
+                        req.session.nombre = usuario[0].nombre;
+                        req.session.apellido = usuario[0].apellido;
+                        req.session.correo = usuario[0].correo;
+                        req.session.rol = usuario[0].rol;
+                        res.render('/');
+                    }
+                    else {
+                        error = 'No fué posible iniciar sesión';
+                    }
                 }
-            }
-            else {
-                error = 'No fué posible iniciar sesión';
-                res.redirect('/users/iniciosesion');
-            }
-            
-            res.redirect('/');
-       })
-
-        
+                res.render('iniciosesion', { error })
+           })
+           .catch(error => res.send(error)) 
     },
     logout: (request, response) => {
         request.session.destroy((err) => {
@@ -65,43 +52,95 @@ const usersController = {
             response.redirect('/users/iniciosesion');
         });
     },
+    list: (req, res) => {
+        res.locals.sessiondata = req.session;
+        if(req.session != undefined && req.session.rol != 'ADMINISTRADOR') {
+            res.redirect('/');
+        }
+        db.Usuario.findAll()
+            .then(usuarios => {
+                res.render('usuarios.ejs', { usuarios })
+            })
+    },
     create: (request, response) => {
         res.locals.sessiondata = req.session;
+        if(request.session != undefined && request.session.rol != 'ADMINISTRADOR') {
+            response.redirect('/');
+        }
         
-        return res.render('usuario-create');
+        return response.render('usuario-create');
     },
     insert: (req, res) => {
-             
-        Productos
-        .create({
-        nombre: req.body.nombre,
-        marca: req.body.marca,
-        modelo: req.body.modelo,
-        agarre: req.body.agarre,
-        tipoDeVara: req.body.tipoDeVara,
-        tipoDeBolsa: req.body.tipoDeBolsa,
-        hierroTipoDeConjunto: req.body.hierroTipoDeConjunto,
-        precio: req.body.precio,
-        descuento: req.body.descuento,
-        stock: req.body.stock,
-        color: req.body.color,
-        categoria_id: req.body.categoria_id,
-        imagen: req.file.filename
-    })
+        res.locals.sessiondata = req.session;
+        if(request.session != undefined && request.session.rol != 'ADMINISTRADOR') {
+            response.redirect('/');
+        }
+        
+        let usuario = {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correo: req.body.correo,
+            telefono: req.body.correo,
+        }
+        let hash = bcrypt.hashSync(req.body.password, 10)
+        usuario.hash = hash;
+        Usuarios.create(usuario)
     .then(() => {
-        return res.redirect('/products')
+        return res.redirect('/users')
     })
-    .catch(error => res.send(error))
-
+    .catch(error => res.send(error)) 
     },
     edit: (request, response) => {
+        if(request.session != undefined && request.session.rol != 'ADMINISTRADOR') {
+            response.redirect('/');
+        }
+
+        let id = request.params.id;
+        let usuario = Usuarios.findByPk(id);
         
+         Promise
+            .all([ usuario ])
+            .then(([ usuario ]) => {
+                return res.render('usuario-edit', { usuario })
+            })
+            .catch(error => res.send(error)) 
     },
-    update: (request, response) => {
+    update: (req, res) => {
+        if(request.session != undefined && request.session.rol != 'ADMINISTRADOR') {
+            response.redirect('/');
+        }
+
+        let usuarioId = req.params.id;
+        let usuario = {
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            correo: req.body.correo,
+            telefono: req.body.correo,
+        }
+        let hash = bcrypt.hashSync(req.body.password, 10)
+        usuario.hash = hash;
         
-    },
-    delete: (request, response) => {
+        Usuarios.update(usuario, {
+                where: { id: usuarioId }
+            })
+            .then(() => {
+                return res.render('users')
+            })
+            .catch(error => res.send(error))
+        },
+    delete: (req, res) => {
+        if(request.session != undefined && request.session.rol != 'ADMINISTRADOR') {
+            response.redirect('/');
+        }
         
+        let usuarioId = req.params.id;
+		Usuarios.delete({
+            where: { id: usuarioId }
+        })
+        .then(() => {
+            return res.render('users')
+        })
+        .catch(error => res.send(error))
     }
 };
 

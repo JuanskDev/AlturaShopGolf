@@ -18,9 +18,9 @@
 <h1>MI CUENTA</h1>
 </div>
 
-<%if(mensaje != ''){%>
-  <p class="message-login"><%=mensaje%></p>
-<%} else {%>
+<%if(error != ''){%>
+  <p class="message-login"><%=error%></p>
+<%}%>
   <div class="p-registro">
     <p>Inicio de Sesion</p>
   </div>
@@ -30,12 +30,12 @@
   </div>
   <form action="/users/iniciosesion" method="POST">
     <div class="nombre-usuario">
-      <label for="email">Nombre de Usuario (e-mail)</label>
-      <input type="text" name="email" id="email" required>
+      <label for="correo">Nombre de Usuario (e-mail)</label>
+      <input type="text" name="correo" id="correo" required>
       </div>
       
       <div class="contraseña-sesion">
-      <label for="contraseña">Contraseña</label>
+      <label for="password">Contraseña</label>
       <input type="password" name="password" id="password">
       </div>
       
@@ -50,7 +50,6 @@
        <p> <a href="/registro">¿No tienes cuenta? ¡Registrate!</a></p>
       </div>
     </form>
-<%}%>
   </main>
 
   <%- include('./partials/footer.ejs')  %>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('./partials/head.ejs')  %>
+    
+  </head>
+ 
+  <body>
+    <%- include('./partials/header.ejs')  %>  
+    <main>
+    
+      <section class="contenedor">
+        <div class="titulo">
+          <h1>ADMINISTRADOR - USUARIOS</h1>
+        </div>
+
+        <p><a href="/users/create">Crear una nuevo usuario</a></p>
+
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;flex-wrap: wrap;">
+          <% for (const item of usuarios) { %>
+            <div style="padding: 15px;">
+              <p>NOMBRE: <%=item.nombre%></p>
+              <p>APELLIDO: <%=item.apellido%></p>
+              <p>CORREO: <%=item.correo%></p>
+              <p>TELÉFONO: <%=item.telefono%></p>
+              <p>ROL:
+                <select id="rol" name="rol">
+                  <option value="ADMINISTRADOR" <%if(item.rol == 'ADMINISTRADOR') {selected='selected'} %>>ADMINISTRADOR</option>
+                  <option value="CLIENTE" <%if(item.rol == 'CLIENTE') {selected='selected'} %>>CLIENTE</option>
+                </select>
+              </p>
+              <p><a href="/users/edit/<%=item.id%>" class="editar">Editar</a></p>
+              <p><a href="/users/delete/<%=item.id%>" class="eliminar">Eliminar</a></p>
+              <p><hr></p>
+            </div>
+          <% } %>
+        </div>
+
+  </main>
+
+<%- include('./partials/footer.ejs')  %>
+ 
+</body>
+</html>
