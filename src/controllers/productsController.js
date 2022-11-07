@@ -221,6 +221,14 @@ const productsController = {
     //  res.locals.sessiondata = req.session;
     //res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })
   },
+  admin: (req, res) => {
+    Productos.findAll({ include: "categoria" })
+      .then((producto) => {
+        //return res.send(relojes);
+        res.render("administrador.ejs", { producto });
+      })
+      .catch((error) => res.send(error));
+  },
 };
 
 module.exports = productsController;

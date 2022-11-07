@@ -15,7 +15,12 @@
         <!-- <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a> -->
 
         <% if(locals && locals.sessiondata != undefined &&
-        locals.sessiondata.user != undefined){%>
+        locals.sessiondata.user != undefined){%> <% if(locals &&
+        locals.sessiondata.user.categoria == 'admin'){%>
+        <div class="administrador">
+          <span><a href="/products/administrar"> Administrar</a></span>
+        </div>
+        <%}%>
 
         <div class="dropdown">
           <button class="dropbtn" onclick="myFunction()">

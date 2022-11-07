@@ -38,7 +38,7 @@ const usersController = {
             req.session.categoria = usuario.categoria;
             return res.redirect("/");
           } else {
-            return res.redirect("Users/InicioSesion.ejs");
+            return res.redirect("/users/iniciosesion");
           }
         }
       })

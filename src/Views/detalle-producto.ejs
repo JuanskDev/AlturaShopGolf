@@ -17,13 +17,22 @@
           <div class="contenido-producto">
             <h5 class="marca-producto"><%=producto.marca%></h5>
             <h6 class="nombre-producto"><%=producto.nombre%></h6>
-            <p class="precio-producto">
-              <strong><%=`${'$ ' + producto.precio}`%></strong>
-            </p>
+            <div>
+              <% let finalPrice = (producto.precio * ((100 - producto.descuento)
+              / 100)).toFixed(0)%> <% if(producto.descuento === 0){ %>
+              <h5>
+                <span class="span-1">$ <%= producto.precio %> </span>
+              </h5>
+              <% } else{ %>
+              <h5>
+                <span class="span-2">$ <%= finalPrice %> </span>
+              </h5>
+              <p class="p-descuento">Ahorra <%= producto.descuento %> %</p>
+              <% } %>
+            </div>
           </div>
 
           <div class="descripcion">
-            <!-- if(producto.tipoDeVara  -->
             <% if(producto.tipoDeVara != "null" && producto.tipoDeVara != "") {
             %>
             <p>
@@ -36,11 +45,18 @@
             <% if(producto.tipoDeBolsa != "null" && producto.tipoDeBolsa != "")
             { %>
             <p class="tipo1">Tipo de Producto:</p>
-            <p class="tipo2">
-              <%= producto.tipoDeBolsa%> <%= producto.hierroTipoDeConjunto %>
-            </p>
+            <p class="tipo2"><%= producto.tipoDeBolsa%></p>
+            <% } %> <% if(producto.hierroTipoDeConjunto != "null" &&
+            producto.hierroTipoDeConjunto != "") { %>
+            <p class="tipo1">Tipo de Producto:</p>
+            <p class="tipo2"><%= producto.hierroTipoDeConjunto%></p>
             <% } %>
-            <p><span class="color1"> Color: </span> <%= producto.color %></p>
+            <p>
+              <% if(producto.color != "null" && producto.color != "") { %>
+              <span class="color1"> Color: </span>
+              <span class="color2"><%= producto.color %> </span>
+              <% } %>
+            </p>
           </div>
         </div>
       </div>

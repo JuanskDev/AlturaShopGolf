@@ -20,6 +20,13 @@
   margin-right: 15px;
 }
 
+.administrador a {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right: 25px;
+}
+
 .desc-usuario {
   font-size: 16px;
   color: #000000;
@@ -102,6 +109,11 @@ span.welcome-user {
 .barra-superior-izq {
   display: none;
 }
+
+.barra-superior-der {
+  display: flex;
+}
+
 .sideA {
   display: none;
 }

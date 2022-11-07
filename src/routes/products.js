@@ -47,5 +47,6 @@ router.put(
 
 //-----------------------ELIMINAR PRODUCTOS---------------------------//
 router.delete("/delete/:id", productsController.delete);
+router.get("/administrar", productsController.admin);
 
 module.exports = router;
