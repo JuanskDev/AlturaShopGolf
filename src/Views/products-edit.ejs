@@ -86,21 +86,24 @@
             <label class="color">COLOR:</label>
             <input type="text" name="color" class="input-form" id="color" value="<%= producto.color %>" placeholder="Seleccione el color">
           </div>
+
        </div>
-        
-        <div class="fila" style="justify-content: flex-end;">
+       <div class="fila" style="justify-content: flex-end;">
+
           <div class="fila-item">
             <input class="file input-form" type="file" name="imagen" />
           </div>
-        </div>
 
-         <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
+        </div>
+        <div class="fila" style="justify-content: flex-end; margin-right: 35px;">
+          
            <div class="fila-item">
-            <button type="submit" id="guardar">MODIFICAR</button>
+              <button type="submit" id="guardar">MODIFICAR</button>
+
        </form>
             
        <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">ELIMINAR</button>
+              <button type="submit" class="action-button delete">ELIMINAR</button>
        </form>
           </div>
       </section>

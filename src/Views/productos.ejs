@@ -28,7 +28,7 @@
                 <h6><%=producto.nombre%></h6>
                 <p class="tipo"><%= producto.tipoDeBolsa%><%= producto.tipoDeVara%></p>
                 <p>Precio: <strong><%=`${'$ ' + producto.precio}`%></strong></p>
-                
+                <a href="/products/detalle/<%= producto.id %>"><%= producto.nombre %></a>
               </div>
             </li>
           <% }) %>

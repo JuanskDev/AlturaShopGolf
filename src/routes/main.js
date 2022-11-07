@@ -6,7 +6,8 @@ const mainController = require('../controllers/mainController');
 var router = express.Router();
 
 router.get('/' , mainController.index);
-router.get('/search', mainController.search)
+
+
 // router.get('/pruebaSession', function(req, res){
 //     if(req.session.numeroVistas == undifined){
 //         req.session.numeroVistas = 0;

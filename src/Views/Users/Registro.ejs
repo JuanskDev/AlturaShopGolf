@@ -1,118 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <%- include('../partials/head.ejs')  %>
-    
-    <link rel="stylesheet" href="/css/Registro.css">
+    <%- include('../partials/head.ejs') %>
+
+    <link rel="stylesheet" href="/css/Registro.css" />
   </head>
- 
+
   <body>
-   
-    <%- include('../partials/header.ejs')  %>  
+    <%- include('../partials/header.ejs') %>
 
-  <main>
-    <section class="contenedor">
+    <main>
+      <section class="contenedor">
         <div class="notificaciones"></div>
-    <div class="contacto"></div>
-    
-    <div class="titulo">
-      <h1>MI CUENTA</h1>
-    </div>  
-    <br />
-    <div class="registrarse"><p>Registro</p></div>
-    <br>
-    
-     <!-- Verificación frontend -->
-    <div>
-      <ul id="errores"> </ul>
-     </div>
+        <div class="contacto"></div>
 
-     <!-- Verificación backend --> 
-     <% if (locals.errores && errores.length > 0) { %>
-       <ul class="backend-validations">
-       <% errores.forEach(error => { %>
-         <li><%= error.msg %> </li>
-       <% }) %>
-       </ul>
-     <% } %>
-    
-    <form action="/Users/Registro" method="post" class="formulario">
-     
-      <div class="fila">
-        <label>Nombre/s*</label>
-        <input type="text" id="nombre" name="nombre" class="input-form" />
-      </div>
+        <div class="titulo">
+          <h1>MI CUENTA</h1>
+        </div>
+        <br />
+        <div class="registrarse"><p>Registro</p></div>
+        <br />
 
-      <br>
+        <!-- Verificación frontend -->
+        <div>
+          <ul id="errores"></ul>
+        </div>
 
-      <div class="fila">
-        <label>Apellido/s*</label>
-        <input type="text" id="apellido" name="apellido" class="input-form" />
-      </div>
+        <!-- Verificación backend -->
+        <% if (locals.errores && errores.length > 0) { %>
+        <ul class="backend-validations">
+          <% errores.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+        <% } %>
 
-      <br>
+        <form action="/Users/Registro" method="post" class="formulario">
+          <div class="fila">
+            <label>Nombre/s*</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="input-form"
+              value="<%= locals.oldData ? oldData.nombre : null %>"
+            />
+          </div>
 
-      <div class="fila">
-        <label>Dirección de correo*</label>
-        <input type="text" id="email" name="email" class="input-form" />
-      </div>
+          <br />
 
-      <br>
+          <div class="fila">
+            <label>Apellido/s*</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              class="input-form"
+              value="<%= locals.oldData ? oldData.apellido : null %>"
+            />
+          </div>
 
-      <div class="fila">
-        <label>Confirmación de correo*</label>
-        <input type="text" name="confirm-email" id="confirm-email" class="input-form" />
-      </div>
+          <br />
 
-      <br>
+          <div class="fila">
+            <label>Dirección de correo*</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              class="input-form"
+              value="<%= locals.oldData ? oldData.email : null %>"
+            />
+          </div>
 
-      <div class="fila">
-        <label>Numero de Telefono*</label>
-        <input type="number" id="telefono" name="telefono" class="input-form" />
-        <label class="fila" style="font-size: 15px; color: gray; display: block;
-        margin: auto" >Ej: 333-3333333 (sin 0 y 15).</label>
-      </div>
+          <br />
 
-      <br />
+          <div class="fila">
+            <label>Confirmación de correo*</label>
+            <input
+              type="text"
+              name="confirm-email"
+              id="confirm-email"
+              class="input-form"
+            />
+          </div>
 
-      <div class="fila">
-        <label>Contraseña*</label>
-        <input type="password" id="password" name="password" class="input-form" />
-      </div>
+          <br />
 
-      <br />
+          <div class="fila">
+            <label>Numero de Telefono*</label>
+            <input
+              type="number"
+              id="telefono"
+              name="telefono"
+              class="input-form"
+            />
+            <label
+              class="fila"
+              style="font-size: 15px; color: gray; display: block; margin: auto"
+              >Ej: 333-3333333 (sin 0 y 15).</label
+            >
+          </div>
 
-      <div class="fila">
-        <label>Confirmar contraseña*</label>
-        <input type="password" name="confirmar_password" id="confirmar_password" class="input-form" />
-      </div>
+          <br />
 
-      <br />
+          <div class="fila">
+            <label>Contraseña*</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input-form"
+            />
+          </div>
 
-      <div class="fila-checkbox">
-        <input type="checkbox" id="terminos" name="terminos" class="check-form" />
-        <span>*Al marcar esta casilla y crear una cuenta, acepto los Términos de uso y la Política de privacidad . Ordeno a GOLF DE ALTURA Store que comparta mi información con AAG (Asociación Argentina de Golf) y acepto los Términos y la Política de privacidad de AAG.</span>
-      </div>
+          <br />
 
-      <br />
-      <br />
+          <div class="fila">
+            <label>Confirmar contraseña*</label>
+            <input
+              type="password"
+              name="confirmar_password"
+              id="confirmar_password"
+              class="input-form"
+            />
+          </div>
 
-      <div class="fila">
-          <button type="sumbit" id="crear-cuenta">Crear Cuenta</button>
-      </div>
+          <br />
 
-    </form>
+          <div class="fila-checkbox">
+            <input
+              type="checkbox"
+              id="terminos"
+              name="terminos"
+              class="check-form"
+              required
+            />
+            <span
+              >*Al marcar esta casilla y crear una cuenta, acepto los Términos
+              de uso y la Política de privacidad . Ordeno a GOLF DE ALTURA Store
+              que comparta mi información con AAG (Asociación Argentina de Golf)
+              y acepto los Términos y la Política de privacidad de AAG.</span
+            >
+          </div>
 
-      <div class="inicia-sesion-">
-        <p class="ya-tenes-cuenta"> <a href="/users/iniciosesion">¿Ya tienes cuenta? Iniciar sesión</a></p>
-      </div>
+          <br />
+          <br />
 
-  </section>
+          <div class="fila">
+            <button type="sumbit" id="crear-cuenta">Crear Cuenta</button>
+          </div>
+        </form>
 
-</main>
+        <div class="inicia-sesion-">
+          <p class="ya-tenes-cuenta">
+            <a href="/users/iniciosesion">¿Ya tienes cuenta? Iniciar sesión</a>
+          </p>
+        </div>
+      </section>
+    </main>
 
- <%- include('../partials/footer.ejs')  %> 
-    <script src="/js/registro.js"></script> 
+    <%- include('../partials/footer.ejs') %>
+    <!-- <script src="/js/registro.js"></script> -->
   </body>
 </html>
-
