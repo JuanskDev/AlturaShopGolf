@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    }
+
+h1 {
+    background-color: #dc3b41;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.main-div {
+    padding: 0 20px 35px;
+}
+
+div.titulo p {
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+div.contacto-info h1 {
+    font-weight: 400
+}
+
+div.contacto-info h3 {
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+
+div.contacto-info p {
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+div.contacto-formulario span {
+    color: grey;
+    font-size: 13px;
+    font-style: italic;
+    display: block;
+    padding-bottom: 12px;
+}
+
+
+
+div.field-wrapper {
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+div.field-wrapper input {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border-radius: 7px;
+    margin: 5px 0;
+    max-width: 400px;
+}
+
+div.field-wrapper select{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border-radius: 7px;
+    margin: 5px 0;
+    max-width: 400px;
+    border: solid 2px;
+    border-color: rgb(50, 49, 49);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    border-radius: 7px;
+    margin: 5px 0;
+    max-width: 400px;
+    border: solid 2px;
+    border-color: rgb(50, 49, 49); 
+}
+
+.div-button {
+    margin-top: 20px;
+}
+
+button.submit {
+    display: block;
+    padding: 10px 5px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #dc3b41;
+    border-radius: 20px;
+    margin: auto;
+    color: white;
+    width: 35%;
+    border: none;
+    opacity: 65%;
+    max-width: 200px;
+    min-width: 150px;
+}
+
+@media (min-width: 600px) {
+
+    div.contacto-info b.dias-1 {
+        position: relative;
+        right: 22px;
+    }
+    
+    div.contacto-info span.horario-1 {
+        position: relative;
+        left: 20px;
+    }
+    
+    div.contacto-info span.horario-2 {
+        position: relative;
+        left: 6px;
+    }
+
+.main-div {
+    text-align: center;
+}
+
+div.contacto-info p.pregunta-usuario {
+    display: block;
+    margin: auto;
+    width: 60%;
+    max-width: 500px;
+}
+
+
+
+
+
+}
+
+@media (min-width: 600px) {
+    .main-div {
+       margin: auto;
+       width: 80%;
+    }
+
+}

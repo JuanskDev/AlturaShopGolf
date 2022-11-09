@@ -1,245 +1,160 @@
-.product-content {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+.contenedor {
+  margin: 35px 10px;
+}
+
+.producto-palos-lista {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 30px;
-}
-.product-content .col1 {
-  align-items: center;
-}
-.product-content .col2 {
+  justify-content: center;
   align-items: flex-start;
+  position: relative;
+  right: 100px;
+  margin: 40px 0;
 }
-.product-content .img-primaria img {
-  width: 200px;
-  height: 200px;
-  transition: 0.5s;
-  object-fit: cover;
+
+.imagen-producto img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 350px;
 }
-.product-content .img-primaria img:hover {
-  transform: scale(1.2);
+
+.imagen-producto img:hover {
+  transform: scale(1.25);
   border: 1px solid rgb(216, 216, 216);
   border-radius: 5px;
-}
-.product-content .fila {
-  margin-bottom: 15px;
+  transition: ease-in-out 1.5s;
 }
 
-
-
-.button-add-cart button{
-  display: flex;
-  font-size: 15px;
-  color: white;
-  background-color: #0854e0;
-  border-radius: 15px;
-  height: 30%;
-  padding: 0px 5px 5px 5px;
-  width: 120px;
-  border: none;
-  margin-left: 110%;
-  margin-top: -20px;
-}
-.button-add-cart button:hover{
-  background-color: white;
-  border: 0.5px solid rgb(212, 212, 212);
-  color: #0854e0;
-  font-family: oswald;
-  font-size: 15px;
-  font-weight: 500;
+.contenido-producto {
+  padding: 10px;
+  margin: auto;
+  width: 80%;
 }
 
-
-
-
-
-
-
-
-
-
-
-nav.menu-detalle-producto{
-  color: #0854e0;
-  font-size: 15px;  
-  text-decoration: underline;
-  padding: 15px 5px 15px  5px;
-  text-align: center;
+.marca-producto {
+  font-weight: 900;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.33333em;
+  font-style: italic;
+  letter-spacing: 0.125em;
+  text-transform: uppercase;
+  color: #021582;
 }
 
-div.slider-products{
-  display: flex;
+.nombre-producto {
+  line-height: 1.33333em;
+  letter-spacing: 0.069em;
+  margin: 5px 0 10px;
+  font-size: 1.5rem !important;
+  text-transform: none !important;
+  font-weight: 400;
+}
 
-  
+.span-2 {
+  font-size: 26px;
+  font-weight: 400;
 }
-img.img3{
-  border: 0.2px solid #dc3b41;
-  border-radius: 50px;
-  align-items: center;
+
+.span-1 {
+  font-size: 26px;
+  font-weight: 400;
 }
-img.img0{
-  border: 0.2px solid #dc3b41;
-  border-radius: 50px;
-  align-items: center;
+
+.p-descuento {
+  font-size: 12px;
+  margin-left: 24px;
+  color: #021582;
 }
-img.img{
-  border: 0.2px solid #dc3b41;
-  border-radius: 50px;
-  align-items: center;
+
+.descripcion {
+  padding: 10px;
+  margin: auto;
+  width: 80%;
 }
-img.img1{
-   border-radius: 50px;
-  align-items: center;
-}
-button.next-img{
-    margin-top: -50px;
-    margin-bottom: -45px;
-    margin-left: 340px;
-    border: none;
-    color: #dc3b41;
-    font-size: 20px;
-    font-weight: 700;
-    background-color: white;
-}
-button.prev-img{
-  margin-left: -20px;
-  margin-bottom: -40px;
-  border: none;
-  color: #dc3b41;
+
+.palo-vara1 {
+  display: block;
+  margin: 5px 0;
   font-size: 20px;
-  font-weight: 700;
-  background-color: white;
+  font-weight: 400;
 }
-.product-name h2{
-  margin-top: 40px;
-  font-family: oswald;
-  color:#0854e0;
-  margin-left: 35px;
-  align-items: center;
-  justify-content: center;
-}
-.product-name h5{
-  margin-top: 40px;
-  font-family: oswald;
-  color:#0854e0;
-  align-items: center;
-}
-.product-name.span-1{
-text-decoration:line-through,
-}
-.product-name p{
-  color: #dc3b41;
-  align-items: center;
-}
-div.fila0{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-h3.antes{
-  color: silver;
-  text-decoration: line-through;
-}
-h3.ahora{
-  color: #dc3b41
-}
-div.fila0 h6{
-  margin-left: 10px;
-  color: #dc3b41;
-}
-div.fila label{
-  margin-left: 15px;
+
+.palo-vara2 {
   font-size: 20px;
-  font-family: oswald;
-  font-weight: 600;
-  
+  color: #021582;
+  font-style: italic;
+  letter-spacing: 0.0325em;
 }
-div.fila input{
-  border: 0.2px solid #dc3b41;
-  border-radius: 5px;
-  width: 165px;
-  margin-left: 15px;
-}
-div.fila label a{
-  display: flex;
-  font-size: 9px;
-  color: #0854e0;
-  
-  width: 165px;
-  margin-left: 90px;
-  text-decoration: underline;
-}
-div.fila2 label{
-  margin-left: 15px;
+
+.tipo1 {
+  margin: 5px 0;
   font-size: 20px;
-  font-family: oswald;
-  font-weight: 600
+  font-weight: 400;
 }
-div.fila2 input{
-  border: 0.2px solid #dc3b41;
-  border-radius: 5px;
-  width: 165px;
-  margin-left: 15px;
-}
-div.fila3 label{
-  margin-left: 15px;
+
+.tipo2 {
   font-size: 20px;
-  font-family: oswald;
-  font-weight: 600
+  color: #021582;
+  font-style: italic;
+  letter-spacing: 0.0325em;
+  padding: 5px 0 10px;
 }
-div.fila3 input{
-  border: 0.2px solid #dc3b41;
-  border-radius: 5px;
-  width: 165px;
-  margin-left: 15px;
-}
-div.subsecciones-container{
-  display: flex;
-  width: 100%;
-}
-div.subsecciones-container label{
-  margin-left: 15px;
+
+.color1 {
+  margin: 5px 0;
   font-size: 20px;
-  font-family: oswald;
-  font-weight: 600 
+  font-weight: 400;
+  display: block;
 }
 
-.button-remove{
- margin-left: 35px; 
-}
-.button-remove button{
-  border: none;
-  background-color: white;
-  color: #0854e0;
-  font-size: 15px;
-  text-decoration: underline;
-  font-weight: 800;
+.precio {
+  font-weight: 400;
 }
 
-
-
-  /*FOOTER*/
-
-
-  
-
-
-@media (min-width: 420px) {
-  
-
+.color2 {
+  font-size: 20px;
+  color: #021582;
+  font-style: italic;
+  letter-spacing: 0.0325em;
+  padding: 5px 0 10px;
 }
 
-@media (min-width: 790px) {
- 
-/*HEADER*/
-
-
-/*FOOTER*/
-
-
-
+.contenedor-info {
+  margin: auto;
+  position: relative;
+  left: 25px;
+  padding-top: 30px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 490px) {
+  .contenedor {
+    display: flex;
+  }
 
-} 
+  div.imagen-producto {
+    width: 60%;
+  }
+}
+
+@media (min-width: 661px) {
+  .contenedor-info {
+    margin: initial;
+  }
+
+  .contenido-producto {
+    width: 100%;
+  }
+
+  .descripcion {
+    width: 100%;
+  }
+}

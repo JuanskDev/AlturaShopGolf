@@ -81,10 +81,9 @@ div.nombre-usuario label {
 
 div.nombre-usuario input {
   width: 100%;
-    font-size: 25px;
-    padding: 15px;
+    padding: 10px;
     color: black;
-    border-radius: 5px;
+    border-radius: 7px;
     margin: 5px 0;
 }
 
@@ -100,10 +99,9 @@ div.contraseña-sesion label {
 
 div.contraseña-sesion input {
   width: 100%;
-    font-size: 25px;
-    padding: 15px;
+    padding: 10px;
     color: black;
-    border-radius: 5px;
+    border-radius: 7px;
     margin: 5px 0;
 }
 
@@ -121,17 +119,18 @@ div.boton-entrar {
 
 
 div.boton-entrar button {
-  padding: 15px 20px 15px 20px;
-  font-size: 25px;
-  font-weight: 600;
-  background-color: #dc3b41;
-  border-radius: 50px;
-  width: 50%;
-  color: white;
-  border: none;
-  opacity: 65%;
-  max-width: 300px;
-    min-width: 200px;
+  padding: 10px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #dc3b41;
+    border-radius: 20px;
+    width: 35%;
+    color: white;
+    border: none;
+    opacity: 65%;
+    max-width: 300px;
+    min-width: 200px
+
 }
 
 div.registrate {
@@ -161,26 +160,12 @@ div.olvidar-contraseña {
   margin-left: 3px;
 }
 
-}
-
-@media (min-width: 790px) {
- 
-/*HEADER*/
-
-/*MAIN*/
-
-div.nombre-usuario {
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-div.nombre-usuario label {
-  font-size: 24px;
-}
-
 div.nombre-usuario input {
-  max-width: 500px;
+  max-width: 400px;
+}
+
+div.contraseña-sesion input{
+  max-width: 400px;
 }
 
 div.contraseña-sesion {
@@ -189,13 +174,23 @@ div.contraseña-sesion {
     align-items: center;
 }
 
-div.contraseña-sesion label {
-  font-size: 24px;
+div.nombre-usuario {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-div.contraseña-sesion input {
-  max-width: 500px;
 }
+
+@media (min-width: 790px) {
+ 
+/*HEADER*/
+
+/*MAIN*/
+
+
+
+
 
 div.olvidar-contraseña {
   text-align: center;

@@ -1,112 +1,115 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans";
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
 
-  body.lecciones h2 {
-    opacity: 0.6;
-    font-family: 'Oswald';
-    color: red;
-    font-size: 30px;
-  }
-  body.lecciones h4 {
-    font-family: 'Oswald';
-    color: red;
-    font-size: 15px;
-    float: left;
-  }
+body.lecciones h2 {
+  opacity: 0.6;
+  font-family: "Oswald";
+  color: red;
+  font-size: 30px;
+}
+body.lecciones h4 {
+  font-family: "Oswald";
+  color: red;
+  font-size: 15px;
+  float: left;
+}
 
-  body.lecciones .resultado-busqueda {
-    position: relative;
-    padding: 15px;
-  }
+body.lecciones .resultado-busqueda {
+  position: relative;
+  padding: 15px;
+}
 
-  body.lecciones .resultado-busqueda h2 {
-    text-align: right;
-  }
+body.lecciones .resultado-busqueda h2 {
+  text-align: right;
+}
 
-  body.lecciones .ordenar-buscador {
-    float: right;
-  }
+body.lecciones .ordenar-buscador {
+  float: right;
+}
 
-  /* .select-buscador {
+/* .select-buscador {
   } */
 
-  .hr-1 {
-    margin-top: 50px;
-  }
-
-  body.lecciones ul {
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-  }
-
-  body.lecciones li.producto-lecciones-lista {
-    width: 47%;
-    padding: 10px 0;
-    margin: 0 1.5% 20px;
-    background: #fff;
-    border-bottom: 1px solid gray;
-  }
-
-  body.lecciones li.producto-lecciones-lista img {
-    max-width: 70%;
-    padding-bottom: 30px;
-  }
-
-  div.tamaño-hr {
-    height: 35%;
-    
-  }
-
-  body.lecciones li.producto-lecciones-lista h6{
-    text-align: center;
-    font-size: 15px;
-    font-family: oswald;
-    color: rgba(41, 41, 196, 0.892);
-  }
-
-  body.lecciones li.producto-lecciones-lista p {
-    text-align: center;
-    font-size: 13px;
-    margin: 5px 0 8px;
-    line-height: 20px;
-  }
-
-  body.lecciones li.producto-lecciones-lista h5 {
-    display: flex;
-    font-size: 14px;
-    justify-content: space-evenly;
-  }
-
-  body.lecciones li.producto-lecciones-lista h5 .span-1 {
-    text-decoration: line-through;
-  }
-
-  body.lecciones li.producto-lecciones-lista h5 .span-3 {
-    justify-content: center;
-  }
-
-  body.lecciones li.producto-lecciones-lista .p-descuento {
-    margin-top: 5px;
-    text-align: center;
-    font-size: 12px;
-    color: red;
-    text-decoration: underline;
-  }
-  body.lecciones li.producto-lecciones-lista .nuevo{
-    font-size: 9px;
-    width: 45px;
-    border-radius: 45px;
-    background-color: blue;
-    color: white;
-    font-family: 'Oswald';
+.hr-1 {
+  margin-top: 50px;
 }
- 
-div.info-lessons h5{
+
+body.lecciones ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+body.lecciones li.producto-lecciones-lista {
+  width: 47%;
+  padding: 10px 0;
+  margin: 0 1.5% 20px;
+  background: #fff;
+  border-bottom: 1px solid gray;
+}
+
+body.lecciones li.producto-lecciones-lista img {
+  max-width: 70%;
+  padding-bottom: 30px;
+}
+
+div.tamaño-hr {
+  height: 35%;
+}
+.info-lessons {
+  width: 90%;
+  margin: auto;
+}
+
+body.lecciones li.producto-lecciones-lista h6 {
+  text-align: center;
+  font-size: 15px;
+  font-family: oswald;
+  color: rgba(41, 41, 196, 0.892);
+}
+
+body.lecciones li.producto-lecciones-lista p {
+  text-align: center;
+  font-size: 13px;
+  margin: 5px 0 8px;
+  line-height: 20px;
+}
+
+body.lecciones li.producto-lecciones-lista h5 {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-evenly;
+}
+
+body.lecciones li.producto-lecciones-lista h5 .span-1 {
+  text-decoration: line-through;
+}
+
+body.lecciones li.producto-lecciones-lista h5 .span-3 {
+  justify-content: center;
+}
+
+body.lecciones li.producto-lecciones-lista .p-descuento {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: red;
+  text-decoration: underline;
+}
+body.lecciones li.producto-lecciones-lista .nuevo {
+  font-size: 9px;
+  width: 45px;
+  border-radius: 45px;
+  background-color: blue;
+  color: white;
+  font-family: "Oswald";
+}
+
+div.info-lessons h5 {
   text-align: justify;
   font-size: 20px;
   font-family: oswald;
@@ -114,43 +117,40 @@ div.info-lessons h5{
   color: black;
   margin-bottom: 10px;
   margin-left: 15px;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
-div.info-lessons p{
+div.info-lessons p {
   margin-right: 15px;
   margin-left: 15px;
   /* font-family: oswald; */
   font-size: 15px;
   text-align: justify;
 }
-  @media (min-width: 420px) {
-    
-    body.lecciones h1 {
-      text-align: left;
-      margin-left: 40px;
+@media (min-width: 420px) {
+  body.lecciones h1 {
+    text-align: left;
+    margin-left: 40px;
   }
 
   body.lecciones .resultado-busqueda h2 {
     text-align: left;
+  }
 }
+
+@media (min-width: 790px) {
+  body.lecciones ul {
+    justify-content: space-around;
   }
 
-@media (min-width: 790px) {
-
-    body.lecciones ul {
-        justify-content: space-around;
-    }  
-
-    body.lecciones li.producto-lecciones-lista {
-        width: 27%;
-    }
-
+  body.lecciones li.producto-lecciones-lista {
+    width: 27%;
+  }
 }
 
 @media (min-width: 790px) {
-body.lecciones li.producto-lecciones-lista img {
-  margin: auto;
-  display: block;
-} 
+  body.lecciones li.producto-lecciones-lista img {
+    margin: auto;
+    display: block;
+  }
 }

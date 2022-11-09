@@ -1,99 +1,122 @@
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/header.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="/css/header.css">
-  <title>Document</title>
-</head>
-
-<body class="body-header">
-  <div class="barra-superior">
-   
-    <a href="/">GOLF</a>
-    <a href="/lecciones">LECCIONES</a>
-    <a href="/campos">CAMPOS</a>
-    <a href="/productos/contacto">CONTACTO</a>
-    <a href=""><p style="text-decoration: underline;font-size: 15px;font-family: oswald;">Argentina</p></a>
-    <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a>
-    <img src="/images/argentina.png" width="25px" height="25px" alt="">
-    <a href="/registro">REGISTRO</a>
-    <a href="/users/iniciosesion">INICIO SESION</a>
-  </div>
-  
-  <header>
-    <div class="btn-menu">
-      <button type="button" onclick="mostrarMenuMobile()" class="item-flex">
-        <span class="fa fa-bars"></span>
-      </button>
-    </div>
-    <nav id="menu-mobile" class="ocultar">
-      <ul>
-        <li><a href="#">INICIO</a></li> 
-        
-        <li>
-          <a href="#">PRODUCTOS</a>
-          <ul>
-            <!-- <li><a href="/productos/"> ACCESORIOS</a></li> -->
-            <li><a href="/products/1"> ACCESORIOS</a></li>
-            <li><a href="/products/1"> TODO</a></li>
-            <li><a href="/products/1/5"> GORRAS</a></li>
-            <li><a href="/products/1/6"> GUANTES</a></li>
-            <li><a href="/products/1/4"> FUNDAS</a></li>
-            <li><a href="/products/1/8"> HERRAMIENTAS</a></li>
-            <li><a href="/products/1/20"> TEES</a></li>
-            <li><a href="/products/1/22"> TOALLAS</a></li>
-            <li><a href="/products/1/12"> PARAGUAS</a></li>
-           <ul>
-            <li><a href="/products/2"> BOLSAS-CARROS</a></li>
-            <li><a href="/products/2/1"> BOLSAS</a></li>
-            <li><a href="/products/2/2"> CARROS</a></li>
-           </ul>  
-            <li><a href="/products/3"> PALOS</a></li>
-            <li><a href="/products/3"> TODO</a></li>
-            <li><a href="/products/3/3"> DRIVE</a></li>
-            <li><a href="/products/3/11"> MADERAS</a></li>
-            <li><a href="/products/3/9"> HIBRIDOS</a></li>
-            <li><a href="/products/3/10"> HIERROS</a></li>
-            <li><a href="/products/3/23"> WEDGES</a></li>
-            <li><a href="/products/3/14"> PUTTERS</a></li>
-                <a href="/products/4/13"> PELOTAS</a>
-
-            <li><a href="/products/5/7"> GPS</a>
-              <a href="/products/5/18"> SIMULADORES</a>
-              <a href="/products/5/19"> SMARTWATCHS</a>
-              <a href="/products/5/21"> TELEMETROS</a>
-            </li>
-            <li><a href="/products/6"> TODO</a></li>
-            <li><a href="/products/6/15"> ROPA DE HOMBRE</a></li>
-            <li><a href="/products/6/16"> ROPA DE MUJER</a></li>
-            <li><a href="/products/6/17"> ROPA DE NIÑOS</a></li>
-            <div>
-              <a href="/products/7/24"> ZAPATOS</a>
-            </div>
-
-          </ul>     
-    </nav>
-    <div class="logo item-flex">
-      <p><a href="/"><img src="/images/logo-header.png" alt="Golf de Altura Store" /></a></p>
-    </div>
-    <div class="iconos-compra-location">
-
-      <span class="location-icon"><i class="fa fa-location-dot"></i> </span>
-      <span><i class="fa fa-cart-shopping"></i></span>
-    </div>
-    <div class="buscador item-flex">
-      <input type="text" placeholder="¿Que podemos ayudarte a encontrar?">
-      <div class="btn">
-        <i class="fa fa-search"></i>
+  <body class="body-header">
+    <div class="barra-superior">
+      <div class="barra-superior-izq">
+        <a class="content" href="/lecciones">LECCIONES</a>
+        <a class="content" href="/campos">CAMPOS</a>
+        <a class="content" href="/users/contacto">CONTACTO</a>
       </div>
-    <div class="Compra-item-flex">
-        <p>Devoluciones gratuitas y garantía en la devolución de su dinero</p>
+      <div class="barra-superior-der">
+        <!-- <a href="/src/views/Carrito-de-compras.ejs"><span><i class="fa fa-cart-shopping"></i></span></a> -->
+
+        <% if(locals && locals.sessiondata != undefined &&
+        locals.sessiondata.user != undefined){%> <% if(locals &&
+        locals.sessiondata.user.categoria == 'admin'){%>
+        <div class="administrador">
+          <span><a href="/products/administrar"> Administrar</a></span>
+        </div>
+        <%}%>
+
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">
+            Bienvenido <%= sessiondata.user.nombre %>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a class="desc-usuario" href="/users/perfil">Mi Perfil</a>
+            <a class="desc-usuario" href="/users/cerrarsesion">Cerrar Sesión</a>
+          </div>
+        </div>
+
+        <%} else {%>
+        <a class="content" href="/users/registro">REGISTRO</a>
+        <a class="content" href="/users/iniciosesion">INICIO SESION</a>
+        <%}%>
       </div>
     </div>
-    <nav class="nav-full-screen">
-      <div>
-        <a href="#" onclick="mostrarMenu('nav-accesorios')"> ACCESORIOS</a>
-        <div id="nav-accesorios" class="nav-submenu">
-          <ul>
+
+    <header>
+      <div class="btn-menu">
+        <button type="button" onclick="mostrarMenuMobile()" class="item-flex">
+          <span class="fa fa-bars"></span>
+        </button>
+      </div>
+      <nav id="menu-mobile" class="ocultar">
+        <ul>
+          <li><a href="/products/categoria/1"> ACCESORIOS</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/products/categoria/2"> BOLSAS</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/products/categoria/3"> PALOS</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/products/categoria/4"> PELOTAS</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/products/categoria/5"> TECNOLOGIA</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="products/categoria/6"> VESTIR</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="products/categoria/7"> ZAPATOS</a></li>
+        </ul>
+      </nav>
+      <div class="logo item-flex">
+        <p>
+          <a href="/"
+            ><img src="/images/logo-header.png" alt="Golf de Altura Store"
+          /></a>
+        </p>
+      </div>
+      <div class="iconos-compra-location">
+        <span class="location-icon"> </span>
+      </div>
+
+      <div class="buscador item-flex">
+        <form
+          action="/products/search_results"
+          method="GET"
+          class="search-form"
+        >
+          <input
+            type="text"
+            name="search"
+            placeholder="¿Que podemos ayudarte a encontrar?"
+            class="search-form_input"
+          />
+          <button type="submit" class="search-form_button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+        <div class="Compra-item-flex">
+          <p>Devoluciones gratuitas y garantía en la devolución de su dinero</p>
+        </div>
+      </div>
+      <nav class="nav-full-screen">
+        <div>
+          <a
+            href="/products/categoria/1"
+            onclick="mostrarMenu('nav-accesorios')"
+          >
+            ACCESORIOS</a
+          >
+          <div id="nav-accesorios" class="nav-submenu">
+            <!-- <ul>
             <li><a href="/products/1"> TODO </a></li>
             <li><a href="/products/1/5"> GORRAS</a></li>
             <li><a href="/products/1/6"> GUANTES</a></li>
@@ -102,23 +125,30 @@
             <li><a href="/products/1/20"> TEES</a></li>
             <li><a href="/products/1/22"> TOALLAS</a></li>
             <li><a href="/products/1/12"> PARAGUAS</a></li>
-          </ul>
+          </ul> -->
+          </div>
         </div>
-      </div>
-      <div>
-        <a href="#" onclick="mostrarMenu('nav-bolsas-carros')"> BOLSAS-CARROS</a>
-        <div id="nav-bolsas-carros" class="nav-submenu">
-          <ul>
+        <div>
+          <a
+            href="/products/categoria/2"
+            onclick="mostrarMenu('nav-bolsas-carros')"
+          >
+            BOLSAS-CARROS</a
+          >
+          <div id="nav-bolsas-carros" class="nav-submenu">
+            <!--    <ul>
             <li><a href="/products/2"> TODO </a></li>
             <li><a href="/products/2/1"> BOLSAS</a></li>
             <li><a href="/products/2/2"> CARROS</a></li>
-          </ul>
+          </ul> -->
+          </div>
         </div>
-      </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-palos')"> PALOS</a>
+          <a href="/products/categoria/3" onclick="mostrarMenu('nav-palos')">
+            PALOS</a
+          >
           <div id="nav-palos" class="nav-submenu">
-            <ul>
+            <!--  <ul>
               <li><a href="/products/3"> TODO</a></li>
               <li><a href="/products/3/3"> DRIVE</a></li>
               <li><a href="/products/3/11"> MADERAS</a></li>
@@ -126,16 +156,21 @@
               <li><a href="/products/3/10"> HIERROS</a></li>
               <li><a href="/products/3/23"> WEDGES</a></li>
               <li><a href="/products/3/14"> PUTTERS</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div>
-          <a href="/products/4/13"> PELOTAS</a>
+          <a href="/products/categoria/4"> PELOTAS</a>
         </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-tecnologia')"> TECNOLOGIA</a>
+          <a
+            href="/products/categoria/5"
+            onclick="mostrarMenu('nav-tecnologia')"
+          >
+            TECNOLOGIA</a
+          >
           <div id="nav-tecnologia" class="nav-submenu">
-            <ul>
+            <!--  <ul>
               <li>
                 <a href="/products/5"> TODO</a>
                 <a href="/products/5/7"> GPS</a>
@@ -143,25 +178,26 @@
                 <a href="/products/5/19"> SMARTWATCHS</a>
                 <a href="/products/5/21"> TELEMETROS</a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div>
-          <a href="#" onclick="mostrarMenu('nav-vestir')"> VESTIR</a>
+          <a href="/products/categoria/6" onclick="mostrarMenu('nav-vestir')">
+            VESTIR</a
+          >
           <div id="nav-vestir" class="nav-submenu">
-            <ul>
+            <!--  <ul>
               <li><a href="/products/6"> TODO</a></li>
               <li><a href="/products/6/15"> ROPA DE HOMBRE</a></li>
               <li><a href="/products/6/16"> ROPA DE MUJER</a></li>
               <li><a href="/products/6/17"> ROPA DE NIÑOS</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div>
-          <a href="/products/7/24"> ZAPATOS</a>
+          <a href="/products/categoria/7"> ZAPATOS</a>
         </div>
-    </nav>
-  </header>
-</body>
-
+      </nav>
+    </header>
+  </body>
 </html>

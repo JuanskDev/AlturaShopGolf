@@ -1,138 +1,148 @@
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Open Sans";
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
 
-  body.palos h2 {
-    opacity: 0.6;
-    font-family: 'Oswald';
-    color: red;
-    font-size: 30px;
-  }
-  body.palos h4 {
-    font-family: 'Oswald';
-    color: red;
-    font-size: 15px;
-    float: left;
-  }
+body.palos h2 {
+  opacity: 0.6;
+  font-family: 'Oswald';
+  color: red;
+  font-size: 30px;
+}
+body.palos h4 {
+  font-family: 'Oswald';
+  color: red;
+  font-size: 15px;
+  float: left;
+}
 
-  body.palos .resultado-busqueda {
-    position: relative;
-    padding: 15px;
-  }
+body.palos .resultado-busqueda {
+  position: relative;
+  padding: 15px;
+}
 
-  body.palos .resultado-busqueda h2 {
-    text-align: right;
-  }
+body.palos .resultado-busqueda h2 {
+  text-align: right;
+}
 
-  body.palos .ordenar-buscador {
-    float: right;
-  }
+body.palos .ordenar-buscador {
+  float: right;
+}
 
-  /* .select-buscador {
-  } */
+/* .select-buscador {
+} */
 
-  .hr-1 {
-    margin-top: 50px;
-  }
+.hr-1 {
+  margin-top: 50px;
+}
 
-  body.palos ul {
-    display: flex;
-    list-style-type: none;
-    flex-wrap: wrap;
-  }
+body.palos ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
+body.palos li.producto-palos-lista {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 1.5% 20px;
+  background: #fff;
+  border-bottom: 1px solid gray;
+}
+
+body.palos li.producto-palos-lista img {
+  max-width: 70%;
+  padding-bottom: 30px;
+  display: block;
+  margin: auto;
+  height: 230px;
+}
+
+div.tamaño-hr {
+  height: 35%;
+  
+}
+
+body.palos li.producto-palos-lista h6{
+  text-align: center;
+  font-size: 15px;
+  font-family: oswald;
+  color: rgba(41, 41, 196, 0.892);
+}
+
+body.palos li.producto-palos-lista p {
+  text-align: center;
+  font-size: 13px;
+  margin: 5px 0 8px;
+  line-height: 20px;
+}
+
+body.palos li.producto-palos-lista h5 {
+  display: flex;
+  font-size: 14px;
+  justify-content: space-evenly;
+}
+
+body.palos li.producto-palos-lista h5 .span-1 {
+  text-decoration: line-through;
+}
+
+body.palos li.producto-palos-lista h5 .span-3 {
+  justify-content: center;
+}
+
+body.palos li.producto-palos-lista .p-descuento {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+  color: red;
+  text-decoration: underline;
+}
+body.palos li.producto-palos-lista .nuevo{
+  font-size: 9px;
+  width: 45px;
+  border-radius: 45px;
+  background-color: blue;
+  color: white;
+  font-family: 'Oswald';
+}
+
+@media (min-width: 420px) {
+  
   body.palos li.producto-palos-lista {
     width: 47%;
-    padding: 10px 0;
-    margin: 0 1.5% 20px;
-    background: #fff;
-    border-bottom: 1px solid gray;
   }
 
-  body.palos li.producto-palos-lista img {
-    max-width: 70%;
-    padding-bottom: 30px;
-  }
-
-  div.tamaño-hr {
-    height: 35%;
-    
-  }
-
-  body.palos li.producto-palos-lista h6{
-    text-align: center;
-    font-size: 15px;
-    font-family: oswald;
-    color: rgba(41, 41, 196, 0.892);
-  }
-
-  body.palos li.producto-palos-lista p {
-    text-align: center;
-    font-size: 13px;
-    margin: 5px 0 8px;
-    line-height: 20px;
-  }
-
-  body.palos li.producto-palos-lista h5 {
-    display: flex;
-    font-size: 14px;
-    justify-content: space-evenly;
-  }
-
-  body.palos li.producto-palos-lista h5 .span-1 {
-    text-decoration: line-through;
-  }
-
-  body.palos li.producto-palos-lista h5 .span-3 {
-    justify-content: center;
-  }
-
-  body.palos li.producto-palos-lista .p-descuento {
-    margin-top: 5px;
-    text-align: center;
-    font-size: 12px;
-    color: red;
-    text-decoration: underline;
-  }
-  body.palos li.producto-palos-lista .nuevo{
-    font-size: 9px;
-    width: 45px;
-    border-radius: 45px;
-    background-color: blue;
-    color: white;
-    font-family: 'Oswald';
-}
-  
-  @media (min-width: 420px) {
-    
-    body.palos h1 {
-      text-align: left;
-      margin-left: 40px;
-  }
-
-  body.palos .resultado-busqueda h2 {
+  body.palos h1 {
     text-align: left;
+    margin-left: 40px;
 }
-  }
+
+
+}
 
 @media (min-width: 790px) {
 
-    body.palos ul {
-        justify-content: space-around;
-    }  
 
-    body.palos li.producto-palos-lista {
-        width: 23%;
-    }
+  body.palos li.producto-palos-lista {
+      width: 23%;
+  }
 
 }
 
 @media (min-width: 790px) {
 body.palos li.producto-palos-lista img {
-  margin: auto;
-  display: block;
+margin: auto;
+display: block;
 } 
+}
+
+@media (min-width: 1000px) {
+
+  body.palos ul {
+    margin: 0 20px;
+  }
 }

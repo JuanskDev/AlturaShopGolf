@@ -1,13 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 
-const camposFilePath = path.join(__dirname, '../dataBase/campos.json');
-const campos = JSON.parse(fs.readFileSync(camposFilePath, 'utf-8'));
+const db = require('../dataBase/models');
+const sequelize = db.sequelize;
 
 const camposController = {
-    index: (req, res)  => {
-        res.render(path.join(__dirname, '../views/campos.ejs'), {campos})
-    }
-};
+    'index': (req, res) => {
+        res.locals.sessiondata = req.session;
+        db.Campo.findAll()     //Busca todos los datos de la tabla de Campos..
+        .then((campos) => {
+            res.render('campos', { campos })
+        })}}
 
 module.exports = camposController;
+
