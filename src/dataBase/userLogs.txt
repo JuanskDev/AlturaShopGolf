@@ -193,3 +193,9 @@ El usuario undefined ingreso en: /iniciosesion
 El usuario undefined ingreso en: /iniciosesion
 El usuario pedro@gmail.com cerró su sesión 
 El usuario undefined ingreso en: /iniciosesion
+El usuario undefined ingreso en: /iniciosesion
+El usuario pedro@gmail.com cerró su sesión 
+El usuario undefined ingreso en: /iniciosesion
+El usuario undefined ingreso en: /iniciosesion
+El usuario pedro@gmail.com cerró su sesión 
+El usuario undefined ingreso en: /iniciosesion
