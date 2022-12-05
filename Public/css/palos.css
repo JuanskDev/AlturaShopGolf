@@ -7,12 +7,12 @@
 
 body.palos h2 {
   opacity: 0.6;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   color: red;
   font-size: 30px;
 }
 body.palos h4 {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   color: red;
   font-size: 15px;
   float: left;
@@ -63,10 +63,9 @@ body.palos li.producto-palos-lista img {
 
 div.tamaño-hr {
   height: 35%;
-  
 }
 
-body.palos li.producto-palos-lista h6{
+body.palos li.producto-palos-lista h6 {
   text-align: center;
   font-size: 15px;
   font-family: oswald;
@@ -101,17 +100,16 @@ body.palos li.producto-palos-lista .p-descuento {
   color: red;
   text-decoration: underline;
 }
-body.palos li.producto-palos-lista .nuevo{
+body.palos li.producto-palos-lista .nuevo {
   font-size: 9px;
   width: 45px;
   border-radius: 45px;
   background-color: blue;
   color: white;
-  font-family: 'Oswald';
+  font-family: "Oswald";
 }
 
 @media (min-width: 420px) {
-  
   body.palos li.producto-palos-lista {
     width: 47%;
   }
@@ -119,29 +117,23 @@ body.palos li.producto-palos-lista .nuevo{
   body.palos h1 {
     text-align: left;
     margin-left: 40px;
-}
-
-
-}
-
-@media (min-width: 790px) {
-
-
-  body.palos li.producto-palos-lista {
-      width: 23%;
   }
-
 }
 
 @media (min-width: 790px) {
-body.palos li.producto-palos-lista img {
-margin: auto;
-display: block;
-} 
+  body.palos li.producto-palos-lista {
+    width: 23%;
+  }
+}
+
+@media (min-width: 790px) {
+  body.palos li.producto-palos-lista img {
+    margin: auto;
+    display: block;
+  }
 }
 
 @media (min-width: 1000px) {
-
   body.palos ul {
     margin: 0 20px;
   }

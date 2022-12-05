@@ -31,9 +31,9 @@ CREATE TABLE `usuarios` (
    `id` INT AUTO_INCREMENT,
    `nombre` VARCHAR(255),
    `apellido` VARCHAR(255),
-   `correo` VARCHAR(255),
+   `email` VARCHAR(255),
    `telefono` INT,
-   `contraseña` INT,
+   `password` INT,
    `categoria` VARCHAR(255),
    PRIMARY KEY (`id`)
 );

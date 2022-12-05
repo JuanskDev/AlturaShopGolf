@@ -80,28 +80,5 @@ window.onclick = function (e) {
   }
 };
 
-// // creando filtrado de busqueda en el header
-// inputSearch = document.getElementById('inputSearch');
-
-// document.getElementById("inputSearch"). addEventListener("keyup", buscador_interno);
-
-// function buscador_interno(){
-
-// filter = inputSearch .value.toUpperCase();
-// li = buscador_item_flex.getElementByTagName('li');
-
-// //recorriendo elementos a filtrar mediante los "li"
-// for(i = 0; i< li.length; i++){
-
-//     a = li [i].getElementByTagName("a")[0];
-//     textValue = a.textContent || a.innerText;
-
-//     if(textValue.toUpperCase() . indexOf(filter) > -1){
-//         li[i].Style.display = "";
-
-//     } else{
-//         li [i].style.display = "none";
-//     }
-// }
-
-// }
+const cartInfo = document.getElementById("cart-info");
+const cart = document.getElementById("cart");

@@ -354,10 +354,12 @@ li {
 
 #juan-slider span.fa.fa-chevron-left {
   left: 15px;
+  top: 50%;
 }
 
 #juan-slider span.fa.fa-chevron-right {
   right: 15px;
+  top: 50%;
 }
 
 #juan-slider .menu-de-a li {
@@ -380,6 +382,10 @@ li {
 #juan-slider .menu-de-a li a.active {
   background-color: white;
   border: 1px solid #dc3b41;
+}
+
+#juan-slider .menu-de-a li a:hover {
+  background-color: #dc3b41;
 }
 
 div.suscripcion-home {
@@ -477,11 +483,13 @@ div.indumentaria-home span.fa:hover {
 }
 
 div.indumentaria-home span.fa.fa-chevron-left {
-  left: 15px;
+  top: 50%;
+  left: 10px;
 }
 
 div.indumentaria-home span.fa.fa-chevron-right {
-  right: 15px;
+  right: 10px;
+  top: 50%;
 }
 /*-----------------------------------------------*/
 div.marcas {
@@ -612,16 +620,15 @@ section.productos-nuevos div h4 {
 
 .fa-chevron-right:before {
   content: "\f054";
-  top: 25px;
+  top: 0px;
   position: relative;
-  left: 5px;
 }
 
 .fa-chevron-left:before {
   content: "\f053";
   position: relative;
-  top: 25px;
-  right: 5px;
+  top: 1px;
+  right: 0px;
 }
 
 section.productos-nuevos div a {

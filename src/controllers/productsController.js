@@ -152,76 +152,8 @@ const productsController = {
       .catch((error) => res.send(error));
   },
 
-  detalleproducto: (req, res) => {
-    let productDetail = productos.find((e) => e.id === +req.params.id);
-    let data = {
-      producto: productDetail,
-      agarre: agarre,
-      tipodevara: tipodevara,
-      tipodebolsa: tipodebolsa,
-      hierrostipodeconjunto: hierrostipodeconjunto,
-      talles: talles,
-      color: color,
-    };
-
-    //categoría
-    let categoriaId = productDetail.categoria;
-    let category_item = categorias.filter(
-      (category) => category.id == categoriaId
-    );
-    category_item.forEach((item_) => {
-      data.category_selected = item_.nombre;
-    });
-
-    //producto
-    let productoId = productDetail.producto;
-    let producto_item = listaProductos.filter(
-      (listaproducto) => listaproducto.id == productoId
-    );
-    producto_item.forEach((item_) => {
-      data.producto_selected = item_.nombre;
-    });
-    //marca
-    let marcaId = productDetail.marca;
-    let marca_item = marcas.filter((marca) => marca.id == marcaId);
-    marca_item.forEach((item_) => {
-      data.marca_selected = item_.nombre;
-    });
-    //modelo
-    let modeloId = productDetail.modelo;
-    let modelo_item = modelos.filter((modelo) => modelo.id == modeloId);
-    modelo_item.forEach((item_) => {
-      data.modelo_selected = item_.nombre;
-    });
-    //talles
-    let talleId = productDetail.talle;
-    let talle_item = talles.filter((talle) => talle.id == talleId);
-    talle_item.forEach((item_) => {
-      data.talle_selected = item_.nombre;
-    });
-    //   //agarre
-    //   let agarreId = item.agarre;
-    //   let agarre_item = agarre.filter(agarre => agarre.id == agarreId)
-    //   agarre_item.forEach(item_ => {
-    //     data.agarre = item_.nombre
-    //   })
-    // //tipo de vara
-    // let tipodevaraId = item.tipodevara;
-    // let tipodevara_item = tipodevara.filter(tipodevara => tipodevara.id == tipodevaraId)
-    // tipodevara_item.forEach(item_ => {
-    //     data.tipodevara_selected = item_.nombre
-    // })
-    //  //tipo de bolsa
-    //  let tipodebolsaId = item.tipodebolsa;
-    //  let tipodebolsa_item = tipodebolsa.filter(tipodebolsa => tipodebolsa.id == tipodebolsaId)
-    //  tipodebolsa_item.forEach(item_ => {
-    //     data.tipodebolsa_selected = item_.nombre
-    //  })
-
-    //  res.locals.sessiondata = req.session;
-    //res.render(path.join(__dirname, '../views/detalle-producto.ejs'), { data, toThousand })
-  },
   admin: (req, res) => {
+    res.locals.sessiondata = req.session;
     Productos.findAll({ include: "categoria" })
       .then((producto) => {
         //return res.send(relojes);
